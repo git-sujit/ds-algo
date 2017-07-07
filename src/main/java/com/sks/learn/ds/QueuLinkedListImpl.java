@@ -26,6 +26,7 @@ public class QueuLinkedListImpl implements QueueInterface {
 			last.next = n;
 			last = n;
 		}
+		size++;
 		System.out.println("Enqued : "+obj);
 	}
 
@@ -38,6 +39,7 @@ public class QueuLinkedListImpl implements QueueInterface {
 		Node temp = first;
 		first = first.next;
 		System.out.println("Dequed : "+temp);
+		size--;
 		return temp;
 	}
 

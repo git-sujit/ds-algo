@@ -125,14 +125,17 @@ public class MiscTester {
 		q.printQueueContent();
 		q.enqueue("3");
 		q.printQueueContent();
+		System.out.println("size = "+q.size());
 		System.out.println(q.dequeu());
 		q.printQueueContent();
 		q.enqueue("5");
 		q.printQueueContent();
+		System.out.println("size = "+q.size());
 		System.out.println(q.dequeu());
 		q.printQueueContent();
 		System.out.println(q.dequeu());
 		q.printQueueContent();
+		System.out.println("size = "+q.size());
 	}
 	
 }
