@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import com.sks.learn.algo.sorting.InsertionSort;
+import com.sks.learn.algo.SortingAlgorithms;
 import com.sks.learn.algo.utility.CSVReader;
 
 
@@ -19,9 +19,13 @@ public class SortingAlgosTester {
 	@Test
 	public void testInsertionSort() {
 		for(ArrayList<Integer> input: CSVReader.readCSVFile()){
-			System.out.println("Input : "+input);
-			InsertionSort.insertionSort(input);
-			System.out.println("Output : "+input);
+			System.out.println("---------------------------------------------------------------------------------------------------------------");
+			System.out.println("IP:Size="+input.size()+"==>"+input);
+			long tStart = System.currentTimeMillis();
+			SortingAlgorithms.insertionSort(input);
+			long tEnd = System.currentTimeMillis();
+			System.out.println("Time Taken(in millis) = "+(tEnd-tStart));
+			System.out.println("OP:Size="+input.size()+"==>"+input);
 		}
 	}
 }
