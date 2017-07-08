@@ -16,7 +16,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
-	<!-- Git -->
+	<!-- SCM plugin: Supports GIT/SVN -->
 	<scm>
 		<connection>scm:git:git@github.com/git-sujit/ds-algo.git</connection>
 		<developerConnection>scm:git:git@github.com/git-sujit/ds-algo.git</developerConnection>
@@ -32,10 +32,14 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
 	<!-- Build Setup -->
 	<build>
+		<!-- pluginManagement: -->
 		<pluginManagement>
 			<plugins>
+				<!-- Apache Maven Shade Plugin: Provides capability to package artifact 
+					in an Uber Jar(Fat Jar), including its dependencies to the jar -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-shade-plugin</artifactId>
@@ -65,13 +69,14 @@
 										implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
 									<transformer
 										implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-										<mainClass>com.sks.learn.dsalgo.AllTests</mainClass>
+										<mainClass>com.sks.learn.dsalgo.SortingAlgosTester</mainClass>
 									</transformer>
 								</transformers>
 							</configuration>
 						</execution>
 					</executions>
 				</plugin>
+				<!-- Apache Maven Compiler Plugin: To compile the source code -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
@@ -82,6 +87,7 @@
 						<target>1.8</target>
 					</configuration>
 				</plugin>
+				<!-- Apache Maven Javadoc Plugin: To generate javadoc for project -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
@@ -106,6 +112,8 @@
 			</plugins>
 		</pluginManagement>
 		<plugins>
+			<!-- Code coverage utility for Java: Calculates percentage of code accessed 
+				by tests. It is based on jcoverage -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>cobertura-maven-plugin</artifactId>
@@ -124,6 +132,8 @@
 					</execution>
 				</executions>
 			</plugin>
+			<!-- Release project artifacts outside immediate development team. Two 
+				step:1. Prepare Release 2. Perform Release -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>

@@ -16,7 +16,7 @@ import com.sks.learn.algo.utility.CSVReader;
  *
  */
 public class SortingAlgosTester {
-	//@Test
+	@Test
 	public void testInsertionSort() {
 		for(ArrayList<Integer> input: CSVReader.readCSVFile()){
 			System.out.println("------------------------------------- INSERTION SORT -------------------------------------");
