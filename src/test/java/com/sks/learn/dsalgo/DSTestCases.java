@@ -1,15 +1,15 @@
-package com.sks.learn.dsalgo.ds;
+package com.sks.learn.dsalgo;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
-import org.junit.Rule;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
-import org.junit.rules.TestRule;
-import org.junit.rules.TestWatcher;
-import org.junit.runner.Description;
 
 import com.sks.learn.algo.QuickFindUF;
 import com.sks.learn.algo.QuickFindUF.QFData;
@@ -21,14 +21,26 @@ import com.sks.learn.ds.StackArrayImpl;
 import com.sks.learn.ds.StackInterface;
 import com.sks.learn.ds.StackLinkedListImpl;
 
-public class DSTester {
-	@Rule
-	public TestRule watcher = new TestWatcher() {
-		protected void starting(Description description) {
-			System.out.println("************************Starting test: " + description.getDisplayName()
-					+ "************************");
-		}
-	};
+public class DSTestCases {
+
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		System.out
+				.println("################################ START :: DATA STRUCTURES ################################");
+	}
+
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+		System.out.println("################################ END :: DATA STRUCTURES ################################");
+	}
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
 
 	@Test
 	public void testUnionFind() {
