@@ -1,4 +1,4 @@
-package com.sks.learn.dsalgo;
+package com.sks.learn.dsalgo.testutility;
 
 public class TestData {
 	public static Integer[] unionFindData() {

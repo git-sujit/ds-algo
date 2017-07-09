@@ -1,11 +1,15 @@
-package com.sks.learn.dsalgo;
+package com.sks.learn.dsalgo.ds;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TestRule;
+import org.junit.rules.TestWatcher;
+import org.junit.runner.Description;
 
 import com.sks.learn.algo.QuickFindUF;
 import com.sks.learn.algo.QuickFindUF.QFData;
@@ -17,7 +21,14 @@ import com.sks.learn.ds.StackArrayImpl;
 import com.sks.learn.ds.StackInterface;
 import com.sks.learn.ds.StackLinkedListImpl;
 
-public class MiscTester {
+public class DSTester {
+	@Rule
+	public TestRule watcher = new TestWatcher() {
+		protected void starting(Description description) {
+			System.out.println("************************Starting test: " + description.getDisplayName()
+					+ "************************");
+		}
+	};
 
 	@Test
 	public void testUnionFind() {
@@ -86,6 +97,7 @@ public class MiscTester {
 		System.out.println(s.pop());
 		s.printStackContent();
 	}
+
 	@Test
 	public void testStack_Array() {
 		System.out.println("************** STACK :: ARRAY IMPLEMENTATION **************");
@@ -113,7 +125,7 @@ public class MiscTester {
 		System.out.println(s.pop());
 		s.printStackContent();
 	}
-	
+
 	@Test
 	public void testQueue_Array() {
 		System.out.println("************** QUEUE :: LINKED LIST IMPLEMENTATION **************");
@@ -125,17 +137,17 @@ public class MiscTester {
 		q.printQueueContent();
 		q.enqueue("3");
 		q.printQueueContent();
-		System.out.println("size = "+q.size());
+		System.out.println("size = " + q.size());
 		System.out.println(q.dequeu());
 		q.printQueueContent();
 		q.enqueue("5");
 		q.printQueueContent();
-		System.out.println("size = "+q.size());
+		System.out.println("size = " + q.size());
 		System.out.println(q.dequeu());
 		q.printQueueContent();
 		System.out.println(q.dequeu());
 		q.printQueueContent();
-		System.out.println("size = "+q.size());
+		System.out.println("size = " + q.size());
 	}
-	
+
 }
