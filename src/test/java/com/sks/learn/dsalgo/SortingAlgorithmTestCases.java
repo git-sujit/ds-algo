@@ -36,7 +36,8 @@ public class SortingAlgorithmTestCases {
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+	// Timeout to avoid infinite loops
+	@Test(timeout = 1000)
 	public void testInsertionSort() {
 		System.out.println(
 				"------------------------------------- START: INSERTION SORT -------------------------------------");

@@ -42,7 +42,8 @@ public class DSTestCases {
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+	// Timeout to avoid infinite loops
+	@Test(timeout = 1000)
 	public void testUnionFind() {
 		UnionFind uf = new UnionFind();
 		assertFalse(uf.isConnected(10, 11));

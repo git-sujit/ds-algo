@@ -34,7 +34,8 @@ public class CSVReaderTestCases {
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+	// Timeout to avoid infinite loops
+	@Test(timeout = 1000)
 	public void testCSVReader() {
 		List<ArrayList<Integer>> csvDataList = CSVReader.readCSVFile();
 		assertNotNull(csvDataList);
