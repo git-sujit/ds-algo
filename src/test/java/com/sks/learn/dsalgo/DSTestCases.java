@@ -5,6 +5,10 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.sks.learn.algo.QuickFindUF;
@@ -17,9 +21,29 @@ import com.sks.learn.ds.StackArrayImpl;
 import com.sks.learn.ds.StackInterface;
 import com.sks.learn.ds.StackLinkedListImpl;
 
-public class MiscTester {
+public class DSTestCases {
 
-	@Test
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		System.out
+				.println("################################ START :: DATA STRUCTURES ################################");
+	}
+
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+		System.out.println("################################ END :: DATA STRUCTURES ################################");
+	}
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	// Timeout to avoid infinite loops
+	@Test(timeout = 1000)
 	public void testUnionFind() {
 		UnionFind uf = new UnionFind();
 		assertFalse(uf.isConnected(10, 11));
@@ -86,6 +110,7 @@ public class MiscTester {
 		System.out.println(s.pop());
 		s.printStackContent();
 	}
+
 	@Test
 	public void testStack_Array() {
 		System.out.println("************** STACK :: ARRAY IMPLEMENTATION **************");
@@ -113,7 +138,7 @@ public class MiscTester {
 		System.out.println(s.pop());
 		s.printStackContent();
 	}
-	
+
 	@Test
 	public void testQueue_Array() {
 		System.out.println("************** QUEUE :: LINKED LIST IMPLEMENTATION **************");
@@ -125,17 +150,17 @@ public class MiscTester {
 		q.printQueueContent();
 		q.enqueue("3");
 		q.printQueueContent();
-		System.out.println("size = "+q.size());
+		System.out.println("size = " + q.size());
 		System.out.println(q.dequeu());
 		q.printQueueContent();
 		q.enqueue("5");
 		q.printQueueContent();
-		System.out.println("size = "+q.size());
+		System.out.println("size = " + q.size());
 		System.out.println(q.dequeu());
 		q.printQueueContent();
 		System.out.println(q.dequeu());
 		q.printQueueContent();
-		System.out.println("size = "+q.size());
+		System.out.println("size = " + q.size());
 	}
-	
+
 }

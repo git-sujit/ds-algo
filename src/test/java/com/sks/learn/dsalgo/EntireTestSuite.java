@@ -5,7 +5,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ SortingAlgosTester.class, CSVReaderTester.class })
-public class AllTests {
+@SuiteClasses({ CSVReaderTestCases.class, DSTestCases.class, SortingAlgorithmTestCases.class })
+public class EntireTestSuite {
 
 }
