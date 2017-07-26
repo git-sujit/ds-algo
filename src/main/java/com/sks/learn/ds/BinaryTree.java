@@ -36,4 +36,15 @@ public class BinaryTree {
 		this.rightChild = rightChild;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder str = new StringBuilder(this.getKey());
+		if (this.getLeftChild() != null) {
+			str.append(", Left: " + this.getLeftChild().getKey());
+		}
+		if (this.getRightChild() != null) {
+			str.append(", Right: " + this.getRightChild().getKey());
+		}
+		return str.toString();
+	}
 }
