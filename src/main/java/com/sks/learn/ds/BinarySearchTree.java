@@ -6,6 +6,15 @@ import java.util.Random;
 import com.sks.learn.algo.BinaryTreeAlgorithms;
 
 public class BinarySearchTree extends BinaryTree {
+	BinarySearchTree parent;
+
+	public BinarySearchTree getParent() {
+		return parent;
+	}
+
+	public void setParent(BinarySearchTree parent) {
+		this.parent = parent;
+	}
 
 	public BinarySearchTree() {
 
@@ -34,6 +43,7 @@ public class BinarySearchTree extends BinaryTree {
 				if (nodeValue <= parentKey) {
 					if (insertAtNode.getLeftChild() == null) {
 						insertAtNode.setLeftChild(nodeToInsert);
+						nodeToInsert.setParent(insertAtNode);
 						flag = false;
 					} else {
 						insertAtNode = (BinarySearchTree) insertAtNode.getLeftChild();
@@ -41,6 +51,7 @@ public class BinarySearchTree extends BinaryTree {
 				} else {
 					if (insertAtNode.getRightChild() == null) {
 						insertAtNode.setRightChild(nodeToInsert);
+						nodeToInsert.setParent(insertAtNode);
 						flag = false;
 					} else {
 						insertAtNode = (BinarySearchTree) insertAtNode.getRightChild();
@@ -187,42 +198,161 @@ public class BinarySearchTree extends BinaryTree {
 	/**
 	 * Predecessor = max value less than the node
 	 * 
+	 * Given node X find the node with largest key smaller than key(X)
+	 * 
+	 * Note: Parent, Left Child, Right Child informations are needed
+	 * 
 	 * @param bst
 	 * @param nodeValue
 	 * @return
 	 */
 	public static BinarySearchTree predecessor(BinarySearchTree bst, int nodeValue) {
-		if (bst == null) {
-			return null;
+		if (bst != null) {
+			BinarySearchTree inputNode = searchRecursive(bst, nodeValue);
+			if (inputNode == null) {
+				System.out.println(nodeValue + " is not found at in Given BST");
+				return null;
+			}
+
+			BinarySearchTree leftChild = (BinarySearchTree) inputNode.getLeftChild();
+			// If no left then get Parent, if this node is right child then return node else
+			// return null
+			if (leftChild == null) {
+				BinarySearchTree parentNode = inputNode.getParent();
+				while (parentNode != null && parentNode.getKey().compareTo(inputNode.getKey()) > 0) {
+					parentNode = parentNode.getParent();
+				}
+				if (parentNode != null) {
+					return parentNode;
+				}
+			}
+			// If there is left child / subtree then find the max of left subtree
+			else {
+				return max(leftChild);
+			}
 		}
-		BinarySearchTree bstNode = searchRecursive(bst, nodeValue);
-		if (bstNode == null) {
-			System.out.println(nodeValue + " is not found at in Given BST");
-			return null;
+		return null;
+	}
+
+	/**
+	 * Successor = min value greater than the node
+	 * 
+	 * Given node X find the node with smallest key greater than key(X)
+	 * 
+	 * Note: Parent, Left Child, Right Child informations are needed
+	 * 
+	 * @param bst
+	 * @param nodeValue
+	 * @return
+	 */
+	public static BinarySearchTree successor(BinarySearchTree bst, int nodeValue) {
+		if (bst != null) {
+			// Search the node in the BST
+			BinarySearchTree inputNode = BinarySearchTree.searchRecursive(bst, nodeValue);
+
+			if (inputNode != null) {
+				BinarySearchTree rightChild = (BinarySearchTree) inputNode.getRightChild();
+				// If Right Child is null
+				if (rightChild == null) {
+					BinarySearchTree parent = (BinarySearchTree) inputNode.getParent();
+					while (parent != null && parent.getKey().compareTo(inputNode.getKey()) < 0) {
+						parent = parent.getParent();
+					}
+					if (parent != null) {
+						return parent;
+					}
+				}
+				// If Right Child is not null then get the min(rightChild/SubTree)
+				else {
+					return min(rightChild);
+				}
+
+			}
 		}
-		// If no left child then no Predecessor
-		BinarySearchTree leftChild = (BinarySearchTree) bstNode.getLeftChild();
-		if (leftChild == null) {
-			return null;
-		}
-		// If there is left child / subtree then find the max of left subtree
-		else {
-			return max(leftChild);
+		return null;
+	}
+
+	/**
+	 * Delete a given node in BST
+	 * 
+	 * Three Scenarios: 1. inputNode has no children 2. inputNode had only one
+	 * child(left or right) 3. inputNode has both children
+	 * 
+	 * @param bst
+	 * @param nodeValue
+	 */
+	public static void delete(BinarySearchTree bst, int nodeValue) {
+		if (bst != null) {
+			BinarySearchTree nodeToBeDeleted = BinarySearchTree.searchRecursive(bst, nodeValue);
+			BinarySearchTree parentNode = (BinarySearchTree) nodeToBeDeleted.getParent();
+			// For Root Node
+			if (parentNode == null) {
+				bst.setLeftChild(null);
+				bst.setRightChild(null);
+				bst.setParent(null);
+			}
+			BinarySearchTree leftChild = (BinarySearchTree) nodeToBeDeleted.getLeftChild();
+			BinarySearchTree rightChild = (BinarySearchTree) nodeToBeDeleted.getRightChild();
+			// For leaf node
+			if (leftChild == null && rightChild == null) {
+				if (isLeftChild(parentNode, nodeToBeDeleted)) {
+					parentNode.setLeftChild(null);
+				} else {
+					parentNode.setRightChild(null);
+				}
+				nodeToBeDeleted.setParent(null);
+			}
+			// For Node having right child but no left child
+			else if (leftChild == null && rightChild != null) {
+				if (isLeftChild(parentNode, nodeToBeDeleted)) {
+					//parentNode.setLeftChild(newParent);
+				} else {
+					//parentNode.setRightChild(newParent);
+				}
+			}
+			// For Node having left child but no right child
+			else if (leftChild != null && rightChild == null) {
+				BinarySearchTree newParent = predecessor(bst, Integer.valueOf(leftChild.getKey()));
+				if (isLeftChild(parentNode, nodeToBeDeleted)) {
+					parentNode.setLeftChild(newParent);
+				} else {
+					parentNode.setRightChild(newParent);
+				}
+			} else {
+
+			}
+
 		}
 	}
 
-	public static void delete(BinarySearchTree bst, int nodeValue) {
-
+	/**
+	 * @param parent
+	 * @param child
+	 * @return True: Left Child False: Right Child
+	 */
+	public static boolean isLeftChild(BinarySearchTree parent, BinarySearchTree child) {
+		if (parent == null || child == null) {
+			return false;
+		}
+		BinarySearchTree leftChild = (BinarySearchTree) parent.getLeftChild();
+		if (leftChild.getKey().compareTo(child.getKey()) == 0) {
+			return true;
+		}
+		return false;
 	}
 
 	@Override
 	public String toString() {
 		StringBuilder str = new StringBuilder(this.getKey());
 		if (this.getLeftChild() != null) {
-			str.append(", Left: " + this.getLeftChild().getKey());
+			str.append("[Left: " + this.getLeftChild().getKey());
+		} else {
+			str.append("[Left: null");
 		}
 		if (this.getRightChild() != null) {
-			str.append(", Right: " + this.getRightChild().getKey());
+			str.append(", Right: " + this.getRightChild().getKey() + "]");
+		} else {
+			str.append(", Right: null" + "]");
 		}
 		return str.toString();
 	}

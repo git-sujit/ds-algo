@@ -71,9 +71,38 @@ public class BinaryTreeTestCases {
 	public void testBinarySearchTreePredSucc() {
 		System.out.println("\n---------- START: BST PREDECESSOR/SUCCESSOR ----------");
 		int input1 = 20;
-		int input2 = 54;
-		System.out.println("\nPredecessor of : " + input1 + ": " + BinarySearchTree.predecessor(bstRandom, input1));
-		System.out.println("\nPredecessor of : " + input2 + ": " + BinarySearchTree.predecessor(bstFromList, input2));
+		int input2 = 3;
+		System.out.println("\nPredecessor of : " + input1 + "=> " + BinarySearchTree.predecessor(bstRandom, input1));
+		System.out.println("\nPredecessor of : " + input2 + "=> " + BinarySearchTree.predecessor(bstFromList, input2));
+		System.out.println("\nSuccessor of : " + input1 + "=> " + BinarySearchTree.successor(bstRandom, input1));
+		System.out.println("\nSuccessor of : " + input2 + "=> " + BinarySearchTree.successor(bstFromList, input2));
 		System.out.println("---------- END: BST PREDECESSOR/SUCCESSOR ----------");
+	}
+
+	@Test
+	public void testBinarySearchTreeDelete() {
+		System.out.println("\n---------- START: BST DELETE ----------");
+		int input = 0;
+		BinarySearchTree.printBST(bstFromList);
+		BinarySearchTree.delete(bstFromList, input);
+		System.out.println("\nAfter Deleting : " + input);
+		BinarySearchTree.printBST(bstFromList);
+		input = 80;
+		BinarySearchTree.delete(bstFromList, input);
+		System.out.println("\nAfter Deleting : " + input);
+		BinarySearchTree.printBST(bstFromList);
+		input = 54;
+		BinarySearchTree.delete(bstFromList, input);
+		System.out.println("\nAfter Deleting : " + input);
+		BinarySearchTree.printBST(bstFromList);
+		input = 78;
+		BinarySearchTree.delete(bstFromList, input);
+		System.out.println("\nAfter Deleting : " + input);
+		BinarySearchTree.printBST(bstFromList);
+		input = 17;
+		BinarySearchTree.delete(bstFromList, input);
+		System.out.println("\nAfter Deleting : " + input);
+		BinarySearchTree.printBST(bstFromList);
+		System.out.println("\n---------- END: BST DELETE ----------");
 	}
 }
