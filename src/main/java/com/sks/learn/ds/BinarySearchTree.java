@@ -2,6 +2,7 @@ package com.sks.learn.ds;
 
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.SynchronousQueue;
 
 import com.sks.learn.algo.BinaryTreeAlgorithms;
 
@@ -284,6 +285,10 @@ public class BinarySearchTree extends BinaryTree {
 	public static void delete(BinarySearchTree bst, int nodeValue) {
 		if (bst != null) {
 			BinarySearchTree nodeToBeDeleted = BinarySearchTree.searchRecursive(bst, nodeValue);
+			if (nodeToBeDeleted == null) {
+				System.out.println("\nNode Not Found: " + nodeValue);
+				return;
+			}
 			BinarySearchTree parentNode = (BinarySearchTree) nodeToBeDeleted.getParent();
 			// For Root Node
 			if (parentNode == null) {
@@ -305,21 +310,29 @@ public class BinarySearchTree extends BinaryTree {
 			// For Node having right child but no left child
 			else if (leftChild == null && rightChild != null) {
 				if (isLeftChild(parentNode, nodeToBeDeleted)) {
-					//parentNode.setLeftChild(newParent);
+					parentNode.setLeftChild(rightChild);
 				} else {
-					//parentNode.setRightChild(newParent);
+					parentNode.setRightChild(rightChild);
 				}
+				nodeToBeDeleted.setParent(null);
 			}
 			// For Node having left child but no right child
 			else if (leftChild != null && rightChild == null) {
-				BinarySearchTree newParent = predecessor(bst, Integer.valueOf(leftChild.getKey()));
 				if (isLeftChild(parentNode, nodeToBeDeleted)) {
-					parentNode.setLeftChild(newParent);
+					parentNode.setLeftChild(leftChild);
 				} else {
-					parentNode.setRightChild(newParent);
+					parentNode.setRightChild(leftChild);
 				}
+				nodeToBeDeleted.setParent(null);
 			} else {
-
+				BinarySearchTree successor = BinarySearchTree.successor(bst, nodeValue);
+				if (isLeftChild(parentNode, nodeToBeDeleted)) {
+					parentNode.setLeftChild(successor);
+					successor.setLeftChild(leftChild);
+					successor.setRightChild(rightChild);
+				} else {
+					parentNode.setRightChild(successor);
+				}
 			}
 
 		}
@@ -335,8 +348,10 @@ public class BinarySearchTree extends BinaryTree {
 			return false;
 		}
 		BinarySearchTree leftChild = (BinarySearchTree) parent.getLeftChild();
-		if (leftChild.getKey().compareTo(child.getKey()) == 0) {
-			return true;
+		if (leftChild != null) {
+			if (leftChild.getKey().compareTo(child.getKey()) == 0) {
+				return true;
+			}
 		}
 		return false;
 	}

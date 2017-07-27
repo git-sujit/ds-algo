@@ -20,7 +20,7 @@ public class BinaryTreeTestCases {
 	public static void setUpBeforeClass() throws Exception {
 		System.out.println("################################ START :: BINARY TREE ################################");
 		bstRandom = BinarySearchTree.prepareRandomBinarySearchTree_1(10);
-		int[] intArray = { 58, 72, 78, 45, 64, 3, 60, 90, 17, 54, 80, 24, 0 };
+		int[] intArray = { 58, 72, 78, 45, 64, 3, 60, 90, 17, 54, 80, 24, 0, 65, 95, 50 };
 		List<Integer> inputList = new ArrayList<Integer>();
 		for (int input : intArray) {
 			inputList.add(input);
@@ -100,6 +100,22 @@ public class BinaryTreeTestCases {
 		System.out.println("\nAfter Deleting : " + input);
 		BinarySearchTree.printBST(bstFromList);
 		input = 17;
+		BinarySearchTree.delete(bstFromList, input);
+		System.out.println("\nAfter Deleting : " + input);
+		BinarySearchTree.printBST(bstFromList);
+		input = 4;
+		BinarySearchTree.delete(bstFromList, input);
+		System.out.println("\nAfter Deleting : " + input);
+		BinarySearchTree.printBST(bstFromList);
+		input = 45;
+		BinarySearchTree.delete(bstFromList, input);
+		System.out.println("\nAfter Deleting : " + input);
+		BinarySearchTree.printBST(bstFromList);
+		input = 72;
+		BinarySearchTree.delete(bstFromList, input);
+		System.out.println("\nAfter Deleting : " + input);
+		BinarySearchTree.printBST(bstFromList);
+		input = 58;
 		BinarySearchTree.delete(bstFromList, input);
 		System.out.println("\nAfter Deleting : " + input);
 		BinarySearchTree.printBST(bstFromList);

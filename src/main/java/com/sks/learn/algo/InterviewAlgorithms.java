@@ -6,7 +6,7 @@ import java.util.List;
 public class InterviewAlgorithms {
 
 	public static void main(String[] args) {
-		String str = "1234";
+		//String str = "1234";
 		// System.out.println(permutationGenerator(str));
 		divideWithoutDivisionOrAmpersand(100, 1000);
 	}
