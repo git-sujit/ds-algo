@@ -1,14 +1,22 @@
 package com.sks.learn.algo;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class InterviewAlgorithms {
 
 	public static void main(String[] args) {
-		//String str = "1234";
+		// String str = "1234";
 		// System.out.println(permutationGenerator(str));
-		divideWithoutDivisionOrAmpersand(100, 1000);
+		// divideWithoutDivisionOrAmpersand(100, 1000);
+		int[] inputArray = { 8, 10, 20, 8, 7, 5, 10, 10, 7, 18, 9, 30, 20 };
+		System.out.println(findDuplicatesInArray(inputArray));
+		int[] inputArray_1 = { 1, 2, 3, 4, 5, 6, 7, 8 };
+		System.out.println(hasDuplicates(inputArray_1));
+		int[] inputArray_2 = { 1, 2, 1, 4, 5, 6, 7, 8 };
+		System.out.println(hasDuplicates(inputArray_2));
 	}
 
 	/**
@@ -61,4 +69,44 @@ public class InterviewAlgorithms {
 		System.out.println("quotient = " + quotient + ", remainder = " + remainder);
 	}
 
+	/**
+	 * Given an Array of Size N in which every number is between 1 and N, determine
+	 * if there are any duplicates
+	 * 
+	 * @param inputArray
+	 * @return
+	 */
+	public static boolean hasDuplicates(int[] inputArray) {
+		int inputSize = inputArray.length;
+		int noDuplicateSum = (inputSize * (inputSize + 1)) / 2;
+		int inputSum = 0;
+		for (int input : inputArray) {
+			inputSum += input;
+		}
+		if (inputSum == noDuplicateSum) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+	/**
+	 * Given an Array of Size N in which every number is between 1 and N, determine
+	 * if there are any duplicates
+	 * 
+	 * @param inputArray
+	 * @return
+	 */
+	public static Set<Integer> findDuplicatesInArray(int[] inputArray) {
+		Set<Integer> outputSet = new HashSet<Integer>();
+		Set<Integer> inputSet = new HashSet<Integer>();
+		for (int input : inputArray) {
+			if (inputSet.contains(input)) {
+				outputSet.add(input);
+			}
+			inputSet.add(input);
+		}
+		return outputSet;
+
+	}
 }
