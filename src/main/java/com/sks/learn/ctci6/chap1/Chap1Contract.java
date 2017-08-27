@@ -16,4 +16,6 @@ public interface Chap1Contract {
 	public abstract boolean isUniqueCtci(String s);
 
 	public abstract boolean isPermutationInMemory(String s1, String s2);
+
+	public abstract String compressString(String s);
 }

@@ -95,4 +95,31 @@ public class Chap1Implementation implements Chap1Contract {
 		return true;
 	}
 
+	@Override
+	public String compressString(String s) {
+		StringBuilder sb = new StringBuilder();
+		int len = s.length();
+		int i = 0;
+		while (i < len) {
+			System.out.println(" i = " + i);
+			char c = s.charAt(i);
+			int count = 1;
+			// TO STOP INFINITE LOOP
+			if (i == (len - 1)) {
+				break;
+			}
+			for (int j = i + 1; j < len; j++) {
+				i = j;
+				char c1 = s.charAt(j);
+				if (c == c1) {
+					count++;
+				} else {
+					break;
+				}
+			}
+			sb.append(""+c + count);
+		}
+		return sb.toString();
+	}
+
 }

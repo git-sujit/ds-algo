@@ -22,5 +22,10 @@ public class GeneralPurpose {
 				"Question1: isPermutationInMemory(" + s1 + ", " + s3 + ") = " + chap1.isPermutationInMemory(s1, s3));
 		System.out.println(
 				"Question1: isPermutationInMemory(" + s4 + ", " + s5 + ") = " + chap1.isPermutationInMemory(s4, s5));
+		
+		String s6 = "aaabbcdDDDee";
+		System.out.println(
+				"Compress String : "+s6+" : " + chap1.compressString("aaabbcdDDDee"));
+	
 	}
 }

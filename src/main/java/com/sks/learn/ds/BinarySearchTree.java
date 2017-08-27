@@ -2,7 +2,6 @@ package com.sks.learn.ds;
 
 import java.util.List;
 import java.util.Random;
-import java.util.concurrent.SynchronousQueue;
 
 import com.sks.learn.algo.BinaryTreeAlgorithms;
 

@@ -10,6 +10,8 @@ import java.util.List;
  *
  */
 public interface GraphInterface {
+	public abstract GraphVertex initializeGraph();
+
 	public abstract void addVertex(GraphVertex v, List<GraphVertex> adjList);
 
 	public abstract void removeVertex(GraphVertex v);
