@@ -19,4 +19,6 @@ public interface Chap4Contract {
 	public abstract List<LinkedList<BTNode>> getListOfDepths(BTNode root);
 
 	public abstract int nthFibonacci(int n);
+
+	public abstract void selectionSort(int[] arr);
 }

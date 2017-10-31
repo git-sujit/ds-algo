@@ -13,10 +13,6 @@ public class Chap4Implementation implements Chap4Contract {
 		// Node root = prepareGraph();
 		Chap4Implementation obj = new Chap4Implementation();
 		obj.stackAndQueueInJava();
-		// System.out.println("Depth First Search :");
-		// obj.depthFirstSearch(root);
-		// System.out.println("Breadth First Search :");
-		// obj.breadthFirstSearch(root);
 
 		// Find Path
 		Node root = new Node("R");
@@ -36,6 +32,13 @@ public class Chap4Implementation implements Chap4Contract {
 		six.setAdjacencyList(Arrays.asList(new Node[] { seven }));
 		seven.setAdjacencyList(Arrays.asList(new Node[] { one, four }));
 
+		System.out.println("Depth First Search :");
+		obj.depthFirstSearch(root);
+		System.out.println("Depth First Search(Lambda) :");
+		obj.depthFirstSearch_lambda(root);
+		// System.out.println("Breadth First Search :");
+		// obj.breadthFirstSearch(root);
+		
 		System.out.println(
 				"Does route exist between : " + three + ", " + seven + " = " + obj.doesRouteExists_BFS(three, seven));
 		System.out.println(
@@ -60,6 +63,17 @@ public class Chap4Implementation implements Chap4Contract {
 
 		int n = 10;
 		System.out.println("Fibonacci at position: " + n + ": " + obj.nthFibonacci(n));
+
+		int[] arr = { 2, 5, 6, 7, 2, 3, 0, 1 };
+		System.out.println("Un-sorted = ");
+		for (int i : arr) {
+			System.out.print(i + " ");
+		}
+		obj.selectionSort(arr);
+		System.out.println("\nSorted = ");
+		for (int i : arr) {
+			System.out.print(i + " ");
+		}
 	}
 
 	public static Node prepareGraph() {
@@ -117,6 +131,20 @@ public class Chap4Implementation implements Chap4Contract {
 		}
 	}
 
+	public void depthFirstSearch_lambda(Node root) {
+		if (root == null) {
+			return;
+		}
+		visitNode(root);
+		root.setVisited(true);
+		/*for (Node n : root.getAdjacencyList()) {
+			if (!n.isVisited()) {
+				depthFirstSearch(n);
+			}
+		}*/
+		root.getAdjacencyList().stream().filter(n1 -> !n1.isVisited()).forEach(n2 -> depthFirstSearch(n2));
+	}
+	
 	private void visitNode(Node n) {
 		System.out.println(n);
 	}
@@ -142,7 +170,25 @@ public class Chap4Implementation implements Chap4Contract {
 			}
 		}
 	}
-
+	public void breadthFirstSearch_lambda(Node root) {
+		if (root == null) {
+			return;
+		}
+		Queue<Node> queue = new LinkedList<Node>();
+		root.setVisited(true);
+		queue.add(root);
+		while (!queue.isEmpty()) {
+			// System.out.println("Queue Content: " + queue);
+			Node n = queue.remove();
+			visitNode(n);
+			for (Node n1 : n.getAdjacencyList()) {
+				if (!n1.isVisited()) {
+					n1.setVisited(true);
+					queue.add(n1);
+				}
+			}
+		}
+	}
 	@Override
 	// Breadth-First-Search, Iterative + Queue Based
 	public boolean doesRouteExists_BFS(Node n1, Node n2) {
@@ -237,5 +283,27 @@ public class Chap4Implementation implements Chap4Contract {
 			fib1 = fib;
 		}
 		return fib;
+	}
+
+	@Override
+	// Bubble the smallest at 0-index, second smallest at 1-index and so on
+	public void selectionSort(int[] arr) {
+		if (arr == null || arr.length == 0) {
+			return;
+		}
+		int len = arr.length;
+		for (int i = 0; i < len; i++) {
+			int minIndex = i;
+			for (int j = i + 1; j < arr.length; j++) {
+				if (arr[minIndex] > arr[j]) {
+					minIndex = j;
+				}
+			}
+			if (minIndex != i) {
+				int temp = arr[i];
+				arr[i] = arr[minIndex];
+				arr[minIndex] = temp;
+			}
+		}
 	}
 }
