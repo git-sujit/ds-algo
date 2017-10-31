@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
+import java.util.stream.Stream;
 
 public class Chap4Implementation implements Chap4Contract {
 
@@ -142,7 +143,10 @@ public class Chap4Implementation implements Chap4Contract {
 				depthFirstSearch(n);
 			}
 		}*/
-		root.getAdjacencyList().stream().filter(n1 -> !n1.isVisited()).forEach(n2 -> depthFirstSearch(n2));
+		//root.getAdjacencyList().stream().filter((n1) -> !n1.isVisited()).forEach((n2) -> depthFirstSearch(n2));
+		Stream<Node> stream = root.getAdjacencyList().stream();
+		Stream<Node> filteredStream = stream.filter((n1) -> !n1.isVisited());
+		filteredStream.forEach((n2) -> depthFirstSearch(n2));
 	}
 	
 	private void visitNode(Node n) {
