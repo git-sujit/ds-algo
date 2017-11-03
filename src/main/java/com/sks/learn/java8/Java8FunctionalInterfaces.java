@@ -55,6 +55,26 @@ public class Java8FunctionalInterfaces {
 		l.stream().filter(p1).forEach(t -> System.out.println(t));
 		l.stream().filter(p2).forEach(t -> System.out.println(t));
 		l.stream().filter(p3).forEach(t -> System.out.println(t));
+
+		System.out.println("Custom functional interface::");
+		// Custom Functional Interface: Using anonymous class
+		MyFunctionalInterface funcInt = new MyFunctionalInterface() {
+
+			@Override
+			public int sum(int a, int b) {
+				return a + b;
+			}
+
+		};
+
+		l.forEach((t) -> System.out.println(funcInt.sum(t, 2)));
+
+		System.out.println("Java8 Default Methods");
+		funcInt.myDefaultMethod_1(2);
+		funcInt.myDefaultMethod_2(4);
+		funcInt.myDefaultMethod_3(6);
+		System.out.println("Java8 Static Default Methods");
+		MyFunctionalInterface.myStaticDefaultMethod(10);
 	}
 
 }
