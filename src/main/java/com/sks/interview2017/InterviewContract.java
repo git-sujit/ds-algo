@@ -15,4 +15,6 @@ public interface InterviewContract {
 	 * @return
 	 */
 	public abstract List<String> getAllPossiblePermutations_FB_AUG_2017(String input);
+
+	int fibonacci(int n);
 }

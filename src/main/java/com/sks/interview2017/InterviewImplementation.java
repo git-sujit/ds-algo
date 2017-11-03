@@ -8,10 +8,13 @@ import java.util.Map;
 public class InterviewImplementation implements InterviewContract {
 	public static void main(String[] args) {
 		InterviewContract obj = new InterviewImplementation();
-		List<String> outList = obj.getAllPossiblePermutations_FB_AUG_2017("118");
-		System.out.println("Permutation Output List: ");
-		for(String s: outList) {
-			System.out.println(s);
+		/*
+		 * List<String> outList = obj.getAllPossiblePermutations_FB_AUG_2017("118");
+		 * System.out.println("Permutation Output List: "); for (String s : outList) {
+		 * System.out.println(s); }
+		 */
+		for (int i = 0; i < 30; i++) {
+			System.out.println(("fib(" + i + ") = " + obj.fibonacci(i)));
 		}
 	}
 
@@ -66,6 +69,22 @@ public class InterviewImplementation implements InterviewContract {
 		masterMap.put('8', new Character[] { 'v', 'w', 'x' });
 		masterMap.put('9', new Character[] { 'y', 'z' });
 		return masterMap;
+	}
+
+	@Override
+	public int fibonacci(int n) {
+		if (n == 0)
+			return 0;
+		if (n == 1)
+			return 1;
+		int a = 0;
+		int b = 1;
+		for (int i = 2; i < n; i++) {
+			int c = a + b;
+			a = b;
+			b = c;
+		}
+		return a + b;
 	}
 
 }
