@@ -8,12 +8,12 @@ import java.util.Set;
 public class InterviewAlgorithms {
 
 	public static void main(String[] args) {
-		System.out.println("Byte min="+Byte.MIN_VALUE+", max="+Byte.MAX_VALUE);
-		System.out.println("Short min="+Short.MIN_VALUE+", max="+Short.MAX_VALUE);
-		System.out.println("Int min="+Integer.MIN_VALUE+", max="+Integer.MAX_VALUE);
-		System.out.println("Long min="+Long.MIN_VALUE+", max="+Long.MAX_VALUE);
-		System.out.println("Char min="+Character.MIN_VALUE+", max="+Character.MAX_VALUE);
-		System.out.println("Byte min="+Byte.MIN_VALUE+", max="+Byte.MAX_VALUE);
+		System.out.println("Byte min=" + Byte.MIN_VALUE + ", max=" + Byte.MAX_VALUE);
+		System.out.println("Short min=" + Short.MIN_VALUE + ", max=" + Short.MAX_VALUE);
+		System.out.println("Int min=" + Integer.MIN_VALUE + ", max=" + Integer.MAX_VALUE);
+		System.out.println("Long min=" + Long.MIN_VALUE + ", max=" + Long.MAX_VALUE);
+		System.out.println("Char min=" + Character.MIN_VALUE + ", max=" + Character.MAX_VALUE);
+		System.out.println("Byte min=" + Byte.MIN_VALUE + ", max=" + Byte.MAX_VALUE);
 		// String str = "1234";
 		// System.out.println(permutationGenerator(str));
 		// divideWithoutDivisionOrAmpersand(100, 1000);
@@ -76,8 +76,8 @@ public class InterviewAlgorithms {
 	}
 
 	/**
-	 * Given an Array of Size N in which every number is between 1 and N, determine
-	 * if there are any duplicates
+	 * Given an Array of Size N in which every number is between 1 and N,
+	 * determine if there are any duplicates
 	 * 
 	 * @param inputArray
 	 * @return
@@ -97,8 +97,8 @@ public class InterviewAlgorithms {
 	}
 
 	/**
-	 * Given an Array of Size N in which every number is between 1 and N, determine
-	 * if there are any duplicates
+	 * Given an Array of Size N in which every number is between 1 and N,
+	 * determine if there are any duplicates
 	 * 
 	 * @param inputArray
 	 * @return
@@ -115,4 +115,34 @@ public class InterviewAlgorithms {
 		return outputSet;
 
 	}
+
+	/**
+	 * Microsoft First 
+	 * @param root
+	 * @return
+	 */
+	MSNode reverseCopyLinkdedList(MSNode root) {
+		MSNode cNext = null;
+		MSNode prev = root;
+		MSNode next = root.next;
+		while (next != null) {
+			MSNode cPrev = copyNode(prev);
+			cNext = copyNode(next);
+			cNext.next = cPrev;
+			prev = next;
+			next = next.next;
+		}
+		return cNext;
+	}
+
+	MSNode copyNode(MSNode n) {
+		MSNode copy = new MSNode();
+		copy.data = n.data;
+		return copy;
+	}
+}
+
+class MSNode {
+	public int data;
+	public MSNode next;
 }
