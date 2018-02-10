@@ -8,14 +8,16 @@ import java.util.Map;
 public class InterviewImplementation implements InterviewContract {
 	public static void main(String[] args) {
 		InterviewContract obj = new InterviewImplementation();
+		
+		  List<String> outList = obj.getAllPossiblePermutations_FB_AUG_2017("118");
+		  System.out.println("Permutation Output List: "); for (String s : outList) {
+		  System.out.println(s); }
+		 
 		/*
-		 * List<String> outList = obj.getAllPossiblePermutations_FB_AUG_2017("118");
-		 * System.out.println("Permutation Output List: "); for (String s : outList) {
-		 * System.out.println(s); }
-		 */
 		for (int i = 0; i < 30; i++) {
 			System.out.println(("fib(" + i + ") = " + obj.fibonacci(i)));
 		}
+		*/
 	}
 
 	@Override
