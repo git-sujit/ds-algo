@@ -11,6 +11,23 @@ public class LeetCodeUtility_MEDIUM {
 		int[] num = { -1, 0, 1, 2, -1, -4 };
 		// System.out.println("threeSum = " + threeSum(num));
 		System.out.println("threeSum_1 = " + threeSum_1(num));
+		int dividend = 7;
+		int divisor = 3;
+		System.out.println(
+				"dividend = " + dividend + ", divisor = " + divisor + ": Quotient = " + divide(dividend, divisor));
+	}
+
+	public static int divide(int dividend, int divisor) {
+		if (dividend == 0)
+			return 0;
+		int quotient = 0;
+		while (dividend > 0) {
+			dividend -= divisor;
+			if (dividend >= 0) {
+				quotient++;
+			}
+		}
+		return quotient;
 	}
 
 	public static List<List<Integer>> threeSum_1(int[] nums) {

@@ -8,6 +8,8 @@ import java.util.Stack;
 
 public class LeetCodeUtility_EASY {
 	public static void main(String[] args) {
+		testHashSet();
+		System.out.println("is Happy = " + isHappy_RECURSIVE(19));
 		String s1 = "PAYPALISHIRING";
 		System.out.println("s1=" + s1 + ", converted=" + convert(s1, 3));
 		int[] nums = { 1, 1, 2, 3, 3, 4, 4, 4, 7, 8 };
@@ -39,6 +41,158 @@ public class LeetCodeUtility_EASY {
 		n = Integer.MAX_VALUE;
 		System.out.println("Reverse integer: " + n + " :: " + reverseInteger(n));
 
+		String haystack = "mississippi";
+		String needle = "issip";
+		System.out.println("Found at : " + strStr(haystack, needle));
+
+	}
+
+	public int lengthOfLastWord(String s) {
+		if (s == null || "".equals(s)) {
+			return 0;
+		}
+		int len = s.length();
+		String lastWord = "";
+		for (int i = 0; i < len; i++) {
+			char c = s.charAt(i);
+			if (c == ' ') {
+				lastWord = "";
+			} else {
+				lastWord = lastWord + c;
+			}
+		}
+		System.out.println("lastWord = " + lastWord);
+		return lastWord.length();
+	}
+
+	public static boolean isHappy(int n) {
+		Set<Integer> s = new HashSet<Integer>();
+		s.add(n);
+		int squareSum = squareDigitSum(n);
+		System.out.println("squareSum = " + squareSum);
+		while (squareSum != 1) {
+			if (!s.add(squareSum)) {
+				return false;
+			}
+			squareSum = squareDigitSum(squareSum);
+		}
+		return true;
+	}
+
+	public static boolean isHappy_RECURSIVE(int n) {
+		int squareSum = squareDigitSum(n);
+		System.out.println("squareSum = " + squareSum);
+		if (squareSum == 1) {
+			return true;
+		}
+		return isHappy_RECURSIVE(squareSum);
+	}
+
+	private static int squareDigitSum(int n) {
+		int sum = 0;
+		while (n != 0) {
+			sum = sum + (int) Math.pow(n % 10, 2);
+			n = n / 10;
+		}
+		return sum;
+	}
+
+	public int[] plusOne(int[] digits) {
+		int len = digits.length;
+		int add = 1;
+		int[] result = new int[len];
+		for (int i = len - 1; i >= 0; i--) {
+			int sum = digits[i] + add;
+			if (sum >= 10) {
+				add = 1;
+				result[i] = sum % 10;
+			} else {
+				add = 0;
+				result[i] = sum;
+			}
+
+		}
+		if (add == 1) {
+			int[] result1 = new int[len + 1];
+			result1[0] = add;
+			for (int i = 0; i < len; i++) {
+				result1[i + 1] = result[i];
+			}
+			return result1;
+		}
+		return result;
+	}
+
+	// TODO
+	public boolean isValidSudoku(char[][] board) {
+		for (int i = 0; i < 9; i++) {
+			if (hasDuplicates(board, 0, i, 9, i)) {
+				return false;
+			}
+			if (hasDuplicates(board, i, 0, i, 9)) {
+				return false;
+			}
+		}
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				if (hasDuplicates(board, i * 3, j * 3, i * 3 + 3, j * 3 + 3)) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
+	public boolean hasDuplicates(char[][] board, int x1, int y1, int x2, int y2) {
+		String existing = "";
+		for (int i = x1; i < x2; i++) {
+			for (int j = y1; j < y2; j++) {
+				if (board[i][j] != '.' && existing.contains("" + board[i][j])) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	public static int strStr1(String haystack, String needle) {
+		for (int i = 0;; i++) {
+			for (int j = 0;; j++) {
+				if (j == needle.length())
+					return i;
+				if (i + j == haystack.length())
+					return -1;
+				if (needle.charAt(j) != haystack.charAt(i + j))
+					break;
+			}
+		}
+	}
+
+	public static int strStr(String haystack, String needle) {
+		if (haystack == null || "".equals(haystack) || needle == null || "".equals(needle)) {
+			return -1;
+		}
+		int len1 = haystack.length();
+		int len2 = needle.length();
+		if (len1 < len2) {
+			return -1;
+		}
+		int i = 0, j = 0;
+		while (i < len1) {
+			char ch = haystack.charAt(i);
+			char cn = needle.charAt(j);
+			while (ch == cn && j < len2) {
+				if (j == len2 - 1) {
+					return i;
+				}
+				j++;
+				ch = haystack.charAt(i + j);
+				cn = needle.charAt(j);
+			}
+			j = 0;
+			i++;
+		}
+		return -1;
 	}
 
 	public int removeElement(int[] nums, int val) {
@@ -308,5 +462,13 @@ public class LeetCodeUtility_EASY {
 		ListNode(int data) {
 			this.val = data;
 		}
+	}
+
+	private static void testHashSet() {
+		Set<Integer> s = new HashSet<Integer>();
+		System.out.println(s.add(1));
+		System.out.println(s.add(2));
+		System.out.println(s.add(3));
+		System.out.println(s.add(1));
 	}
 }
