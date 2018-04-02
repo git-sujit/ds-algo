@@ -83,6 +83,21 @@ public class SortingAlgorithms {
 		return a;
 	}
 
+	public static void mergeSortRecursive(int[] a) {
+		if (a == null)
+			return;
+		mergeSortRecursive(a, 0, a.length);
+	}
+
+	public static void mergeSortRecursive(int[] a, int start, int end) {
+		if(end == 0){
+			return;
+		}
+		int mid = (start+end)/2;
+		mergeSortRecursive(a, 0, mid);
+		mergeSortRecursive(a, mid, end);
+	}
+
 	public static void shellSort(int[] a) {
 		if (a == null || a.length <= 1) {
 			return;

@@ -12,6 +12,34 @@ public class Chap6Implementation {
 
 	}
 
+	/**
+	 * Not fully implemented
+	 * 
+	 * @param max
+	 */
+	public static void sieveOfEratosthnes(int max) {
+		boolean[] isPrime = new boolean[max + 1];
+		for (int i = 0; i < max + 1; i++) {
+			isPrime[i] = true;
+		}
+
+		isPrime[2] = false;
+		for (int i = 2; i < max; i++) {
+			if (isPrime[i]) {
+				crossOff(isPrime, i);
+			}
+		}
+
+	}
+
+	public static void crossOff(boolean[] a, int p) {
+		for (int i = p + 1; i < a.length; i++) {
+			if (i % p == 0) {
+
+			}
+		}
+	}
+
 	public static List<Integer> allPrimesLessThanMax_sieve_of_Eratosthenes(int max) {
 		List<Integer> primeList = new ArrayList<Integer>();
 		if (max < 2) {
