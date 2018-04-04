@@ -2,6 +2,8 @@ package com.sks.learn.ds;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Insert/Delete/Search operation on Trie Data Structure <br>
@@ -17,10 +19,25 @@ import java.util.Map;
  *         Refer: https://www.youtube.com/watch?v=AXjmTQ8LEoI
  */
 public class TrieDS {
-	TNode root;
+	Node root;
+	Logger log = Logger.getLogger(TrieDS.class.getName());
+
+	/**
+	 * Generic TrieNode, can be used for any character in Java (Unicode)
+	 */
+	class Node {
+		Map<Character, Node> children;
+		boolean isWord;
+
+		// Constructors
+		Node() {
+			this.children = new HashMap<Character, Node>();
+			this.isWord = false;
+		}
+	}
 
 	public TrieDS() {
-		root = new TNode();
+		root = new Node();
 	}
 
 	/**
@@ -31,23 +48,21 @@ public class TrieDS {
 	 */
 	public void insertIterative(String word) {
 		// Boundary Condition
-		if (word == null || "".equals(word)) {
-			System.out.println("Error: Word is null/empty");
+		if (word == null || word.isEmpty()) {
+			log.log(Level.SEVERE, "Error: Word is null/empty");
 			return;
 		}
 		// Regular Case
-		int len = word.length();
-		TNode p = root;
-		for (int i = 0; i < len; i++) {
-			char c = word.charAt(i);
-			TNode p1 = p.children.get(c);
-			if (p1 == null) {
-				p1 = new TNode();
-				p.children.put(c, p1);
+		Node curr = root;
+		for (char ch : word.toCharArray()) {
+			Node n = curr.children.get(ch);
+			if (n == null) {
+				n = new Node();
+				curr.children.put(ch, n);
 			}
-			p = p1;
+			curr = n;
 		}
-		p.isWord = true;
+		curr.isWord = true;
 	}
 
 	/**
@@ -57,18 +72,18 @@ public class TrieDS {
 		insertRecursive(root, word, 0);
 	}
 
-	private void insertRecursive(TNode p, String word, int index) {
+	private void insertRecursive(Node curr, String word, int index) {
 		if (index == word.length()) {
-			p.isWord = true;
+			curr.isWord = true;
 			return;
 		}
-		char c = word.charAt(index);
-		TNode p1 = p.children.get(c);
-		if (p1 == null) {
-			TNode node = new TNode();
-			node.children.put(c, node);
+		char ch = word.charAt(index);
+		Node n = curr.children.get(ch);
+		if (n == null) {
+			Node node = new Node();
+			node.children.put(ch, node);
 		}
-		insertRecursive(p1, word, index + 1);
+		insertRecursive(n, word, index + 1);
 	}
 
 	/**
@@ -80,17 +95,15 @@ public class TrieDS {
 		if (word == null || word.isEmpty()) {
 			return false;
 		}
-		TNode p = root;
-		int len = word.length();
-		for (int i = 0; i < len; i++) {
-			char c = word.charAt(i);
-			TNode p1 = p.children.get(c);
-			if (p1 == null) {
+		Node curr = root;
+		for (char ch : word.toCharArray()) {
+			Node n = curr.children.get(ch);
+			if (n == null) {
 				return false;
 			}
-			p = p1;
+			curr = n;
 		}
-		return p.isWord;
+		return curr.isWord;
 	}
 
 	/**
@@ -103,15 +116,15 @@ public class TrieDS {
 		return searchWordRecursive(root, word, 0);
 	}
 
-	private boolean searchWordRecursive(TNode p, String word, int index) {
+	private boolean searchWordRecursive(Node curr, String word, int index) {
 		if (index == word.length()) {
-			return p.isWord;
+			return curr.isWord;
 		}
-		TNode p1 = p.children.get(word.charAt(index));
-		if (p1 == null) {
+		Node n = curr.children.get(word.charAt(index));
+		if (n == null) {
 			return false;
 		} else {
-			return searchWordRecursive(p1, word, index + 1);
+			return searchWordRecursive(n, word, index + 1);
 		}
 	}
 
@@ -124,7 +137,7 @@ public class TrieDS {
 		return deleteWordRecursive(root, word, 0);
 	}
 
-	private boolean deleteWordRecursive(TNode p, String word, int index) {
+	private boolean deleteWordRecursive(Node p, String word, int index) {
 		if (index == word.length()) {
 			// If word does not exist
 			if (!p.isWord) {
@@ -137,7 +150,7 @@ public class TrieDS {
 
 		}
 		char ch = word.charAt(index);
-		TNode p1 = p.children.get(ch);
+		Node p1 = p.children.get(ch);
 		// If word does not exist
 		if (p1 == null) {
 			return false;
@@ -157,11 +170,11 @@ public class TrieDS {
 		if (word == null || word.isEmpty()) {
 			System.out.println("Invalid Input");
 		}
-		TNode p = root;
+		Node p = root;
 		int len = word.length();
 		for (int i = 0; i < len; i++) {
 			char c = word.charAt(i);
-			TNode p1 = p.children.get(c);
+			Node p1 = p.children.get(c);
 			if (p1 == null) {
 				System.out.println("Word not present");
 			}
@@ -189,7 +202,7 @@ public class TrieDS {
 	/**
 	 * @param root
 	 */
-	public void traverseTrie(TNode root) {
+	public void traverseTrie(Node root) {
 
 	}
 
@@ -200,18 +213,4 @@ public class TrieDS {
 
 	}
 
-}
-
-/**
- * Generic TrieNode, can be used for any character in Java (Unicode)
- */
-class Node {
-	Map<Character, TNode> children;
-	boolean isWord;
-
-	// Constructors
-	Node() {
-		this.children = new HashMap<Character, TNode>();
-		this.isWord = false;
-	}
 }

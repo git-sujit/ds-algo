@@ -10,10 +10,53 @@ import java.util.Map;
  *         Refer: https://www.youtube.com/watch?v=NZ3lP33mXlY&t=886s
  */
 public class TrieDSAutoComplete {
-	TNode root;
+	Node root;
 
-	public static void main(String[] args) {
+	class Node {
+		// Prefix to store the point till which word is traversed
+		String prefix;
+		Map<Character, Node> children;
+		boolean isWord;
 
+		Node(String prefix) {
+			this.prefix = prefix;
+			this.children = new HashMap<Character, Node>();
+			this.isWord = false;
+		}
+	}
+
+	public TrieDSAutoComplete() {
+		this.root = new Node("");
+	}
+
+	/**
+	 * Get all words as array of Strings <br>
+	 * Insert all the words in Constructor
+	 * 
+	 * @param dict
+	 */
+	public TrieDSAutoComplete(String[] dict) {
+		for (String s : dict) {
+			insertWord(s);
+		}
+	}
+
+	private void insertWord(String word) {
+		if (word == null || word.isEmpty()) {
+			// TODO
+		}
+		Node curr = root;
+		for (int i = 0; i < word.length(); i++) {
+			char ch = word.charAt(i);
+			Node n = curr.children.get(ch);
+			if (n == null) {
+				// TODO check why i+1
+				n = new Node(word.substring(i + 1));
+				curr.children.put(ch, n);
+			}
+			curr = n;
+		}
+		curr.isWord = true;
 	}
 
 	/**
@@ -27,33 +70,31 @@ public class TrieDSAutoComplete {
 	 */
 	public List<String> getWordsForPrefix(String pre) {
 		// LinkedList because Insertion is faster
-		List<String> result = new LinkedList<String>();
-		TNode curr = root;
+		List<String> results = new LinkedList<String>();
+		Node curr = root;
 		for (char ch : pre.toCharArray()) {
-			TNode n = curr.children.get(ch);
+			Node n = curr.children.get(ch);
 			if (n == null) {
 				// log.error("Invalid Prefix");
-				return result;
+				return results;
 			}
 			curr = n;
 		}
-		return getWordsForPrefix(curr, result);
+		findAllChildWords(curr, results);
+		return results;
 	}
 
-	private List<String> getWordsForPrefix(TNode curr, List<String> result) {
-		return null;
+	private void findAllChildWords(Node curr, List<String> results) {
+		if (curr.isWord) {
+			results.add(curr.prefix);
+		}
+
+		for (char ch : curr.children.keySet()) {
+			findAllChildWords(curr.children.get(ch), results);
+		}
 	}
-}
 
-class TNode {
-	// Prefix to store the point till which word is traversed
-	String prefix;
-	Map<Character, TNode> children;
-	boolean isWord;
+	public static void main(String[] args) {
 
-	TNode(String prefix) {
-		this.prefix = prefix;
-		this.children = new HashMap<Character, TNode>();
-		this.isWord = false;
 	}
 }
