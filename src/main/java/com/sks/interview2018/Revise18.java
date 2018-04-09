@@ -24,6 +24,27 @@ public class Revise18 {
 		itocMap.put(9, Arrays.asList('w', 'x', 'y'));
 	}
 
+	/**
+	 * Sorting Algorithms <br>
+	 * - 1. Selection Sort: O(n^2), In-Place, Unstable sort (Natural way of
+	 * sorting, Put min at first place and so on): Not data sensitive sort <br>
+	 * - 2. Bubble Sort: O(n^2), In-Place, Unstable sort (Put max to the end for
+	 * each pass): Improvement- If swaps zero then break because its sorted
+	 * now<br>
+	 * - 3. Insertion Sort: O(n^2), In-place, Stable Card Players) : There are
+	 * many movements : Efficient when input is small and almost sorted<br>
+	 * - 4. Shell Sort: O(n(logn)^2), In-place, Unstable : Improved Insertion
+	 * Sort by making sublist and increments(5,3,1) : By shell- divide increment
+	 * by 2 in each pass, should be relatively prime<br>
+	 * - 5. Merge Sort: N(nlogn), Not in-place, Stable: Divide & Conquer,
+	 * Recursive & Top-Down: Iterative is Bottom-Up <br>
+	 * - 6. Quick Sort(Hoare-1959): Time=O(nlogn)- Space=O(n), Not in-place,
+	 * Unstable Sort: Top 10 algorithm: Divide & Conquer-Pivot: Best Case: if
+	 * partition is balanced(Half)- O(nlogn) : Worst Case: Reverse sorted-
+	 * O(n^2) <br>
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		// Fibonnaci: Not efficient --> Time: O(2^n) Memory: In-Memory
 		int n = 5;
@@ -49,6 +70,137 @@ public class Revise18 {
 		System.out.println("Input:: String = " + str);
 		List<String> lComs = letterCombinations(str);
 		System.out.println("Number of permutatitons = " + lComs.size() + "\nPermutations = " + lComs);
+	}
+
+	/**
+	 * Binary Search: Time Complexity- O(logn), In-Place
+	 */
+	public int binarySearch(int[] a, int s) {
+		if (a == null || a.length == 0) {
+			return -1;
+		}
+		return binarySearchRecursive(a, s, 0, a.length - 1);
+	}
+
+	public int binarySearchRecursive(int[] a, int s, int l, int h) {
+		if (l > h) {
+			return -1;
+		}
+		int m = (l + h) / 2;
+		if (s < a[m]) {
+			return binarySearchRecursive(a, s, l, m - 1);
+		} else if (s > a[m]) {
+			return binarySearchRecursive(a, s, m + 1, h);
+		} else {
+			return m;
+		}
+	}
+
+	public int binarySearchIterative(int[] a, int s) {
+		int l = 0;
+		int h = a.length - 1;
+		while (l <= h) {
+			int m = (l + h) / 2;
+			if (s < a[m]) {
+				h = m - 1;
+			} else if (s > a[m]) {
+				l = m + 1;
+			} else {
+				return m;
+			}
+		}
+		return -1;
+	}
+
+	/**
+	 * Sorting Algorithms
+	 */
+	public void mergeSort(int[] a) {
+		if (a == null || a.length == 0) {
+			return;
+		}
+		int[] res = new int[a.length];
+		mergeSort(a, res, 0, a.length - 1);
+	}
+
+	private void mergeSort(int[] a, int[] res, int low, int up) {
+		// Base Case of recursion
+		if (low >= up)
+			return;
+		int med = (low + up) / 2;
+		mergeSort(a, res, low, med);
+		mergeSort(a, res, med + 1, up);
+		merge(a, res, low, med, med + 1, up);
+		copy(a, res, low, up);
+	}
+
+	private void merge(int[] a, int[] res, int l1, int u1, int l2, int u2) {
+		int i = l1;
+		int j = l2;
+		int k = l1;
+		while ((i <= u1) && (j <= u2)) {
+			if (a[i] <= a[j]) {
+				res[k++] = a[i++];
+
+			} else {
+				res[k++] = a[j++];
+			}
+		}
+		while (i <= u1) {
+			res[k++] = a[i++];
+
+		}
+		while (j < u2) {
+			res[k++] = a[j++];
+		}
+	}
+
+	private void copy(int[] a, int[] res, int low, int up) {
+		for (int i = low; i <= up; i++) {
+			a[i] = res[i];
+		}
+
+	}
+
+	public void quickSort(int[] a) {
+		if (a == null || a.length == 0) {
+			return;
+		}
+		quickSort(a, 0, a.length - 1);
+	}
+
+	private void quickSort(int[] a, int low, int up) {
+		if (low >= up)
+			return;
+		int pivot = partition(a, low, up);
+		quickSort(a, low, pivot - 1);
+		quickSort(a, pivot + 1, up);
+	}
+
+	private int partition(int[] a, int low, int up) {
+		int temp, i, j, pivot;
+		pivot = a[low];
+		i = low + 1;
+		j = up;
+		while (i <= j) {
+			while (a[i] < pivot && i < up) {
+				i++;
+			}
+			while (a[j] > pivot) {
+				j--;
+			}
+			if (i < j) {
+				temp = a[i];
+				a[i] = a[j];
+				a[j] = temp;
+				i++;
+				j--;
+			} else {
+				break;
+			}
+
+		}
+		return j;
 	}
 
 	public static int fibonacci_NOTefficient(int n) {
@@ -196,6 +348,86 @@ public class Revise18 {
 	}
 
 	/**
+	 * Binary Tree Algorithms
+	 */
+	class BTNode {
+		public int data;
+		public BTNode left;
+		public BTNode right;
+
+		@Override
+		public boolean equals(Object obj) {
+			return this.data == ((BTNode) obj).data;
+		}
+	}
+
+	/**
+	 * TIME COMPLEXITY: O(N)
+	 * 
+	 * @param root
+	 * @param n1
+	 * @param n2
+	 * @return
+	 */
+	public BTNode lowestCommonAncestor(BTNode root, BTNode n1, BTNode n2) {
+		if (root == null) {
+			return null;
+		}
+		if (root == n1 || root == n2) {
+			return root;
+		}
+		BTNode lcn = lowestCommonAncestor(root.left, n1, n2);
+		BTNode rcn = lowestCommonAncestor(root.right, n1, n2);
+
+		if (lcn != null && rcn != null) {
+			return root;
+		}
+		if (lcn == null && rcn == null) {
+			return null;
+		}
+		if (lcn == null && rcn != null) {
+			return rcn;
+		}
+		if (lcn != null && rcn == null) {
+			return lcn;
+		}
+		return null;
+		// Short Form
+		// return lcn != null ? lcn : rcn;
+
+	}
+
+	public BTNode lowestCommonAncestor_BST_Recursive(BTNode root, BTNode n1, BTNode n2) {
+		if (root == null)
+			return null;
+		if (root.data > Math.max(n1.data, n2.data)) {
+			return lowestCommonAncestor_BST_Recursive(root.left, n1, n2);
+		} else if (root.data < Math.min(n1.data, n2.data)) {
+			return lowestCommonAncestor_BST_Recursive(root.right, n1, n2);
+		} else {
+			return root;
+		}
+	}
+
+	public BTNode lowestCommonAncestor_BST(BTNode root, BTNode n1, BTNode n2) {
+		if (root == null)
+			return null;
+		BTNode curr = root;
+		while (curr != null) {
+			if (n1.data < root.data && n2.data < root.data) {
+				curr = root.left;
+				continue;
+			} else if (n1.data > root.data && n2.data > root.data) {
+				curr = root.right;
+				continue;
+			} else {
+				return curr;
+			}
+		}
+		return null;
+	}
+
+	/**
 	 * Graph Algorithms
 	 */
 	class Node {
@@ -208,39 +440,41 @@ public class Revise18 {
 	 * Recursive DFS algorithm <br>
 	 * Stack Based
 	 * 
-	 * @param root
+	 * @param n
 	 */
-	public void dfs(Node root) {
+	public void dfs(Node n) {
 		// Base Case
-		if (root == null) {
+		if (n == null) {
 			return;
 		}
 		// Visit the Node
-		System.out.println(root.data);
-		root.visited = true;
-		// Visit the children (Stack behavior)
-		for (Node n : root.children) {
+		System.out.println(n.data);
+		n.visited = true;
+
+		// Visit the children (Stack behavior) because the children which is
+		// last is visited first(LIFO)
+		for (Node cn : n.children) {
 			// Recursive Case
-			if (!n.visited) {
-				dfs(n);
+			if (!cn.visited) {
+				dfs(cn);
 			}
 		}
 	}
 
 	/**
-	 * Iterative NFS algorithm <br>
+	 * Iterative BFS algorithm <br>
 	 * Queue Based <br>
 	 * Kind of Level Order Traversal <br>
 	 * 
-	 * @param root
+	 * @param n
 	 */
-	public void bfs(Node root) {
-		if (root == null) {
+	public void bfs(Node n) {
+		if (n == null) {
 			return;
 		}
 		Queue<Node> cq = new LinkedList<Node>();
-		cq.add(root);
-		bfs(root, cq);
+		cq.add(n);
+		bfs(n, cq);
 	}
 
 	private void bfs(Node p, Queue<Node> cq) {
@@ -249,6 +483,7 @@ public class Revise18 {
 			Node n = cq.remove();
 			if (!n.visited) {
 				System.out.println(n.data);
+				n.visited = true;
 			}
 			Node[] children = n.children;
 			cq.addAll(Arrays.asList(children));
