@@ -11,7 +11,7 @@ public class Chap8Implementation {
 
 	public static void main(String[] args) {
 		long ts1 = System.currentTimeMillis();
-		towerOfHanoi(20, 'A', 'B', 'C');
+		towerOfHanoi(4, 'A', 'B', 'C');
 		System.out.println("No of moves in Hanoi = " + moves_toi);
 		long ts2 = System.currentTimeMillis();
 		System.out.println("Time Taken to nmove disk = " + (ts2 - ts1));
@@ -27,7 +27,7 @@ public class Chap8Implementation {
 		List<List<Integer>> subSet = powerSubSet(lst);
 		System.out.println("subSet size = " + subSet.size() + "\n subSet = " + subSet);
 		// System.out.println("recMultiply = " + recMultiply(3, 0, 0));
-
+		System.out.println("recMultiply_1 = "+recMultiply_1(2,5));
 		List<String> l = perm_final("abc");
 		for (String s : l) {
 			System.out.print(s + " ");
@@ -139,6 +139,16 @@ public class Chap8Implementation {
 		}
 		temp = temp + n1;
 		return recMultiply(n1, n2 - 1, temp);
+	}
+
+	public static int recMultiply_1(int n1, int n2) {
+		if (n2 > n1) {
+			return recMultiply_1(n2, n1);
+		}
+		if (n2 == 0) {
+			return 0;
+		}
+		return n1 + recMultiply_1(n1, n2 - 1);
 	}
 
 	public static List<String> perm_final(String s) {

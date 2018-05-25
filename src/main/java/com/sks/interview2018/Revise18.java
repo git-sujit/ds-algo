@@ -21,7 +21,7 @@ public class Revise18 {
 		itocMap.put(6, Arrays.asList('m', 'n', 'o'));
 		itocMap.put(7, Arrays.asList('p', 'q', 'r', 's'));
 		itocMap.put(8, Arrays.asList('t', 'u', 'v'));
-		itocMap.put(9, Arrays.asList('w', 'x', 'y'));
+		itocMap.put(9, Arrays.asList('w', 'x', 'y', 'z'));
 	}
 
 	/**
@@ -46,6 +46,10 @@ public class Revise18 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		printPrime(100);
+		int num = 14;
+		int base = 8;
+		System.out.println("Converting " + num + " to base " + base + " = " + baseConv(num, base));
 		// Fibonnaci: Not efficient --> Time: O(2^n) Memory: In-Memory
 		int n = 5;
 		System.out.println("fibonacci_NOTefficient(" + n + ") = " + fibonacci_NOTefficient(10));
@@ -72,8 +76,49 @@ public class Revise18 {
 		System.out.println("Number of permutatitons = " + lComs.size() + "\nPermutations = " + lComs);
 	}
 
+	public static void printPrime(int n) {
+		for (int i = 0; i <= n; i++) {
+			if (isPrime(i)) {
+				System.out.print(i + " ");
+			}
+		}
+	}
+
+	public static boolean isPrime(int n) {
+		if (n < 2)
+			return false;
+		int pivot = (int) Math.sqrt(new Double(n));
+		pivot = pivot + 1;
+		// System.out.println("sqrt( " + n + ") = " + pivot);
+		for (int i = 2; i < pivot; i++) {
+			if (n % i == 0)
+				return false;
+		}
+		return true;
+	}
+
 	/**
-	 * Binary Search: Time Complexity- O(logn), In-Place
+	 * Conversion to any Base
+	 * 
+	 * @param n
+	 * @param b
+	 * @param c
+	 * @return
+	 */
+	public static String baseConv(int n, int b) {
+		if (n / b == 0) {
+			return Integer.toString(n % b);
+		}
+		return baseConv(n / b, b) + n % b;
+	}
+
+	/**
+	 * Binary Search: <br>
+	 * 
+	 * Required: Sorted Input <br>
+	 * Work on Index of array(Inclusive) <br>
+	 * Time Complexity- O(logn) <br>
+	 * Memory Complexity: In-Place
 	 */
 	public int binarySearch(int[] a, int s) {
 		if (a == null || a.length == 0) {
@@ -204,7 +249,7 @@ public class Revise18 {
 	}
 
 	public static int fibonacci_NOTefficient(int n) {
-		if (n == 0 || n == 1) {
+		if (n < 2) {
 			return n;
 		}
 		return fibonacci_NOTefficient(n - 1) + fibonacci_NOTefficient(n - 2);
@@ -225,6 +270,14 @@ public class Revise18 {
 		return ma[n];
 	}
 
+	/**
+	 * Remember: STD -> SDT & TSD (Only T is moving)
+	 * 
+	 * @param n
+	 * @param s
+	 * @param t
+	 * @param d
+	 */
 	public static void towerOfHanoi(int n, char s, char t, char d) {
 		if (n == 1) {
 			System.out.println("Move disk-" + n + " ::  " + s + "->" + d);
@@ -237,8 +290,9 @@ public class Revise18 {
 
 	/**
 	 * Chapter-8 of CTCI <br>
-	 * Logic: subset{1,2,3} = [subset{1,2}] + [3+subset{1,2}] <br>
-	 * subset{} = {} subset{1} = {} + {1} <br>
+	 * Logic: subset{1,2,3} = [subset{1,2}] + [subset{1,2}+3] <br>
+	 * subset{} = {} <br>
+	 * subset{1} = {} + {1} <br>
 	 * subset{1,2} = {}, {1} + {2}, {1,2} <br>
 	 * subset{1,2,3} = {}, {1}, {2}, {1,2} + {3}, {1,3}, {2,3}, {1,2,3} <br>
 	 * 
@@ -288,7 +342,7 @@ public class Revise18 {
 	 * 
 	 * Number of Permutations = NcN = n! <br>
 	 * 
-	 * Time Complexity: O(!n)
+	 * Time Complexity: O(n!)
 	 * 
 	 * @param str
 	 * @return
@@ -314,7 +368,9 @@ public class Revise18 {
 	}
 
 	/**
-	 * Facebook Interview
+	 * Facebook Interview <br>
+	 * Difference from Permutation: Take char at 0th index because its indexed
+	 * per
 	 * 
 	 * @param digits
 	 * @return
@@ -334,6 +390,7 @@ public class Revise18 {
 			System.out.println("Not valid number");
 			ex.printStackTrace();
 		}
+		// This is important
 		char ch = digits.charAt(0);
 		List<Character> letters = itocMap.get(new Integer("" + ch));
 		// System.out.println("ch=" + ch + ", letters=" + letters);
@@ -428,7 +485,8 @@ public class Revise18 {
 	}
 
 	/**
-	 * Graph Algorithms
+	 * Graph Algorithms <br>
+	 * Based on adjacency List
 	 */
 	class Node {
 		public int data;
@@ -447,9 +505,11 @@ public class Revise18 {
 		if (n == null) {
 			return;
 		}
-		// Visit the Node
-		System.out.println(n.data);
-		n.visited = true;
+		// Visit the Node if not visited
+		if (!n.visited) {
+			visit(n);
+			n.visited = true;
+		}
 
 		// Visit the children (Stack behavior) because the children which is
 		// last is visited first(LIFO)
@@ -459,6 +519,10 @@ public class Revise18 {
 				dfs(cn);
 			}
 		}
+	}
+
+	private void visit(Node n) {
+		System.out.println("Visited: " + n.data);
 	}
 
 	/**

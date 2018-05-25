@@ -471,4 +471,23 @@ public class LeetCodeUtility_EASY {
 		System.out.println(s.add(3));
 		System.out.println(s.add(1));
 	}
+
+	public int longestPalindromePossible(String s) {
+		if (s == null || s.length() == 0)
+			return 0;
+		Set<Character> hs = new HashSet<Character>();
+		int count = 0;
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			if (hs.contains(ch)) {
+				hs.remove(ch);
+				count++;
+			} else {
+				hs.add(ch);
+			}
+		}
+		if (!hs.isEmpty())
+			return count * 2 + 1;
+		return count * 2;
+	}
 }

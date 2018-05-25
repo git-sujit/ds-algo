@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 /**
  * Insert/Delete/Search operation on Trie Data Structure <br>
  * Trie / Prefix Tree / n-ary Tree : To store collection of words<br>
- * If two strigs have common ancestors then Trie fits well <br>
+ * If two strings have common ancestors then Trie fits well <br>
  * Ideal data structure for Dictionary <br>
  * Trie Vs HashTable <br>
  * - HashTable has no prefix based search <br>
@@ -210,7 +210,10 @@ public class TrieDS {
 	 * LOCAL - TESTING
 	 */
 	public static void main(String[] args) {
-
+		String s = null;
+		if(s.isEmpty()){
+			System.out.println("Null/empty word");
+		}
 	}
 
 }
