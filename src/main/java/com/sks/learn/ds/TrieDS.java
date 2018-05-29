@@ -10,6 +10,7 @@ import java.util.logging.Logger;
  * Trie / Prefix Tree / n-ary Tree : To store collection of words<br>
  * If two strings have common ancestors then Trie fits well <br>
  * Ideal data structure for Dictionary <br>
+ * Ideal data structure to store 100s of thousands of words <br>
  * Trie Vs HashTable <br>
  * - HashTable has no prefix based search <br>
  * - HashTable takes more space <br>
@@ -39,7 +40,6 @@ public class TrieDS {
 	public TrieDS() {
 		root = new Node();
 	}
-
 	/**
 	 * Time Complexity : <br>
 	 * Space Complexity : <br>
@@ -53,16 +53,16 @@ public class TrieDS {
 			return;
 		}
 		// Regular Case
-		Node curr = root;
+		Node p = root;
 		for (char ch : word.toCharArray()) {
-			Node n = curr.children.get(ch);
+			Node n = p.children.get(ch);
 			if (n == null) {
 				n = new Node();
-				curr.children.put(ch, n);
+				p.children.put(ch, n);
 			}
-			curr = n;
+			p = n;
 		}
-		curr.isWord = true;
+		p.isWord = true;
 	}
 
 	/**
@@ -72,13 +72,13 @@ public class TrieDS {
 		insertRecursive(root, word, 0);
 	}
 
-	private void insertRecursive(Node curr, String word, int index) {
+	private void insertRecursive(Node p, String word, int index) {
 		if (index == word.length()) {
-			curr.isWord = true;
+			p.isWord = true;
 			return;
 		}
 		char ch = word.charAt(index);
-		Node n = curr.children.get(ch);
+		Node n = p.children.get(ch);
 		if (n == null) {
 			Node node = new Node();
 			node.children.put(ch, node);
@@ -211,7 +211,7 @@ public class TrieDS {
 	 */
 	public static void main(String[] args) {
 		String s = null;
-		if(s.isEmpty()){
+		if (s.isEmpty()) {
 			System.out.println("Null/empty word");
 		}
 	}

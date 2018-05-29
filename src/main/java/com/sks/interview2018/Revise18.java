@@ -7,6 +7,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Revise18 {
 	private static Map<Integer, List<Character>> itocMap = null;
@@ -46,6 +48,12 @@ public class Revise18 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		Random ran = new Random();
+		int random = ran.nextInt(100);
+		System.out.println("random = " + random);
+		// Java 1.7 or later
+		random = ThreadLocalRandom.current().nextInt(1, 10);
+		System.out.println("ThreadLocal random = " + random);
 		printPrime(100);
 		int num = 14;
 		int base = 8;
@@ -485,6 +493,83 @@ public class Revise18 {
 	}
 
 	/**
+	 * Given a string s, find the longest palindromic substring in s. You may
+	 * assume that the maximum length of s is 1000. <br>
+	 * Palindromic Criteria: <br>
+	 * 1. First Letter = Last Letter <br>
+	 * 2. Inner Word us also Palindrome <br>
+	 * <br>
+	 * Time complexity : O(n^2) <br>
+	 * Space complexity : O(n^2). space to store the boolean table.
+	 * 
+	 * @param s
+	 * @return
+	 */
+	public static String longestPalindromicSubstring(String s) {
+		// Boundary Condition
+		if (s == null)
+			return s;
+		int length = s.length();
+		if (length < 2)
+			return s;
+		// Dynamic Programming Technique
+		boolean[][] isPalindrome = new boolean[length][length];
+		int left = 0;
+		int right = 0;
+		for (int j = 1; j < length; j++) {
+			for (int i = 0; i < j; i++) {
+				boolean isInnerWordPalindrome = isPalindrome[i + 1][j - 1] || j - i <= 2;
+				if (s.charAt(i) == s.charAt(j) && isInnerWordPalindrome) {
+					isPalindrome[i][j] = true;
+					if (j - i > right - left) {
+						left = i;
+						right = j;
+					}
+				}
+			}
+		}
+		return s.substring(left, right + 1);
+	}
+
+	/**
+	 * Given a string which consists of lowercase or uppercase letters, find the
+	 * length of the longest palindromes that can be built with those letters.
+	 * 
+	 * Time Complexity: O(n) <br>
+	 * Space Complexity: O(n), HashMap to store character counts <br>
+	 * 
+	 * @param s
+	 * @return
+	 */
+	public int longestPalindrome(String s) {
+		if (s == null)
+			return 0;
+		int length = s.length();
+		if (length < 2)
+			return s.length();
+		Map<Character, Integer> charCountMap = new HashMap<Character, Integer>();
+		for (char c : s.toCharArray()) {
+			if (charCountMap.containsKey(c)) {
+				charCountMap.put(c, charCountMap.get(c) + 1);
+			} else {
+				charCountMap.put(c, 1);
+			}
+		}
+		boolean hasOdd = false;
+		int maxLength = 0;
+		for (char c : charCountMap.keySet()) {
+			int count = charCountMap.get(c);
+			if (count % 2 == 0) {
+				maxLength += count;
+			} else {
+				maxLength += ((count / 2) * 2);
+				hasOdd = true;
+			}
+		}
+		return hasOdd ? maxLength + 1 : maxLength;
+	}
+
+	/**
 	 * Graph Algorithms <br>
 	 * Based on adjacency List
 	 */
@@ -536,22 +621,17 @@ public class Revise18 {
 		if (n == null) {
 			return;
 		}
-		Queue<Node> cq = new LinkedList<Node>();
-		cq.add(n);
-		bfs(n, cq);
-	}
-
-	private void bfs(Node p, Queue<Node> cq) {
-		while (!cq.isEmpty()) {
-			// Visit Node
-			Node n = cq.remove();
-			if (!n.visited) {
-				System.out.println(n.data);
-				n.visited = true;
+		Queue<Node> q = new LinkedList<Node>();
+		q.add(n);
+		while (!q.isEmpty()) {
+			Node qn = q.remove();
+			if (!qn.visited) {
+				visit(qn);
+				qn.visited = true;
+				for (Node c : qn.children) {
+					q.add(c);
+				}
 			}
-			Node[] children = n.children;
-			cq.addAll(Arrays.asList(children));
 		}
 	}
-
 }
