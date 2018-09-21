@@ -1,7 +1,9 @@
 package com.sks.interview2018;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Deque;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -602,6 +604,26 @@ public class Revise18 {
 			// Recursive Case
 			if (!cn.visited) {
 				dfs(cn);
+			}
+		}
+	}
+
+	public void dfs_iterative(Node n) {
+		if (n == null) {
+			return;
+		}
+		Deque<Node> stack = new ArrayDeque<Node>();
+		stack.push(n);
+		while (!stack.isEmpty()) {
+			Node sn = stack.pop();
+			if (!sn.visited) {
+				visit(sn);
+				sn.visited = true;
+				if (sn.children != null) {
+					for (Node c : sn.children) {
+						stack.push(c);
+					}
+				}
 			}
 		}
 	}

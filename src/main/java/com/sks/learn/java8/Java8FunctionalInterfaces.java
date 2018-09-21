@@ -58,7 +58,7 @@ public class Java8FunctionalInterfaces {
 
 		System.out.println("Custom functional interface::");
 		// Custom Functional Interface: Using anonymous class
-		MyFunctionalInterface funcInt = new MyFunctionalInterface() {
+		TestLambdaFI funcInt = new TestLambdaFI() {
 
 			@Override
 			public int sum(int a, int b) {
@@ -74,7 +74,7 @@ public class Java8FunctionalInterfaces {
 		funcInt.myDefaultMethod_2(4);
 		funcInt.myDefaultMethod_3(6);
 		System.out.println("Java8 Static Default Methods");
-		MyFunctionalInterface.myStaticDefaultMethod(10);
+		TestLambdaFI.myStaticDefaultMethod(10);
 	}
 
 }

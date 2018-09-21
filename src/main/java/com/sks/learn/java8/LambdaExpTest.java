@@ -5,7 +5,7 @@ public class LambdaExpTest {
 	public static void main(String[] args) {
 		print();
 		sum(8, 9);
-		// () -> {System.out.println("Hellow to Lambda World!!!");}
+		() -> {System.out.println("Hellow to Lambda World!!!");}
 	}
 
 	public static void print() {
