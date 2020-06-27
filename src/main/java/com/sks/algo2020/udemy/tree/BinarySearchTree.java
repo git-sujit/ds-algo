@@ -1,14 +1,18 @@
 package com.sks.algo2020.udemy.tree;
 
+import com.sks.algo2020.TestData;
+
+import static com.sks.algo2020.TestData.BTNode;
+
 /**
  * @author : Sujit K Singh
  * Purpose :
  */
 public class BinarySearchTree {
 
-    public static Node search(Node n, int data) {
+    public static BTNode<Integer> search(BTNode<Integer> n, int data) {
         if (n == null) return null;
-        int nData = (Integer) n.data;
+        int nData = n.data;
         if (data < nData)
             return search(n.left, data);
         else if (data > nData)
@@ -17,31 +21,31 @@ public class BinarySearchTree {
             return n;
     }
 
-    public static Node min(Node n) {
+    public static BTNode<Integer> min(BTNode n) {
         if (n == null) return null;
         while (n.left != null)
             n = n.left;
         return n;
     }
 
-    public static Node max(Node n) {
+    public static BTNode<Integer> max(BTNode n) {
         if (n == null) return null;
         while (n.right != null)
             n = n.right;
         return n;
     }
 
-    public static Node insert(Node n, int d) {
-        Node in = new Node(d);
-        Node parent = null;
+    public static BTNode<Integer> insert(BTNode<Integer> n, int d) {
+        BTNode<Integer> in = new BTNode(d);
+        BTNode<Integer> parent = null;
         while (n != null) {
             parent = n;
-            if (d < (Integer) n.data) {
+            if (d < n.data) {
                 n = n.left;
                 if (n == null) {
                     parent.left = in;
                 }
-            } else if (d > (Integer) n.data) {
+            } else if (d > n.data) {
                 n = n.right;
                 if (n == null) {
                     parent.right = n;
@@ -53,49 +57,49 @@ public class BinarySearchTree {
         return parent;
     }
 
-    public static Node insert_recursive(Node n, int d) {
-        if (n == null) return new Node(d);
-        if (d < (Integer) n.data)
+    public static BTNode<Integer> insert_recursive(BTNode<Integer> n, int d) {
+        if (n == null) return new BTNode(d);
+        if (d < n.data)
             n.left = insert_recursive(n.left, d);
-        else if (d > (Integer) n.data)
+        else if (d > n.data)
             n.right = insert_recursive(n.right, d);
         return n;
     }
 
-    public static void delete(Node n, int d) {
+    public static void delete(BTNode<Integer> n, int d) {
         if (n == null) return;
-        Node p = null;
+        BTNode<Integer> p = null;
         while (n != null) {
-            if (d == (Integer) n.data) break;
+            if (d == n.data) break;
             p = n;
-            if (d < (Integer) n.data) n = n.left;
-            else if (d > (Integer) n.data) n = n.right;
+            if (d < n.data) n = n.left;
+            else if (d > n.data) n = n.right;
         }
         if (n == null) {
             System.out.println("Data to be deleted not found in BST");
             return;
         }
         System.out.println("Data to be Deleted=" + n + ", parent=" + p);
-        Node l = n.left;
-        Node r = n.right;
+        BTNode<Integer> l = n.left;
+        BTNode<Integer> r = n.right;
         if (l == null && r == null) {
-            if (d < (Integer) p.data) p.left = null;
+            if (d < p.data) p.left = null;
             else p.right = null;
         } else if (l == null) {
-            if (d == (Integer) p.left.data)
+            if (d == p.left.data)
                 p.left = r;
             else
                 p.right = r;
             r = null;
         } else if (r == null) {
-            if (d == (Integer) p.left.data)
+            if (d == p.left.data)
                 p.left = l;
             else
                 p.right = l;
             l = null;
         } else {
-            Node in = n;
-            Node inp = null;
+            BTNode<Integer> in = n;
+            BTNode<Integer> inp = null;
             while (in.left != null) {
                 inp = in;
                 in = in.left;
@@ -105,27 +109,27 @@ public class BinarySearchTree {
             in.right = r;
             l = null;
             r = null;
-            if (d == (Integer) p.left.data)
+            if (d == p.left.data)
                 p.left = in;
-            else if (d == (Integer) p.right.data)
+            else if (d == p.right.data)
                 p.right = in;
         }
     }
 
-    public static Node parent(Node n, int d) {
+    public static BTNode<Integer> parent(BTNode<Integer> n, int d) {
         if (n == null) return null;
-        Node parent = null;
+        BTNode parent = null;
         while (n != null) {
-            if (d == (Integer) n.data) break;
+            if (d == n.data) break;
             parent = n;
-            if (d < (Integer) n.data) n = n.left;
-            else if (d > (Integer) n.data) n = n.right;
+            if (d < n.data) n = n.left;
+            else if (d > n.data) n = n.right;
         }
         return parent;
     }
 
     public static void main(String[] args) {
-        Node root = Node.getBinarySearchTreeData();
+        BTNode<Integer> root = TestData.getBinarySearchTreeData();
         testGeneral(root);
         //testTraversal(root);
         //testSearching(root);
@@ -134,14 +138,14 @@ public class BinarySearchTree {
     }
 
 
-    private static void testGeneral(Node root) {
+    private static void testGeneral(BTNode<Integer> root) {
         System.out.println("Parent = " + parent(root, 35));
         System.out.println("Height = " + BinaryTreeTraversal.height(root));
-        System.out.println("Min Data Node = " + min(root) + ", root=" + root);
-        System.out.println("Min Data Node = " + max(root) + ", root=" + root);
+        System.out.println("Min Data BTNode = " + min(root) + ", root=" + root);
+        System.out.println("Min Data BTNode = " + max(root) + ", root=" + root);
     }
 
-    private static void testTraversal(Node root) {
+    private static void testTraversal(BTNode<Integer> root) {
         System.out.println("### Pre-Order");
         BinaryTreeTraversal.preOrder(root);
         System.out.println("\n### Post-Order");
@@ -152,7 +156,7 @@ public class BinarySearchTree {
         BinaryTreeTraversal.levelOrder(root);
     }
 
-    private static void testSearching(Node root) {
+    private static void testSearching(BTNode<Integer> root) {
         int searchData = 10;
         System.out.println("Searching " + searchData + " :: " + search(root, searchData));
         searchData = 80;
@@ -165,7 +169,7 @@ public class BinarySearchTree {
         System.out.println("Searching " + searchData + " :: " + search(root, searchData));
     }
 
-    private static void testInsertion(Node root) {
+    private static void testInsertion(BTNode<Integer> root) {
         System.out.println("### Insert in BST");
         int in = 20;
         System.out.println("Inserting " + in + " :: " + insert(root, in));
@@ -178,7 +182,7 @@ public class BinarySearchTree {
         BinaryTreeTraversal.levelOrder(root);
     }
 
-    private static void testDeletion(Node root) {
+    private static void testDeletion(BTNode<Integer> root) {
         int del = 4500;
         delete(root, del);
         del = 70;

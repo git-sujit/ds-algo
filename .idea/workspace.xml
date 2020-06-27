@@ -2,41 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ds-algo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/TestRandom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/ArraySubSequence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/ClosestBST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/Palindrome.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/ThreeLargestNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/TwoNumberSum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/club/Island.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/BreadthFirstSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/DepthFirstSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/recursion/BaseConversion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/recursion/EuclidsAlgorithmGCD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/recursion/Factorial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/recursion/Fibonacci.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/recursion/TowerOfBrahma.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/tree/BinarySearchTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/tree/BinaryTreeTraversal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/tree/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview2018/InterviewQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview2018/InterviewQuestions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/learn/java8/Java8FunctionalInterfaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/learn/java8/Java8FunctionalInterfaces.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/learn/java8/LambdaExpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/learn/java8/LambdaExpTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/TestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/ClosestBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/ClosestBST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/BreadthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/DepthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/tree/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/tree/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/tree/BinaryTreeTraversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/tree/BinaryTreeTraversal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/tree/Node.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,6 +55,82 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
+  <component name="RunManager" selected="Application.ClosestBST">
+    <configuration name="BinarySearchTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.algo2020.udemy.tree.BinarySearchTree" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.algo2020.udemy.tree.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinaryTreeTraversal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.algo2020.udemy.tree.BinaryTreeTraversal" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.algo2020.udemy.tree.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BreadthFirstSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.algo2020.udemy.graph.BreadthFirstSearch" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.algo2020.udemy.graph.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClosestBST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.algo2020.algoexperts.easy.ClosestBST" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.algo2020.algoexperts.easy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepthFirstSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.algo2020.udemy.graph.DepthFirstSearch" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.algo2020.udemy.graph.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ClosestBST" />
+        <item itemvalue="Application.BinaryTreeTraversal" />
+        <item itemvalue="Application.DepthFirstSearch" />
+        <item itemvalue="Application.BreadthFirstSearch" />
+        <item itemvalue="Application.BinarySearchTree" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -78,7 +141,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1593212696777</updated>
-      <workItem from="1593212701493" duration="821000" />
+      <workItem from="1593212701493" duration="10240000" />
     </task>
     <servers />
   </component>
@@ -86,13 +149,69 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="4866" y="435" width="667" height="729" key="find.popup" timestamp="1593213461798">
-      <screen x="4240" y="211" width="1920" height="1177" />
+    <state x="2698" y="553" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593216589652">
+      <screen x="1680" y="91" width="2560" height="1417" />
     </state>
+    <state x="2698" y="553" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1593216589652" />
+    <state width="2518" height="650" key="GridCell.Tab.0.bottom" timestamp="1593239599171">
+      <screen x="1680" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="650" key="GridCell.Tab.0.bottom/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593239599171" />
+    <state width="2518" height="600" key="GridCell.Tab.0.bottom/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1593218228463" />
+    <state width="2518" height="650" key="GridCell.Tab.0.center" timestamp="1593239599170">
+      <screen x="1680" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="650" key="GridCell.Tab.0.center/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593239599170" />
+    <state width="2518" height="600" key="GridCell.Tab.0.center/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1593218228462" />
+    <state width="2518" height="650" key="GridCell.Tab.0.left" timestamp="1593239599170">
+      <screen x="1680" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="650" key="GridCell.Tab.0.left/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593239599170" />
+    <state width="2518" height="600" key="GridCell.Tab.0.left/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1593218228462" />
+    <state width="2518" height="650" key="GridCell.Tab.0.right" timestamp="1593239599171">
+      <screen x="1680" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="650" key="GridCell.Tab.0.right/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593239599171" />
+    <state width="2518" height="600" key="GridCell.Tab.0.right/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1593218228462" />
+    <state width="2518" height="479" key="GridCell.Tab.1.bottom" timestamp="1593238845001">
+      <screen x="1680" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="479" key="GridCell.Tab.1.bottom/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593238845001" />
+    <state width="2518" height="479" key="GridCell.Tab.1.center" timestamp="1593238845000">
+      <screen x="1680" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="479" key="GridCell.Tab.1.center/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593238845000" />
+    <state width="2518" height="479" key="GridCell.Tab.1.left" timestamp="1593238845000">
+      <screen x="1680" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="479" key="GridCell.Tab.1.left/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593238845000" />
+    <state width="2518" height="479" key="GridCell.Tab.1.right" timestamp="1593238845001">
+      <screen x="1680" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="479" key="GridCell.Tab.1.right/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593238845001" />
+    <state x="2698" y="474" key="extract.method.dialog" timestamp="1593236016247">
+      <screen x="1680" y="23" width="2560" height="1417" />
+    </state>
+    <state x="2698" y="474" key="extract.method.dialog/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593236016247" />
+    <state x="2515" y="361" width="890" height="878" key="find.popup" timestamp="1593216407933">
+      <screen x="1680" y="91" width="2560" height="1417" />
+    </state>
+    <state x="2515" y="361" width="890" height="878" key="find.popup/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1593216407933" />
     <state x="4866" y="435" width="667" height="729" key="find.popup/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@4240.211.1920.1177" timestamp="1593213461798" />
     <state x="4865" y="476" width="670" height="676" key="search.everywhere.popup" timestamp="1593213436352">
       <screen x="4240" y="211" width="1920" height="1177" />
     </state>
     <state x="4865" y="476" width="670" height="676" key="search.everywhere.popup/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@4240.211.1920.1177" timestamp="1593213436352" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/ClosestBST.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
