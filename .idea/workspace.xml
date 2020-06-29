@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/TestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/BranchSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/NodeDepthSum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/TestData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/ClosestBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/ClosestBST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/BreadthFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/DepthFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/club/Island.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/club/Island.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/tree/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/tree/BinarySearchTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/tree/BinaryTreeTraversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/tree/BinaryTreeTraversal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/tree/Node.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +45,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -55,39 +53,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ClosestBST">
-    <configuration name="BinarySearchTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.algo2020.udemy.tree.BinarySearchTree" />
+  <component name="RunManager" selected="Application.NodeDepthSum">
+    <configuration name="BranchSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.algo2020.algoexperts.easy.BranchSum" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.algo2020.udemy.tree.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BinaryTreeTraversal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.algo2020.udemy.tree.BinaryTreeTraversal" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.algo2020.udemy.tree.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BreadthFirstSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.algo2020.udemy.graph.BreadthFirstSearch" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.algo2020.udemy.graph.*" />
+          <option name="PATTERN" value="com.sks.algo2020.algoexperts.easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,12 +80,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DepthFirstSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.algo2020.udemy.graph.DepthFirstSearch" />
+    <configuration name="Island" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.algo2020.club.Island" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.algo2020.udemy.graph.*" />
+          <option name="PATTERN" value="com.sks.algo2020.club.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -121,13 +93,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NodeDepthSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.algo2020.algoexperts.easy.NodeDepthSum" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.algo2020.algoexperts.easy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EntireTestSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.learn.dsalgo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sks.learn.dsalgo" />
+      <option name="MAIN_CLASS_NAME" value="com.sks.learn.dsalgo.EntireTestSuite" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NodeDepthSum" />
+        <item itemvalue="Application.BranchSum" />
+        <item itemvalue="Application.Island" />
+        <item itemvalue="JUnit.EntireTestSuite" />
         <item itemvalue="Application.ClosestBST" />
-        <item itemvalue="Application.BinaryTreeTraversal" />
-        <item itemvalue="Application.DepthFirstSearch" />
-        <item itemvalue="Application.BreadthFirstSearch" />
-        <item itemvalue="Application.BinarySearchTree" />
       </list>
     </recent_temporary>
   </component>
@@ -141,7 +141,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1593212696777</updated>
-      <workItem from="1593212701493" duration="10240000" />
+      <workItem from="1593212701493" duration="10447000" />
+      <workItem from="1593291572804" duration="19362000" />
+      <workItem from="1593358554750" duration="2356000" />
     </task>
     <servers />
   </component>
@@ -153,42 +155,46 @@
       <screen x="1680" y="91" width="2560" height="1417" />
     </state>
     <state x="2698" y="553" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1593216589652" />
-    <state width="2518" height="650" key="GridCell.Tab.0.bottom" timestamp="1593239599171">
+    <state width="2518" height="262" key="GridCell.Tab.0.bottom" timestamp="1593410934256">
       <screen x="1680" y="23" width="2560" height="1417" />
     </state>
-    <state width="2518" height="650" key="GridCell.Tab.0.bottom/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593239599171" />
+    <state width="2518" height="262" key="GridCell.Tab.0.bottom/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593410934256" />
     <state width="2518" height="600" key="GridCell.Tab.0.bottom/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1593218228463" />
-    <state width="2518" height="650" key="GridCell.Tab.0.center" timestamp="1593239599170">
+    <state width="2518" height="262" key="GridCell.Tab.0.center" timestamp="1593410934255">
       <screen x="1680" y="23" width="2560" height="1417" />
     </state>
-    <state width="2518" height="650" key="GridCell.Tab.0.center/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593239599170" />
+    <state width="2518" height="262" key="GridCell.Tab.0.center/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593410934255" />
     <state width="2518" height="600" key="GridCell.Tab.0.center/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1593218228462" />
-    <state width="2518" height="650" key="GridCell.Tab.0.left" timestamp="1593239599170">
+    <state width="2518" height="262" key="GridCell.Tab.0.left" timestamp="1593410934255">
       <screen x="1680" y="23" width="2560" height="1417" />
     </state>
-    <state width="2518" height="650" key="GridCell.Tab.0.left/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593239599170" />
+    <state width="2518" height="262" key="GridCell.Tab.0.left/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593410934255" />
     <state width="2518" height="600" key="GridCell.Tab.0.left/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1593218228462" />
-    <state width="2518" height="650" key="GridCell.Tab.0.right" timestamp="1593239599171">
+    <state width="2518" height="262" key="GridCell.Tab.0.right" timestamp="1593410934255">
       <screen x="1680" y="23" width="2560" height="1417" />
     </state>
-    <state width="2518" height="650" key="GridCell.Tab.0.right/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593239599171" />
+    <state width="2518" height="262" key="GridCell.Tab.0.right/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593410934255" />
     <state width="2518" height="600" key="GridCell.Tab.0.right/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1593218228462" />
-    <state width="2518" height="479" key="GridCell.Tab.1.bottom" timestamp="1593238845001">
+    <state width="2518" height="479" key="GridCell.Tab.1.bottom" timestamp="1593240623143">
       <screen x="1680" y="23" width="2560" height="1417" />
     </state>
-    <state width="2518" height="479" key="GridCell.Tab.1.bottom/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593238845001" />
-    <state width="2518" height="479" key="GridCell.Tab.1.center" timestamp="1593238845000">
+    <state width="2518" height="479" key="GridCell.Tab.1.bottom/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593240623143" />
+    <state width="2518" height="479" key="GridCell.Tab.1.center" timestamp="1593240623143">
       <screen x="1680" y="23" width="2560" height="1417" />
     </state>
-    <state width="2518" height="479" key="GridCell.Tab.1.center/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593238845000" />
-    <state width="2518" height="479" key="GridCell.Tab.1.left" timestamp="1593238845000">
+    <state width="2518" height="479" key="GridCell.Tab.1.center/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593240623143" />
+    <state width="2518" height="479" key="GridCell.Tab.1.left" timestamp="1593240623143">
       <screen x="1680" y="23" width="2560" height="1417" />
     </state>
-    <state width="2518" height="479" key="GridCell.Tab.1.left/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593238845000" />
-    <state width="2518" height="479" key="GridCell.Tab.1.right" timestamp="1593238845001">
+    <state width="2518" height="479" key="GridCell.Tab.1.left/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593240623143" />
+    <state width="2518" height="479" key="GridCell.Tab.1.right" timestamp="1593240623143">
       <screen x="1680" y="23" width="2560" height="1417" />
     </state>
-    <state width="2518" height="479" key="GridCell.Tab.1.right/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593238845001" />
+    <state width="2518" height="479" key="GridCell.Tab.1.right/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593240623143" />
+    <state x="2469" y="370" key="SettingsEditor" timestamp="1593300131989">
+      <screen x="1680" y="23" width="2560" height="1417" />
+    </state>
+    <state x="2469" y="370" key="SettingsEditor/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593300131989" />
     <state x="2698" y="474" key="extract.method.dialog" timestamp="1593236016247">
       <screen x="1680" y="23" width="2560" height="1417" />
     </state>

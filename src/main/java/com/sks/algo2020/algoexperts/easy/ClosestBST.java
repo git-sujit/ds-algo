@@ -41,7 +41,7 @@ public class ClosestBST {
     }
 
     public static void main(String[] args) {
-        BTNode<Integer> root = TestData.getBinarySearchTreeData();
+        BTNode<Integer> root = TestData.getBinarySearchTreeDataInt();
         System.out.println("Inorder Traversal of Binary Search Tree");
         BinaryTreeTraversal.inOrder(root);
         TestData.printBinaryTree(root, 1);

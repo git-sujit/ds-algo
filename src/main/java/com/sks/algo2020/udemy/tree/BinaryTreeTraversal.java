@@ -59,9 +59,9 @@ public class BinaryTreeTraversal {
     }
 
     public static void main(String[] args) {
-        BTNode<String> root = TestData.getBinaryTreeData();
+        BTNode<String> root = TestData.getBinaryTreeDataString();
         System.out.println(root);
-        BTNode<String> root1 = TestData.getBinaryTreeData_1();
+        BTNode<String> root1 = TestData.getBinaryTreeDataString_1();
         System.out.println("Height = " + height(root));
         System.out.println("Height = " + height(root1));
         System.out.println("### Pre-Order");

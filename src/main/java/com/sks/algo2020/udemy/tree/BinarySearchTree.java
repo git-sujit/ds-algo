@@ -129,7 +129,7 @@ public class BinarySearchTree {
     }
 
     public static void main(String[] args) {
-        BTNode<Integer> root = TestData.getBinarySearchTreeData();
+        BTNode<Integer> root = TestData.getBinarySearchTreeDataInt();
         testGeneral(root);
         //testTraversal(root);
         //testSearching(root);

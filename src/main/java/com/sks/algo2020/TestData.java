@@ -85,7 +85,7 @@ public class TestData {
         return n0;
     }
 
-    public static BTNode<String> getBinaryTreeData() {
+    public static BTNode<String> getBinaryTreeDataString() {
         BTNode<String> n0 = new BTNode("P");
         BTNode<String> n1 = new BTNode("A");
         BTNode<String> n2 = new BTNode("X");
@@ -111,7 +111,7 @@ public class TestData {
         return n0;
     }
 
-    public static BTNode<String> getBinaryTreeData_1() {
+    public static BTNode<String> getBinaryTreeDataString_1() {
         BTNode<String> n0 = new BTNode("P");
         BTNode<String> n1 = new BTNode("A");
         BTNode<String> n2 = new BTNode("X");
@@ -142,7 +142,30 @@ public class TestData {
         return n0;
     }
 
-    public static BTNode<Integer> getBinarySearchTreeData() {
+    public static BTNode<Integer> getBinaryTreeDataInt() {
+        BTNode<Integer> n1 = new BTNode(1);
+        BTNode<Integer> n2 = new BTNode(2);
+        BTNode<Integer> n3 = new BTNode(3);
+        n1.left = n2;
+        n1.right = n3;
+        BTNode<Integer> n4 = new BTNode(4);
+        BTNode<Integer> n5 = new BTNode(5);
+        n2.left = n4;
+        n2.right = n5;
+        BTNode<Integer> n6 = new BTNode(6);
+        BTNode<Integer> n7 = new BTNode(7);
+        n3.left = n6;
+        n3.right = n7;
+        BTNode<Integer> n8 = new BTNode(8);
+        BTNode<Integer> n9 = new BTNode(9);
+        n4.left = n8;
+        n4.right = n9;
+        BTNode<Integer> n10 = new BTNode(10);
+        n5.left = n10;
+        return n1;
+    }
+
+    public static BTNode<Integer> getBinarySearchTreeDataInt() {
         BTNode<Integer> n0 = new BTNode(70);
         BTNode<Integer> n1 = new BTNode(40);
         BTNode<Integer> n2 = new BTNode(80);
@@ -175,7 +198,7 @@ public class TestData {
         return n0;
     }
 
-    static final int COUNT = 10;
+    static final int COUNT = 5;
 
     // Function to print binary tree in 2D
     // It does reverse inorder traversal
