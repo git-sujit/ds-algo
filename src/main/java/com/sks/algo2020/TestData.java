@@ -29,6 +29,7 @@ public class TestData {
         public BTNode<T> left;
         public T data;
         public BTNode<T> right;
+        public int depth;
 
         public BTNode() {
         }

@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/BranchSum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/NodeDepthSum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/TestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/ClosestBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/ClosestBST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/club/Island.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/club/Island.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/tree/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/tree/BinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/tree/BinaryTreeTraversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/tree/BinaryTreeTraversal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/NodeDepthSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/NodeDepthSum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +138,8 @@
       <updated>1593212696777</updated>
       <workItem from="1593212701493" duration="10447000" />
       <workItem from="1593291572804" duration="19362000" />
-      <workItem from="1593358554750" duration="2356000" />
+      <workItem from="1593358554750" duration="2974000" />
+      <workItem from="1593466641702" duration="1799000" />
     </task>
     <servers />
   </component>
@@ -155,25 +151,25 @@
       <screen x="1680" y="91" width="2560" height="1417" />
     </state>
     <state x="2698" y="553" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1593216589652" />
-    <state width="2518" height="262" key="GridCell.Tab.0.bottom" timestamp="1593410934256">
+    <state width="2518" height="400" key="GridCell.Tab.0.bottom" timestamp="1593491560737">
       <screen x="1680" y="23" width="2560" height="1417" />
     </state>
-    <state width="2518" height="262" key="GridCell.Tab.0.bottom/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593410934256" />
+    <state width="2518" height="400" key="GridCell.Tab.0.bottom/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593491560737" />
     <state width="2518" height="600" key="GridCell.Tab.0.bottom/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1593218228463" />
-    <state width="2518" height="262" key="GridCell.Tab.0.center" timestamp="1593410934255">
+    <state width="2518" height="400" key="GridCell.Tab.0.center" timestamp="1593491560737">
       <screen x="1680" y="23" width="2560" height="1417" />
     </state>
-    <state width="2518" height="262" key="GridCell.Tab.0.center/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593410934255" />
+    <state width="2518" height="400" key="GridCell.Tab.0.center/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593491560737" />
     <state width="2518" height="600" key="GridCell.Tab.0.center/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1593218228462" />
-    <state width="2518" height="262" key="GridCell.Tab.0.left" timestamp="1593410934255">
+    <state width="2518" height="400" key="GridCell.Tab.0.left" timestamp="1593491560736">
       <screen x="1680" y="23" width="2560" height="1417" />
     </state>
-    <state width="2518" height="262" key="GridCell.Tab.0.left/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593410934255" />
+    <state width="2518" height="400" key="GridCell.Tab.0.left/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593491560736" />
     <state width="2518" height="600" key="GridCell.Tab.0.left/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1593218228462" />
-    <state width="2518" height="262" key="GridCell.Tab.0.right" timestamp="1593410934255">
+    <state width="2518" height="400" key="GridCell.Tab.0.right" timestamp="1593491560737">
       <screen x="1680" y="23" width="2560" height="1417" />
     </state>
-    <state width="2518" height="262" key="GridCell.Tab.0.right/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593410934255" />
+    <state width="2518" height="400" key="GridCell.Tab.0.right/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1593491560737" />
     <state width="2518" height="600" key="GridCell.Tab.0.right/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1593218228462" />
     <state width="2518" height="479" key="GridCell.Tab.1.bottom" timestamp="1593240623143">
       <screen x="1680" y="23" width="2560" height="1417" />
