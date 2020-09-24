@@ -1,5 +1,7 @@
 package com.sks.algo2020.club;
 
+import java.util.Arrays;
+
 /**
  * @author : Sujit K Singh
  * Purpose : Given a string, find longest palindromic substring
@@ -7,11 +9,36 @@ package com.sks.algo2020.club;
 public class LongestPalindromicSubstring {
     public static String manachersAlgorithm(String str) {
         if (str == null || str.isEmpty()) return "";
-        StringBuilder ps = new StringBuilder("#");
+        StringBuilder ps = new StringBuilder("$#");
         for (char c : str.toCharArray())
             ps.append(c).append("#");
-        str = ps.toString();
-        System.out.println("Padded String = " + str);
+        ps.append("@");
+        String paddedStr = ps.toString();
+        System.out.println("Padded String = " + paddedStr);
+        int[] pLenArr = new int[paddedStr.length()];
+        System.out.println("Before pLen = " + Arrays.toString(pLenArr));
+
+        int centerOfMainPalindrome = 0;
+        int rightBoundaryOfMainPalindrome = 0;
+        // i is next center of Main Palindrome
+        for (int i = 1; i < paddedStr.length() - 1; i++) {
+            // Mirror location for i in main palindrome
+            int mirrorOff_i = 2 * centerOfMainPalindrome - i;
+
+            if (i < rightBoundaryOfMainPalindrome)
+                pLenArr[i] = Math.min(rightBoundaryOfMainPalindrome - i, pLenArr[mirrorOff_i]);
+
+            //Expand
+            while (paddedStr.charAt(i + (1 + pLenArr[i])) == paddedStr.charAt(i - (1 + pLenArr[i])))
+                pLenArr[i]++;
+
+            if (i + pLenArr[i] > rightBoundaryOfMainPalindrome) {
+                centerOfMainPalindrome = i;
+                rightBoundaryOfMainPalindrome = i + pLenArr[i];
+            }
+            System.out.println("i = " + i + ", omirrorOff_i = " + mirrorOff_i + ",centerOfMainPalindrome = " + centerOfMainPalindrome + ", rightBoundaryOfMainPalindrome = " + rightBoundaryOfMainPalindrome);
+        }
+        System.out.println("After pLen = " + Arrays.toString(pLenArr));
         return "";
     }
 
@@ -101,10 +128,9 @@ public class LongestPalindromicSubstring {
     // Time: O(n) Space: O(1)
     public static boolean isPalindrome(String str) {
         int l = str.length();
-        boolean flag = true;
-        for (int i = 0, j = l - 1; i < l / 2 && i < j; i++, j--)
-            if (str.charAt(i) != str.charAt(j)) flag = false;
-        return flag;
+        for (int i = 0, j = l - 1; i < j; i++, j--)
+            if (str.charAt(i) != str.charAt(j)) return false;
+        return true;
     }
 
     // Time: O(n) Space: O(n) Method stack memory
@@ -115,9 +141,9 @@ public class LongestPalindromicSubstring {
     }
 
     public static void main(String[] args) {
-        String s = "aaaabcda";
+        String s = "ABABABA";
         printOutput(s);
-        testCases();
+        //testCases();
     }
 
     private static void testCases() {
@@ -141,10 +167,10 @@ public class LongestPalindromicSubstring {
         System.out.println("##### Input String = " + str);
         //System.out.println("\tIs palindrome? " + isPalindrome(str));
         //System.out.println("\tIs palindrome_rec? " + isPalindrome_recursive(str));
-        System.out.println("\tNaive- Max Length Palindrome = " + naive(str));
-        System.out.println("\tNaive_Improved- Max Length Palindrome = " + naive_improved(str));
-        System.out.println("\tDynamic_Programming- Max Length Palindrome = " + lps_dynamicProgramming(str));
-        System.out.println("\tExpanding_Around_Center Algorithm- Max Length Palindrome = " + lps_expandingAroundCenterAlgorithm(str));
+        //System.out.println("\tNaive- Max Length Palindrome = " + naive(str));
+        //System.out.println("\tNaive_Improved- Max Length Palindrome = " + naive_improved(str));
+        //System.out.println("\tDynamic_Programming- Max Length Palindrome = " + lps_dynamicProgramming(str));
+        //System.out.println("\tExpanding_Around_Center Algorithm- Max Length Palindrome = " + lps_expandingAroundCenterAlgorithm(str));
         System.out.println("\tManacher's Algorithm- Max Length Palindrome = " + manachersAlgorithm(str));
     }
 }
