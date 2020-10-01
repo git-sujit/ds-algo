@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/ProductSumOfArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/ThreeNumberSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/dp/KnapsackProblem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/club/LongestPalindromicSubstring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/club/LongestPalindromicSubstring.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +47,20 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.KnapsackProblem">
+    <configuration name="KnapsackProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.dp.KnapsackProblem" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.dp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="KnuthMorrisPrattAlgo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sks.algo2020.club.pattern_search.KnuthMorrisPrattAlgo" />
       <module name="ds-algo" />
@@ -69,19 +80,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.sks.algo2020.club.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NaivePatternSearchAlgo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.algo2020.club.pattern_search.NaivePatternSearchAlgo" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.algo2020.club.pattern_search.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,13 +115,25 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.KnapsackProblem" />
         <item itemvalue="Application.ThreeNumberSum" />
         <item itemvalue="Application.ProductSumOfArray" />
         <item itemvalue="Application.LongestPalindromicSubstring" />
         <item itemvalue="Application.KnuthMorrisPrattAlgo" />
-        <item itemvalue="Application.NaivePatternSearchAlgo" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -154,6 +164,9 @@
       <workItem from="1598357529509" duration="293000" />
       <workItem from="1598559785535" duration="3216000" />
       <workItem from="1599055842161" duration="4851000" />
+      <workItem from="1600969246350" duration="3693000" />
+      <workItem from="1601494988326" duration="8010000" />
+      <workItem from="1601577891791" duration="86000" />
     </task>
     <servers />
   </component>
@@ -161,6 +174,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2679" y="448" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1601500891757">
+      <screen x="1680" y="23" width="2560" height="1417" />
+    </state>
+    <state x="2679" y="448" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/0.23.1680.972/1680.23.2560.1417@1680.23.2560.1417" timestamp="1601500891757" />
     <state x="2698" y="553" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593216589652">
       <screen x="1680" y="91" width="2560" height="1417" />
     </state>
@@ -169,49 +186,49 @@
       <screen x="1680" y="91" width="2560" height="1417" />
     </state>
     <state x="2723" y="507" key="#xdebugger.evaluate/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1594155055445" />
-    <state width="1638" height="820" key="GridCell.Tab.0.bottom" timestamp="1599098684123">
-      <screen x="0" y="23" width="1680" height="972" />
+    <state width="2518" height="404" key="GridCell.Tab.0.bottom" timestamp="1601537765244">
+      <screen x="1680" y="23" width="2560" height="1417" />
     </state>
     <state width="2518" height="312" key="GridCell.Tab.0.bottom/0.23.1680.971/1680.23.2560.1361@1680.23.2560.1361" timestamp="1593656219985" />
     <state width="1638" height="360" key="GridCell.Tab.0.bottom/0.23.1680.971/1680.23.2560.1417@0.23.1680.971" timestamp="1598574392120" />
-    <state width="2518" height="557" key="GridCell.Tab.0.bottom/0.23.1680.972/1680.23.2560.1417@1680.23.2560.1417" timestamp="1599058814571" />
-    <state width="1638" height="820" key="GridCell.Tab.0.bottom/0.23.1680.972@0.23.1680.972" timestamp="1599098684123" />
+    <state width="2518" height="404" key="GridCell.Tab.0.bottom/0.23.1680.972/1680.23.2560.1417@1680.23.2560.1417" timestamp="1601537765244" />
+    <state width="1638" height="272" key="GridCell.Tab.0.bottom/0.23.1680.972@0.23.1680.972" timestamp="1601192292764" />
     <state width="2518" height="2" key="GridCell.Tab.0.bottom/0.23.1680.974/1680.23.2560.1417@0.23.1680.974" timestamp="1593495414092" />
     <state width="2518" height="759" key="GridCell.Tab.0.bottom/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1596933377515" />
     <state width="1638" height="519" key="GridCell.Tab.0.bottom/0.23.1680.974@0.23.1680.974" timestamp="1595783057480" />
     <state width="2518" height="558" key="GridCell.Tab.0.bottom/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1596955770821" />
     <state width="1878" height="269" key="GridCell.Tab.0.bottom/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@4240.211.1920.1177" timestamp="1593736225149" />
-    <state width="1638" height="820" key="GridCell.Tab.0.center" timestamp="1599098684123">
-      <screen x="0" y="23" width="1680" height="972" />
+    <state width="2518" height="404" key="GridCell.Tab.0.center" timestamp="1601537765243">
+      <screen x="1680" y="23" width="2560" height="1417" />
     </state>
     <state width="2518" height="312" key="GridCell.Tab.0.center/0.23.1680.971/1680.23.2560.1361@1680.23.2560.1361" timestamp="1593656219984" />
     <state width="1638" height="360" key="GridCell.Tab.0.center/0.23.1680.971/1680.23.2560.1417@0.23.1680.971" timestamp="1598574392120" />
-    <state width="2518" height="557" key="GridCell.Tab.0.center/0.23.1680.972/1680.23.2560.1417@1680.23.2560.1417" timestamp="1599058814571" />
-    <state width="1638" height="820" key="GridCell.Tab.0.center/0.23.1680.972@0.23.1680.972" timestamp="1599098684123" />
+    <state width="2518" height="404" key="GridCell.Tab.0.center/0.23.1680.972/1680.23.2560.1417@1680.23.2560.1417" timestamp="1601537765243" />
+    <state width="1638" height="272" key="GridCell.Tab.0.center/0.23.1680.972@0.23.1680.972" timestamp="1601192292764" />
     <state width="2518" height="2" key="GridCell.Tab.0.center/0.23.1680.974/1680.23.2560.1417@0.23.1680.974" timestamp="1593495414091" />
     <state width="2518" height="759" key="GridCell.Tab.0.center/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1596933377514" />
     <state width="1638" height="519" key="GridCell.Tab.0.center/0.23.1680.974@0.23.1680.974" timestamp="1595783057479" />
     <state width="2518" height="558" key="GridCell.Tab.0.center/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1596955770821" />
     <state width="1878" height="269" key="GridCell.Tab.0.center/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@4240.211.1920.1177" timestamp="1593736225148" />
-    <state width="1638" height="820" key="GridCell.Tab.0.left" timestamp="1599098684123">
-      <screen x="0" y="23" width="1680" height="972" />
+    <state width="2518" height="404" key="GridCell.Tab.0.left" timestamp="1601537765243">
+      <screen x="1680" y="23" width="2560" height="1417" />
     </state>
     <state width="2518" height="312" key="GridCell.Tab.0.left/0.23.1680.971/1680.23.2560.1361@1680.23.2560.1361" timestamp="1593656219983" />
     <state width="1638" height="360" key="GridCell.Tab.0.left/0.23.1680.971/1680.23.2560.1417@0.23.1680.971" timestamp="1598574392120" />
-    <state width="2518" height="557" key="GridCell.Tab.0.left/0.23.1680.972/1680.23.2560.1417@1680.23.2560.1417" timestamp="1599058814570" />
-    <state width="1638" height="820" key="GridCell.Tab.0.left/0.23.1680.972@0.23.1680.972" timestamp="1599098684123" />
+    <state width="2518" height="404" key="GridCell.Tab.0.left/0.23.1680.972/1680.23.2560.1417@1680.23.2560.1417" timestamp="1601537765243" />
+    <state width="1638" height="272" key="GridCell.Tab.0.left/0.23.1680.972@0.23.1680.972" timestamp="1601192292764" />
     <state width="2518" height="2" key="GridCell.Tab.0.left/0.23.1680.974/1680.23.2560.1417@0.23.1680.974" timestamp="1593495414090" />
     <state width="2518" height="759" key="GridCell.Tab.0.left/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1596933377514" />
     <state width="1638" height="519" key="GridCell.Tab.0.left/0.23.1680.974@0.23.1680.974" timestamp="1595783057479" />
     <state width="2518" height="558" key="GridCell.Tab.0.left/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1596955770821" />
     <state width="1878" height="269" key="GridCell.Tab.0.left/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@4240.211.1920.1177" timestamp="1593736225148" />
-    <state width="1638" height="820" key="GridCell.Tab.0.right" timestamp="1599098684123">
-      <screen x="0" y="23" width="1680" height="972" />
+    <state width="2518" height="404" key="GridCell.Tab.0.right" timestamp="1601537765243">
+      <screen x="1680" y="23" width="2560" height="1417" />
     </state>
     <state width="2518" height="312" key="GridCell.Tab.0.right/0.23.1680.971/1680.23.2560.1361@1680.23.2560.1361" timestamp="1593656219985" />
     <state width="1638" height="360" key="GridCell.Tab.0.right/0.23.1680.971/1680.23.2560.1417@0.23.1680.971" timestamp="1598574392120" />
-    <state width="2518" height="557" key="GridCell.Tab.0.right/0.23.1680.972/1680.23.2560.1417@1680.23.2560.1417" timestamp="1599058814571" />
-    <state width="1638" height="820" key="GridCell.Tab.0.right/0.23.1680.972@0.23.1680.972" timestamp="1599098684123" />
+    <state width="2518" height="404" key="GridCell.Tab.0.right/0.23.1680.972/1680.23.2560.1417@1680.23.2560.1417" timestamp="1601537765243" />
+    <state width="1638" height="272" key="GridCell.Tab.0.right/0.23.1680.972@0.23.1680.972" timestamp="1601192292764" />
     <state width="2518" height="2" key="GridCell.Tab.0.right/0.23.1680.974/1680.23.2560.1417@0.23.1680.974" timestamp="1593495414091" />
     <state width="2518" height="759" key="GridCell.Tab.0.right/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1596933377515" />
     <state width="1638" height="519" key="GridCell.Tab.0.right/0.23.1680.974@0.23.1680.974" timestamp="1595783057480" />
