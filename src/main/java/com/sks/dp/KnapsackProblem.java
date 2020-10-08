@@ -15,6 +15,10 @@ public class KnapsackProblem {
     private static int[][] mem;
 
     // Recursion
+    // Approach: A simple solution is to consider all subsets of items and calculate the total weight and value of all subsets.
+    // Consider the only subsets whose total weight is smaller than W. From all such subsets, pick the maximum value subset.
+    // Time Complexity: O(2^n)
+    // Space Complexity: O(1)
     public static int knapsack_recursion(int[] wt, int[] v, int w, int n) {
         //System.out.println("knapsack(" + Arrays.toString(wt) + ", " + Arrays.toString(v) + ", " + w + ", " + n + ")");
         // 1. Base Condition
@@ -30,6 +34,7 @@ public class KnapsackProblem {
 
     // Recursion + Memoization = Dynamic Programming
     // Time Complexity: O(n2)
+    // Space Complexity:
     // Concern: Method stack is used that may become full, highly unlikely
     public static int knapsack_memoization(int[] wt, int[] v, int w, int n) {
         // 1. Base Condition
@@ -50,7 +55,8 @@ public class KnapsackProblem {
 
     // Top-down is called real dynamic programming
     // Remove recursive call
-    // Time Complexity: O(n2)
+    // Time Complexity: O(n^2)
+    // Space Complexity:
     // Better Part: No method stack is used
     public static int knapsack_top_down(int[] wt, int[] v, int w, int n) {
         // 1. Initialization: Base condition changes to Initialization
