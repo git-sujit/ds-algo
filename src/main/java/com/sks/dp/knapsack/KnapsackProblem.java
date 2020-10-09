@@ -1,4 +1,4 @@
-package com.sks.dp;
+package com.sks.dp.knapsack;
 
 import java.util.Arrays;
 
@@ -6,7 +6,7 @@ import java.util.Arrays;
  * @author : Sujit K Singh
  * Purpose : Knapsack problem
  * - Problem of combinatorics
- * - n Items, for item i: weight=w[i] and value=v[i]
+ * - n Items, for item i: weight=w[i] and value=v[i] :: set of non-negative integers
  * - Max weight in Knapsack = M
  * - Which all items to pick to maximize the value of Knapsack
  */
