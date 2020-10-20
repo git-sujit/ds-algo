@@ -44,22 +44,6 @@ public class MinimumSubsetSumDifference {
         return min_diff;
     }
 
-    public static int countNoSubsetWithGivenDifference(int[] arr, int diff) {
-        int n = arr.length;
-        int sum = 0;
-        for (int a : arr)
-            sum += a;
-        Boolean[][] t = prepareSubsetSumTopDownMatrix(arr, sum, n);
-
-        Boolean[] lastRow = t[n];
-
-        int count = 0;
-        for (int j = 0; j <= sum / 2; j++)
-            if (Math.abs(sum - 2 * j) == diff) count++;
-
-        return count;
-    }
-
     private static Boolean[][] prepareSubsetSumTopDownMatrix(int[] arr, int sum, int n) {
         Boolean[][] t = new Boolean[n + 1][sum + 1];
         for (int i = 0; i <= n; i++) {
@@ -89,20 +73,10 @@ public class MinimumSubsetSumDifference {
 
         int[] arr2 = {1, 2, 7};
         test_minimumSubsetSumDifference(arr2);
-
-        int[] arr3 = {1, 1, 2, 3};
-        int diff = 1;
-        test_countNoSubsetWithGivenDifference(arr3, diff);
     }
 
     private static void test_minimumSubsetSumDifference(int[] arr) {
         System.out.println("##### Array: " + Arrays.toString(arr));
         System.out.println("Minimum Subset Sum Difference = " + minimumSubsetSumDifference(arr));
-    }
-
-    private static void test_countNoSubsetWithGivenDifference(int[] arr, int diff) {
-        System.out.println("##### Array: " + Arrays.toString(arr));
-        System.out.println("Difference = " + diff);
-        System.out.println("Count of No of Subsets with Given Difference = " + countNoSubsetWithGivenDifference(arr, diff));
     }
 }
