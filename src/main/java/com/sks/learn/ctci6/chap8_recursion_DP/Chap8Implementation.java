@@ -1,4 +1,4 @@
-package com.sks.learn.ctci6.chap8;
+package com.sks.learn.ctci6.chap8_recursion_DP;
 
 import java.util.ArrayList;
 import java.util.Arrays;
