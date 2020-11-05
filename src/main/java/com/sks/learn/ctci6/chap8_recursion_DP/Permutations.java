@@ -5,6 +5,28 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Permutations {
+
+    public static List<String> permutation(String s) {
+        if (s == null) return null;
+        if (s.length() <= 1) {
+            List<String> p = new ArrayList<>();
+            p.add(s);
+            return p;
+        }
+        int len = s.length();
+        String sub = s.substring(0, len - 1);
+        char last = s.charAt(len - 1);
+        List<String> perms1 = permutation(sub);
+        List<String> perms = new ArrayList<>();
+        for (String s1 : perms1) {
+            String p1 = last + s1;
+            String p2 = s1 + last;
+            perms.add(p1);
+            perms.add(p2);
+        }
+        return perms;
+    }
+
     /**
      * ITERATION
      * Time Complexity  : O(n!): n is length of String

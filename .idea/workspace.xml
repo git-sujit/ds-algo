@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/Permutations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/RecursiveMultiply.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/BinarySearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/BooleanEvaluation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/PermutationsWithDups.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/learn/algo/SearchingAlgorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/learn/algo/SearchingAlgorithms_DEPRECATED.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/Permutations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/Permutations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sks/learn/dsalgo/SearchingAlgorithmTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sks/learn/dsalgo/SearchingAlgorithmTestCases.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,20 +29,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1dsTFPZJt1E5wAzgn0lkRf4rahT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -46,10 +46,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -57,9 +58,22 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Permutations">
-    <configuration name="MagicIndex" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.learn.ctci6.chap8_recursion_DP.MagicIndex" />
+  <component name="RunManager" selected="Application.BinarySearch">
+    <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.algo2020.algoexperts.easy.BinarySearch" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.algo2020.algoexperts.easy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BooleanEvaluation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.learn.ctci6.chap8_recursion_DP.BooleanEvaluation" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
@@ -84,8 +98,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PowerSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.learn.ctci6.chap8_recursion_DP.PowerSet" />
+    <configuration name="PermutationsWithDups" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.learn.ctci6.chap8_recursion_DP.PermutationsWithDups" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
@@ -110,41 +124,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RobotInGrid" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.learn.ctci6.chap8_recursion_DP.RobotInGrid" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.learn.ctci6.chap8_recursion_DP.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BinarySearch" />
+        <item itemvalue="Application.BooleanEvaluation" />
+        <item itemvalue="Application.PermutationsWithDups" />
         <item itemvalue="Application.Permutations" />
         <item itemvalue="Application.RecursiveMultiply" />
-        <item itemvalue="Application.PowerSet" />
-        <item itemvalue="Application.MagicIndex" />
-        <item itemvalue="Application.RobotInGrid" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -188,11 +191,15 @@
       <workItem from="1603300478570" duration="15179000" />
       <workItem from="1603387228222" duration="15977000" />
       <workItem from="1603499591245" duration="2863000" />
+      <workItem from="1603998908611" duration="6351000" />
+      <workItem from="1604336510623" duration="2504000" />
+      <workItem from="1604421220126" duration="1083000" />
+      <workItem from="1604545888421" duration="2774000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2773" y="448" key="#com.intellij.ide.util.MemberChooser" timestamp="1603234763259">
@@ -214,7 +221,7 @@
     </state>
     <state x="2447" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1680.1027/1680.23.2560.1417@1680.23.2560.1417" timestamp="1603235039183" />
     <state x="2447" y="91" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/4240.211.1920.1177/0.23.1680.972/1680.91.2560.1417@1680.91.2560.1417" timestamp="1603390909706" />
-    <state width="2518" height="422" key="GridCell.Tab.0.bottom" timestamp="1603510792924">
+    <state width="2518" height="463" key="GridCell.Tab.0.bottom" timestamp="1604548513406">
       <screen x="1680" y="91" width="2560" height="1417" />
     </state>
     <state width="2518" height="423" key="GridCell.Tab.0.bottom/0.23.1680.1027/1680.23.2560.1417@1680.23.2560.1417" timestamp="1603235064400" />
@@ -222,11 +229,10 @@
     <state width="2518" height="422" key="GridCell.Tab.0.bottom/0.23.1680.972/1680.23.2560.1417@1680.23.2560.1417" timestamp="1603497962601" />
     <state width="2518" height="423" key="GridCell.Tab.0.bottom/0.23.1680.972@0.23.1680.972" timestamp="1603354182204" />
     <state width="2518" height="759" key="GridCell.Tab.0.bottom/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1596933377515" />
-    <state width="1638" height="519" key="GridCell.Tab.0.bottom/0.23.1680.974@0.23.1680.974" timestamp="1595783057480" />
     <state width="2518" height="423" key="GridCell.Tab.0.bottom/4240.211.1920.1177/0.23.1680.1027/1680.91.2560.1417@1680.91.2560.1417" timestamp="1603256523624" />
-    <state width="2518" height="422" key="GridCell.Tab.0.bottom/4240.211.1920.1177/0.23.1680.972/1680.91.2560.1417@1680.91.2560.1417" timestamp="1603510792924" />
+    <state width="2518" height="463" key="GridCell.Tab.0.bottom/4240.211.1920.1177/0.23.1680.972/1680.91.2560.1417@1680.91.2560.1417" timestamp="1604548513406" />
     <state width="2518" height="558" key="GridCell.Tab.0.bottom/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1596955770821" />
-    <state width="2518" height="422" key="GridCell.Tab.0.center" timestamp="1603510792923">
+    <state width="2518" height="463" key="GridCell.Tab.0.center" timestamp="1604548513404">
       <screen x="1680" y="91" width="2560" height="1417" />
     </state>
     <state width="2518" height="423" key="GridCell.Tab.0.center/0.23.1680.1027/1680.23.2560.1417@1680.23.2560.1417" timestamp="1603235064399" />
@@ -234,11 +240,10 @@
     <state width="2518" height="422" key="GridCell.Tab.0.center/0.23.1680.972/1680.23.2560.1417@1680.23.2560.1417" timestamp="1603497962601" />
     <state width="2518" height="423" key="GridCell.Tab.0.center/0.23.1680.972@0.23.1680.972" timestamp="1603354182199" />
     <state width="2518" height="759" key="GridCell.Tab.0.center/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1596933377514" />
-    <state width="1638" height="519" key="GridCell.Tab.0.center/0.23.1680.974@0.23.1680.974" timestamp="1595783057479" />
     <state width="2518" height="423" key="GridCell.Tab.0.center/4240.211.1920.1177/0.23.1680.1027/1680.91.2560.1417@1680.91.2560.1417" timestamp="1603256523623" />
-    <state width="2518" height="422" key="GridCell.Tab.0.center/4240.211.1920.1177/0.23.1680.972/1680.91.2560.1417@1680.91.2560.1417" timestamp="1603510792923" />
+    <state width="2518" height="463" key="GridCell.Tab.0.center/4240.211.1920.1177/0.23.1680.972/1680.91.2560.1417@1680.91.2560.1417" timestamp="1604548513404" />
     <state width="2518" height="558" key="GridCell.Tab.0.center/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1596955770821" />
-    <state width="2518" height="422" key="GridCell.Tab.0.left" timestamp="1603510792923">
+    <state width="2518" height="463" key="GridCell.Tab.0.left" timestamp="1604548513403">
       <screen x="1680" y="91" width="2560" height="1417" />
     </state>
     <state width="2518" height="423" key="GridCell.Tab.0.left/0.23.1680.1027/1680.23.2560.1417@1680.23.2560.1417" timestamp="1603235064398" />
@@ -246,11 +251,10 @@
     <state width="2518" height="422" key="GridCell.Tab.0.left/0.23.1680.972/1680.23.2560.1417@1680.23.2560.1417" timestamp="1603497962601" />
     <state width="2518" height="423" key="GridCell.Tab.0.left/0.23.1680.972@0.23.1680.972" timestamp="1603354182198" />
     <state width="2518" height="759" key="GridCell.Tab.0.left/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1596933377514" />
-    <state width="1638" height="519" key="GridCell.Tab.0.left/0.23.1680.974@0.23.1680.974" timestamp="1595783057479" />
     <state width="2518" height="423" key="GridCell.Tab.0.left/4240.211.1920.1177/0.23.1680.1027/1680.91.2560.1417@1680.91.2560.1417" timestamp="1603256523623" />
-    <state width="2518" height="422" key="GridCell.Tab.0.left/4240.211.1920.1177/0.23.1680.972/1680.91.2560.1417@1680.91.2560.1417" timestamp="1603510792923" />
+    <state width="2518" height="463" key="GridCell.Tab.0.left/4240.211.1920.1177/0.23.1680.972/1680.91.2560.1417@1680.91.2560.1417" timestamp="1604548513403" />
     <state width="2518" height="558" key="GridCell.Tab.0.left/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1596955770821" />
-    <state width="2518" height="422" key="GridCell.Tab.0.right" timestamp="1603510792924">
+    <state width="2518" height="463" key="GridCell.Tab.0.right" timestamp="1604548513405">
       <screen x="1680" y="91" width="2560" height="1417" />
     </state>
     <state width="2518" height="423" key="GridCell.Tab.0.right/0.23.1680.1027/1680.23.2560.1417@1680.23.2560.1417" timestamp="1603235064399" />
@@ -258,9 +262,8 @@
     <state width="2518" height="422" key="GridCell.Tab.0.right/0.23.1680.972/1680.23.2560.1417@1680.23.2560.1417" timestamp="1603497962601" />
     <state width="2518" height="423" key="GridCell.Tab.0.right/0.23.1680.972@0.23.1680.972" timestamp="1603354182199" />
     <state width="2518" height="759" key="GridCell.Tab.0.right/0.23.1680.974/1680.23.2560.1417@1680.23.2560.1417" timestamp="1596933377515" />
-    <state width="1638" height="519" key="GridCell.Tab.0.right/0.23.1680.974@0.23.1680.974" timestamp="1595783057480" />
     <state width="2518" height="423" key="GridCell.Tab.0.right/4240.211.1920.1177/0.23.1680.1027/1680.91.2560.1417@1680.91.2560.1417" timestamp="1603256523623" />
-    <state width="2518" height="422" key="GridCell.Tab.0.right/4240.211.1920.1177/0.23.1680.972/1680.91.2560.1417@1680.91.2560.1417" timestamp="1603510792924" />
+    <state width="2518" height="463" key="GridCell.Tab.0.right/4240.211.1920.1177/0.23.1680.972/1680.91.2560.1417@1680.91.2560.1417" timestamp="1604548513405" />
     <state width="2518" height="558" key="GridCell.Tab.0.right/4240.211.1920.1177/0.23.1680.974/1680.91.2560.1417@1680.91.2560.1417" timestamp="1596955770821" />
     <state width="2518" height="501" key="GridCell.Tab.1.bottom" timestamp="1602234291719">
       <screen x="1680" y="23" width="2560" height="1417" />
@@ -282,6 +285,10 @@
     </state>
     <state width="2518" height="501" key="GridCell.Tab.1.right/0.23.1680.972/1680.23.2560.1417@1680.23.2560.1417" timestamp="1602234291719" />
     <state width="2518" height="501" key="GridCell.Tab.1.right/4240.211.1920.1177/0.23.1680.972/1680.91.2560.1417@1680.91.2560.1417" timestamp="1602187348424" />
+    <state x="2469" y="438" key="SettingsEditor" timestamp="1603942531311">
+      <screen x="1680" y="91" width="2560" height="1417" />
+    </state>
+    <state x="2469" y="438" key="SettingsEditor/4240.211.1920.1177/0.23.1680.972/1680.91.2560.1417@1680.91.2560.1417" timestamp="1603942531311" />
     <state x="2354" y="422" key="new project wizard" timestamp="1603394570517">
       <screen x="1680" y="91" width="2560" height="1417" />
     </state>
@@ -290,6 +297,10 @@
       <screen x="1680" y="23" width="2560" height="1417" />
     </state>
     <state x="2625" y="346" width="670" height="675" key="run.anything.popup/0.23.1680.972/1680.23.2560.1417@1680.23.2560.1417" timestamp="1602135584078" />
+    <state x="2625" y="416" width="670" height="676" key="search.everywhere.popup" timestamp="1604010228032">
+      <screen x="1680" y="91" width="2560" height="1417" />
+    </state>
+    <state x="2625" y="416" width="670" height="676" key="search.everywhere.popup/4240.211.1920.1177/0.23.1680.972/1680.91.2560.1417@1680.91.2560.1417" timestamp="1604010228032" />
     <state x="2690" y="650" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1601879872908">
       <screen x="1680" y="23" width="2560" height="1417" />
     </state>

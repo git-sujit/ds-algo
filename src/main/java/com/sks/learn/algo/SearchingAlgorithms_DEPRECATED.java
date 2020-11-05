@@ -1,6 +1,6 @@
 package com.sks.learn.algo;
 
-public class SearchingAlgorithms {
+public class SearchingAlgorithms_DEPRECATED {
 
 	public static void main(String[] args) {
 		int[] sortedArray = { 1, 3, 7, 13, 21, 31, 43, 57, 73, 91 };

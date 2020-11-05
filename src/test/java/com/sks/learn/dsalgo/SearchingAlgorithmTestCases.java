@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.sks.learn.algo.SearchingAlgorithms;
+import com.sks.learn.algo.SearchingAlgorithms_DEPRECATED;
 
 public class SearchingAlgorithmTestCases {
 
@@ -47,13 +47,13 @@ public class SearchingAlgorithmTestCases {
 			// Positive Test Case
 			int input = 1 + i * (i + 1);
 			System.out.println("Iterative Binary Searching: " + input);
-			int output = SearchingAlgorithms.binarySearchSortedArrayIterative(sortedArray, input);
+			int output = SearchingAlgorithms_DEPRECATED.binarySearchSortedArrayIterative(sortedArray, input);
 			System.out.println("Found At Index: " + output);
 			// assertTrue(output > 0);
 			// Negative Test Case
 			input = 2 + i * (i + 1);
 			System.out.println("Iterative Binary Searching:  " + input);
-			output = SearchingAlgorithms.binarySearchSortedArrayIterative(sortedArray, input);
+			output = SearchingAlgorithms_DEPRECATED.binarySearchSortedArrayIterative(sortedArray, input);
 			System.out.println("Found At Index: " + output);
 			// assertFalse(output > 0);
 		}
@@ -76,14 +76,14 @@ public class SearchingAlgorithmTestCases {
 			// Positive Test Case
 			int input = 1 + i * (i + 1);
 			System.out.println("Recursive Binary Searching: " + input);
-			int output = SearchingAlgorithms.binarySearchSortedArrayRecursive(sortedArray, 0, sortedArray.length - 1,
+			int output = SearchingAlgorithms_DEPRECATED.binarySearchSortedArrayRecursive(sortedArray, 0, sortedArray.length - 1,
 					input);
 			System.out.println("Found At Index: " + output);
 			// assertTrue(output > 0);
 			// Negative Test Case
 			input = 2 + i * (i + 1);
 			System.out.println("Recursive Binary Searching: " + input);
-			output = SearchingAlgorithms.binarySearchSortedArrayRecursive(sortedArray, 0, sortedArray.length - 1,
+			output = SearchingAlgorithms_DEPRECATED.binarySearchSortedArrayRecursive(sortedArray, 0, sortedArray.length - 1,
 					input);
 			System.out.println("Found At Index: " + output);
 			// assertFalse(output > 0);
