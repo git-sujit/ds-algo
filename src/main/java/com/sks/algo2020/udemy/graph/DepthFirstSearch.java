@@ -9,6 +9,10 @@ import static com.sks.algo2020.TestData.GraphNode;
  * Purpose :
  */
 public class DepthFirstSearch {
+    /**
+     * Time Complexity  : O(n) - Visiting each of n nodes
+     * Space Complexity : O(n) - method stack memory for recursion
+     */
     public static void dfs(GraphNode<Integer> n) {
         if (n == null) return;
         visit(n);

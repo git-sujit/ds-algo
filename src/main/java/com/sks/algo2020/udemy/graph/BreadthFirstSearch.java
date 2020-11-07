@@ -13,6 +13,10 @@ import static com.sks.algo2020.TestData.GraphNode;
  * Purpose : BFS
  */
 public class BreadthFirstSearch {
+    /**
+     * Time Complexity  : O(n) - Visiting each of n nodes
+     * Space Complexity : O(n) - Queue memory
+     */
     public static void bfs(GraphNode<Integer> n) {
         if (n == null) return;
         Queue<GraphNode<Integer>> q = new LinkedList<>();

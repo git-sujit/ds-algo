@@ -10,17 +10,44 @@ import static com.sks.algo2020.TestData.BTNode;
  */
 public class BinarySearchTree {
 
-    public static BTNode<Integer> search(BTNode<Integer> n, int data) {
+    /**
+     * Time Complexity  : O(height=logn)
+     * Space Complexity : O(1)
+     */
+    public static BTNode<Integer> search_iterative(BTNode<Integer> n, int data) {
+        if (n == null) return null;
+        BTNode p;
+        while (n != null) {
+            int d = n.data;
+            if (data < d)
+                n = n.left;
+            else if (data > d)
+                n = n.right;
+            else
+                return n;
+        }
+        return null;
+    }
+
+    /**
+     * Time Complexity  : O(height=logn)
+     * Space Complexity : O(logn) for method stack
+     */
+    public static BTNode<Integer> search_recursive(BTNode<Integer> n, int data) {
         if (n == null) return null;
         int nData = n.data;
         if (data < nData)
-            return search(n.left, data);
+            return search_recursive(n.left, data);
         else if (data > nData)
-            return search(n.right, data);
+            return search_recursive(n.right, data);
         else
             return n;
     }
 
+    /**
+     * Time Complexity  : O(height=logn)
+     * Space Complexity : O(1)
+     */
     public static BTNode<Integer> min(BTNode n) {
         if (n == null) return null;
         while (n.left != null)
@@ -28,6 +55,10 @@ public class BinarySearchTree {
         return n;
     }
 
+    /**
+     * Time Complexity  : O(height=logn)
+     * Space Complexity : O(1)
+     */
     public static BTNode<Integer> max(BTNode n) {
         if (n == null) return null;
         while (n.right != null)
@@ -35,6 +66,12 @@ public class BinarySearchTree {
         return n;
     }
 
+    /**
+     * ITERATION
+     * ALWAYS INSERTED AT LEAF NODE
+     * Time Complexity  : O(height=logn)
+     * Space Complexity : O(1)
+     */
     public static BTNode<Integer> insert(BTNode<Integer> n, int d) {
         BTNode<Integer> in = new BTNode(d);
         BTNode<Integer> parent = null;
@@ -57,6 +94,12 @@ public class BinarySearchTree {
         return parent;
     }
 
+    /**
+     * RECURSION
+     * ALWAYS INSERTED AT LEAF NODE
+     * Time Complexity  : O(height=logn)
+     * Space Complexity : O(logn)
+     */
     public static BTNode<Integer> insert_recursive(BTNode<Integer> n, int d) {
         if (n == null) return new BTNode(d);
         if (d < n.data)
@@ -122,8 +165,10 @@ public class BinarySearchTree {
         while (n != null) {
             if (d == n.data) break;
             parent = n;
-            if (d < n.data) n = n.left;
-            else if (d > n.data) n = n.right;
+            if (d < n.data)
+                n = n.left;
+            else
+                n = n.right;
         }
         return parent;
     }
@@ -132,9 +177,9 @@ public class BinarySearchTree {
         BTNode<Integer> root = TestData.getBinarySearchTreeDataInt();
         testGeneral(root);
         //testTraversal(root);
-        //testSearching(root);
+        testSearching(root);
         //testInsertion(root);
-        testDeletion(root);
+        //testDeletion(root);
     }
 
 
@@ -158,15 +203,24 @@ public class BinarySearchTree {
 
     private static void testSearching(BTNode<Integer> root) {
         int searchData = 10;
-        System.out.println("Searching " + searchData + " :: " + search(root, searchData));
+        System.out.println("Recursion: Searching " + searchData + " :: " + search_recursive(root, searchData));
+        System.out.println("Iteration: Searching " + searchData + " :: " + search_iterative(root, searchData));
+
         searchData = 80;
-        System.out.println("Searching " + searchData + " :: " + search(root, searchData));
+        System.out.println("Recursion: Searching " + searchData + " :: " + search_recursive(root, searchData));
+        System.out.println("Iteration: Searching " + searchData + " :: " + search_iterative(root, searchData));
+
         searchData = 93;
-        System.out.println("Searching " + searchData + " :: " + search(root, searchData));
+        System.out.println("Recursion: Searching " + searchData + " :: " + search_recursive(root, searchData));
+        System.out.println("Iteration: Searching " + searchData + " :: " + search_iterative(root, searchData));
+
         searchData = 50;
-        System.out.println("Searching " + searchData + " :: " + search(root, searchData));
+        System.out.println("Recursion: Searching " + searchData + " :: " + search_recursive(root, searchData));
+        System.out.println("Iteration: Searching " + searchData + " :: " + search_iterative(root, searchData));
+
         searchData = 40;
-        System.out.println("Searching " + searchData + " :: " + search(root, searchData));
+        System.out.println("Recursion: Searching " + searchData + " :: " + search_recursive(root, searchData));
+        System.out.println("Iteration: Searching " + searchData + " :: " + search_iterative(root, searchData));
     }
 
     private static void testInsertion(BTNode<Integer> root) {
