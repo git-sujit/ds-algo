@@ -1,4 +1,4 @@
-package com.sks.learn.ctci6.chap4;
+package com.sks.learn.ctci6.chap4_trees_graphs;
 
 public class BTNode {
 	private int nodeId;
