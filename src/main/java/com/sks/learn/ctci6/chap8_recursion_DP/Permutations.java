@@ -2,7 +2,9 @@ package com.sks.learn.ctci6.chap8_recursion_DP;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Permutations {
 
@@ -91,10 +93,30 @@ public class Permutations {
         return perms;
     }
 
+
+    public static void helper(char[] word,char[] chars, List<String> ans, int index)   {
+        if(index > word.length){
+            ans.add(new String(word));
+        }
+        Set<Character> set = new HashSet<>();
+        for(int i = 0; i < index; i++){
+            set.add(word[i]);
+        }
+        for( int i = 0; i < chars.length; i++){
+            if(set.contains(chars[i])){
+                word[index] = chars[i];
+                helper(word, chars, ans, index + 1);
+            }
+        }
+
+
+    }
+
     public static void main(String[] args) {
         List<Integer> l = new ArrayList<>();
         l.add(null);
 
+        /**
         System.out.println("RECURSION");
         testPermutationsWithoutDups_string(null);
         testPermutationsWithoutDups_string("");
@@ -109,6 +131,9 @@ public class Permutations {
         testPermutationsWithoutDups_list(new ArrayList<>(Arrays.asList(1)));
         testPermutationsWithoutDups_list(new ArrayList<>(Arrays.asList(1, 2)));
         testPermutationsWithoutDups_list(new ArrayList<>(Arrays.asList(1, 2, 3)));
+    **/
+
+
     }
 
     private static void testPermutationsWithoutDups_string(String s) {
@@ -118,10 +143,12 @@ public class Permutations {
         System.out.println("Permutations = " + perms);
     }
 
-    private static void testPermutationsWithoutDups_list(List<Integer> list) {
-        System.out.println("\nList = " + list);
-        List<List<Integer>> perms = permutationsWithoutDups_recursion(list);
+    private static void testPermutationsWithoutDups_interview(String s) {
+        System.out.println("\nString = " + s);
+        List<String> perms = permutationsWithoutDups(s);
         System.out.println("No. of Perms = " + perms.size());
         System.out.println("Permutations = " + perms);
     }
+
+
 }

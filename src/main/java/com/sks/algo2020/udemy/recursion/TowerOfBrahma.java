@@ -23,6 +23,6 @@ public class TowerOfBrahma {
     }
 
     public static void main(String[] args) {
-        brahma(5, "A", "B", "C");
+        brahma(2, "S", "T", "D");
     }
 }

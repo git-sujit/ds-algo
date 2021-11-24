@@ -25,7 +25,7 @@ public class BreadthFirstSearch {
         n.visited = true;
         while (!q.isEmpty()) {
             System.out.println("Queue = " + q.toString());
-            GraphNode<Integer> qn = q.remove();f
+            GraphNode<Integer> qn = q.remove();
             if (!qn.visited) {
                 q.addAll(Arrays.asList(qn.children));
                 visit(qn);

@@ -27,6 +27,8 @@ public class ThreeNumberSum {
                     right--;
             }
         }
+        int[] arr = {1,2,3};
+        new ArrayList<Integer>(arr[0]);
         return out;
     }
 
