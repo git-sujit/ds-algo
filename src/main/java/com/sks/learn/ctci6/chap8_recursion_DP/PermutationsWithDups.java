@@ -42,7 +42,7 @@ public class PermutationsWithDups {
         testPermutationsWithoutDups("a");
         testPermutationsWithoutDups("ab");
         testPermutationsWithoutDups("abc");
-        testPermutationsWithoutDups("abcde");
+        testPermutationsWithoutDups("abcd");
     }
 
     private static void testPermutationsWithoutDups(String s) {
