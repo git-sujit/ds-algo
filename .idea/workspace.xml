@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/ThreeNumberSum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2021/MatrixRotation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2021/ScratchBook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/conceptsOfJava/TroubleshootNoClassDefFound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TwoSum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/ThreeNumberSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts/easy/ThreeNumberSum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/BreadthFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/recursion/TowerOfBrahma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/recursion/TowerOfBrahma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/Permutations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/Permutations.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +60,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TowerOfBrahma">
+  <component name="RunManager" selected="Application.TwoSum">
     <configuration name="MatrixRotation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sks.algo2021.MatrixRotation" />
       <module name="ds-algo" />
@@ -88,19 +80,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.sks.algo2021.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ThreeNumberSum (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.algo2020.algoexperts.easy.ThreeNumberSum" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.algo2020.algoexperts.easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,13 +113,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TwoSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.TwoSum" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TwoSum" />
         <item itemvalue="Application.TowerOfBrahma" />
         <item itemvalue="Application.ScratchBook" />
         <item itemvalue="Application.MatrixRotation" />
         <item itemvalue="Application.TroubleshootNoClassDefFound" />
-        <item itemvalue="Application.ThreeNumberSum (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -216,6 +208,8 @@
       <workItem from="1635104377438" duration="1593000" />
       <workItem from="1636400878269" duration="5024000" />
       <workItem from="1636583093132" duration="2608000" />
+      <workItem from="1637737133140" duration="1665000" />
+      <workItem from="1638470165500" duration="5286000" />
     </task>
     <servers />
   </component>
