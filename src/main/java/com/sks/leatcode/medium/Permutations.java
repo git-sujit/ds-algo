@@ -6,10 +6,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Permutations {
-    // Time Complexity: O(n*n!)
-    // Space Complexity: O(n!)
-    // Idea: Building from permutations of all (n-1) substrings
-    // Ex: p(abc) = a+p(bc), b+p(ac), c+p(ab)
+    /**
+     * Time Complexity: O(n*n!)
+     * Space Complexity: O(n!)
+     * Idea: Building from permutations of all (n-1) substrings
+     * Ex: p(abc) = a+p(bc), b+p(ac), c+p(ab)
+     **/
     public List<String> permutations_string(String s) {
         List<String> perms = new ArrayList<>();
         if (s.length() == 1) {
@@ -17,10 +19,10 @@ public class Permutations {
             return perms;
         }
         for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
+            char first = s.charAt(i);
             List<String> subPerms = permutations_string(s.substring(0, i) + s.substring(i + 1));
             for (String p : subPerms)
-                perms.add(c + p);
+                perms.add(first + p);
         }
         return perms;
     }
@@ -72,11 +74,13 @@ public class Permutations {
         int[] a = {1, 2, 3};
         System.out.println("Permutation(int[])  : " + Arrays.toString(a));
         List<List<Integer>> perms = obj.permutations_int_array(a);
+        System.out.println("\tIs int[] modified  : " + Arrays.toString(a));
         System.out.println("\tcount = " + perms.size() + " : " + perms);
 
         String s = "abcd";
         System.out.println("Permutation(String) : " + s);
         List<String> perms1 = obj.permutations_string(s);
+        System.out.println("\tIs string modified : " + s);
         System.out.println("\tcount = " + perms1.size() + " : " + perms1);
 
     }
