@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/InvertBinaryTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/Revise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/Revise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/Permutations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/Permutations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/dp/knapsack/KnapsackProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/dp/knapsack/KnapsackProblem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/dp/knapsack/SubsetSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/dp/knapsack/SubsetSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/InvertBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/InvertBinaryTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,13 +62,26 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.InvertBinaryTree">
+  <component name="RunManager" selected="Application.KnapsackProblem">
     <configuration name="InvertBinaryTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.InvertBinaryTree" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.sks.leatcode.easy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KnapsackProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.dp.knapsack.KnapsackProblem" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.dp.knapsack.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -89,32 +102,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Permutations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.learn.ctci6.chap8_recursion_DP.Permutations" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.learn.ctci6.chap8_recursion_DP.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PermutationsWithDups" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.learn.ctci6.chap8_recursion_DP.PermutationsWithDups" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.learn.ctci6.chap8_recursion_DP.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Revise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.Revise" />
       <module name="ds-algo" />
@@ -128,13 +115,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SubsetSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.dp.knapsack.SubsetSum" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.dp.knapsack.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.KnapsackProblem" />
+        <item itemvalue="Application.SubsetSum" />
         <item itemvalue="Application.InvertBinaryTree" />
         <item itemvalue="Application.Revise" />
         <item itemvalue="Application.Permutations (1)" />
-        <item itemvalue="Application.PermutationsWithDups" />
-        <item itemvalue="Application.Permutations" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +211,8 @@
       <workItem from="1636400878269" duration="5024000" />
       <workItem from="1636583093132" duration="2608000" />
       <workItem from="1637737133140" duration="1665000" />
-      <workItem from="1638470165500" duration="35031000" />
+      <workItem from="1638470165500" duration="45018000" />
+      <workItem from="1638930646158" duration="1538000" />
     </task>
     <servers />
   </component>

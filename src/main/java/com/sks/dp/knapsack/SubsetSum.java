@@ -28,10 +28,14 @@ public class SubsetSum {
     // Time Complexity: O(n^2)
     // Space Complexity: O(n*sum) for array
     public static boolean isSubsetSum_memoization(int[] arr, int sum, int n) {
+        Boolean[][] mem = new Boolean[n + 1][sum + 1];
+        return isSubsetSum_memoization(arr, sum, n, mem);
+    }
+
+    private static boolean isSubsetSum_memoization(int[] arr, int sum, int n, Boolean[][] mem) {
         if (sum == 0) return true; /// This will be first because is sum==0 then true
         if (n == 0) return false;
 
-        Boolean[][] mem = new Boolean[n + 1][sum + 1];
         if (mem[n][sum] != null) return mem[n][sum];
 
         if (arr[n - 1] <= sum)
