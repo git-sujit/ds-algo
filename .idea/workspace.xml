@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/AllDuplicateNumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/FloydAlgoDuplicateNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/ValidateBST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -211,7 +210,7 @@
       <workItem from="1636583093132" duration="2608000" />
       <workItem from="1637737133140" duration="1665000" />
       <workItem from="1638470165500" duration="45018000" />
-      <workItem from="1638930646158" duration="7978000" />
+      <workItem from="1638930646158" duration="11218000" />
     </task>
     <servers />
   </component>
