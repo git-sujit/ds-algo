@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/ValidateBST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/ClimbStairs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/KthSmallestBST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/learn/ds/BinaryTreeTraversalIterative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/learn/ds/BinaryTreeTraversalIterative.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,13 +62,39 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AllDuplicateNumbers">
+  <component name="RunManager" selected="Application.ClimbStairs">
     <configuration name="AllDuplicateNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.AllDuplicateNumbers" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.sks.leatcode.medium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinaryTreeTraversalIterative" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.learn.ds.BinaryTreeTraversalIterative" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.learn.ds.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClimbStairs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.ClimbStairs" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -87,19 +115,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InvertBinaryTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.InvertBinaryTree" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="KnapsackProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sks.dp.knapsack.KnapsackProblem" />
       <module name="ds-algo" />
@@ -113,26 +128,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubsetSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.dp.knapsack.SubsetSum" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.dp.knapsack.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ClimbStairs" />
+        <item itemvalue="Application.BinaryTreeTraversalIterative" />
         <item itemvalue="Application.AllDuplicateNumbers" />
         <item itemvalue="Application.FloydAlgoDuplicateNumber" />
         <item itemvalue="Application.KnapsackProblem" />
-        <item itemvalue="Application.SubsetSum" />
-        <item itemvalue="Application.InvertBinaryTree" />
       </list>
     </recent_temporary>
   </component>
@@ -210,7 +212,9 @@
       <workItem from="1636583093132" duration="2608000" />
       <workItem from="1637737133140" duration="1665000" />
       <workItem from="1638470165500" duration="45018000" />
-      <workItem from="1638930646158" duration="11218000" />
+      <workItem from="1638930646158" duration="17415000" />
+      <workItem from="1639450378930" duration="791000" />
+      <workItem from="1639451263561" duration="1222000" />
     </task>
     <servers />
   </component>
