@@ -5,194 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bin/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/TestData$BTNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/TestData$GraphNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/TestData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/ThreeNumberSum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/algoexperts/TestRandom.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/algoexperts/easy/ArraySubSequence.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/algoexperts/easy/BinarySearch.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/algoexperts/easy/BranchSum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/algoexperts/easy/ClosestBST.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/algoexperts/easy/NodeDepthSum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/algoexperts/easy/Palindrome.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/algoexperts/easy/ProductSumOfArray.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/algoexperts/easy/ThreeLargestNumber.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/algoexperts/easy/ThreeNumberSum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/algoexperts/easy/TwoNumberSum$Input.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/algoexperts/easy/TwoNumberSum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/club/Island$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/club/Island.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/club/LongestPalindromicSubstring.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/club/pattern_search/KnuthMorrisPrattAlgo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/club/pattern_search/NaivePatternSearchAlgo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/club/pattern_search/RabinKarpAlgo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/club/pattern_search/TestPatternSearch.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/udemy/graph/BreadthFirstSearch.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/udemy/graph/DepthFirstSearch.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/udemy/recursion/BaseConversion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/udemy/recursion/EuclidsAlgorithmGCD.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/udemy/recursion/Factorial.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/udemy/recursion/Fibonacci.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/udemy/recursion/TowerOfBrahma.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/udemy/tree/BinarySearchTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2020/udemy/tree/BinaryTreeTraversal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2021/MatrixRotation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/algo2021/ScratchBook.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/conceptsOfJava/ClassA.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/conceptsOfJava/TroubleshootNoClassDefFound.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/dp/knapsack/CountOfSubsetSum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/dp/knapsack/CountSubsetsWithDifference.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/dp/knapsack/EqualSumPartition.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/dp/knapsack/KnapsackProblem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/dp/knapsack/MinimumSubsetSumDifference.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/dp/knapsack/SubsetSum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/dp/knapsack/TargetSum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/dp/lcs/LowestCommonSubsequence.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/gfg/GfgMS.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/gfg/GfgRecursion_1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/interview2017/InterviewContract.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/interview2017/InterviewImplementation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/interview2018/GenColl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/interview2018/InterviewQuestions$NestedList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/interview2018/InterviewQuestions$PayPalTelephonic.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/interview2018/InterviewQuestions.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/interview2018/Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/interview2018/Others.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/interview2018/RecursiveAlgos.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/interview2018/Revise18$BTNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/interview2018/Revise18$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/interview2018/Revise18.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/interview2018/WMTTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/algo/BinaryTreeAlgorithms.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/algo/InterviewAlgorithms.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/algo/MSNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/algo/QuickFindUF$QFData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/algo/QuickFindUF.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/algo/QuickUnion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/algo/SearchingAlgorithms_DEPRECATED.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/algo/SortingAlgorithms.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/algo/UnionFind.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/algo/utility/MathFunctions.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/GeneralPurpose.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap1/Chap1Contract.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap1/Chap1Implementation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap3/Chap3Contract.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap3/Chap3Implementation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap3/Chap3Tester.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap3/MyQueue.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap3/MyStack.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap3/QueueNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap3/QueueViaTwoStacks.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap3/StackNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap4_trees_graphs/BTNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap4_trees_graphs/Chap4Contract.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap4_trees_graphs/Chap4Implementation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap4_trees_graphs/Graph.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap4_trees_graphs/Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap6/Chap6Implementation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/BooleanEvaluation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/Chap8Implementation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/FibonacciFinder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/MagicIndex.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/Permutations.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/PermutationsWithDups.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/Point.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/PowerSet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/RecursiveMultiply.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/RobotInGrid.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/TripleStep.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/BagInterface.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/BinarySearchTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/BinaryTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/BinaryTreeTraversalIterative$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/BinaryTreeTraversalIterative.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/GraphDS.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/GraphEdge.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/GraphInterface.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/GraphVertex.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/JavaOOTB_DS.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/QueuLinkedListImpl$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/QueuLinkedListImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/QueueArrayImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/QueueInterface.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/StackArrayImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/StackArrayImpl_v2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/StackInterface.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/StackInterface_v2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/StackLinkedListImpl$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/StackLinkedListImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/TrieDS$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/TrieDS.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/TrieDSAutoComplete$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/ds/TrieDSAutoComplete.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/dsludemy/linkedlist/CircularLinkedList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/dsludemy/linkedlist/DoublyNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/dsludemy/linkedlist/SinglyNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/dsludemy/stackqueue/Utility.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/java8/Java8FunctionalInterfaces.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/java8/LambdaExpTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/java8/MyConsumer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/java8/MyFI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/java8/MyFI_1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/java8/MyFIimpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/java8/MyPredicate.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/java8/StreamApiTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/java8/TestLambdaFI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/leetcode/LeetCodeUtility_EASY$ListNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/leetcode/LeetCodeUtility_EASY.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/leetcode/LeetCodeUtility_MEDIUM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/others/GenericImplementation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/others/GenericInterface.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/others/Java8Features.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/learn/others/MyLambda.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/Revise.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/easy/ClimbStairs.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/easy/InvertBinaryTree$TreeNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/easy/InvertBinaryTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/easy/LevelAverageInTree$TreeNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/easy/LevelAverageInTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/easy/OnesTogether.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/easy/PalindromeInteger.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/easy/SameBinaryTree$TreeNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/easy/SameBinaryTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/easy/TwoSum$ALGO_TYPE.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/easy/TwoSum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/hard/MedianOfSortedArrays.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/hard/MissingPositive.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/hard/NQueens.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/medium/AllDuplicateNumbers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/medium/CourseSchedule.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/medium/FloydAlgoDuplicateNumber.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/medium/KthSmallestBST$BST.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/medium/KthSmallestBST.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/medium/LowestCommonSubsequence.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/medium/Permutations.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/medium/ValidateBST$BST.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/leatcode/medium/ValidateBST.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/sks/random/RandomProblems.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/test/java/com/sks/learn/dsalgo/BinaryTreeTestCases.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/test/java/com/sks/learn/dsalgo/CSVReaderTestCases.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/test/java/com/sks/learn/dsalgo/DSTestCases.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/test/java/com/sks/learn/dsalgo/EntireTestSuite.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/test/java/com/sks/learn/dsalgo/SearchingAlgorithmTestCases.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/test/java/com/sks/learn/dsalgo/SortingAlgorithmTestCases.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/test/java/com/sks/learn/dsalgo/testutility/CSVReader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/test/java/com/sks/learn/dsalgo/testutility/TestData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/test/java/com/sks/learn/dsalgo/testutility/ValidationUtility.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/test/resources/SortingData.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/dp/lcs/LongestCommonSubstring.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/dp/lcs/LowestCommonSubsequence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/OnesTogether.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/SameBinaryTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/hard/NQueens.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/CourseSchedule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LowestCommonSubsequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/MaxProfitStock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/dp/lcs/LongestCommonSubstring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/dp/lcs/LongestCommonSubstring.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +59,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -252,26 +67,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LowestCommonSubsequence">
-    <configuration name="BinaryTreeTraversalIterative" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.learn.ds.BinaryTreeTraversalIterative" />
+  <component name="RunManager" selected="Application.MaxProfitStock">
+    <configuration name="LongestCommonSubstring" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.dp.lcs.LongestCommonSubstring" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.learn.ds.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ClimbStairs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.ClimbStairs" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
+          <option name="PATTERN" value="com.sks.dp.lcs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -285,6 +87,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.sks.dp.lcs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaxProfitStock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.MaxProfitStock" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -320,11 +135,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MaxProfitStock" />
+        <item itemvalue="Application.LongestCommonSubstring" />
         <item itemvalue="Application.LowestCommonSubsequence" />
         <item itemvalue="Application.OnesTogether" />
         <item itemvalue="Application.MedianOfSortedArrays" />
-        <item itemvalue="Application.ClimbStairs" />
-        <item itemvalue="Application.BinaryTreeTraversalIterative" />
       </list>
     </recent_temporary>
   </component>
