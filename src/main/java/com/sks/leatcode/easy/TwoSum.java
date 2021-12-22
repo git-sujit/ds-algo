@@ -1,5 +1,7 @@
 package com.sks.leatcode.easy;
 
+import com.sks.leatcode.common.ALGO_TYPE;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -51,13 +53,6 @@ public class TwoSum {
         }
 
         return null;
-    }
-
-    /**
-     * TEST CASES
-     */
-    private enum ALGO_TYPE {
-        BRUTE_FORCE, ONE_PASS_HASH_TABLE, TWO_PASS_HASH_TABLE
     }
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.sks.leatcode;
+package com.sks.leatcode.common;
 
 public class TreeNode {
     public int val;

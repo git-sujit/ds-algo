@@ -1,5 +1,7 @@
 package com.sks.leatcode.medium;
 
+import com.sks.leatcode.common.BST;
+
 import java.util.Stack;
 
 /**
@@ -76,15 +78,5 @@ public class ValidateBST {
             return isValidBST_inorderTraversal(root.left);
         }
         return false;
-    }
-
-    class BST {
-        int value;
-        BST left;
-        BST right;
-
-        BST(int value) {
-            this.value = value;
-        }
     }
 }

@@ -1,5 +1,7 @@
 package com.sks.leatcode.medium;
 
+import com.sks.leatcode.common.BST;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -63,15 +65,5 @@ public class KthSmallestBST {
         sortedList.add(root.value);
         if (root.right != null)
             inOrder_sort(root.right, sortedList);
-    }
-
-    class BST {
-        int value;
-        BST left;
-        BST right;
-
-        BST(int value) {
-            this.value = value;
-        }
     }
 }

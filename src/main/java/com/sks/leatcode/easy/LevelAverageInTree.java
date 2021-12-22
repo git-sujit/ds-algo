@@ -1,6 +1,6 @@
 package com.sks.leatcode.easy;
 
-import com.sks.leatcode.TreeNode;
+import com.sks.leatcode.common.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
