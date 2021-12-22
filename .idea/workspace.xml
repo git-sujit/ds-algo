@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/MaxProfitStock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/MaximumSubarray_KadanesAlgo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/DiagonalTraversalMatrix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/dp/lcs/LongestCommonSubstring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/dp/lcs/LongestCommonSubstring.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +67,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MaxProfitStock">
+  <component name="RunManager" selected="Application.MaximumSubarray_KadanesAlgo">
     <configuration name="LongestCommonSubstring" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sks.dp.lcs.LongestCommonSubstring" />
       <module name="ds-algo" />
@@ -107,12 +107,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MedianOfSortedArrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.hard.MedianOfSortedArrays" />
+    <configuration name="MaximumSubarray_KadanesAlgo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.MaximumSubarray_KadanesAlgo" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.hard.*" />
+          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,11 +135,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MaximumSubarray_KadanesAlgo" />
         <item itemvalue="Application.MaxProfitStock" />
         <item itemvalue="Application.LongestCommonSubstring" />
         <item itemvalue="Application.LowestCommonSubsequence" />
         <item itemvalue="Application.OnesTogether" />
-        <item itemvalue="Application.MedianOfSortedArrays" />
       </list>
     </recent_temporary>
   </component>
