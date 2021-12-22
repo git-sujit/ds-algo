@@ -1,5 +1,7 @@
 package com.sks.leatcode.easy;
 
+import com.sks.leatcode.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -43,24 +45,5 @@ public class SameBinaryTree {
         if (p == null || q == null) return false;
         if (p.val != q.val) return false;
         return isSameTree_recursion(p.left, q.left) && isSameTree_recursion(p.right, q.right);
-    }
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

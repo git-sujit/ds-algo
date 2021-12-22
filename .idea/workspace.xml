@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/MaximumSubarray_KadanesAlgo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/DiagonalTraversalMatrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/TreeNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/BinaryTreeDiameter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/InvertBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/InvertBinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/LevelAverageInTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/LevelAverageInTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/SameBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/SameBinaryTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
