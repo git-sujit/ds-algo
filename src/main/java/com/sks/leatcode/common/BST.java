@@ -1,5 +1,8 @@
 package com.sks.leatcode.common;
 
+/**
+ * Binary Search Tree Node
+ */
 public class BST {
     public int value;
     public BST left;
