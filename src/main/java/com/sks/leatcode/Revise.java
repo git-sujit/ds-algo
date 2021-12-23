@@ -27,6 +27,13 @@ public class Revise {
 
     }
 
+    private static void stringUtilities() {
+        // Reverse a string
+        String s = "sujit kumar singh";
+        String r = new StringBuilder(s).reverse().toString();
+        System.out.println("s = " + s + ", r = " + r);
+    }
+
     private static void array_of_primitive_to_object() {
         // Compilation error: That's because autoboxing only applies to individual elements and not to arrays or collections
         // Integer[] integers = (Integer[])(new int[]{0,1,2,3,4});
@@ -77,5 +84,6 @@ public class Revise {
     public static void main(String[] args) {
         stackInJava();
         queueInJava();
+        stringUtilities();
     }
 }
