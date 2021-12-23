@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/dp/lcs/LongestPalindromicSubsequence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LongestPalindromicSubsequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/dp/mcm/MatrixChainMultiplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/hard/WildcardMatching.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/InorderSuccessorBST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/InorderSuccessorTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/Revise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/Revise.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,20 +70,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LongestPalindromicSubsequence">
-    <configuration name="LongestCommonSubstring" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.dp.lcs.LongestCommonSubstring" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.dp.lcs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.WildcardMatching">
     <configuration name="LongestPalindromicSubsequence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.LongestPalindromicSubsequence" />
       <module name="ds-algo" />
@@ -96,12 +84,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MaxProfitStock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.MaxProfitStock" />
+    <configuration name="MatrixChainMultiplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.dp.mcm.MatrixChainMultiplication" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
+          <option name="PATTERN" value="com.sks.dp.mcm.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,13 +123,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WildcardMatching" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.hard.WildcardMatching" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.leatcode.hard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WildcardMatching" />
+        <item itemvalue="Application.MatrixChainMultiplication" />
         <item itemvalue="Application.LongestPalindromicSubsequence" />
         <item itemvalue="Application.Revise" />
         <item itemvalue="Application.MaximumSubarray_KadanesAlgo" />
-        <item itemvalue="Application.MaxProfitStock" />
-        <item itemvalue="Application.LongestCommonSubstring" />
       </list>
     </recent_temporary>
   </component>
