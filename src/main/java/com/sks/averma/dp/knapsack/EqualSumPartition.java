@@ -1,4 +1,4 @@
-package com.sks.dp.knapsack;
+package com.sks.averma.dp.knapsack;
 
 /**
  * @author : Sujit K Singh

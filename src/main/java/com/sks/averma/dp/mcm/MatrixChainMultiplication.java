@@ -1,4 +1,4 @@
-package com.sks.dp.mcm;
+package com.sks.averma.dp.mcm;
 
 /**
  * If a chain of matrices is given, we have to find the minimum number of the correct sequence of matrices to multiply.

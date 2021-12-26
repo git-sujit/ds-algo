@@ -5,11 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/dp/mcm/MatrixChainMultiplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/hard/WildcardMatching.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/InorderSuccessorBST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/InorderSuccessorTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/ArrayRotation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/BinarySearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/NearlySortedArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/dp/knapsack/CountOfSubsetSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/CountOfSubsetSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/dp/knapsack/CountSubsetsWithDifference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/CountSubsetsWithDifference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/dp/knapsack/EqualSumPartition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/EqualSumPartition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/dp/knapsack/KnapsackProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/KnapsackProblem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/dp/knapsack/MinimumSubsetSumDifference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/MinimumSubsetSumDifference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/dp/knapsack/SubsetSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/SubsetSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/dp/knapsack/TargetSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/TargetSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/dp/lcs/LongestCommonSubstring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/LongestCommonSubstring.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/dp/lcs/LongestPalindromicSubsequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/LongestPalindromicSubsequence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/dp/lcs/LowestCommonSubsequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/LowestCommonSubsequence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/dp/mcm/MatrixChainMultiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/mcm/MatrixChainMultiplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/random/RandomProblems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/random/RandomProblems.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,13 +81,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WildcardMatching">
-    <configuration name="LongestPalindromicSubsequence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.LongestPalindromicSubsequence" />
+  <component name="RunManager" selected="Application.NearlySortedArray">
+    <configuration name="ArrayRotation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.binarysearch.ArrayRotation" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.medium.*" />
+          <option name="PATTERN" value="com.sks.averma.binarysearch.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -84,12 +95,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MatrixChainMultiplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.dp.mcm.MatrixChainMultiplication" />
+    <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.binarysearch.BinarySearch" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.dp.mcm.*" />
+          <option name="PATTERN" value="com.sks.averma.binarysearch.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,12 +108,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MaximumSubarray_KadanesAlgo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.MaximumSubarray_KadanesAlgo" />
+    <configuration name="NearlySortedArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.binarysearch.NearlySortedArray" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
+          <option name="PATTERN" value="com.sks.averma.binarysearch.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -110,12 +121,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Revise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.Revise" />
+    <configuration name="RandomProblems" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.random.RandomProblems" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.*" />
+          <option name="PATTERN" value="com.sks.random.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -138,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NearlySortedArray" />
+        <item itemvalue="Application.ArrayRotation" />
+        <item itemvalue="Application.BinarySearch" />
+        <item itemvalue="Application.RandomProblems" />
         <item itemvalue="Application.WildcardMatching" />
-        <item itemvalue="Application.MatrixChainMultiplication" />
-        <item itemvalue="Application.LongestPalindromicSubsequence" />
-        <item itemvalue="Application.Revise" />
-        <item itemvalue="Application.MaximumSubarray_KadanesAlgo" />
       </list>
     </recent_temporary>
   </component>
@@ -278,12 +289,12 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/sks/dp/knapsack/SubsetSum.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/SubsetSum.java</url>
           <line>15</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/sks/dp/lcs/LowestCommonSubsequence.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/LowestCommonSubsequence.java</url>
           <line>14</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>

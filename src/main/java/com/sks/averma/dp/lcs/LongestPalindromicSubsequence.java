@@ -1,4 +1,4 @@
-package com.sks.dp.lcs;
+package com.sks.averma.dp.lcs;
 
 import java.util.Arrays;
 
