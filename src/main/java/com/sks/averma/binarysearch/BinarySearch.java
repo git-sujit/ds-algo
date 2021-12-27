@@ -83,6 +83,11 @@ public class BinarySearch {
         return -1;
     }
 
+    /**
+     * First occurrence of
+     * Input: Array=[2,4,10,10,10,18,20], Number=10
+     * Output: 2
+     */
     public static int firstOccurrence(int[] a, int n) {
         if (a == null || a.length == 0) return -1;
         int s = 0;
@@ -102,6 +107,11 @@ public class BinarySearch {
         return ans;
     }
 
+    /**
+     * Last occurrence
+     * Input: Array=[2,4,10,10,10,18,20], Number=10
+     * Output: 4
+     */
     public static int lastOccurrence(int[] a, int n) {
         if (a == null || a.length == 0) return -1;
         int s = 0;

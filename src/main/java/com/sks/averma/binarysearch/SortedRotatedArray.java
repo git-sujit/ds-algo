@@ -5,19 +5,50 @@ import java.util.Arrays;
 /**
  * Sorted array is rotated n times, find n
  */
-public class ArrayRotation {
+public class SortedRotatedArray {
+    /**
+     * numOfRotations = index of minimum element
+     * Time Complexity: O(logn)
+     * Space Complexity: O(1)
+     * Remember: %len to avoid array out of bound error
+     */
     public static int numOfRotations(int[] a) {
         if (a == null || a.length == 0) return -1;
         if (a.length == 1) return 0;
+        int len = a.length;
         int s = 0;
-        int e = a.length - 1;
+        int e = len - 1;
         while (s <= e) {
             int mid = s + (e - s) / 2;
-            if (a[mid] < a[mid - 1] && a[mid] < a[mid + 1])
+            int next = (mid + 1) % len;
+            int prev = (mid + len - 1) % len;
+            if (a[mid] < a[prev] && a[mid] < a[next])
                 return mid;
             if (a[s] > a[mid])
                 e = mid - 1;
             else if (a[mid] > a[e])
+                s = mid + 1;
+        }
+        return -1;
+    }
+
+    public static int find(int[] a, int n) {
+        int minEleIndex = numOfRotations(a);
+        if (n == a[minEleIndex])
+            return minEleIndex;
+        else if (n < a[minEleIndex])
+            return binarySearch(a, n, 0, minEleIndex - 1);
+        else
+            return binarySearch(a, n, minEleIndex + 1, a.length - 1);
+    }
+
+    private static int binarySearch(int[] a, int n, int s, int e) {
+        while (s <= e) {
+            int mid = s + (e - s) / 2;
+            if (n == a[mid]) return mid;
+            else if (n < a[mid])
+                e = mid - 1;
+            else
                 s = mid + 1;
         }
         return -1;
@@ -30,13 +61,16 @@ public class ArrayRotation {
         System.out.println("Original Array = " + Arrays.toString(a));
         System.out.println("Rotated Array = " + Arrays.toString(rotatedA));
         System.out.println("Num of Rotations = " + numOfRotations(rotatedA));
+        System.out.println("Found 18 at " + find(rotatedA, 18));
 
         rotatedA = new int[]{6, 7, 1, 2, 3, 4, 5};
         System.out.println("Rotated Array = " + Arrays.toString(rotatedA));
         System.out.println("Num of Rotations = " + numOfRotations(rotatedA));
+        System.out.println("Found +" + 4 + ", at " + find(a, 4));
 
         rotatedA = new int[]{2, 1};
         System.out.println("Rotated Array = " + Arrays.toString(rotatedA));
         System.out.println("Num of Rotations = " + numOfRotations(rotatedA));
+        System.out.println("Found +" + 0 + ", at " + find(a, 0));
     }
 }
