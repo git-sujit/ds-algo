@@ -21,6 +21,7 @@ public class PagesOfBooks {
 
     /**
      * Time Complexity: O(nmlogn)
+     * n is array size, m is no. of students
      */
     public static int minimumPagesToRead(int[] books, int students) {
         if (books == null || books.length == 0) return -1;
@@ -65,6 +66,14 @@ public class PagesOfBooks {
     public static void main(String[] args) {
         int[] books = {10, 20, 30, 40};
         int students = 2;
+        System.out.println("Books = " + Arrays.toString(books) + ", Students = " + students);
+        System.out.println("Optimum number of pages = " + minimumPagesToRead(books, students));
+        books = new int[]{12, 34, 67, 90};
+        students = 2;
+        System.out.println("Books = " + Arrays.toString(books) + ", Students = " + students);
+        System.out.println("Optimum number of pages = " + minimumPagesToRead(books, students));
+        books = new int[]{1, 2, 3, 50, 100};
+        students = 2;
         System.out.println("Books = " + Arrays.toString(books) + ", Students = " + students);
         System.out.println("Optimum number of pages = " + minimumPagesToRead(books, students));
     }
