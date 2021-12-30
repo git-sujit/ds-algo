@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/RowColumnSortedArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/PagesOfBooks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +67,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RowColumnSortedArray">
+  <component name="RunManager" selected="Application.PagesOfBooks">
     <configuration name="BinarySearchOnAnswer$BitonicArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sks.averma.binarysearch.BinarySearchOnAnswer$BitonicArray" />
       <module name="ds-algo" />
@@ -94,8 +94,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FloorCeilOfSortedArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.binarysearch.FloorCeilOfSortedArray" />
+    <configuration name="PagesOfBooks" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.binarysearch.PagesOfBooks" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
@@ -135,11 +135,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PagesOfBooks" />
         <item itemvalue="Application.RowColumnSortedArray" />
         <item itemvalue="Application.BinarySearchOnAnswer$BitonicArray" />
         <item itemvalue="Application.BinarySearchOnAnswer$PeakElement" />
         <item itemvalue="Application.PeakElement" />
-        <item itemvalue="Application.FloorCeilOfSortedArray" />
       </list>
     </recent_temporary>
   </component>
