@@ -9,7 +9,7 @@
         <module name="ds-algo" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="11">
       <module name="ds-algo" target="11" />
     </bytecodeTargetLevel>
   </component>
