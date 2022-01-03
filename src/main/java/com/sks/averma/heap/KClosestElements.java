@@ -1,5 +1,7 @@
 package com.sks.averma.heap;
 
+import com.sks.leatcode.common.CustomPair;
+
 import java.util.*;
 
 /**
@@ -18,14 +20,15 @@ public class KClosestElements {
     public static List<Integer> findClosestElements(int[] a, int k, int x) {
         List<Integer> out = new ArrayList<>();
         if (a == null || a.length == 0 || k <= 0 || k > a.length) return out;
-        PriorityQueue<DiffEle> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
+        PriorityQueue<CustomPair<Integer, Integer>> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
         for (int e : a) {
-            maxHeap.add(new DiffEle(Math.abs(e - x), e));
+            //CustomPair(Key=number, Value=Diffrence)
+            maxHeap.add(new CustomPair(e, Math.abs(e - x)));
             if (maxHeap.size() > k)
                 maxHeap.remove();
         }
         while (!maxHeap.isEmpty())
-            out.add(maxHeap.remove().ele);
+            out.add(maxHeap.remove().key);
         Collections.sort(out);
         return out;
     }
@@ -34,15 +37,15 @@ public class KClosestElements {
         int[] out = null;
         if (a == null || a.length == 0 || k <= 0 || k > a.length) return out;
         out = new int[k];
-        PriorityQueue<DiffEle> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
+        PriorityQueue<CustomPair<Integer, Integer>> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
         for (int e : a) {
-            maxHeap.add(new DiffEle(Math.abs(e - x), e));
+            maxHeap.add(new CustomPair(e, Math.abs(e - x)));
             if (maxHeap.size() > k)
                 maxHeap.remove();
         }
         int i = 0;
         while (!maxHeap.isEmpty())
-            out[i++] = maxHeap.remove().ele;
+            out[i++] = maxHeap.remove().key;
 
         Arrays.sort(out);
         return out;
@@ -65,29 +68,5 @@ public class KClosestElements {
         System.out.println(k + " closest elements of " + x + " = " + Arrays.toString(kClosest(a, k, x)));
         System.out.println(k + " closest elements of " + x + " = " + findClosestElements(a, k, x));
 
-    }
-
-    static class DiffEle implements Comparable<DiffEle> {
-        public int diff;
-        public int ele;
-
-
-        public DiffEle(int diff, int ele) {
-            this.diff = diff;
-            this.ele = ele;
-        }
-
-        @Override
-        public int compareTo(DiffEle obj) {
-            return this.diff == obj.diff ? Integer.compare(this.ele, obj.ele) : Integer.compare(this.diff, obj.diff);
-        }
-
-        @Override
-        public String toString() {
-            return "EleDiff{" +
-                    "ele=" + ele +
-                    ", diff=" + diff +
-                    '}';
-        }
     }
 }
