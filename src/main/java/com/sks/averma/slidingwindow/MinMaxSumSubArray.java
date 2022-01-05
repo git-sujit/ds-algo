@@ -1,6 +1,14 @@
 package com.sks.averma.slidingwindow;
 
 import java.util.Arrays;
+/*- SLIDING WINDOW CODE TEMPLATE
+    int windowStart = 0;
+    for (int windowEnd = 0; windowEnd < a.length; windowEnd++) {
+        if (windowEnd - windowStart + 1 == k) { // When we hit the window size
+            windowStart++; // Slide the window
+        }
+    }
+ */
 
 /**
  * Given an array of integers Arr of size N and a number K. Return the maximum sum of a subarray of size K.
@@ -36,7 +44,7 @@ public class MinMaxSumSubArray {
         for (int i = 0; i < k; i++) maxSum += a[i];
         for (int i = 1; i <= a.length - k; i++) {
             int sum = maxSum - a[i - 1] + a[i + k - 1];
-            System.out.println("Sum = " + sum);
+            //System.out.println("Sum = " + sum);
             maxSum = Math.max(maxSum, sum);
         }
         return maxSum;
@@ -54,18 +62,38 @@ public class MinMaxSumSubArray {
             for (int j = i; j < i + k; j++) {
                 sum += a[j];
             }
-            System.out.println("Sum = " + sum);
+            //System.out.println("Sum = " + sum);
             maxSum = Math.max(maxSum, sum);
         }
         return maxSum;
+    }
+
+    public static int[][] slidingWindowSubArrays(int[] a, int k) {
+        if (a == null || a.length == 0 || k <= 0 || k > a.length) return null;
+        int[][] subArrays = new int[a.length - k + 1][k];
+        int windowStart = 0;
+        for (int windowEnd = 0; windowEnd < a.length; windowEnd++) {
+            if (windowEnd - windowStart + 1 == k) {
+                int[] subArr = new int[k];
+                int j = 0;
+                for (int i = windowStart; i <= windowEnd; i++) subArr[j++] = a[i];
+                subArrays[windowStart] = subArr;
+                windowStart++;
+            }
+        }
+        return subArrays;
     }
 
     public static void main(String[] args) {
         int[] a = {2, 3, 5, 2, 9, 7, 1};
         int k = 3;
         System.out.println("Array = " + Arrays.toString(a) + ", Size of Sub-array = " + k);
+        int[][] subArrays = slidingWindowSubArrays(a, k);
+        System.out.println("Total Sub-Arrays = " + subArrays.length);
+        for (int[] array : subArrays)
+            System.out.println(Arrays.toString(array));
         System.out.println("Max Sum of sub-array(Sliding Window) = " + maxSumSubArray_slidingWindow(a, k));
-        //System.out.println("Max Sum of sub-array = " + maxSumSubArray(a, k));
-        //System.out.println("Max Sum of sub-array(Brute Force) = " + maxSumSubArray_bruteForce(a, k));
+        System.out.println("Max Sum of sub-array = " + maxSumSubArray(a, k));
+        System.out.println("Max Sum of sub-array(Brute Force) = " + maxSumSubArray_bruteForce(a, k));
     }
 }
