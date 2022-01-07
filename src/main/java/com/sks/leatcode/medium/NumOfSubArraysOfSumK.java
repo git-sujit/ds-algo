@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * Given an array of integers nums and an integer k, return the total number of continuous subarrays whose sum equals to k.
  */
-public class SubArraySumK {
+public class NumOfSubArraysOfSumK {
 
     /**
      * Time Complexity: O(n), The entire nums array is traversed only once
