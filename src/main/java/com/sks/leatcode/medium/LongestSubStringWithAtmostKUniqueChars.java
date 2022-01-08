@@ -6,7 +6,7 @@ import java.util.Map;
 public class LongestSubStringWithAtmostKUniqueChars {
     /**
      * Time Complexity: O(n)
-     * Spcae Complexity: O(k) for map
+     * Space Complexity: O(k) for map
      */
     public static int lengthOfLongestSubstringKDistinct(String s, int k) {
         if (s == null || s.length() == 0) return -1;

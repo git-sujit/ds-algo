@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/LongestSubArrayOfASum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/LongestSubstringWithKUniqueChars.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LongestSubStringWithAtmostKUniqueChars.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/NumOfSubArraysOfSumK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/LongestSubstringWithoutRepeatingChar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/LongestSubstringWithKUniqueChars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/LongestSubstringWithKUniqueChars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LongestSubStringWithAtmostKUniqueChars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LongestSubStringWithAtmostKUniqueChars.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +69,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LongestSubStringWithAtmostKUniqueChars">
+  <component name="RunManager" selected="Application.LongestSubstringWithoutRepeatingChar">
     <configuration name="LongestSubArrayOfASum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.LongestSubArrayOfASum" />
       <module name="ds-algo" />
@@ -110,8 +109,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MaxOfAllSubarryas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.MaxOfAllSubarryas" />
+    <configuration name="LongestSubstringWithoutRepeatingChar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.LongestSubstringWithoutRepeatingChar" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
@@ -138,11 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LongestSubstringWithoutRepeatingChar" />
         <item itemvalue="Application.LongestSubStringWithAtmostKUniqueChars" />
         <item itemvalue="Application.LongestSubstringWithKUniqueChars" />
         <item itemvalue="Application.LongestSubArrayOfASum" />
         <item itemvalue="Application.NumOfSubArraysOfSumK" />
-        <item itemvalue="Application.MaxOfAllSubarryas" />
       </list>
     </recent_temporary>
   </component>

@@ -6,6 +6,10 @@ import java.util.Map;
 import java.util.Set;
 
 public class LongestSubstringWithKUniqueChars {
+    /**
+     * Time Complexity: O(n)
+     * Space Complexity: O(k) for map
+     */
     public int lengthOfLongestSubstringAtMostKDistinct_leetcode(String str, int k) {
         if (str == null || str.length() == 0 || k <= 0 || k > str.length()) return -1;
         int maxSize = 0;
