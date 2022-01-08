@@ -1,25 +1,16 @@
 package com.sks.learn.dsalgo;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
-import java.util.List;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
 import com.sks.learn.algo.QuickFindUF;
 import com.sks.learn.algo.QuickFindUF.QFData;
 import com.sks.learn.algo.QuickUnion;
 import com.sks.learn.algo.UnionFind;
-import com.sks.learn.ds.QueuLinkedListImpl;
-import com.sks.learn.ds.QueueInterface;
-import com.sks.learn.ds.StackArrayImpl;
-import com.sks.learn.ds.StackInterface;
-import com.sks.learn.ds.StackLinkedListImpl;
+import com.sks.learn.ds.*;
+import org.junit.*;
+
+import java.util.List;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class DSTestCases {
 

@@ -1,10 +1,6 @@
 package com.sks.leatcode.medium;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Given an integer array nums of length n where all the integers of nums are in the range [1, n] and

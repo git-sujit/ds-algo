@@ -1,10 +1,6 @@
 package com.sks.learn.leetcode;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-import java.util.Stack;
+import java.util.*;
 
 public class LeetCodeUtility_EASY {
 	public static void main(String[] args) {

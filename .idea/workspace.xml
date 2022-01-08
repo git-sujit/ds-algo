@@ -5,10 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/LongestSubstringWithoutRepeatingChar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.java-version" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/RangeSumQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/LongestSubstringWithKUniqueChars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/LongestSubstringWithKUniqueChars.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LongestSubStringWithAtmostKUniqueChars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LongestSubStringWithAtmostKUniqueChars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ds-algo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ds-algo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/club/Island.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/club/Island.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/MinimumWindowSubstring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/MinimumWindowSubstring.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/gfg/GfgRecursion_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/gfg/GfgRecursion_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview2018/Revise18.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview2018/Revise18.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/learn/algo/BinaryTreeAlgorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/learn/algo/BinaryTreeAlgorithms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/learn/ctci6/chap4_trees_graphs/Chap4Implementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/learn/ctci6/chap4_trees_graphs/Chap4Implementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/Chap8Implementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/Chap8Implementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/Permutations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/learn/ctci6/chap8_recursion_DP/Permutations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/learn/ds/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/learn/ds/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/learn/ds/JavaOOTB_DS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/learn/ds/JavaOOTB_DS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/learn/leetcode/LeetCodeUtility_EASY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/learn/leetcode/LeetCodeUtility_EASY.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/AllDuplicateNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/AllDuplicateNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LRUCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LRUCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sks/learn/dsalgo/BinaryTreeTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sks/learn/dsalgo/BinaryTreeTestCases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sks/learn/dsalgo/CSVReaderTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sks/learn/dsalgo/CSVReaderTestCases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sks/learn/dsalgo/DSTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sks/learn/dsalgo/DSTestCases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sks/learn/dsalgo/SearchingAlgorithmTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sks/learn/dsalgo/SearchingAlgorithmTestCases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sks/learn/dsalgo/SortingAlgorithmTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sks/learn/dsalgo/SortingAlgorithmTestCases.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +59,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="showPreview" value="true" />
+  </component>
   <component name="ProjectId" id="1dsTFPZJt1E5wAzgn0lkRf4rahT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -48,6 +73,10 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -59,8 +88,8 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
@@ -69,46 +98,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LongestSubstringWithoutRepeatingChar">
-    <configuration name="LongestSubArrayOfASum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.LongestSubArrayOfASum" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.averma.slidingwindow.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LongestSubStringWithAtmostKUniqueChars" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.LongestSubStringWithAtmostKUniqueChars" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.medium.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LongestSubstringWithKUniqueChars" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.LongestSubstringWithKUniqueChars" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.averma.slidingwindow.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.RangeSumQuery">
     <configuration name="LongestSubstringWithoutRepeatingChar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.LongestSubstringWithoutRepeatingChar" />
       <module name="ds-algo" />
@@ -122,12 +112,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NumOfSubArraysOfSumK" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.NumOfSubArraysOfSumK" />
+    <configuration name="MinimumWindowSubstring" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.MinimumWindowSubstring" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.medium.*" />
+          <option name="PATTERN" value="com.sks.averma.slidingwindow.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PalindromeInteger" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.PalindromeInteger" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PickToys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.PickToys" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.averma.slidingwindow.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RangeSumQuery" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.RangeSumQuery" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RangeSumQuery" />
         <item itemvalue="Application.LongestSubstringWithoutRepeatingChar" />
-        <item itemvalue="Application.LongestSubStringWithAtmostKUniqueChars" />
-        <item itemvalue="Application.LongestSubstringWithKUniqueChars" />
-        <item itemvalue="Application.LongestSubArrayOfASum" />
-        <item itemvalue="Application.NumOfSubArraysOfSumK" />
+        <item itemvalue="Application.PalindromeInteger" />
+        <item itemvalue="Application.MinimumWindowSubstring" />
+        <item itemvalue="Application.PickToys" />
       </list>
     </recent_temporary>
   </component>

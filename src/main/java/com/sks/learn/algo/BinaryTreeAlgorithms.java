@@ -1,8 +1,8 @@
 package com.sks.learn.algo;
 
-import java.util.Random;
-
 import com.sks.learn.ds.BinaryTree;
+
+import java.util.Random;
 
 public class BinaryTreeAlgorithms {
 

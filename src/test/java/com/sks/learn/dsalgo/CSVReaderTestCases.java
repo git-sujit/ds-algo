@@ -1,18 +1,13 @@
 package com.sks.learn.dsalgo;
 
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertNotNull;
+import com.sks.learn.dsalgo.testutility.CSVReader;
+import org.junit.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
-import com.sks.learn.dsalgo.testutility.CSVReader;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class CSVReaderTestCases {
 

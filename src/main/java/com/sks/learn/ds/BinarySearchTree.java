@@ -1,9 +1,9 @@
 package com.sks.learn.ds;
 
+import com.sks.learn.algo.BinaryTreeAlgorithms;
+
 import java.util.List;
 import java.util.Random;
-
-import com.sks.learn.algo.BinaryTreeAlgorithms;
 
 public class BinarySearchTree extends BinaryTree {
 	BinarySearchTree parent;

@@ -1,16 +1,11 @@
 package com.sks.learn.dsalgo;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
 import com.sks.learn.algo.BinaryTreeAlgorithms;
 import com.sks.learn.ds.BinarySearchTree;
+import org.junit.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BinaryTreeTestCases {
 	static BinarySearchTree bstRandom = null;

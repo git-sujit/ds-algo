@@ -1,12 +1,7 @@
 package com.sks.learn.dsalgo;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
 import com.sks.learn.algo.SearchingAlgorithms_DEPRECATED;
+import org.junit.*;
 
 public class SearchingAlgorithmTestCases {
 

@@ -1,14 +1,6 @@
 package com.sks.learn.ds;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.PriorityQueue;
-import java.util.Queue;
-import java.util.Stack;
-import java.util.Vector;
+import java.util.*;
 
 public class JavaOOTB_DS {
 
