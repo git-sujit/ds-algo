@@ -2,7 +2,6 @@ package com.sks.averma.slidingwindow;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 /**
  * Two Strings S1 & S2. Return min substring of S1 having all the letters of S2 with at least counts of S2-Chars
@@ -39,6 +38,38 @@ public class MinimumWindowSubstring {
         return min;
     }
 
+    public static int minWindowSize_bruteForce(String s, String t) {
+        if (s == null || s.length() == 0 || t == null || t.length() == 0 || t.length() > s.length()) return -1;
+        int min = Integer.MAX_VALUE;
+        Map<Character, Integer> tMap = new HashMap<>();
+        for (char c : t.toCharArray())
+            tMap.put(c, tMap.getOrDefault(c, 0) + 1);
+        System.out.println("tMap = " + tMap);
+        for (int i = 0; i < s.length(); i++) {
+            String sub = "";
+            for (int j = i; j < s.length(); j++) {
+                sub += s.charAt(j);
+                if (sub.length() >= t.length() && isValid(sub, tMap)) {
+                    min = Math.min(min, sub.length());
+                    //System.out.println("(i, j) = (" + i + ", " + j + ")");
+                }
+            }
+        }
+        return min;
+    }
+
+    private static boolean isValid(String sub, Map<Character, Integer> tMap) {
+        Map<Character, Integer> subMap = new HashMap<>();
+        for (char c : sub.toCharArray())
+            subMap.put(c, subMap.getOrDefault(c, 0) + 1);
+        //System.out.println("subMap = " + subMap);
+        if (subMap.size() < tMap.size()) return false;
+        for (char key : tMap.keySet()) {
+            if (!subMap.containsKey(key) || subMap.get(key) < tMap.get(key)) return false;
+        }
+        return true;
+    }
+
     private static boolean isEligible(Map<Character, Integer> sMap, Map<Character, Integer> tMap) {
         if (tMap.size() != sMap.size()) return false;
         for (char key : tMap.keySet()) {
@@ -59,27 +90,6 @@ public class MinimumWindowSubstring {
 
     private static void test(String s, String t) {
         System.out.println("\ns = " + s + ", t = " + t);
-        System.out.println("Minimum Window Size = " + minWindowSize(s, t));
-    }
-    class Range{
-        int left;
-        int right;
-        public Range(int left, int right){
-            this.left = left;
-            this.right = right;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Range range = (Range) o;
-            return left == range.left && right == range.right;
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(left, right);
-        }
+        System.out.println("[Brute Force] Minimum Window Size = " + minWindowSize_bruteForce(s, t));
     }
 }
