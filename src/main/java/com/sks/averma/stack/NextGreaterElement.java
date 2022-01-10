@@ -1,5 +1,7 @@
 package com.sks.averma.stack;
 
+import javafx.util.Pair;
+
 import java.util.Arrays;
 import java.util.Stack;
 
@@ -27,6 +29,26 @@ public class NextGreaterElement {
                 }
             }
             stack.push(nums[i]);
+        }
+        return ngl;
+    }
+
+    //Pair<Element, Index>
+    public static Pair<Integer, Integer>[] ngLeft_pair(int[] nums) {
+        if (nums == null || nums.length == 0) return null;
+        Pair<Integer, Integer>[] ngl = new Pair[nums.length];
+        Stack<Pair<Integer, Integer>> stack = new Stack<>();
+        for (int i = 0; i < nums.length; i++) {
+            Pair<Integer, Integer> eleIndexPair = new Pair(nums[i], i);
+            if (stack.isEmpty()) ngl[i] = new Pair<>(nums[i], -1);
+            else {
+                if (stack.peek().getKey() > nums[i]) ngl[i] = stack.peek();
+                else {
+                    while (!stack.isEmpty() && stack.peek().getKey() <= nums[i]) stack.pop();
+                    ngl[i] = stack.isEmpty() ? new Pair<>(nums[i], -1) : stack.peek();
+                }
+            }
+            stack.push(eleIndexPair);
         }
         return ngl;
     }
@@ -100,6 +122,7 @@ public class NextGreaterElement {
     private static void test(int[] nums) {
         System.out.println("\nnums = " + Arrays.toString(nums));
         System.out.println("Next Greater Element in Left = " + Arrays.toString(ngLeft(nums)));
+        System.out.println("[Pair]Next Greater Element in Left = " + Arrays.toString(ngLeft_pair(nums)));
         System.out.println("Next Greater Element in Right = " + Arrays.toString(ngRight(nums)));
         System.out.println("[Improved] Next Greater Element in Right = " + Arrays.toString(ngRight_improved(nums)));
         System.out.println("[Brute Force] Next Greater Element in Right = " + Arrays.toString(ngRight_bruteForce(nums)));
