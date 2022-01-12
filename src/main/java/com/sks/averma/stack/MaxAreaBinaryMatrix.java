@@ -7,6 +7,10 @@ import java.util.Stack;
  * Given a binary matrix, find the maximum size rectangle binary-sub-matrix with all 1’s.
  */
 public class MaxAreaBinaryMatrix {
+    /**
+     * Time Complexity: O(R x C): Only one traversal of the matrix is required, so the time complexity is O(R X C)
+     * Space Complexity: O(C): Stack is required to store the columns, so so space complexity is O(C)
+     */
     public static int maxArea(int[][] bMatrix) {
         if (bMatrix == null || bMatrix.length == 0) return -1;
         int max = 0;
