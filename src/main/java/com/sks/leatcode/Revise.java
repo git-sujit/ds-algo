@@ -39,7 +39,10 @@ public class Revise {
         List<Integer> l = Arrays.stream(a).boxed().collect(Collectors.toList());
         // If we have Integer[] then no need to box
         Integer[] a1 = {1, 2, 3};
+        System.out.println("Before, array = " + Arrays.toString(a1));
         List<Integer> l1 = Arrays.asList(a1);
+        a1[0]++;
+        System.out.println("After, array = " + Arrays.toString(a1));
 
 
         // List to Array
@@ -108,6 +111,7 @@ public class Revise {
         //stackInJava();
         //queueInJava();
         //stringUtilities();
-        heap();
+        //heap();
+        array();
     }
 }
