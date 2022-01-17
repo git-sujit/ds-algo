@@ -18,7 +18,7 @@ public class BinarySearch {
         while (s <= e) {
             //int mid = (s + e) / 2;
             //To avoid int overflow use: mid = s+(e-s)/2
-            int mid = s + (e - s) / e;
+            int mid = s + (e - s) / 2;
             if (n > a[mid])
                 s = mid + 1;
             else if (n < a[mid])
