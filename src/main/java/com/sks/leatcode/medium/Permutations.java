@@ -27,6 +27,24 @@ public class Permutations {
         return perms;
     }
 
+    public List<List<Integer>> permutations_1(int[] a) {
+        List<List<Integer>> out = new ArrayList<>();
+        if (a == null || a.length == 0) return out;
+        out.add(new ArrayList<>(Arrays.asList(a[0])));
+        for (int i = 1; i < a.length; i++) {
+            List<List<Integer>> sub = new ArrayList<>();
+            for (List<Integer> l : out) {
+                for (int j = 0; j <= l.size(); j++) {
+                    List<Integer> t = new ArrayList<>(l);
+                    t.add(j, a[i]);
+                    sub.add(t);
+                }
+            }
+            out = sub;
+        }
+        return out;
+    }
+
     // Time Complexity: O(n*n!)
     // Space Complexity: O(n!)
     // Idea: Same as String permutation above
@@ -74,6 +92,9 @@ public class Permutations {
         int[] a = {1, 2, 3};
         System.out.println("Permutation(int[])  : " + Arrays.toString(a));
         List<List<Integer>> perms = obj.permutations_int_array(a);
+        System.out.println("\tIs int[] modified  : " + Arrays.toString(a));
+        System.out.println("\tcount = " + perms.size() + " : " + perms);
+        perms = obj.permutations_1(a);
         System.out.println("\tIs int[] modified  : " + Arrays.toString(a));
         System.out.println("\tcount = " + perms.size() + " : " + perms);
 
