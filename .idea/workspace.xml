@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/KthSymbolInGrammar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/StackProblems.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/Subset.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/TowerOfHanoi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/PathInGraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/StarGraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/GraphBipartite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/GraphCloner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/GraphValidTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/PermutationInString.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/BasicProblems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/BasicProblems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/BreadthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/DepthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/Node.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,13 +84,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.KthSymbolInGrammar">
-    <configuration name="BasicProblems" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.recursion.BasicProblems" />
+  <component name="RunManager" selected="Application.GraphValidTree">
+    <configuration name="DepthFirstSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.algo2020.udemy.graph.DepthFirstSearch" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.recursion.*" />
+          <option name="PATTERN" value="com.sks.algo2020.udemy.graph.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,21 +98,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KthSymbolInGrammar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.recursion.KthSymbolInGrammar" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.averma.recursion.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Permutations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.Permutations" />
+    <configuration name="GraphBipartite" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.GraphBipartite" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
@@ -116,12 +111,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StackProblems" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.recursion.StackProblems" />
+    <configuration name="GraphCloner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.GraphCloner" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.recursion.*" />
+          <option name="PATTERN" value="com.sks.leatcode.medium.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,12 +124,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Subsets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.Subsets" />
+    <configuration name="GraphValidTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.GraphValidTree" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.sks.leatcode.medium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StarGraph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.StarGraph" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.KthSymbolInGrammar" />
-        <item itemvalue="Application.StackProblems" />
-        <item itemvalue="Application.BasicProblems" />
-        <item itemvalue="Application.Permutations" />
-        <item itemvalue="Application.Subsets" />
+        <item itemvalue="Application.GraphValidTree" />
+        <item itemvalue="Application.DepthFirstSearch" />
+        <item itemvalue="Application.GraphBipartite" />
+        <item itemvalue="Application.GraphCloner" />
+        <item itemvalue="Application.StarGraph" />
       </list>
     </recent_temporary>
   </component>
