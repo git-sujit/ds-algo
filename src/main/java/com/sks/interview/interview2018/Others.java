@@ -1,4 +1,4 @@
-package com.sks.interview2018;
+package com.sks.interview.interview2018;
 
 public class Others {
 

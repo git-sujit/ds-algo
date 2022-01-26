@@ -5,18 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/Subset.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/TowerOfHanoi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/PathInGraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/StarGraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/GraphBipartite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/GraphCloner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/GraphValidTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/PermutationInString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/java/java8/CollectionsNLambda.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/java/java8/DoubleColonOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/java/java8/InterfaceRevamp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/java/java8/JodaAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/java/java8/LambdaExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/java/java8/LearnFunctionalInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/java/java8/StreamsAPIs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/GraphConnectedComponents.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/TreeEvenGrandParents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/BreadthFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/DepthFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/conceptsOfJava/TroubleshootNoClassDefFound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/java/TroubleshootNoClassDefFound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview2017/InterviewContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2017/InterviewContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview2017/InterviewImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2017/InterviewImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview2018/GenColl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2018/GenColl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview2018/InterviewQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2018/InterviewQuestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview2018/Others.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2018/Others.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview2018/RecursiveAlgos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2018/RecursiveAlgos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview2018/Revise18.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2018/Revise18.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview2018/WMTTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2018/WMTTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +91,20 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GraphValidTree">
+  <component name="RunManager" selected="Application.CollectionsNLambda">
+    <configuration name="CollectionsNLambda" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.java.java8.CollectionsNLambda" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.java.java8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DepthFirstSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sks.algo2020.udemy.graph.DepthFirstSearch" />
       <module name="ds-algo" />
@@ -98,21 +118,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GraphBipartite" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.GraphBipartite" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.medium.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GraphCloner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.GraphCloner" />
+    <configuration name="GraphConnectedComponents" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.GraphConnectedComponents" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
@@ -137,12 +144,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StarGraph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.StarGraph" />
+    <configuration name="LambdaExpression" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.java.java8.LambdaExpression" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
+          <option name="PATTERN" value="com.sks.java.java8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -152,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CollectionsNLambda" />
+        <item itemvalue="Application.LambdaExpression" />
+        <item itemvalue="Application.GraphConnectedComponents" />
         <item itemvalue="Application.GraphValidTree" />
         <item itemvalue="Application.DepthFirstSearch" />
-        <item itemvalue="Application.GraphBipartite" />
-        <item itemvalue="Application.GraphCloner" />
-        <item itemvalue="Application.StarGraph" />
       </list>
     </recent_temporary>
   </component>

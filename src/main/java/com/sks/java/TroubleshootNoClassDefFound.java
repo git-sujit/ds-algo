@@ -1,4 +1,4 @@
-package com.sks.conceptsOfJava;
+package com.sks.java;
 
 public class TroubleshootNoClassDefFound {
     //How to Resolve java.lang.NoClassDefFoundError

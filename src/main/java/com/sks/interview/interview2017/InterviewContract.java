@@ -1,4 +1,4 @@
-package com.sks.interview2017;
+package com.sks.interview.interview2017;
 
 import java.util.List;
 
