@@ -5,25 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/java/java8/CollectionsNLambda.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/java/java8/DoubleColonOperator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/java/java8/InterfaceRevamp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/java/java8/JodaAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/java/java8/LambdaExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/java/java8/LearnFunctionalInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/java/java8/StreamsAPIs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/GraphConnectedComponents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/TreeEvenGrandParents.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeMerge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreePaths.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeSubtree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeTilt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeTraversal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeUnival.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/conceptsOfJava/TroubleshootNoClassDefFound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/java/TroubleshootNoClassDefFound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview2017/InterviewContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2017/InterviewContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview2017/InterviewImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2017/InterviewImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview2018/GenColl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2018/GenColl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview2018/InterviewQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2018/InterviewQuestions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview2018/Others.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2018/Others.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview2018/RecursiveAlgos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2018/RecursiveAlgos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview2018/Revise18.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2018/Revise18.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview2018/WMTTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2018/WMTTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/random/RandomProblems.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +81,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CollectionsNLambda">
+  <component name="RunManager" selected="Application.TreeTraversal">
     <configuration name="CollectionsNLambda" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sks.java.java8.CollectionsNLambda" />
       <module name="ds-algo" />
@@ -105,12 +95,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DepthFirstSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.algo2020.udemy.graph.DepthFirstSearch" />
+    <configuration name="TreeMerge" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.TreeMerge" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.algo2020.udemy.graph.*" />
+          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,12 +108,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GraphConnectedComponents" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.GraphConnectedComponents" />
+    <configuration name="TreePaths" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.TreePaths" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.medium.*" />
+          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -131,12 +121,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GraphValidTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.GraphValidTree" />
+    <configuration name="TreeTilt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.TreeTilt" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.medium.*" />
+          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,12 +134,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LambdaExpression" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.java.java8.LambdaExpression" />
+    <configuration name="TreeTraversal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.TreeTraversal" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.java.java8.*" />
+          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -159,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TreeTraversal" />
+        <item itemvalue="Application.TreeMerge" />
+        <item itemvalue="Application.TreeTilt" />
+        <item itemvalue="Application.TreePaths" />
         <item itemvalue="Application.CollectionsNLambda" />
-        <item itemvalue="Application.LambdaExpression" />
-        <item itemvalue="Application.GraphConnectedComponents" />
-        <item itemvalue="Application.GraphValidTree" />
-        <item itemvalue="Application.DepthFirstSearch" />
       </list>
     </recent_temporary>
   </component>
@@ -332,6 +322,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/Permutations.java</url>
           <line>34</line>
           <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreePaths.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MinInStack.java</url>
