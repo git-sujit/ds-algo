@@ -1,6 +1,5 @@
 package com.sks.leatcode.easy;
 
-import apple.laf.JRSUIUtils;
 import com.sks.leatcode.common.TreeNode;
 
 import java.util.*;
@@ -60,7 +59,7 @@ public class TreePaths {
     }
 
     public static void main(String[] args) {
-        TreeNode root = TreeNode.prepareTestData();
+        TreeNode root = TreeNode.treeData1();
         System.out.println("Tree = " + root);
         System.out.println("Paths = " + binaryTreePaths(root));
         System.out.println("[Iterative] Paths = " + binaryTreePaths_iterative(root));

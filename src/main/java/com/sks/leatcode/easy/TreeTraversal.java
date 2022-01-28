@@ -1,6 +1,7 @@
 package com.sks.leatcode.easy;
 
 import com.sks.leatcode.common.TreeNode;
+import com.sks.leatcode.common.TreePrinter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,6 +71,11 @@ public class TreeTraversal {
         return traverseList;
     }
 
+    public static List<Integer> postOrderTraversal_iteration(TreeNode root) {
+        System.out.println("[Iteration] Pre-Order Traversal");
+        return null;
+    }
+
     /**
      * Time Complexity:  O(N), where N is the number of nodes, i.e. the size of tree.
      * Space Complexity:  O(N), for recursion stack, Balanced tree O(NlogN)
@@ -87,9 +93,23 @@ public class TreeTraversal {
         return traverseList;
     }
 
+    public static List<Integer> inOrderTraversal_iteration(TreeNode root) {
+        System.out.println("[Iteration] In-Order Traversal");
+        return null;
+    }
+
+    /**
+     * Time Complexity:  O(N), where N is the number of nodes, i.e. the size of tree.
+     * Space Complexity:  O(N), for recursion stack, Balanced tree O(NlogN)
+     */
+    public static List<Integer> levelOrderTraversal(TreeNode root) {
+        System.out.println("[Iteration] Level-Order Traversal");
+        return null;
+    }
 
     public static void main(String[] args) {
-        TreeNode root = TreeNode.prepareTestData_1();
+        TreeNode root = TreeNode.treeData2();
+        TreePrinter.printNode(root);
         List<Integer> traversedNodes = preorderTraversal_recursion(root);
         System.out.println(traversedNodes);
         traversedNodes = preorderTraversal_iteration(root);

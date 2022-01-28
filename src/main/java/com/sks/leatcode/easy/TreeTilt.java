@@ -34,7 +34,7 @@ public class TreeTilt {
     }
 
     public static void main(String[] args) {
-        TreeNode root = TreeNode.prepareTestData_1();
+        TreeNode root = TreeNode.treeData2();
         System.out.println("Sum of Tilt = " + findTilt(root));
     }
 }

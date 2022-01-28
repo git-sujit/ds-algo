@@ -1,6 +1,8 @@
 package com.sks.leatcode.easy;
 
+import apple.laf.JRSUIUtils;
 import com.sks.leatcode.common.TreeNode;
+import com.sks.leatcode.common.TreePrinter;
 
 /**
  * Given the root of a binary tree, return the length of the diameter of the tree.
@@ -14,19 +16,18 @@ import com.sks.leatcode.common.TreeNode;
  * - Tree traversal mechanism: DFS (Preorder, Inorder, Postorder)
  */
 public class BinaryTreeDiameter {
-    private int diameter;
+    private static int diameter = 0;
 
     /**
      * Time Complexity: O(n), n-number of nodes in binary tree
      * Space Complexity: O(n), O(logn) if tree is balanced
      */
-    public int diameterOfBinaryTree(TreeNode root) {
-        diameter = 0;
+    public static int diameterOfBinaryTree(TreeNode root) {
         longestPath(root);
         return diameter;
     }
 
-    private int longestPath(TreeNode node) {
+    private static int longestPath(TreeNode node) {
         if (node == null) return 0;
         int leftPath = longestPath(node.left);
         int rightPath = longestPath(node.right);
@@ -35,4 +36,17 @@ public class BinaryTreeDiameter {
 
         return 1 + Math.max(leftPath, rightPath);
     }
+
+    public static void main(String[] args) {
+        demo(TreeNode.treeData1());
+        demo(TreeNode.treeData2());
+        demo(TreeNode.binarySearchTreeData1());
+    }
+
+    private static void demo(TreeNode root) {
+        System.out.println("------------------ TREE ------------------");
+        TreePrinter.printNode(root);
+        System.out.println("Diameter = " + diameterOfBinaryTree(root));
+    }
+
 }

@@ -53,7 +53,26 @@ public class TreeNode {
                 ", " + (right == null ? right : right.val) + ")";
     }
 
-    public static TreeNode prepareTestData() {
+    public String printTree() {
+        return val + "=>(L: "
+                + (left == null ? left : left.printTree()) + ", R: "
+                + (right == null ? right : right.printTree()) + ")";
+    }
+
+    public static void printBinaryTree(TreeNode root, int level) {
+        if (root == null)
+            return;
+        printBinaryTree(root.right, level + 1);
+        if (level != 0) {
+            for (int i = 0; i < level - 1; i++)
+                System.out.print("|\t");
+            System.out.println("|-------" + root.val);
+        } else
+            System.out.println(root.val);
+        printBinaryTree(root.left, level + 1);
+    }
+
+    public static TreeNode treeData1() {
         List<TreeNode> nodes = testNodes(10);
         TreeNode root = nodes.get(1);
         root.left = nodes.get(2);
@@ -65,7 +84,7 @@ public class TreeNode {
         return root;
     }
 
-    public static TreeNode prepareTestData_1() {
+    public static TreeNode treeData2() {
         List<TreeNode> nodes = testNodes(10);
         TreeNode root = nodes.get(4);
         root.left = nodes.get(2);
@@ -76,10 +95,53 @@ public class TreeNode {
         return root;
     }
 
+    public static TreeNode binarySearchTreeData1() {
+        List<TreeNode> nodes = testNodes(10);
+        TreeNode root = nodes.get(5);
+        root.left = nodes.get(3);
+        root.right = nodes.get(6);
+        nodes.get(3).left = nodes.get(2);
+        nodes.get(3).right = nodes.get(4);
+        nodes.get(2).left = nodes.get(1);
+        nodes.get(6).right = nodes.get(8);
+        nodes.get(8).left = nodes.get(7);
+        nodes.get(8).right = nodes.get(9);
+        return root;
+    }
+
+    public static TreeNode treeData_leftLinear() {
+        List<TreeNode> nodes = testNodes(10);
+        TreeNode root = nodes.get(1);
+        root.left = nodes.get(2);
+        nodes.get(2).left = nodes.get(3);
+        nodes.get(3).left = nodes.get(4);
+        nodes.get(4).left = nodes.get(5);
+        nodes.get(5).left = nodes.get(6);
+        nodes.get(6).left = nodes.get(7);
+        return root;
+    }
+
+    public static TreeNode treeData_rightLinear() {
+        List<TreeNode> nodes = testNodes(10);
+        TreeNode root = nodes.get(1);
+        root.right = nodes.get(2);
+        nodes.get(2).right = nodes.get(3);
+        nodes.get(3).right = nodes.get(4);
+        nodes.get(4).right = nodes.get(5);
+        nodes.get(5).right = nodes.get(6);
+        nodes.get(6).right = nodes.get(7);
+        return root;
+    }
+
     private static List<TreeNode> testNodes(int n) {
         List<TreeNode> nodes = new ArrayList<>();
         for (int i = 0; i <= n; i++)
             nodes.add(new TreeNode(i));
         return nodes;
+    }
+
+    public static void main(String[] args) {
+        TreeNode root = treeData_leftLinear();
+        TreePrinter.printNode(root);
     }
 }

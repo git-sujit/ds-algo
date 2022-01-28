@@ -47,10 +47,10 @@ public class TreeMerge {
     }
 
     public static void main(String[] args) {
-        TreeNode root1 = TreeNode.prepareTestData();
+        TreeNode root1 = TreeNode.treeData1();
         System.out.println("\nTree One");
         preOrder(root1);
-        TreeNode root2 = TreeNode.prepareTestData_1();
+        TreeNode root2 = TreeNode.treeData2();
         System.out.println("\nTree Two");
         preOrder(root2);
         TreeNode merged = mergeTrees_brandNewTree(root1, root2);
