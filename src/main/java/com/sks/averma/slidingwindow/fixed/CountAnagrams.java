@@ -1,4 +1,4 @@
-package com.sks.averma.slidingwindow;
+package com.sks.averma.slidingwindow.fixed;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,29 +8,27 @@ import java.util.Map;
  */
 public class CountAnagrams {
     /**
-     * Time Complexity:
-     * Space Complexity:
+     * Time Complexity: O(n)
+     * Space Complexity: O(n)
      */
     public static int count_slidingWindow(String txt, String pat) {
         if (txt == null | txt.length() == 0 || pat == null || pat.length() == 0 || pat.length() > txt.length())
             return -1;
         int anagramCount = 0;
         Map<Character, Integer> masterCharCountMap = new HashMap<>();
-        for (Character c : pat.toCharArray()) {
-            if (masterCharCountMap.containsKey(c)) masterCharCountMap.put(c, masterCharCountMap.get(c) + 1);
-            else masterCharCountMap.put(c, 1);
-        }
+        for (Character c : pat.toCharArray())
+            masterCharCountMap.put(c, masterCharCountMap.getOrDefault(c, 0) + 1);
+
         int windowStart = 0;
         Map<Character, Integer> charCountMap = new HashMap<>();
         for (int windowEnd = 0; windowEnd < txt.length(); windowEnd++) {
             Character c = txt.charAt(windowEnd);
-            if (masterCharCountMap.containsKey(c)) {
-                if (charCountMap.containsKey(c)) charCountMap.put(c, charCountMap.get(c) + 1);
-                else charCountMap.put(c, 1);
-            }
+            if (masterCharCountMap.containsKey(c))
+                charCountMap.put(c, charCountMap.getOrDefault(c, 0) + 1);
+
             if (windowEnd - windowStart + 1 == pat.length()) {
                 if (charCountMap.size() == masterCharCountMap.size() && charCountMap.equals(masterCharCountMap)) {
-                    System.out.println("Anagram found at index-" + windowStart + ", charCountMap = " + charCountMap);
+                    //System.out.println("Anagram found at index-" + windowStart + ", charCountMap = " + charCountMap);
                     anagramCount++;
                 }
                 if (charCountMap.containsKey(txt.charAt(windowStart))) {
@@ -46,8 +44,8 @@ public class CountAnagrams {
     }
 
     /**
-     * Time Complexity:
-     * Space Complexity:
+     * Time Complexity: O(n^2)
+     * Space Complexity: O(1)
      */
     public static int count_bruteForce(String txt, String pat) {
         if (txt == null | txt.length() == 0 || pat == null || pat.length() == 0 || pat.length() > txt.length())
@@ -67,7 +65,7 @@ public class CountAnagrams {
                 else charCountMap.put(ch, 1);
             }
             if (charCountMap.equals(masterCharCountMap)) {
-                System.out.println("Anagram found at index-" + i + ", charCountMap = " + charCountMap);
+                //System.out.println("Anagram found at index-" + i + ", charCountMap = " + charCountMap);
                 anagramCount++;
             }
         }
@@ -86,7 +84,7 @@ public class CountAnagrams {
 
     private static void test(String txt, String pat) {
         System.out.println("\nText = " + txt + ", Pattern = " + pat);
-        System.out.println("Count of Anagrams of pattern = " + count_slidingWindow(txt, pat));
-        System.out.println("Count of Anagrams of pattern(Brute Force) = " + count_bruteForce(txt, pat));
+        System.out.println("[Sliding Window]Count of Anagrams of pattern = " + count_slidingWindow(txt, pat));
+        System.out.println("[Brute Force] Count of Anagrams of pattern = " + count_bruteForce(txt, pat));
     }
 }

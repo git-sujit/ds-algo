@@ -1,4 +1,4 @@
-package com.sks.averma.slidingwindow;
+package com.sks.averma.slidingwindow.fixed;
 
 import java.util.Arrays;
 /*- SLIDING WINDOW CODE TEMPLATE

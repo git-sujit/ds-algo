@@ -1,4 +1,4 @@
-package com.sks.averma.slidingwindow;
+package com.sks.averma.slidingwindow.variable;
 
 
 import java.util.Arrays;
