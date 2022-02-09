@@ -5,6 +5,45 @@ import java.util.*;
 public class MultipleMissingAndDuplicatesInArray {
     /**
      * Time Complexity: O(n): Traversing the array once
+     * Space Complexity: O(1) no additional space is used, only output has extra space
+     */
+    public static List<List<Integer>> multipleMissingAndDuplicates_swapSort(int[] nums) {
+        if (nums == null || nums.length == 0) return null;
+        swapSort(nums);
+        List<Integer> missing = new ArrayList<>();
+        List<Integer> duplicates = new ArrayList<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != i + 1) {
+                missing.add(i + 1);
+                duplicates.add(nums[i]);
+            }
+        }
+        List<List<Integer>> out = new ArrayList<>();
+        out.add(missing);
+        out.add(duplicates);
+        return out;
+    }
+
+    private static void swapSort(int[] nums) {
+        if (nums == null || nums.length == 0) return;
+        int i = 0;
+        while (i < nums.length) {
+            if (nums[i] != (i + 1)) {
+                if (nums[nums[i] - 1] == nums[i]) i++;
+                else {
+                    int t = nums[i];
+                    nums[i] = nums[t - 1];
+                    nums[t - 1] = t;
+                }
+            } else {
+                i++;
+            }
+        }
+        //System.out.println("Swap Sort = " + Arrays.toString(nums));
+    }
+
+    /**
+     * Time Complexity: O(n): Traversing the array once
      * Space Complexity: O(n): For HashMap
      */
     public static List<List<Integer>> missingAndDuplicates(int[] nums) {
@@ -24,9 +63,11 @@ public class MultipleMissingAndDuplicatesInArray {
         return out;
     }
 
+
     public static void main(String[] args) {
         int[] nums = {2, 3, 1, 8, 2, 3, 5, 1};
         test(nums);
+        //swapSort(nums);
     }
 
     private static void test(int[] nums) {
@@ -34,5 +75,11 @@ public class MultipleMissingAndDuplicatesInArray {
         List<List<Integer>> out = missingAndDuplicates(nums);
         System.out.println("Missing Numbers = " + out.get(0));
         System.out.println("Duplicate Numbers = " + out.get(1));
+
+        System.out.println("\nUsing Swap Sort:: ");
+        out = multipleMissingAndDuplicates_swapSort(nums);
+        System.out.println("Missing Numbers = " + out.get(0));
+        System.out.println("Duplicate Numbers = " + out.get(1));
+        multipleMissingAndDuplicates_swapSort(nums);
     }
 }

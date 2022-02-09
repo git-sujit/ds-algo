@@ -32,11 +32,17 @@ public class LongestSubArrayOfASum {
                 windowEnd++;
             } else if (localSum == sum) {
                 maxSize = Math.max(maxSize, windowEnd - windowStart + 1);
-                //localSum -= numbers[windowStart];
-                System.out.println("Local sum range (i,j) = (" + windowStart + ", " + windowEnd + "), Size = " + (windowEnd - windowStart + 1));
+                localSum -= numbers[windowStart];
+                //System.out.println("Local sum range (i,j) = (" + windowStart + ", " + windowEnd + "), Size = " + (windowEnd - windowStart + 1));
                 windowStart++;
+                windowEnd++;
             } else if (localSum > sum) {
-                while (localSum > sum) {
+                while (localSum > sum && windowStart < numbers.length) {
+                    localSum -= numbers[windowStart];
+                    windowStart++;
+                }
+                if (localSum == sum && windowStart < numbers.length) {
+                    maxSize = Math.max(maxSize, windowEnd - windowStart + 1);
                     localSum -= numbers[windowStart];
                     windowStart++;
                 }
@@ -82,7 +88,7 @@ public class LongestSubArrayOfASum {
                 localSum += numbers[j];
                 if (localSum == sum) {
                     maxSize = Math.max(maxSize, j - i + 1);
-                    System.out.println("Local sum range (i,j) = (" + i + ", " + j + "), Size = " + (j - i + 1));
+                    //System.out.println("Local sum range (i,j) = (" + i + ", " + j + "), Size = " + (j - i + 1));
                 }
             }
         }
@@ -96,6 +102,10 @@ public class LongestSubArrayOfASum {
 
         numbers = new int[]{-5, 8, -14, 2, 4, 12};
         sum = -5;
+        test(numbers, sum);
+
+        numbers = new int[]{1, 2, 3};
+        sum = 3;
         test(numbers, sum);
     }
 

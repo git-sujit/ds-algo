@@ -38,13 +38,13 @@ public class MissingAndDuplicateInArray {
     public static int[] missingAndDuplicate(final int[] nums) {
         if (nums == null || nums.length == 0) return null;
         int[] out = new int[2];
-        int[] copy = new int[nums.length];
+        int[] count = new int[nums.length];
 
         for (int i = 0; i < nums.length; i++)
-            copy[nums[i] - 1]++;
-        for (int i = 0; i < copy.length; i++) {
-            if (copy[i] == 0) out[0] = i + 1;
-            if (copy[i] == 2) out[1] = i + 1;
+            count[nums[i] - 1] = nums[i];
+        for (int i = 0; i < count.length; i++) {
+            if (count[i] == 0) out[0] = i + 1;
+            if (count[i] == 2) out[1] = i + 1;
         }
         return out;
     }
@@ -52,7 +52,7 @@ public class MissingAndDuplicateInArray {
     public static void main(String[] args) {
         int[] nums = {1, 2, 4, 3, 2, 5};
         test(nums);
-        
+
         nums = new int[]{3, 1, 2, 5, 3};
         test(nums);
     }

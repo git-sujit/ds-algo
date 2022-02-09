@@ -3,6 +3,9 @@ package com.sks.algo2020.algoexperts;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 /**
@@ -12,6 +15,9 @@ import java.util.UUID;
 public class TestRandom {
 
     public static void main(String[] args) throws ScriptException {
+        //Set<Long> s = new HashSet<>(Arrays.asList(1L, 34L));
+        Set<Long> s = new HashSet<>();
+        System.out.println("First element: " + s.iterator().next());
         String webUrl = "https://web.yammer.com/{0}/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiNjk4NTQyMzkxODY5NDQwIn0";
         //String threadId = "eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiNjk4NTQyMzkxODY5NDQwIn0";
         long threadId = 698542391869440l;

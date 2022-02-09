@@ -13,12 +13,9 @@ public class KTopFrequentNumbers {
         if (numbers == null || numbers.length == 0 || k <= 0 || k > numbers.length) return null;
         int[] out = new int[k];
         Map<Integer, Integer> freqMap = new HashMap<>();
-        for (int num : numbers) {
-            if (freqMap.containsKey(num))
-                freqMap.put(num, freqMap.get(num) + 1);
-            else
-                freqMap.put(num, 1);
-        }
+        for (int num : numbers)
+            freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
+
         //System.out.println("Frequency Map = " + freqMap);
         PriorityQueue<CustomPair<Integer, Integer>> minHeap = new PriorityQueue<>();
         for (int num : freqMap.keySet()) {
@@ -63,6 +60,10 @@ public class KTopFrequentNumbers {
         test(numbers, k);
 
         numbers = new int[]{1, 3, 3, 2, 1, 2, 1, 4};
+        k = 3;
+        test(numbers, k);
+
+        numbers = new int[]{8, 9, 10, 9, 8, 5, 4, 8, 10, 9, 5, 6, 8, 9, 8, 10, 7, 6, 5, 9, 8, 4, 3, 8, 9, 10};
         k = 3;
         test(numbers, k);
     }

@@ -52,7 +52,7 @@ public class KClosestElements {
     }
 
     public static void main(String[] args) {
-        int[] a = {1, 2, 3, 4, 5};
+        int[] a = {1, 2, 3, 4, 5, 6, 7};
         int k = 4;
         int x = 3;
         test(a, k, x);
