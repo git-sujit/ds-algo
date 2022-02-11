@@ -36,10 +36,10 @@ public class SortedRotatedArray {
         int minEleIndex = numOfRotations(a);
         if (n == a[minEleIndex])
             return minEleIndex;
-        else if (n < a[minEleIndex])
-            return binarySearch(a, n, 0, minEleIndex - 1);
-        else
-            return binarySearch(a, n, minEleIndex + 1, a.length - 1);
+        int out = binarySearch(a, n, 0, minEleIndex - 1);
+        if (out == -1)
+            out = binarySearch(a, n, minEleIndex + 1, a.length - 1);
+        return out;
     }
 
     private static int binarySearch(int[] a, int n, int s, int e) {
@@ -55,22 +55,23 @@ public class SortedRotatedArray {
     }
 
     public static void main(String[] args) {
-        int[] a = {2, 5, 6, 8, 10, 13, 15, 18, 20};
-        int[] ra = {10, 13, 15, 18, 20, 2, 5, 6, 8};
+        //int[] a = {2, 5, 6, 8, 10, 13, 15, 18, 20};
         int[] rotatedA = {15, 18, 20, 2, 5, 6, 8, 10, 13};
-        System.out.println("Original Array = " + Arrays.toString(a));
-        System.out.println("Rotated Array = " + Arrays.toString(rotatedA));
-        System.out.println("Num of Rotations = " + numOfRotations(rotatedA));
-        System.out.println("Found 18 at " + find(rotatedA, 18));
+        int n = 18;
+        test(rotatedA, n);
 
         rotatedA = new int[]{6, 7, 1, 2, 3, 4, 5};
-        System.out.println("Rotated Array = " + Arrays.toString(rotatedA));
-        System.out.println("Num of Rotations = " + numOfRotations(rotatedA));
-        System.out.println("Found +" + 4 + ", at " + find(a, 4));
+        n = 4;
+        test(rotatedA, n);
 
         rotatedA = new int[]{2, 1};
-        System.out.println("Rotated Array = " + Arrays.toString(rotatedA));
+        n = 0;
+        test(rotatedA, n);
+    }
+
+    private static void test(int[] rotatedA, int n) {
+        System.out.println("\nRotated Array = " + Arrays.toString(rotatedA));
         System.out.println("Num of Rotations = " + numOfRotations(rotatedA));
-        System.out.println("Found +" + 0 + ", at " + find(a, 0));
+        System.out.println("Found " + n + " at : " + find(rotatedA, n));
     }
 }

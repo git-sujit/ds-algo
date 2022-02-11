@@ -34,7 +34,7 @@ public class PagesOfBooks {
             end += pages;
             start = Math.max(start, pages);
         }
-        System.out.println("Start = " + start + ", End = " + end);
+        //System.out.println("Start = " + start + ", End = " + end);
         while (start <= end) {
             int mid = start + (end - start) / 2;
             if (isValid(books, students, mid)) {
@@ -66,15 +66,19 @@ public class PagesOfBooks {
     public static void main(String[] args) {
         int[] books = {10, 20, 30, 40};
         int students = 2;
-        System.out.println("Books = " + Arrays.toString(books) + ", Students = " + students);
-        System.out.println("Optimum number of pages = " + minimumPagesToRead(books, students));
+        test(books, students);
+
         books = new int[]{12, 34, 67, 90};
         students = 2;
-        System.out.println("Books = " + Arrays.toString(books) + ", Students = " + students);
-        System.out.println("Optimum number of pages = " + minimumPagesToRead(books, students));
+        test(books, students);
+
         books = new int[]{1, 2, 3, 50, 100};
         students = 2;
-        System.out.println("Books = " + Arrays.toString(books) + ", Students = " + students);
+        test(books, students);
+    }
+
+    private static void test(int[] books, int students) {
+        System.out.println("\nBooks = " + Arrays.toString(books) + ", Students = " + students);
         System.out.println("Optimum number of pages = " + minimumPagesToRead(books, students));
     }
 }

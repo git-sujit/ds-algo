@@ -16,7 +16,7 @@ public class FloorCeilOfSortedArray {
         while (s <= e) {
             int mid = s + (e - s) / 2;
             if (n == a[mid]) return mid;
-            else if (a[mid] > n)
+            else if (n < a[mid])
                 e = mid - 1;
             else {
                 result = mid;
@@ -39,7 +39,7 @@ public class FloorCeilOfSortedArray {
         while (s <= e) {
             int mid = s + (e - s) / 2;
             if (n == a[mid]) return a[mid];
-            else if (a[mid] > n) {
+            else if (n < a[mid]) {
                 e = mid - 1;
                 result = mid;
             } else
@@ -61,10 +61,10 @@ public class FloorCeilOfSortedArray {
         while (s <= e) {
             int mid = s + (e - s) / 2;
             if (ca[mid] == c) s = mid + 1;
-            else if (ca[mid] > c) {
+            else if (c < ca[mid]) {
                 result = ca[mid];
                 e = mid - 1;
-            } else
+            } else if (c > ca[mid])
                 s = mid + 1;
         }
         return result;

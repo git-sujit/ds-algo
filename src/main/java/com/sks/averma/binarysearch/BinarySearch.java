@@ -29,6 +29,21 @@ public class BinarySearch {
         return -1;
     }
 
+    public static int binarySearch(int[] a, int n, int s, int e) {
+        while (s <= e) {
+            //int mid = (s + e) / 2;
+            //To avoid int overflow use: mid = s+(e-s)/2
+            int mid = s + (e - s) / 2;
+            if (n > a[mid])
+                s = mid + 1;
+            else if (n < a[mid])
+                e = mid - 1;
+            else
+                return mid;
+        }
+        return -1;
+    }
+
     /**
      * Array is sorted in descending order
      * Time Complexity: O(logn), each iteration we are reducing the input to the half
@@ -38,6 +53,19 @@ public class BinarySearch {
         if (a == null || a.length == 0) return -1;
         int s = 0;
         int e = a.length - 1;
+        while (s <= e) {
+            int mid = s + (e - s) / 2;
+            if (n > a[mid])
+                e = mid - 1;
+            else if (n < a[mid])
+                e = mid + 1;
+            else
+                return mid;
+        }
+        return -1;
+    }
+
+    public static int binarySearch_reverseSorted(int[] a, int n, int s, int e) {
         while (s <= e) {
             int mid = s + (e - s) / 2;
             if (n > a[mid])
