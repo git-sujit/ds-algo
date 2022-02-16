@@ -11,7 +11,7 @@ import java.util.Queue;
  * Given the root of a binary tree, return the average value of the nodes on each level in the form of an array.
  * Answers within 10-5 of the actual answer will be accepted.
  */
-public class LevelAverageInTree {
+public class TreeLevelAverage {
     public static List<Double> levelAverage(TreeNode root) {
         List<Double> avg = new ArrayList<>();
         if (root == null)

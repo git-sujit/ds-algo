@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Given the root of a binary search tree and a target value, return the value in the BST that is closest to the target.
  */
-public class BSTreeClosest {
+public class TreeBSClosest {
     /**
      * Binary Search
      * Time complexity : O(H)/O(logN) since here one goes from root down to a leaf.

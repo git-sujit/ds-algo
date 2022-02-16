@@ -10,7 +10,7 @@ import java.util.Queue;
  * Given the root of a binary tree, invert the tree, and return its root.
  * (Get the mirror image of binary tree)
  */
-public class InvertBinaryTree {
+public class TreeInversion {
 
     public static TreeNode invertTree_recursive(TreeNode root) {
         if (root == null)

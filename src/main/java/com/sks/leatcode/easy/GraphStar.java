@@ -6,7 +6,7 @@ package com.sks.leatcode.easy;
  * You are given a 2D integer array edges where each edges[i] = [ui, vi] indicates that there is an edge
  * between the nodes ui and vi. Return the center of the given star graph.
  */
-public class StarGraph {
+public class GraphStar {
     /**
      * Time Complexity: O(1)
      * Space Complexity: O(1)

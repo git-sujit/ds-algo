@@ -9,7 +9,7 @@ import java.util.*;
  * You want to determine if there is a valid path that exists from vertex source to vertex destination.
  * Given edges and the integers n, source, and destination, return true if there is a valid path from source to destination, or false otherwise.
  */
-public class PathInGraph {
+public class GraphPath {
     /**
      * Time Complexity:
      * Space Complexity:

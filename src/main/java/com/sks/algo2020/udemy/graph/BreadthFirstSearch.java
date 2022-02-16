@@ -15,7 +15,7 @@ import static com.sks.algo2020.TestData.GraphNode;
 public class BreadthFirstSearch {
     /**
      * Time Complexity:  O(n)- Each node is traversed once thru queue
-     * Space Complexity: Max queue size is n
+     * Space Complexity: O(n) Max queue size is n
      * Check the visited after removing from queue, queue might have duplicate data, hence need to check visited
      */
     public static void bfs_better(GraphNode<Integer> n) {

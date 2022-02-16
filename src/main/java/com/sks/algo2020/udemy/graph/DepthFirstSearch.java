@@ -1,7 +1,9 @@
 package com.sks.algo2020.udemy.graph;
 
 import com.sks.algo2020.TestData;
+import javafx.util.Pair;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.Stack;
@@ -28,6 +30,25 @@ public class DepthFirstSearch {
         }
     }
 
+    /**
+     * Time: O(n)
+     * Space: O(n) for visitedSet
+     */
+    public static void dfs_visited_set(GraphNode<Integer> n) {
+        //Set<GraphNode> visitedSet = new HashSet<>();
+        dfs_visited_set(n, new HashSet<>());
+        //System.out.println("visitedSet = " + visitedSet);
+    }
+
+    private static void dfs_visited_set(GraphNode<Integer> node, Set<GraphNode> visitedSet) {
+        if (node == null) return;
+        visit(node);
+        visitedSet.add(node);
+        for (GraphNode child : node.children) {
+            if (!visitedSet.contains(child)) dfs_visited_set(child, visitedSet);
+        }
+    }
+
     public static void dfs_iterative(GraphNode<Integer> n) {
         if (n == null) return;
         Stack<GraphNode<Integer>> stack = new Stack<>();
@@ -36,8 +57,11 @@ public class DepthFirstSearch {
             GraphNode<Integer> sn = stack.pop();
             visit(sn);
             sn.visited = true;
-            for (GraphNode<Integer> cn : sn.children)
-                if (!cn.visited) stack.push(cn);
+            GraphNode[] children = sn.children;
+            for (int i = children.length - 1; i >= 0; i--) {
+                GraphNode child = children[i];
+                if (!child.visited) stack.push(child);
+            }
         }
     }
 
@@ -68,7 +92,7 @@ public class DepthFirstSearch {
 
     public static void main(String[] args) {
         test_dfs_vertices();
-        test_dfs_edges();
+        //test_dfs_edges();
     }
 
     /**
@@ -88,7 +112,9 @@ public class DepthFirstSearch {
     private static void test_dfs_vertices() {
         System.out.println("### GRAPH DFS");
         GraphNode<Integer> root = TestData.getGraphData();
-        System.out.println("DFS Recursive");
+        System.out.println("DFS Recursive- visitedSet");
+        dfs_visited_set(root);
+        System.out.println("DFS Recursive- mutating Graph");
         dfs(root);
         System.out.println("DFS Iterative");
         root = TestData.getGraphData();

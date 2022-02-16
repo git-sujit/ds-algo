@@ -15,7 +15,7 @@ import com.sks.leatcode.common.TreePrinter;
  * - Longest path(Diameter) will be between two leaf nodes
  * - Tree traversal mechanism: DFS (Preorder, Inorder, Postorder)
  */
-public class BinaryTreeDiameter {
+public class TreeDiameter {
     private static int diameter = 0;
 
     /**

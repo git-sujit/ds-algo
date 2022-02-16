@@ -11,7 +11,7 @@ import java.util.List;
  * Given the root of a binary search tree, rearrange the tree in in-order so that the leftmost node in
  * the tree is now the root of the tree, and every node has no left child and only one right child.
  */
-public class BSTreeInOrder {
+public class TreeBSInOrder {
     /**
      * Time Complexity: O(N), where NN is the number of nodes in the given tree
      * Space Complexity: O(N)

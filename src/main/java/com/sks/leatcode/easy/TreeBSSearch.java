@@ -3,7 +3,7 @@ package com.sks.leatcode.easy;
 import com.sks.leatcode.common.TreeNode;
 import com.sks.leatcode.common.TreePrinter;
 
-public class BSTreeSearch {
+public class TreeBSSearch {
     /**
      * Time complexity : O(H), where H is a tree height. That results in O(logN) in the average case, and O(N) in the worst case.
      * Space complexity : O(H) to keep the recursion stack, i.e. O(logN) in the average case, and O(N) in the worst case.
