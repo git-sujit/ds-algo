@@ -1,6 +1,7 @@
 package com.sks.leatcode.easy;
 
 import com.sks.leatcode.common.TreeNode;
+import com.sks.leatcode.common.TreePrinter;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,15 +18,14 @@ public class TreeBalance {
      * Space Complexity: o(logn) for recursive stack, worst case O(n) if tree is linear
      * Concern: Multiple calls for height
      */
-    public boolean isBalanced_recursion(TreeNode root) {
+    public static boolean isBalanced_recursion(TreeNode root) {
         if (root == null) return true;
-        return Math.abs(height(root.left) - height(root.right)) <= 1
-                && isBalanced_recursion(root.left)
-                && isBalanced_recursion(root.right);
+        if (Math.abs(height(root.left) - height(root.right)) > 1) return false;
+        return isBalanced_recursion(root.left) && isBalanced_recursion(root.right);
     }
 
-    private int height(TreeNode node) {
-        if (node == null) return -1;
+    private static int height(TreeNode node) {
+        if (node == null) return 0;
         return 1 + Math.max(height(node.left), height(node.right));
     }
 
@@ -34,21 +34,22 @@ public class TreeBalance {
      * Time Complexity: O(n), one pass to store height of each node, second pass to check if its balanced
      * Space Complexity: o(n) for Recursion stack & HashMap
      */
-    public boolean isBalanced_memoization(TreeNode root) {
-        Map<TreeNode, Integer> nodeHeightMap = new HashMap<>();
-        memoizeHeight(root, nodeHeightMap);
-        return isBalanced_memoization(root, nodeHeightMap);
+    public static boolean isBalanced_memoization(TreeNode root) {
+        //Map<TreeNode, Integer> nodeHeightMap = new HashMap<>();
+        //memoizeHeight(root, nodeHeightMap);
+        return isBalanced_memoization(root, new HashMap<>());
     }
 
-    private boolean isBalanced_memoization(TreeNode root, Map<TreeNode, Integer> nodeHeightMap) {
+    private static boolean isBalanced_memoization(TreeNode root, Map<TreeNode, Integer> nodeHeightMap) {
+        //System.out.println("nodeHeightMap = " + nodeHeightMap);
         if (root == null) return true;
-        return Math.abs(nodeHeightMap.get(root.left) - nodeHeightMap.get(root.right)) <= 1
-                && isBalanced_memoization(root.left, nodeHeightMap)
-                && isBalanced_memoization(root.right, nodeHeightMap);
+        if (Math.abs(memoizeHeight(root.left, nodeHeightMap) - memoizeHeight(root.right, nodeHeightMap)) > 1)
+            return false;
+        return isBalanced_memoization(root.left, nodeHeightMap) && isBalanced_memoization(root.right, nodeHeightMap);
     }
 
-    private int memoizeHeight(TreeNode root, Map<TreeNode, Integer> memo) {
-        if (root == null) return -1;
+    private static int memoizeHeight(TreeNode root, Map<TreeNode, Integer> memo) {
+        if (root == null) return 0;
         if (memo.containsKey(root))
             return memo.get(root);
         int height = 1 + Math.max(memoizeHeight(root.left, memo), memoizeHeight(root.right, memo));
@@ -56,33 +57,21 @@ public class TreeBalance {
         return height;
     }
 
-    /**
-     * Bottom-Up recursion
-     * Time Complexity: O(n), one pass to store height of each node, second pass to check if its balanced
-     * Space Complexity: o(n) for Recursion stack & HashMap
-     */
-    public boolean isBalanced(TreeNode root) {
-        return getTreeInfo(root).isBalanced;
+    public static void main(String[] args) {
+        TreeNode root = TreeNode.treeData1();
+        test(root);
+
+        root = TreeNode.treeData2();
+        test(root);
+
+        root = TreeNode.treeData_leftLinear();
+        test(root);
     }
 
-    TreeInfo getTreeInfo(TreeNode node) {
-        if (node == null)
-            return new TreeInfo(true, -1);
-        TreeInfo leftInfo = getTreeInfo(node.left);
-        TreeInfo rightInfo = getTreeInfo(node.right);
-        boolean isBalanced = leftInfo.isBalanced && rightInfo.isBalanced && Math.abs(leftInfo.height - rightInfo.height) <= 1;
-        int height = Math.max(leftInfo.height, rightInfo.height) + 1;
-
-        return new TreeInfo(isBalanced, height);
+    private static void test(TreeNode root) {
+        TreePrinter.printNode(root);
+        System.out.println("[Recursion] Is tree balanced : " + isBalanced_recursion(root));
+        System.out.println("[Memoization] Is tree balanced : " + isBalanced_memoization(root));
     }
 
-    class TreeInfo {
-        boolean isBalanced;
-        int height;
-
-        TreeInfo(boolean isBalanced, int height) {
-            this.isBalanced = isBalanced;
-            this.height = height;
-        }
-    }
 }

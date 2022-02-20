@@ -16,7 +16,7 @@ import java.util.*;
  * Like many graph interview problems though, the input format we're given doesn't allow us to quickly get the neighbours of a node.
  * Therefore, our first step is to convert the input into an adjacency list.
  * <p> IMPORTANT
- * Acyclic Graph: For directed graph checking [if(visited.contains(nbr) return false] works but for undirected graph ther will be trivial cycle(A->B->A)
+ * Acyclic Graph: For directed graph checking [if(visited.contains(nbr) return false] works but for undirected graph there will be trivial cycle(A->B->A)
  * Two approaches:
  * 1. Delete opposite direction edge from Adjacency List(nbrMap)
  * 2. Instead of visited set, use parent map that keeps track of parent node. Then when we iterate thru neighbors of a node, we ignore parent node

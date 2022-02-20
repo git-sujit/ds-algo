@@ -3,9 +3,7 @@ package com.sks.leatcode.easy;
 import com.sks.leatcode.common.TreeNode;
 import com.sks.leatcode.common.TreePrinter;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * There are two general strategies to traverse a tree:
@@ -38,7 +36,7 @@ public class TreeTraversal {
 
     public static List<Integer> preorderTraversal_iteration(TreeNode root) {
         System.out.println("[Iteration] Pre-Order Traversal");
-        List<Integer> traverseList = new ArrayList<Integer>();
+        List<Integer> traverseList = new ArrayList<>();
         if (root == null) return traverseList;
         Stack<TreeNode> stack = new Stack<>();
         stack.push(root);
@@ -104,7 +102,17 @@ public class TreeTraversal {
      */
     public static List<Integer> levelOrderTraversal(TreeNode root) {
         System.out.println("[Iteration] Level-Order Traversal");
-        return null;
+        List<Integer> levList = new ArrayList<>();
+        if (root == null) return levList;
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+        while (!q.isEmpty()) {
+            TreeNode node = q.remove();
+            levList.add(node.val);
+            if (node.left != null) q.add(node.left);
+            if (node.right != null) q.add(node.right);
+        }
+        return levList;
     }
 
     public static void main(String[] args) {
@@ -112,7 +120,11 @@ public class TreeTraversal {
         TreePrinter.printNode(root);
         List<Integer> traversedNodes = preorderTraversal_recursion(root);
         System.out.println(traversedNodes);
+
         traversedNodes = preorderTraversal_iteration(root);
+        System.out.println(traversedNodes);
+
+        traversedNodes = levelOrderTraversal(root);
         System.out.println(traversedNodes);
     }
 }

@@ -5,22 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/GraphBFS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/GraphDFS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeHeight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/BreadthFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/algo2020/udemy/graph/DepthFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/BSTreeClosest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeBSClosest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/BSTreeInOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeBSInOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/BSTreeSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeBSSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/BalancedBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeBalance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/BinaryTreeDiameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeDiameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/InvertBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeInversion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/LevelAverageInTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeLevelAverage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/PathInGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/GraphPath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/SameBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeSame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/StarGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/GraphStar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/SymmetricTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeSymmetry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/learn/leetcode/LeetCodeUtility_EASY.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/learn/leetcode/LeetCodeUtility_MEDIUM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/GraphBFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/GraphBFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/GraphPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/GraphPath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeBalance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeDiameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeDiameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeInversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeInversion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreePaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreePaths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeSame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeSame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeSymmetry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeSymmetry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeTilt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeTilt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeTraversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeTraversal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeUnival.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeUnival.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/GraphValidTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/GraphValidTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,13 +90,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DepthFirstSearch">
-    <configuration name="DepthFirstSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.algo2020.udemy.graph.DepthFirstSearch" />
+  <component name="RunManager" selected="Application.TreeDiameter">
+    <configuration name="TreeDiameter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.TreeDiameter" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.algo2020.udemy.graph.*" />
+          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,12 +104,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedListOddEven" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.LinkedListOddEven" />
+    <configuration name="TreeInversion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.TreeInversion" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.medium.*" />
+          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,12 +117,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedListReversal2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.LinkedListReversal2" />
+    <configuration name="TreePaths" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.TreePaths" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.medium.*" />
+          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,12 +130,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MaxLengthRepeatedSubArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.MaxLengthRepeatedSubArray" />
+    <configuration name="TreeTilt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.TreeTilt" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.medium.*" />
+          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -142,12 +143,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubdomainVisitCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.SubdomainVisitCount" />
+    <configuration name="TreeUnival" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.TreeUnival" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.medium.*" />
+          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -157,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DepthFirstSearch" />
-        <item itemvalue="Application.MaxLengthRepeatedSubArray" />
-        <item itemvalue="Application.SubdomainVisitCount" />
-        <item itemvalue="Application.LinkedListOddEven" />
-        <item itemvalue="Application.LinkedListReversal2" />
+        <item itemvalue="Application.TreeDiameter" />
+        <item itemvalue="Application.TreeUnival" />
+        <item itemvalue="Application.TreeTilt" />
+        <item itemvalue="Application.TreePaths" />
+        <item itemvalue="Application.TreeInversion" />
       </list>
     </recent_temporary>
   </component>
@@ -333,7 +334,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreePaths.java</url>
-          <line>40</line>
+          <line>70</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

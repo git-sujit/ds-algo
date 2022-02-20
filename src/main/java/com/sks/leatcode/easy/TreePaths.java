@@ -1,6 +1,7 @@
 package com.sks.leatcode.easy;
 
 import com.sks.leatcode.common.TreeNode;
+import com.sks.leatcode.common.TreePrinter;
 
 import java.util.*;
 
@@ -24,6 +25,35 @@ public class TreePaths {
         if (node.left != null) binaryTreePaths(node.left, path + node.val + "->", paths);
         if (node.right != null) binaryTreePaths(node.right, path + node.val + "->", paths);
     }
+
+    /**
+     * Time Complexity: O(n), we visit each node exactly once
+     * Space Complexity: O(logN) / O(n), For balanced vs Skew tree
+     */
+    public static List<String> binaryTreePaths_iterative_better(TreeNode root) {
+        List<String> paths = new ArrayList<>();
+        if (root == null) return paths;
+        Stack<TreeNode> nodeStack = new Stack<>();
+        Stack<String> pathStack = new Stack<>();
+        nodeStack.add(root);
+        pathStack.push(String.valueOf(root.val));
+        while (!nodeStack.isEmpty()) {
+            TreeNode node = nodeStack.pop();
+            String path = pathStack.pop();
+            if (node.left == null && node.right == null)
+                paths.add(path);
+            if (node.right != null) {
+                nodeStack.push(node.right);
+                pathStack.push(path + "->" + node.right.val);
+            }
+            if (node.left != null) {
+                nodeStack.push(node.left);
+                pathStack.push(path + "->" + node.left.val);
+            }
+        }
+        return paths;
+    }
+
 
     public static List<String> binaryTreePaths_iterative(TreeNode root) {
         List<String> paths = new ArrayList<>();
@@ -60,8 +90,15 @@ public class TreePaths {
 
     public static void main(String[] args) {
         TreeNode root = TreeNode.treeData1();
-        System.out.println("Tree = " + root);
-        System.out.println("Paths = " + binaryTreePaths(root));
+        demo(root);
+        root = TreeNode.treeData2();
+        demo(root);
+    }
+
+    private static void demo(TreeNode root) {
+        TreePrinter.printNode(root);
+        System.out.println("[Recursion] Paths = " + binaryTreePaths(root));
+        System.out.println("[Iterative-Better] Paths = " + binaryTreePaths_iterative_better(root));
         System.out.println("[Iterative] Paths = " + binaryTreePaths_iterative(root));
     }
 }

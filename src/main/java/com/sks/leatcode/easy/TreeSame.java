@@ -1,6 +1,7 @@
 package com.sks.leatcode.easy;
 
 import com.sks.leatcode.common.TreeNode;
+import com.sks.leatcode.common.TreePrinter;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -14,7 +15,7 @@ public class TreeSame {
      * Time Complexity:
      * Space Complexity:
      */
-    public boolean isSameTree_iteration(TreeNode p, TreeNode q) {
+    public static boolean isSameTree_iteration(TreeNode p, TreeNode q) {
         if (p == null && q == null) return true;
         if (p == null || q == null) return false;
         Queue<TreeNode> q1 = new LinkedList<>();
@@ -40,10 +41,28 @@ public class TreeSame {
      * Time Complexity: O(n), each node is traversed once
      * Space Complexity: O(n), O(log(N) if balanced tree else O(n) to keep RECURSION-STACK
      */
-    public boolean isSameTree_recursion(TreeNode p, TreeNode q) {
+    public static boolean isSameTree_recursion(TreeNode p, TreeNode q) {
         if (p == null && q == null) return true;
         if (p == null || q == null) return false;
         if (p.val != q.val) return false;
         return isSameTree_recursion(p.left, q.left) && isSameTree_recursion(p.right, q.right);
+    }
+
+    public static void main(String[] args) {
+        TreeNode root1 = TreeNode.treeData1();
+        TreeNode root11 = TreeNode.treeData1();
+        System.out.println("Tree - 1");
+        TreePrinter.printNode(root1);
+        System.out.println("Tree - 1(Same)");
+        TreePrinter.printNode(root11);
+        System.out.println("Tree - 2");
+        TreeNode root2 = TreeNode.treeData2();
+        TreePrinter.printNode(root2);
+
+        System.out.println("[Recursion] Are tree same? : " + isSameTree_recursion(root1, root11));
+        System.out.println("[Iteration] Are tree same? : " + isSameTree_iteration(root1, root11));
+
+        System.out.println("[Recursion] Are tree same? : " + isSameTree_recursion(root1, root2));
+        System.out.println("[Iteration] Are tree same? : " + isSameTree_iteration(root1, root2));
     }
 }

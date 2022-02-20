@@ -1,6 +1,7 @@
 package com.sks.leatcode.easy;
 
 import com.sks.leatcode.common.TreeNode;
+import com.sks.leatcode.common.TreePrinter;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -11,7 +12,10 @@ import java.util.Queue;
  * (Get the mirror image of binary tree)
  */
 public class TreeInversion {
-
+    /**
+     * Time Complexity  : O(n), we are going through each node once
+     * Space Complexity : O(logn)/Height, for Balance tree , O(n) if Recursion stack can grow upto n size if Tree is skewed/linear
+     */
     public static TreeNode invertTree_recursive(TreeNode root) {
         if (root == null)
             return null;
@@ -24,6 +28,11 @@ public class TreeInversion {
         return root;
     }
 
+    /**
+     * /**
+     * Time Complexity  : O(n), we are going through each node once
+     * Space Complexity : O(n), Queue storage
+     */
     public static TreeNode invertTree_iterative(TreeNode root) {
         if (root == null)
             return null;
@@ -61,6 +70,19 @@ public class TreeInversion {
 
 
     public static void main(String[] args) {
+        //deprecated();
+        TreeNode root = TreeNode.treeData2();
+        demo(root);
+    }
+
+    private static void demo(TreeNode root) {
+        System.out.println("Original Tree");
+        TreePrinter.printNode(root);
+        System.out.println("Inverted Tree");
+        TreePrinter.printNode(invertTree_recursive(root));
+    }
+
+    private static void deprecated() {
         int[] a = {Integer.MAX_VALUE, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         System.out.println("Array = " + Arrays.toString(a));
         TreeNode root = prepareCompleteBinaryTree_queueBased(a);

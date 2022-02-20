@@ -121,6 +121,30 @@ public class TreeNode {
         return root;
     }
 
+    public static TreeNode treeData_symmetric() {
+        List<TreeNode> pool1 = testNodes(10);
+        List<TreeNode> pool2 = testNodes(10);
+        TreeNode root = new TreeNode(1);
+        root.left = pool1.get(2);
+        root.right = pool2.get(2);
+        pool1.get(2).left = pool1.get(3);
+        pool1.get(2).right = pool1.get(4);
+        pool2.get(2).left = pool2.get(4);
+        pool2.get(2).right = pool2.get(3);
+        return root;
+    }
+
+    public static TreeNode treeData_unival() {
+        List<TreeNode> nodes = testNodes_unival(10);
+        TreeNode root = nodes.get(4);
+        root.left = nodes.get(2);
+        root.right = nodes.get(9);
+        nodes.get(2).left = nodes.get(3);
+        nodes.get(2).right = nodes.get(5);
+        nodes.get(9).right = nodes.get(7);
+        return root;
+    }
+
     public static TreeNode treeData_rightLinear() {
         List<TreeNode> nodes = testNodes(10);
         TreeNode root = nodes.get(1);
@@ -137,6 +161,13 @@ public class TreeNode {
         List<TreeNode> nodes = new ArrayList<>();
         for (int i = 0; i <= n; i++)
             nodes.add(new TreeNode(i));
+        return nodes;
+    }
+
+    private static List<TreeNode> testNodes_unival(int n) {
+        List<TreeNode> nodes = new ArrayList<>();
+        for (int i = 0; i <= n; i++)
+            nodes.add(new TreeNode(5));
         return nodes;
     }
 

@@ -16,69 +16,64 @@ public class GraphPath {
      * Typical Candidate for BFS: We are trying to get path between two nodes
      */
     public static boolean validPath(int n, int[][] edges, int source, int destination) {
-
         if (source == destination) return true;
-
-        HashSet<Integer> visited = new HashSet<>();
-        Queue<Integer> vertices = new ArrayDeque();
-        for (int i = 0; i < edges.length; i++) {
-            if (edges[i][0] == source) vertices.add(edges[i][1]);
-            if (edges[i][1] == source) vertices.add(edges[i][0]);
-        }
-        visited.add(source);
-
-        while (!vertices.isEmpty()) {
-            int vertex = vertices.poll();
-            if (visited.contains(vertex)) continue;
-            visited.add(vertex);
-            if (vertex == destination) return true;
-            for (int i = 0; i < edges.length; i++) {
-                if (edges[i][0] == vertex && !visited.contains(edges[i][1])) {
-                    vertices.add(edges[i][1]);
-                } else if (edges[i][1] == vertex && !visited.contains(edges[i][0])) {
-                    vertices.add(edges[i][0]);
+        HashSet<Integer> visitedSet = new HashSet<>();
+        Queue<Integer> que = new LinkedList<>();
+        que.add(source);
+        while (!que.isEmpty()) {
+            int qn = que.remove();
+            if (!visitedSet.contains(qn)) {
+                if (qn == destination) return true;
+                visitedSet.add(qn);
+                for (int[] edge : edges) {
+                    if (edge[0] == qn && !visitedSet.contains(edge[1]))
+                        que.add(edge[1]);
+                    else if (edge[1] == qn && !visitedSet.contains(edge[0]))
+                        que.add(edge[0]);
                 }
             }
         }
-
         return false;
     }
 
-    /**
-     * Partially works
-     */
-    public static boolean validPath_1(int n, int[][] edges, int source, int destination) {
-        Map<Integer, List<Integer>> adjMap = prepareAdjMap(edges);
-        //System.out.println("adjMap = "+adjMap);
-        Set<Integer> visited = new HashSet<>();
-        return found(adjMap, source, destination, visited);
+    public static boolean validPath_adjList(int n, int[][] edges, int source, int destination) {
+        if (edges == null || edges.length == 0 || source < 0 || destination < 0 || source > n || destination > n)
+            return false;
+        Map<Integer, Set<Integer>> adjList = prepareAdjacencyList(edges);
+        return bfs_find(adjList, source, destination);
     }
 
-    private static boolean found(Map<Integer, List<Integer>> adjMap, int source, int destination, Set<Integer> visited) {
-        Queue<Integer> path = new LinkedList<>();
-        path.add(source);
-        visited.add(source);
-        while (!path.isEmpty()) {
-            int n = path.remove();
-            if (n == destination) return true;
-            for (int n1 : adjMap.get(n)) {
-                if (!visited.contains(n1)) path.add(n1);
+    private static boolean bfs_find(Map<Integer, Set<Integer>> adjList, int source, int destination) {
+        Set<Integer> visitedSet = new HashSet<>();
+        Queue<Integer> q = new LinkedList<>();
+        q.add(source);
+        while (!q.isEmpty()) {
+            int qn = q.remove();
+            if (!visitedSet.contains(qn)) {
+                if (qn == destination) return true;
+                visitedSet.add(qn);
+                for (int child : adjList.get(qn)) {
+                    if (!visitedSet.contains(child))
+                        q.add(child);
+                }
             }
         }
         return false;
     }
 
-    private static Map<Integer, List<Integer>> prepareAdjMap(int[][] edges) {
-        Map<Integer, List<Integer>> map = new HashMap<>();
-        for (int[] e : edges) {
-            List<Integer> v = map.getOrDefault(e[0], new ArrayList<>());
-            v.add(e[1]);
-            map.put(e[0], v);
-            v = map.getOrDefault(e[1], new ArrayList<>());
-            v.add(e[0]);
-            map.put(e[1], v);
+    private static Map<Integer, Set<Integer>> prepareAdjacencyList(int[][] edges) {
+        Map<Integer, Set<Integer>> adjList = new HashMap<>();
+        for (int[] edge : edges) {
+            int n1 = edge[0];
+            int n2 = edge[1];
+            Set<Integer> n1Children = adjList.getOrDefault(n1, new HashSet<>());
+            n1Children.add(n2);
+            adjList.put(n1, n1Children);
+            Set<Integer> n2Children = adjList.getOrDefault(n2, new HashSet<>());
+            n1Children.add(n1);
+            adjList.put(n2, n2Children);
         }
-        return map;
+        return adjList;
     }
 
     public static void main(String[] args) {
@@ -86,11 +81,16 @@ public class GraphPath {
         int[][] edges = {{0, 1}, {1, 2}, {2, 0}};
         int source = 0;
         int destination = 2;
-        System.out.println("valid path exists? : " + validPath(n, edges, source, destination));
-        System.out.println("[Mine]valid path exists? : " + validPath_1(n, edges, source, destination));
+        test(n, edges, source, destination);
 
         destination = 3;
-        System.out.println("valid path exists? : " + validPath(n, edges, source, destination));
-        System.out.println("[Mine]valid path exists? : " + validPath_1(n, edges, source, destination));
+        test(n, edges, source, destination);
     }
+
+    private static void test(int n, int[][] edges, int source, int destination) {
+        System.out.println("\n[Better]valid path exists? : " + validPath(n, edges, source, destination));
+        System.out.println("[Adj-List]valid path exists? : " + validPath_adjList(n, edges, source, destination));
+
+    }
+
 }
