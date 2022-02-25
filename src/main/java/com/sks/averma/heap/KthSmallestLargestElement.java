@@ -29,12 +29,12 @@ public class KthSmallestLargestElement {
      * Space Complexity: O(k)
      */
     public static int kthLarglest(int[] a, int k) {
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>();
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
         for (int e : a) {
-            maxHeap.add(e);
-            if (maxHeap.size() > k) maxHeap.remove();
+            minHeap.add(e);
+            if (minHeap.size() > k) minHeap.remove();
         }
-        return maxHeap.peek();
+        return minHeap.peek();
     }
 
     public static int[] topXMarks(int[] marks, int x) {

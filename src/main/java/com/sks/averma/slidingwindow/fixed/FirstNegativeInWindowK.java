@@ -30,7 +30,8 @@ public class FirstNegativeInWindowK {
                 negList.add(arr[endWindow]);
             if (endWindow - startWindow + 1 == k) {
                 out[startWindow] = negList.size() > 0 ? negList.get(0) : 0;
-                if (arr[startWindow] < 0 && negList.size() > 0) negList.remove(0);
+                //if (arr[startWindow] < 0 && negList.size() > 0) negList.remove(0);
+                if (negList.size() > 0 && arr[startWindow] == negList.get(0)) negList.remove(0);
                 startWindow++;
             }
         }

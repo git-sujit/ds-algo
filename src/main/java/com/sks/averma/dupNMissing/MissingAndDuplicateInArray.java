@@ -41,7 +41,7 @@ public class MissingAndDuplicateInArray {
         int[] count = new int[nums.length];
 
         for (int i = 0; i < nums.length; i++)
-            count[nums[i] - 1] = nums[i];
+            count[nums[i] - 1]++;// = nums[i];
         for (int i = 0; i < count.length; i++) {
             if (count[i] == 0) out[0] = i + 1;
             if (count[i] == 2) out[1] = i + 1;

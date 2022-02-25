@@ -1,5 +1,6 @@
 package com.sks.leatcode.medium;
 
+import java.util.Deque;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
@@ -19,34 +20,33 @@ import java.util.Map;
  */
 public class LRUCache {
     private int capacity;
-    private final Map<Integer, Integer> cache = new HashMap<>();
-    private final LinkedList<Integer> usabilityList = new LinkedList<>();
+    private static final Map<Integer, Integer> cache = new HashMap<>();
+    private static final Deque<Integer> q = new LinkedList<>();
 
     public LRUCache(int capacity) {
         this.capacity = capacity;
     }
 
     public int get(int key) {
-        if (usabilityList.getLast() == key) {
-            usabilityList.removeLast();
-            usabilityList.addFirst(key);
+        if (cache.containsKey(key)) {
+            q.remove(key);
+            q.addFirst(key);
+            return cache.get(key);
         }
-        return cache.get(key) != null ? cache.get(key) : -1;
+        return -1;
     }
 
     public void put(int key, int value) {
-        if (cache.size() == this.capacity)
-            evictLeastRecentUsed();
-        usabilityList.addFirst(key);
+        if (cache.containsKey(key)) {
+            q.remove(key);
+        } else {
+            if (q.size() == capacity) {
+                int lruKey = q.removeLast();
+                cache.remove(lruKey);
+            }
+        }
+        q.addFirst(key);
         cache.put(key, value);
-        System.out.println("Cache = " + cache);
-        System.out.println("usabilityList = " + usabilityList);
-    }
-
-    private void evictLeastRecentUsed() {
-        int lastKey = usabilityList.removeLast();
-        cache.remove(lastKey);
-        System.out.println("Evicting least used: " + lastKey);
     }
 
     public static void main(String[] args) {

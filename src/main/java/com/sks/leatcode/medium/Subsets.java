@@ -10,52 +10,25 @@ import java.util.List;
  */
 public class Subsets {
     /**
-     * LEXICOGRAPHIC:
-     * Time complexity:
-     * Space complexity:
-     * IDEA(By Knuth): The idea is that we map each subset to a bitmask of length n,
-     * where 1 on the ith position in bitmask means the presence of nums[i] in the subset, and 0 means its absence.
-     */
-    public static List<List<Integer>> subsets_lexicographic(int[] nums) {
-        List<List<Integer>> out = new ArrayList();
-        int n = nums.length;
-
-        for (int i = (int) Math.pow(2, n); i < (int) Math.pow(2, n + 1); ++i) {
-            // generate bitmask, from 0..00 to 1..11
-            String bitmask = Integer.toBinaryString(i).substring(1);
-
-            // append subset corresponding to that bitmask
-            List<Integer> curr = new ArrayList();
-            for (int j = 0; j < n; ++j) {
-                if (bitmask.charAt(j) == '1') curr.add(nums[j]);
-            }
-            out.add(curr);
-        }
-        return out;
-    }
-
-    /**
      * BACKTRACKING: Power set is all possible combinations of all possible lengths, from 0 to n.
-     * Time complexity: O(N×2^N)
-     * Space complexity: O(N)
+     * Time complexity: O(N×2^N), To generate all subsets and then copy them into output list
+     * Space complexity: O(N) , To maintain curr, and are modifying curr in-place with backtracking.
      * IDEA: Backtracking is an algorithm for finding all solutions by exploring all potential candidates.
      * If the solution candidate turns to be not a solution (or at least not the last one),
      * backtracking algorithm discards it by making some changes on the previous step, i.e. backtracks and then try again.
      */
     public static List<List<Integer>> subsets_backtracking(int[] nums) {
         List<List<Integer>> out = new ArrayList<>();
-        if (nums == null) return out;
-        out.add(new ArrayList<>());
-        if (nums.length == 0) return out;
-        for (int subLen = 1; subLen <= nums.length; subLen++) {
-            backtrack(0, subLen, new ArrayList<Integer>(), nums, out);
+        if (nums == null || nums.length == 0) return out;
+        for (int subLen = 0; subLen <= nums.length; subLen++) {
+            backtrack(0, subLen, new ArrayList<>(), nums, out);
         }
         return out;
     }
 
     private static void backtrack(int first, int subLen, List<Integer> curr, int[] nums, List<List<Integer>> out) {
         if (curr.size() == subLen) {
-            out.add(curr);
+            out.add(new ArrayList<>(curr));
             return;
         }
         for (int i = first; i < nums.length; i++) {
@@ -87,6 +60,31 @@ public class Subsets {
         return out;
     }
 
+    /**
+     * LEXICOGRAPHIC:
+     * Time complexity : O(N×2^N)
+     * Space complexity: O(N×2^N)
+     * IDEA(By Knuth): The idea is that we map each subset to a bitmask of length n,
+     * where 1 on the ith position in bitmask means the presence of nums[i] in the subset, and 0 means its absence.
+     */
+    public static List<List<Integer>> subsets_lexicographic(int[] nums) {
+        List<List<Integer>> out = new ArrayList();
+        int n = nums.length;
+
+        for (int i = (int) Math.pow(2, n); i < (int) Math.pow(2, n + 1); ++i) {
+            // generate bitmask, from 0..00 to 1..11
+            String bitmask = Integer.toBinaryString(i).substring(1);
+
+            // append subset corresponding to that bitmask
+            List<Integer> curr = new ArrayList();
+            for (int j = 0; j < n; ++j) {
+                if (bitmask.charAt(j) == '1') curr.add(nums[j]);
+            }
+            out.add(curr);
+        }
+        return out;
+    }
+
     public static void main(String[] args) {
         int[] nums = new int[]{};
         test(nums);
@@ -102,8 +100,8 @@ public class Subsets {
         System.out.println("\nNumbers = " + Arrays.toString(nums));
         List<List<Integer>> out = subsets_cascading(nums);
         System.out.println("[Cascading] Number of subsets = " + out.size() + ", subsets = " + out);
-        //out = subsets_backtracking(nums);
-        //System.out.println("[Backtracking] Number of subsets = " + out.size() + ", subsets = " + out);
+        out = subsets_backtracking(nums);
+        System.out.println("[Backtracking] Number of subsets = " + out.size() + ", subsets = " + out);
         out = subsets_lexicographic(nums);
         System.out.println("[Lexicographic] No of subsets = " + out.size() + ", subsets = " + out);
     }
