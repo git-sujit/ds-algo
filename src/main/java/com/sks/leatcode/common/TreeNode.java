@@ -28,6 +28,8 @@ public class TreeNode {
         this.right = right;
     }
 
+    public static List<TreeNode> nodes;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -73,7 +75,7 @@ public class TreeNode {
     }
 
     public static TreeNode treeData1() {
-        List<TreeNode> nodes = testNodes(10);
+        nodes = testNodes(10);
         TreeNode root = nodes.get(1);
         root.left = nodes.get(2);
         root.right = nodes.get(3);
@@ -85,7 +87,7 @@ public class TreeNode {
     }
 
     public static TreeNode treeData2() {
-        List<TreeNode> nodes = testNodes(10);
+        nodes = testNodes(10);
         TreeNode root = nodes.get(4);
         root.left = nodes.get(2);
         root.right = nodes.get(9);
@@ -96,7 +98,7 @@ public class TreeNode {
     }
 
     public static TreeNode binarySearchTreeData1() {
-        List<TreeNode> nodes = testNodes(10);
+        nodes = testNodes(10);
         TreeNode root = nodes.get(5);
         root.left = nodes.get(3);
         root.right = nodes.get(6);
@@ -110,7 +112,7 @@ public class TreeNode {
     }
 
     public static TreeNode treeData_leftLinear() {
-        List<TreeNode> nodes = testNodes(10);
+        nodes = testNodes(10);
         TreeNode root = nodes.get(1);
         root.left = nodes.get(2);
         nodes.get(2).left = nodes.get(3);
@@ -135,7 +137,7 @@ public class TreeNode {
     }
 
     public static TreeNode treeData_unival() {
-        List<TreeNode> nodes = testNodes_unival(10);
+        nodes = testNodes_unival(10);
         TreeNode root = nodes.get(4);
         root.left = nodes.get(2);
         root.right = nodes.get(9);
@@ -146,7 +148,7 @@ public class TreeNode {
     }
 
     public static TreeNode treeData_rightLinear() {
-        List<TreeNode> nodes = testNodes(10);
+        nodes = testNodes(10);
         TreeNode root = nodes.get(1);
         root.right = nodes.get(2);
         nodes.get(2).right = nodes.get(3);
@@ -165,7 +167,7 @@ public class TreeNode {
     }
 
     private static List<TreeNode> testNodes_unival(int n) {
-        List<TreeNode> nodes = new ArrayList<>();
+        nodes = new ArrayList<>();
         for (int i = 0; i <= n; i++)
             nodes.add(new TreeNode(5));
         return nodes;

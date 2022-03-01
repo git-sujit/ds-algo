@@ -6,6 +6,54 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Permutations {
+    public static List<List<Integer>> permutations_backtracking(int[] nums) {
+        return null;
+    }
+
+    /**
+     * Time Complexity: O(n*n!)
+     * Space Complexity: O(n!)
+     */
+    public static List<List<Integer>> permutations_better(int[] nums) {
+        List<List<Integer>> perms = new ArrayList<>();
+        if (nums == null || nums.length == 0) return perms;
+        perms.add(Arrays.asList(nums[0]));
+        for (int i = 1; i < nums.length; i++) {
+            List<List<Integer>> subPerms = new ArrayList<>();
+            for (List<Integer> l : perms) {
+                for (int j = 0; j <= l.size(); j++) {
+                    List<Integer> t = new ArrayList<>(l);
+                    t.add(j, nums[i]);
+                    subPerms.add(t);
+                }
+            }
+            perms = subPerms;
+        }
+        return perms;
+    }
+
+    /**
+     * Time Complexity: O(n*n!)
+     * Space Complexity: O(n!)
+     */
+    public static List<String> permutations_string_better(String str) {
+        List<String> perms = new ArrayList<>();
+        if (str == null || str.isEmpty()) return perms;
+        perms.add("" + str.charAt(0));
+        for (int i = 1; i < str.length(); i++) {
+            char c = str.charAt(i);
+            List<String> subPerms = new ArrayList<>();
+            for (String s : perms) {
+                for (int j = 0; j <= s.length(); j++) {
+                    String s1 = s.substring(0, j) + c + s.substring(j);
+                    subPerms.add(s1);
+                }
+            }
+            perms = subPerms;
+        }
+        return perms;
+    }
+
     /**
      * Time Complexity: O(n*n!)
      * Space Complexity: O(n!)
@@ -27,23 +75,6 @@ public class Permutations {
         return perms;
     }
 
-    public List<List<Integer>> permutations_1(int[] a) {
-        List<List<Integer>> out = new ArrayList<>();
-        if (a == null || a.length == 0) return out;
-        out.add(new ArrayList<>(Arrays.asList(a[0])));
-        for (int i = 1; i < a.length; i++) {
-            List<List<Integer>> sub = new ArrayList<>();
-            for (List<Integer> l : out) {
-                for (int j = 0; j <= l.size(); j++) {
-                    List<Integer> t = new ArrayList<>(l);
-                    t.add(j, a[i]);
-                    sub.add(t);
-                }
-            }
-            out = sub;
-        }
-        return out;
-    }
 
     // Time Complexity: O(n*n!)
     // Space Complexity: O(n!)
@@ -87,6 +118,25 @@ public class Permutations {
     }
 
     public static void main(String[] args) {
+        //demo_old();
+        int[] nums = {1, 2, 3};
+        demo_intPerms(nums);
+
+        String str = "abc";
+        demo_stringPerms(str);
+    }
+
+    private static void demo_intPerms(int[] nums) {
+        System.out.println("\nNums : " + Arrays.toString(nums));
+        System.out.println("Perms: " + permutations_better(nums));
+    }
+
+    private static void demo_stringPerms(String str) {
+        System.out.println("\nString: " + str);
+        System.out.println("Perms : " + permutations_string_better(str));
+    }
+
+    private static void demo_old() {
         Permutations obj = new Permutations();
 
         int[] a = {1, 2, 3};
@@ -94,7 +144,7 @@ public class Permutations {
         List<List<Integer>> perms = obj.permutations_int_array(a);
         System.out.println("\tIs int[] modified  : " + Arrays.toString(a));
         System.out.println("\tcount = " + perms.size() + " : " + perms);
-        perms = obj.permutations_1(a);
+        perms = obj.permutations_better(a);
         System.out.println("\tIs int[] modified  : " + Arrays.toString(a));
         System.out.println("\tcount = " + perms.size() + " : " + perms);
 
@@ -103,6 +153,5 @@ public class Permutations {
         List<String> perms1 = obj.permutations_string(s);
         System.out.println("\tIs string modified : " + s);
         System.out.println("\tcount = " + perms1.size() + " : " + perms1);
-
     }
 }
