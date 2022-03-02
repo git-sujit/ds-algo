@@ -58,9 +58,11 @@ public class Revise {
     }
 
     private static void array() {
+        /**
+         * primitive array to List
+         */
         // Creating and Initializing array in one-line
         int[] a = {1, 2, 3};
-
         // Array to List: We need to box to Integer[]
         List<Integer> l = Arrays.stream(a).boxed().collect(Collectors.toList());
         // If we have Integer[] then no need to box
@@ -69,14 +71,10 @@ public class Revise {
         List<Integer> l1 = Arrays.asList(a1);
         a1[0]++;
         System.out.println("After, array = " + Arrays.toString(a1));
-
-
-        // List to Array
-
-        // Sort an Array: Modifies the array
-        // Quick Sort, Time- O(nlogn), Space- O(logn)
-        Arrays.sort(a1);
-
+        /**
+         * List to primitive array
+         */
+        int[] la = l.stream().mapToInt(i -> i).toArray();
     }
 
     private static void stringUtilities() {

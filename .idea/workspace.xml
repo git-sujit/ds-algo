@@ -5,18 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/BalancedParentheses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/JosephusProblem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/NBitBinary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview_2022/DoorDash.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/hard/TreePathSum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/NextGreaterElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/NextPermutation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/TreeLCA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/TreeBSTFromPrePostOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/TreeBSTSerDeserBetter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/TreeSerDeser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/JosephusProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/JosephusProblem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/Revise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/Revise.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/TreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/Permutations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/Permutations.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,20 +80,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JosephusProblem">
-    <configuration name="BalancedParentheses" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.recursion.BalancedParentheses" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.averma.recursion.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.TreeBSTSerDeserBetter">
     <configuration name="JosephusProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sks.averma.recursion.JosephusProblem" />
       <module name="ds-algo" />
@@ -125,8 +107,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NextGreaterElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.NextGreaterElement" />
+    <configuration name="TreeBSTFromPrePostOrder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.TreeBSTFromPrePostOrder" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
@@ -138,8 +120,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeLCA" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.TreeLCA" />
+    <configuration name="TreeBSTSerDeserBetter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.TreeBSTSerDeserBetter" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.leatcode.medium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TreeSerDeser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.TreeSerDeser" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
@@ -153,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TreeBSTSerDeserBetter" />
+        <item itemvalue="Application.TreeBSTFromPrePostOrder" />
+        <item itemvalue="Application.TreeSerDeser" />
         <item itemvalue="Application.JosephusProblem" />
         <item itemvalue="Application.NBitBinary" />
-        <item itemvalue="Application.BalancedParentheses" />
-        <item itemvalue="Application.NextGreaterElement" />
-        <item itemvalue="Application.TreeLCA" />
       </list>
     </recent_temporary>
   </component>

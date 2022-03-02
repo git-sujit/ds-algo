@@ -28,6 +28,54 @@ public class TreeNode {
         this.right = right;
     }
 
+    /**
+     * PreOrder traversal
+     */
+    public static int[] preOrder(TreeNode root) {
+        List<Integer> pre = new ArrayList<>();
+        preOrder(root, pre);
+        return pre.stream().mapToInt(i -> i).toArray();
+    }
+
+    private static void preOrder(TreeNode node, List<Integer> pre) {
+        if (node == null) return;
+        pre.add(node.val);
+        preOrder(node.left, pre);
+        preOrder(node.right, pre);
+    }
+
+    /**
+     * InOrder traversal
+     */
+    public static int[] inOrder(TreeNode root) {
+        List<Integer> in = new ArrayList<>();
+        inOrder(root, in);
+        return in.stream().mapToInt(i -> i).toArray();
+    }
+
+    private static void inOrder(TreeNode node, List<Integer> in) {
+        if (node == null) return;
+        inOrder(node.left, in);
+        in.add(node.val);
+        inOrder(node.right, in);
+    }
+
+    /**
+     * PostOrder traversal
+     */
+    public static int[] postOrder(TreeNode root) {
+        List<Integer> post = new ArrayList<>();
+        postOrder(root, post);
+        return post.stream().mapToInt(i -> i).toArray();
+    }
+
+    private static void postOrder(TreeNode node, List<Integer> post) {
+        if (node == null) return;
+        postOrder(node.left, post);
+        postOrder(node.right, post);
+        post.add(node.val);
+    }
+
     public static List<TreeNode> nodes;
 
     @Override
