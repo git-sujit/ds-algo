@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/TreeBSTFromPrePostOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/TreeBSTSerDeserBetter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/TreeSerDeser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/hard/LFUCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LRUCacheBetter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/MergeIntervals.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/JosephusProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/JosephusProblem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/CountOfSubsetSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/CountOfSubsetSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/KnapsackProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/KnapsackProblem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/MinimumSubsetSumDifference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/MinimumSubsetSumDifference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/SubsetSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/SubsetSum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/Revise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/Revise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LRUCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LRUCache.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,13 +83,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TreeBSTSerDeserBetter">
-    <configuration name="JosephusProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.recursion.JosephusProblem" />
+  <component name="RunManager" selected="Application.MinimumSubsetSumDifference">
+    <configuration name="CountOfSubsetSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.dp.knapsack.CountOfSubsetSum" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.recursion.*" />
+          <option name="PATTERN" value="com.sks.averma.dp.knapsack.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,12 +97,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NBitBinary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.recursion.NBitBinary" />
+    <configuration name="KnapsackProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.dp.knapsack.KnapsackProblem" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.recursion.*" />
+          <option name="PATTERN" value="com.sks.averma.dp.knapsack.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,8 +110,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeBSTFromPrePostOrder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.TreeBSTFromPrePostOrder" />
+    <configuration name="MergeIntervals" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.MergeIntervals" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
@@ -120,12 +123,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeBSTSerDeserBetter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.TreeBSTSerDeserBetter" />
+    <configuration name="MinimumSubsetSumDifference" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.dp.knapsack.MinimumSubsetSumDifference" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.medium.*" />
+          <option name="PATTERN" value="com.sks.averma.dp.knapsack.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,12 +136,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeSerDeser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.TreeSerDeser" />
+    <configuration name="SubsetSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.dp.knapsack.SubsetSum" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.medium.*" />
+          <option name="PATTERN" value="com.sks.averma.dp.knapsack.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -148,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TreeBSTSerDeserBetter" />
-        <item itemvalue="Application.TreeBSTFromPrePostOrder" />
-        <item itemvalue="Application.TreeSerDeser" />
-        <item itemvalue="Application.JosephusProblem" />
-        <item itemvalue="Application.NBitBinary" />
+        <item itemvalue="Application.MinimumSubsetSumDifference" />
+        <item itemvalue="Application.CountOfSubsetSum" />
+        <item itemvalue="Application.MergeIntervals" />
+        <item itemvalue="Application.SubsetSum" />
+        <item itemvalue="Application.KnapsackProblem" />
       </list>
     </recent_temporary>
   </component>
@@ -331,6 +334,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/MaxLengthRepeatedSubArray.java</url>
           <line>32</line>
           <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LRUCache.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MinInStack.java</url>

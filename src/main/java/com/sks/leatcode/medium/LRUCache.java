@@ -1,5 +1,7 @@
 package com.sks.leatcode.medium;
 
+import javafx.util.Pair;
+
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -10,7 +12,9 @@ import java.util.Map;
  * Implement the LRUCache class:
  * LRUCache(int capacity) Initialize the LRU cache with positive size capacity.
  * int get(int key) Return the value of the key if the key exists, otherwise return -1.
- * void put(int key, int value) Update the value of the key if the key exists. Otherwise, add the key-value pair to the cache. If the number of keys exceeds the capacity from this operation, evict the least recently used key.
+ * void put(int key, int value) Update the value of the key if the key exists.
+ * Otherwise, add the key-value pair to the cache. If the number of keys exceeds the capacity from this operation,
+ * evict the least recently used key.
  * The functions get and put must each run in O(1) average time complexity.
  */
 
@@ -20,36 +24,56 @@ import java.util.Map;
  */
 public class LRUCache {
     private int capacity;
-    private static final Map<Integer, Integer> cache = new HashMap<>();
-    private static final Deque<Integer> q = new LinkedList<>();
+    private Map<Integer, Pair<Integer, Integer>> cache;
+    private Deque<Pair<Integer, Integer>> dq;
 
     public LRUCache(int capacity) {
         this.capacity = capacity;
+        cache = new HashMap<>();
+        dq = new LinkedList<>();
     }
 
     public int get(int key) {
         if (cache.containsKey(key)) {
-            q.remove(key);
-            q.addFirst(key);
-            return cache.get(key);
+            Pair<Integer, Integer> p = cache.get(key);
+            dq.remove(p);
+            dq.addFirst(p);
+            return p.getValue();
         }
         return -1;
     }
 
     public void put(int key, int value) {
-        if (cache.containsKey(key)) {
-            q.remove(key);
-        } else {
-            if (q.size() == capacity) {
-                int lruKey = q.removeLast();
-                cache.remove(lruKey);
+        if (cache.size() == capacity) {
+            if (cache.containsKey(key)) {
+                Pair<Integer, Integer> rem = cache.get(key);
+                dq.remove(rem);
+            } else {
+                Pair<Integer, Integer> rem = dq.removeLast();
+                cache.remove(rem.getKey());
             }
         }
-        q.addFirst(key);
-        cache.put(key, value);
+        Pair<Integer, Integer> p = new Pair(key, value);
+        cache.put(key, p);
+        dq.addFirst(p);
     }
 
     public static void main(String[] args) {
+        //demo_1();
+        demo_2();
+    }
+
+    private static void demo_2() {
+        LRUCache lru = new LRUCache(2);
+        lru.put(2, 1);
+        lru.put(1, 1);
+        lru.put(2, 3);
+        lru.put(4, 1);
+        System.out.println(lru.get(1));
+        System.out.println(lru.get(2));
+    }
+
+    private static void demo_1() {
         LRUCache lru = new LRUCache(5);
         lru.put(1, 10);
         lru.put(2, 20);

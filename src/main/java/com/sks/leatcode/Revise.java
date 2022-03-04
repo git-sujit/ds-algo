@@ -75,6 +75,20 @@ public class Revise {
          * List to primitive array
          */
         int[] la = l.stream().mapToInt(i -> i).toArray();
+        /**
+         * Sort int[][]
+         */
+        int[][] intervals = {{15, 18}, {1, 3}, {2, 6}, {8, 10}};
+        Arrays.sort(intervals, Comparator.comparingInt(e -> e[0]));
+        Arrays.sort(intervals, (e1, e2) -> Integer.compare(e1[0], e2[0]));
+        /**
+         * List of array to 2D array
+         */
+        List<int[]> out = new ArrayList<>();
+        out.add(new int[]{1, 2});
+        out.add(new int[]{4, 8});
+        out.add(new int[]{7, 9});
+        int[][] outArr = out.toArray(new int[out.size()][]);
     }
 
     private static void stringUtilities() {

@@ -68,8 +68,7 @@ public class KnapsackProblem {
     public static int knapsack_top_down(int[] wt, int[] v, int w, int n) {
         // 1. Initialization: Base condition changes to Initialization
         int[][] td = new int[n + 1][w + 1];
-        for (int[] arr : td)
-            Arrays.fill(arr, -1);
+        
         for (int i = 0; i <= n; i++)
             for (int j = 0; j <= w; j++)
                 if (i == 0 || j == 0)
@@ -86,10 +85,10 @@ public class KnapsackProblem {
                     td[i][j] = td[i - 1][j];
             }
 
-
+        /*-
         for (int[] arr : td)
             System.out.println(Arrays.toString(arr));
-
+        */
         return td[n][w];
     }
 
@@ -117,10 +116,11 @@ public class KnapsackProblem {
         System.out.println("Knapsack Capacity/Max Weight = " + w);
         System.out.println("Max Value in knapsack_recursion = " + knapsack_recursion(wt, v, w, n));
         System.out.println("Max Value in knapsack_memoization = " + knapsack_memoization(wt, v, w, n));
-
+        /*-
         System.out.println("######### Memoization Array after the call");
         for (int[] arr : mem)
             System.out.println(Arrays.toString(arr));
+         */
         System.out.println("Max Value in knapsack_top_down = " + knapsack_top_down(wt, v, w, n));
     }
 }

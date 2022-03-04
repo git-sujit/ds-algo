@@ -15,7 +15,6 @@ import java.util.Arrays;
  */
 
 public class MinimumSubsetSumDifference {
-
     /**
      * The problem can be solved using dynamic programming when the sum of the elements is not too big.
      * We can create a 2D array dp[n+1][sum+1] where n is number of elements in given set and sum is sum of all elements. We can construct the solution in bottom up manner.
@@ -32,7 +31,7 @@ public class MinimumSubsetSumDifference {
         Boolean[][] t = prepareSubsetSumTopDownMatrix(arr, sum, n);
 
         Boolean[] lastRow = t[n];
-        System.out.println("Last Row = " + Arrays.toString(lastRow));
+        //System.out.println("Last Row = " + Arrays.toString(lastRow));
 
         int min_diff = Integer.MAX_VALUE;
         for (int j = sum / 2; j >= 0; j--)
@@ -40,7 +39,7 @@ public class MinimumSubsetSumDifference {
                 min_diff = sum - 2 * j;
                 break;
             }
-        System.out.println("Total Sum = " + sum);
+        //System.out.println("Total Sum = " + sum);
         return min_diff;
     }
 
@@ -61,10 +60,40 @@ public class MinimumSubsetSumDifference {
                     t[i][j] = t[i - 1][j];
             }
         }
-        System.out.println("Top-Down Matrix");
+        /*-System.out.println("Top-Down Matrix");
         for (Boolean[] b : t)
-            System.out.println(Arrays.toString(b));
+            System.out.println(Arrays.toString(b));*/
         return t;
+    }
+
+    /**
+     * Recursion
+     */
+    public static int minimumSubsetSumDifference_recursion(int[] arr) {
+        if (arr == null || arr.length == 0) return 0;
+        return minimumSubsetSumDifference_recursion(arr, arr.length, 0, 0);
+    }
+
+    private static int minimumSubsetSumDifference_recursion(int[] arr, int n, int s1, int s2) {
+        if (n == 0) return Math.abs(s1 - s2);
+        return Math.min(minimumSubsetSumDifference_recursion(arr, n - 1, s1 + arr[n - 1], s2),
+                minimumSubsetSumDifference_recursion(arr, n - 1, s1, s2 + arr[n - 1]));
+    }
+
+    /**
+     * Recursion
+     */
+    public static int minimumSubsetSumDifference_memoization(int[] arr) {
+        if (arr == null || arr.length == 0) return 0;
+        int sum = 0;
+        for (int a : arr)
+            sum += a;
+        return minimumSubsetSumDifference_recursion(arr, arr.length, 0, 0, new Integer[arr.length + 1][sum + 1]);
+    }
+
+    private static int minimumSubsetSumDifference_recursion(int[] arr, int n, int s1, int s2, Integer[][] mem) {
+        if (n == 0) return Math.abs(s1 - s2);
+        return -1;
     }
 
     public static void main(String[] args) {
@@ -76,7 +105,8 @@ public class MinimumSubsetSumDifference {
     }
 
     private static void test_minimumSubsetSumDifference(int[] arr) {
-        System.out.println("##### Array: " + Arrays.toString(arr));
+        System.out.println("\nArray: " + Arrays.toString(arr));
         System.out.println("Minimum Subset Sum Difference = " + minimumSubsetSumDifference(arr));
+        System.out.println("[Recursion]Minimum Subset Sum Difference = " + minimumSubsetSumDifference_recursion(arr));
     }
 }

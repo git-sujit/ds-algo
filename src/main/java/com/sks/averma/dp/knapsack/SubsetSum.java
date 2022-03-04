@@ -39,9 +39,9 @@ public class SubsetSum {
         if (mem[n][sum] != null) return mem[n][sum];
 
         if (arr[n - 1] <= sum)
-            mem[n][sum] = isSubsetSum_memoization(arr, sum - arr[n - 1], n - 1) || isSubsetSum_memoization(arr, sum, n - 1);
+            mem[n][sum] = isSubsetSum_memoization(arr, sum - arr[n - 1], n - 1, mem) || isSubsetSum_memoization(arr, sum, n - 1, mem);
         else
-            mem[n][sum] = isSubsetSum_memoization(arr, sum, n - 1);
+            mem[n][sum] = isSubsetSum_memoization(arr, sum, n - 1, mem);
 
         return mem[n][sum];
     }

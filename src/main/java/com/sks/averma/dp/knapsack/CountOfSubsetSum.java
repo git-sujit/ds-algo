@@ -12,8 +12,6 @@ public class CountOfSubsetSum {
     // Space Complexity
     public static int countOfSubsetSum(int[] arr, int sum, int n) {
         int[][] t = new int[n + 1][sum + 1];
-        for (int[] a : t)
-            Arrays.fill(a, -1);
         for (int i = 0; i <= n; i++) {
             for (int j = 0; j <= sum; j++) {
                 if (i == 0) t[i][j] = 0;
@@ -30,11 +28,36 @@ public class CountOfSubsetSum {
             }
         }
 
+        /*-
         System.out.println("----- Top-Down Matrix");
         for (int[] a : t)
             System.out.println(Arrays.toString(a));
-
+        */
         return t[n][sum];
+    }
+
+    public static int countOfSubsetSum_recursion(int[] arr, int sum, int n) {
+        if (sum == 0) return 1;
+        if (n == 0) return 0;
+        if (arr[n - 1] <= sum)
+            return countOfSubsetSum(arr, sum - arr[n - 1], n - 1) + countOfSubsetSum(arr, sum, n - 1);
+        else
+            return countOfSubsetSum(arr, sum, n - 1);
+    }
+
+    public static int countOfSubsetSum_memoization(int[] arr, int sum, int n) {
+        return countOfSubsetSum_memoization(arr, sum, n, new Integer[n + 1][sum + 1]);
+    }
+
+    private static int countOfSubsetSum_memoization(int[] arr, int sum, int n, Integer[][] mem) {
+        if (sum == 0) return 1;
+        if (n == 0) return 0;
+        if (mem[n][sum] != null) return mem[n][sum];
+        if (arr[n - 1] <= sum)
+            mem[n][sum] = countOfSubsetSum_memoization(arr, sum - arr[n - 1], n - 1, mem) + countOfSubsetSum_memoization(arr, sum, n - 1, mem);
+        else
+            mem[n][sum] = countOfSubsetSum_memoization(arr, sum, n - 1, mem);
+        return mem[n][sum];
     }
 
     public static void main(String[] args) {
@@ -52,7 +75,9 @@ public class CountOfSubsetSum {
     }
 
     private static void test_countOfSubsetSum(int[] arr, int sum) {
-        System.out.println("##### Array: " + Arrays.toString(arr));
-        System.out.println("Count of Subset Sum = " + countOfSubsetSum(arr, sum, arr.length));
+        System.out.println("\nArray: " + Arrays.toString(arr) + ", Target Sum = " + sum);
+        System.out.println("[Top Down]Count of Subset Sum = " + countOfSubsetSum(arr, sum, arr.length));
+        System.out.println("[Recursion] Count of Subset Sum = " + countOfSubsetSum_recursion(arr, sum, arr.length));
+        System.out.println("[Memoization] Count of Subset Sum = " + countOfSubsetSum_memoization(arr, sum, arr.length));
     }
 }
