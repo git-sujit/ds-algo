@@ -1,5 +1,7 @@
 package com.sks.averma.stack;
 
+import javafx.util.Pair;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -54,3 +56,22 @@ public class StockSpanner {
         System.out.println("Stock Spanner Array = " + Arrays.toString(span(stocks)));
     }
 }
+
+class StockSpannerLC {
+    private Stack<Pair<Integer, Integer>> psStack;
+
+    public StockSpannerLC() {
+        psStack = new Stack<>();
+    }
+
+    public int next(int price) {
+        int span = 1;
+        while (!psStack.isEmpty() && price >= psStack.peek().getKey()) {
+            span += psStack.peek().getValue();
+            psStack.pop();
+        }
+        psStack.push(new Pair(price, span));
+        return span;
+    }
+}
+

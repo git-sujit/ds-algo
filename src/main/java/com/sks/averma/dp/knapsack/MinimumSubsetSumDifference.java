@@ -88,12 +88,23 @@ public class MinimumSubsetSumDifference {
         int sum = 0;
         for (int a : arr)
             sum += a;
-        return minimumSubsetSumDifference_recursion(arr, arr.length, 0, 0, new Integer[arr.length + 1][sum + 1]);
+        int maxDiff = sum;
+        Integer[][] mem = new Integer[arr.length + 1][maxDiff + 1];
+        minimumSubsetSumDifference_recursion(arr, arr.length, 0, 0, mem);
+        System.out.println(Arrays.deepToString(mem));
+        int minDiff = Integer.MAX_VALUE;
+        for (Integer[] m : mem)
+            for (int d : m)
+                minDiff = Math.min(minDiff, d);
+        return minDiff;
     }
 
-    private static int minimumSubsetSumDifference_recursion(int[] arr, int n, int s1, int s2, Integer[][] mem) {
-        if (n == 0) return Math.abs(s1 - s2);
-        return -1;
+    private static void minimumSubsetSumDifference_recursion(int[] arr, int n, int s1, int s2, Integer[][] mem) {
+        if (n == 0) return;
+        if (mem[n][Math.abs(s1 - s2)] != null) return;
+        mem[n][Math.abs(s1 - s2)] = Math.abs(s1 - s2);
+        minimumSubsetSumDifference_recursion(arr, n - 1, s1 + arr[n - 1], s2, mem);
+        minimumSubsetSumDifference_recursion(arr, n - 1, s1, s2 + arr[n - 1], mem);
     }
 
     public static void main(String[] args) {
@@ -108,5 +119,6 @@ public class MinimumSubsetSumDifference {
         System.out.println("\nArray: " + Arrays.toString(arr));
         System.out.println("Minimum Subset Sum Difference = " + minimumSubsetSumDifference(arr));
         System.out.println("[Recursion]Minimum Subset Sum Difference = " + minimumSubsetSumDifference_recursion(arr));
+        System.out.println("[Memoization]Minimum Subset Sum Difference = " + minimumSubsetSumDifference_memoization(arr));
     }
 }

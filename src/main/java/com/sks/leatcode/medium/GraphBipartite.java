@@ -1,6 +1,8 @@
 package com.sks.leatcode.medium;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.Stack;
 
 /**
@@ -10,6 +12,41 @@ import java.util.Stack;
  * You are given a 2D array graph, where graph[u] is an array of nodes that node u is adjacent to.
  */
 public class GraphBipartite {
+    public static boolean isBipartite_partialWorking(int[][] graph) {
+        if (graph == null) return false;
+        Set<Integer> s1 = new HashSet<>();
+        Set<Integer> s2 = new HashSet<>();
+        int start = 0;
+        for (; start < graph.length; start++) {
+            if (graph[start].length > 0) {
+                s1.add(start);
+                for (int nbr : graph[start])
+                    s2.add(nbr);
+                break;
+            }
+        }
+        for (int node = start + 1; node < graph.length; node++) {
+            int[] nbrs = graph[node];
+            if (s1.contains(node)) {
+                if (!validate(nbrs, s2, s1)) return false;
+            } else if (s2.contains(node)) {
+                if (!validate(nbrs, s1, s2)) return false;
+            }
+            //System.out.println("s1 = " + s1);
+            //System.out.println("s2 = " + s2);
+        }
+        return true;
+    }
+
+    private static boolean validate(int[] nbrs, Set<Integer> cs, Set<Integer> os) {
+        for (int nbr : nbrs) {
+            if (os.contains(nbr)) return false;
+            cs.add(nbr);
+        }
+        return true;
+    }
+
+
     /**
      * Time Complexity: O(N+E), where N is the number of nodes in the graph, and E is the number of edges.
      * We explore each node once when we transform it from uncolored to colored, traversing all its edges in the process.

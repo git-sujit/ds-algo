@@ -76,12 +76,15 @@ public class MaxAreaBinaryMatrix {
     private static int[][] prepareHistograms(int[][] bMatrix) {
         int[][] histograms = new int[bMatrix.length][bMatrix[0].length];
         for (int i = 0; i < bMatrix.length; i++) {
-            for (int j = 0; j < bMatrix.length; j++) {
-                if (i == 0) histograms[i][j] = bMatrix[i][j];
+            for (int j = 0; j < bMatrix[0].length; j++) {
+                if (i == 0)
+                    histograms[i][j] = bMatrix[i][j];
                 else {
+                    // If base is o then overall its 0
                     if (bMatrix[i][j] == 0) histograms[i][j] = 0;
                     else histograms[i][j] = histograms[i - 1][j] + bMatrix[i][j];
                 }
+
             }
         }
         return histograms;
@@ -92,6 +95,15 @@ public class MaxAreaBinaryMatrix {
         test(bMatrix);
 
         bMatrix = new int[][]{{0, 1, 1}, {1, 1, 1}, {0, 1, 1}};
+        test(bMatrix);
+
+        bMatrix = new int[][]{{1, 0, 1, 0, 0}, {1, 0, 1, 1, 1}, {1, 1, 1, 1, 1}, {1, 0, 0, 1, 0}};
+        test(bMatrix);
+
+        bMatrix = new int[][]{{0, 1}};
+        test(bMatrix);
+
+        bMatrix = new int[][]{{0, 1}, {1, 0}};
         test(bMatrix);
     }
 

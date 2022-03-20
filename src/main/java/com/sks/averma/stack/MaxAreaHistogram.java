@@ -72,6 +72,15 @@ public class MaxAreaHistogram {
 
         heights = new int[]{2, 4};
         test(heights);
+
+        heights = new int[]{3, 1, 3, 2, 0};
+        test(heights);
+
+        heights = new int[]{4, 0, 0, 3, 0};
+        test(heights);
+
+        heights = new int[]{1, 1};
+        test(heights);
     }
 
     private static void test(int[] heights) {

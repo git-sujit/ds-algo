@@ -9,6 +9,24 @@ import java.util.*;
  * Return a deep copy (clone) of the graph.
  */
 public class GraphCloner {
+    /**
+     * Idea: maintain map of <Node, ClonedNode> and clone in DFS fashion
+     */
+    public static Node cloneGraph_evenBetter(Node node) {
+        return cloneGraph_evenBetter(node, new HashMap<Node, Node>());
+    }
+
+    private static Node cloneGraph_evenBetter(Node node, Map<Node, Node> visited) {
+        if (node == null) return null;
+        if (visited.containsKey(node)) return visited.get(node);
+        Node clone = new Node(node.val, new ArrayList<>());
+        visited.put(node, clone);
+        for (Node child : node.children) {
+            clone.children.add(cloneGraph_evenBetter(child, visited));
+        }
+        return clone;
+    }
+
     // The key is original node and value being the clone node.
     private static Map<Node, Node> visited_better = new HashMap<>();
 
@@ -71,6 +89,9 @@ public class GraphCloner {
         Node.visit_dfs(clonedNode);
         System.out.println("\n[Better]Cloned Graph");
         clonedNode = cloneGraph_better(node);
+        Node.visit_dfs(clonedNode);
+        System.out.println("\n[Even-Better]Cloned Graph");
+        clonedNode = cloneGraph_evenBetter(node);
         Node.visit_dfs(clonedNode);
     }
 }
