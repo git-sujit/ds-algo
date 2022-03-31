@@ -4,6 +4,38 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Revise {
+    private static void bitwiseOperator() {
+        int n = 81;
+        String s = Integer.toBinaryString(n);
+        System.out.println("Number  " + n + ", Binary String = " + binaryString(n) + " Java = " + s);
+        int mask = 1;
+        for (int i = 0; i < 32; i++) {
+            //System.out.println(n & mask);
+            mask <<= 1;
+        }
+    }
+
+    private static String binaryString(int n) {
+        if (n == 0) return "";
+        return binaryString(n / 2) + n % 2;
+    }
+
+    private static void comparators() {
+        PriorityQueue<String> heap = new PriorityQueue<>(Comparator
+                .comparing(String::length)
+                .thenComparing(String::toString));
+
+        PriorityQueue<String> minHeap = new PriorityQueue<>();
+        minHeap.add("Sujit");
+        minHeap.add("K");
+        minHeap.add("Singh");
+        int i = 0;
+        String[] out = new String[minHeap.size()];
+        for (String s : minHeap)
+            out[i++] = s;
+        System.out.println("out = " + Arrays.toString(out));
+    }
+
     private static void map() {
         /**getOrDefault: for primitive
          * computeIfAbsent: for Object lke list*/
@@ -151,6 +183,8 @@ public class Revise {
         //stringUtilities();
         //heap();
         //array();
-        map();
+        //map();
+        //comparators();
+        bitwiseOperator();
     }
 }

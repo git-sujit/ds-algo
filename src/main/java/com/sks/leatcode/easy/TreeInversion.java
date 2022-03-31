@@ -28,6 +28,18 @@ public class TreeInversion {
         return root;
     }
 
+    public static TreeNode invertTree_recursive_1(TreeNode root) {
+        if (root == null) return null;
+        TreeNode temp = root.left;
+        root.left = root.right;
+        root.right = temp;
+
+        invertTree_recursive_1(root.left);
+        invertTree_recursive_1(root.right);
+
+        return root;
+    }
+
     /**
      * /**
      * Time Complexity  : O(n), we are going through each node once
@@ -80,6 +92,9 @@ public class TreeInversion {
         TreePrinter.printNode(root);
         System.out.println("Inverted Tree");
         TreePrinter.printNode(invertTree_recursive(root));
+        System.out.println("Inverted Tree-1");
+        root = TreeNode.treeData2();
+        TreePrinter.printNode(invertTree_recursive_1(root));
     }
 
     private static void deprecated() {
