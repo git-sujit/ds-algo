@@ -20,12 +20,13 @@ public class MinimumWindowSubstring {
         for (char tc : t.toCharArray())
             tMap.put(tc, tMap.getOrDefault(tc, 0) + 1);
         Map<Character, Integer> sMap = new HashMap<>();
-        System.out.println("tMap = " + tMap);
+        //System.out.println("tMap = " + tMap);
         while (we < s.length()) {
             char sc = s.charAt(we);
             sMap.put(sc, sMap.getOrDefault(sc, 0) + 1);
             if (isEligible(sMap, tMap)) {
                 min = Math.min(min, we - ws + 1);
+                System.out.println("Min-String = " + s.substring(ws, we + 1));
             } else {
                 char wsc = s.charAt(ws);
                 int count = sMap.get(wsc);
@@ -36,6 +37,14 @@ public class MinimumWindowSubstring {
             we++;
         }
         return min;
+    }
+
+    private static boolean isEligible(Map<Character, Integer> sMap, Map<Character, Integer> tMap) {
+        if (tMap.size() != sMap.size()) return false;
+        for (char key : tMap.keySet()) {
+            if (!sMap.containsKey(key) || sMap.get(key) < tMap.get(key)) return false;
+        }
+        return true;
     }
 
     public static int minWindowSize_bruteForce(String s, String t) {
@@ -70,14 +79,6 @@ public class MinimumWindowSubstring {
         return true;
     }
 
-    private static boolean isEligible(Map<Character, Integer> sMap, Map<Character, Integer> tMap) {
-        if (tMap.size() != sMap.size()) return false;
-        for (char key : tMap.keySet()) {
-            if (!sMap.containsKey(key) || sMap.get(key) < tMap.get(key)) return false;
-        }
-        return true;
-    }
-
     public static void main(String[] args) {
         String s = "timetopractice";
         String t = "toc";
@@ -90,6 +91,7 @@ public class MinimumWindowSubstring {
 
     private static void test(String s, String t) {
         System.out.println("\ns = " + s + ", t = " + t);
+        System.out.println("[Sliding Window] Minimum Window Size = " + minWindowSize(s, t));
         System.out.println("[Brute Force] Minimum Window Size = " + minWindowSize_bruteForce(s, t));
     }
 }

@@ -11,6 +11,38 @@ public class CountAnagrams {
      * Time Complexity: O(n)
      * Space Complexity: O(n)
      */
+    public static int count_slidingWindow_better(String txt, String pat) {
+        if (txt == null | txt.length() == 0 || pat == null || pat.length() == 0 || pat.length() > txt.length())
+            return -1;
+        int[] masterCharCount = new int[26];
+        for (char c : pat.toCharArray())
+            masterCharCount[c - 'a']++;
+        int anagramCount = 0;
+        int ws = 0;
+        int we = 0;
+        int[] tempCharCount = new int[26];
+        while (we < txt.length()) {
+            tempCharCount[txt.charAt(we) - 'a']++;
+            if (we - ws + 1 == pat.length()) {
+                if (isAnagram(tempCharCount, masterCharCount))
+                    anagramCount++;
+                tempCharCount[txt.charAt(ws++) - 'a']--;
+            }
+            we++;
+        }
+        return anagramCount;
+    }
+
+    private static boolean isAnagram(int[] tempCharCount, int[] masterCharCount) {
+        for (int i = 0; i < 26; i++)
+            if (tempCharCount[i] != masterCharCount[i]) return false;
+        return true;
+    }
+
+    /**
+     * Time Complexity: O(n)
+     * Space Complexity: O(n)
+     */
     public static int count_slidingWindow(String txt, String pat) {
         if (txt == null | txt.length() == 0 || pat == null || pat.length() == 0 || pat.length() > txt.length())
             return -1;
@@ -85,6 +117,7 @@ public class CountAnagrams {
     private static void test(String txt, String pat) {
         System.out.println("\nText = " + txt + ", Pattern = " + pat);
         System.out.println("[Sliding Window]Count of Anagrams of pattern = " + count_slidingWindow(txt, pat));
+        System.out.println("[Better-Sliding Window]Count of Anagrams of pattern = " + count_slidingWindow_better(txt, pat));
         System.out.println("[Brute Force] Count of Anagrams of pattern = " + count_bruteForce(txt, pat));
     }
 }

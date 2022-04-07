@@ -5,7 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 /*- SLIDING WINDOW CODE TEMPLATE
     int windowStart = 0;
-    for (int windowEnd = 0; windowEnd < a.length; windowEnd++) {
+    int windowEnd = 0;
+    while (windowEnd < a.length) {
         if (windowEnd - windowStart + 1 == k) { // When we hit the window size
             windowStart++; // Slide the window
         }
@@ -17,7 +18,31 @@ import java.util.List;
  */
 public class FirstNegativeInWindowK {
     /**
-     * Time Complexity: O(n): Traersing the array only once
+     * Time Complexity: O(n): Traversing the array only once
+     * Time Complexity: O(k): Size of list that stores negative numbers, which will be at max k
+     */
+    public static int[] firstNegativeInteger_better(int arr[], int k) {
+        if (arr == null || arr.length == 0 || k <= 0 || k > arr.length) return null;
+        int[] out = new int[arr.length - k + 1];
+        int startWindow = 0;
+        int endWindow = 0;
+        List<Integer> negList = new ArrayList<>();
+        while (endWindow < arr.length) {
+            if (arr[endWindow] < 0)
+                negList.add(arr[endWindow]);
+            if (endWindow - startWindow + 1 == k) {
+                out[startWindow] = negList.size() > 0 ? negList.get(0) : 0;
+                //if (arr[startWindow] < 0 && negList.size() > 0) negList.remove(0);
+                if (negList.size() > 0 && arr[startWindow] == negList.get(0)) negList.remove(0);
+                startWindow++;
+            }
+            endWindow++;
+        }
+        return out;
+    }
+
+    /**
+     * Time Complexity: O(n): Traversing the array only once
      * Time Complexity: O(k): Size of list that stores negative numbers, which will be at max k
      */
     public static int[] firstNegativeInteger(int arr[], int k) {
@@ -72,6 +97,7 @@ public class FirstNegativeInWindowK {
     private static void test(int[] arr, int k) {
         System.out.println("\nArray = " + Arrays.toString(arr) + ", k = " + k);
         System.out.println("First -ve integer in each sub-array of size " + k + " = " + Arrays.toString(firstNegativeInteger(arr, k)));
+        System.out.println("[Better]First -ve integer in each sub-array of size " + k + " = " + Arrays.toString(firstNegativeInteger_better(arr, k)));
         System.out.println("First -ve integer in each sub-array of size(Brute Force) " + k + " = " + Arrays.toString(firstNegativeInteger_bruteForce(arr, k)));
     }
 }

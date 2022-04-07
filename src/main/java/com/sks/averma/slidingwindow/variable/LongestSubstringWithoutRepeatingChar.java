@@ -72,7 +72,7 @@ public class LongestSubstringWithoutRepeatingChar {
     }
 
     /**
-     * Time complexity : O(n^3) two hested loops & one uniqueness check
+     * Time complexity : O(n^3) two nested loops & one uniqueness check
      * Space complexity : O(n) for HashSet
      * Brute Force- Check for all possible substrings
      */

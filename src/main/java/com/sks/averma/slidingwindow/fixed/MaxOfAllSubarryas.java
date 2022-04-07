@@ -15,11 +15,15 @@ public class MaxOfAllSubarryas {
         List<Integer> maxList = new ArrayList<>();
         for (int windowEnd = 0; windowEnd < numbers.length; windowEnd++) {
             if (windowEnd == 0) maxList.add(numbers[windowEnd]);
-            else if (numbers[windowEnd] > maxList.get(0)) maxList.add(0, numbers[windowEnd]);
-            System.out.println("maxList = " + maxList);
+            else {
+                if (numbers[windowEnd] > maxList.get(0)) maxList.add(0, numbers[windowEnd]);
+                else maxList.add(numbers[windowEnd]);
+            }
+            //System.out.println("maxList = " + maxList);
             if (windowEnd - windowStart + 1 == k) {
                 out[windowStart] = maxList.get(0);
-                if (numbers[windowStart] == maxList.get(0)) maxList.remove(0);
+                //if (numbers[windowStart] == maxList.get(0)) maxList.remove(0);
+                maxList.remove((Integer) numbers[windowStart]);
                 windowStart++;
             }
         }
@@ -40,7 +44,8 @@ public class MaxOfAllSubarryas {
             maxHeap.add(numbers[windowEnd]);
             if (windowEnd - windowStart + 1 == k) {
                 out[windowStart] = maxHeap.peek();
-                if (numbers[windowStart] == maxHeap.peek()) maxHeap.remove();
+                //if (numbers[windowStart] == maxHeap.peek())
+                maxHeap.remove(numbers[windowStart]);
                 windowStart++;
             }
         }
@@ -68,12 +73,16 @@ public class MaxOfAllSubarryas {
         int[] numbers = {1, 3, -1, -3, 5, 3, 3, 6, 7};
         int k = 3;
         test(numbers, k);
+
+        numbers = new int[]{1, 3, -1, -3, 5, 3, 3, 6, 7, -1, -2, -3, -4, 8};
+        k = 3;
+        test(numbers, k);
     }
 
     private static void test(int[] numbers, int k) {
         System.out.println("\nNumbers = " + Arrays.toString(numbers) + ", Window Size K = " + k);
         System.out.println("Max of SubArrays(Using Array) = " + Arrays.toString(maxOfSubArrays_array(numbers, k)));
-        System.out.println("Max of SubArrays(Using Heap) = " + Arrays.toString(maxOfSubArrays_maxHeap(numbers, k)));
-        System.out.println("[Brute Force] Max of SubArrays = " + Arrays.toString(maxOfSubArrays_bruteForce(numbers, k)));
+        System.out.println("Max of SubArrays(Using Heap)  = " + Arrays.toString(maxOfSubArrays_maxHeap(numbers, k)));
+        System.out.println("[Brute Force] Max of SubArrays= " + Arrays.toString(maxOfSubArrays_bruteForce(numbers, k)));
     }
 }

@@ -121,6 +121,16 @@ public class Revise {
         out.add(new int[]{4, 8});
         out.add(new int[]{7, 9});
         int[][] outArr = out.toArray(new int[out.size()][]);
+
+        /**
+         * Removing element from List
+         * remove(int index) vs remove(Obj)
+         */
+        List<Integer> lst = Arrays.asList(new Integer[]{10, 20, 30, 40});
+        // Removes element at index-0
+        lst.remove(0);
+        // Removes element with value 10
+        lst.remove((Integer) 40);
     }
 
     private static void stringUtilities() {

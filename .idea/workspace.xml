@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/ShortestUniqueSubstring.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/FBprep/PairSums.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/CountAnagrams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/CountAnagrams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/FirstNegativeInWindowK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/FirstNegativeInWindowK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/MaxOfAllSubarryas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/MaxOfAllSubarryas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubstringWithoutRepeatingChar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubstringWithoutRepeatingChar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/MinimumWindowSubstring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/MinimumWindowSubstring.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/Revise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/Revise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeInversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeInversion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/GraphBipartite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/GraphBipartite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/GraphConnectedComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/GraphConnectedComponents.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,13 +81,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ShortestUniqueSubstring">
-    <configuration name="CoinChange_MinCoins" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.dp.knapsack.CoinChange_MinCoins" />
+  <component name="RunManager" selected="Application.MinimumWindowSubstring">
+    <configuration name="LongestSubstringWithKUniqueChars" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.variable.LongestSubstringWithKUniqueChars" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.dp.knapsack.*" />
+          <option name="PATTERN" value="com.sks.averma.slidingwindow.variable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,12 +95,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GraphCloner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.GraphCloner" />
+    <configuration name="LongestSubstringWithoutRepeatingChar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.variable.LongestSubstringWithoutRepeatingChar" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.medium.*" />
+          <option name="PATTERN" value="com.sks.averma.slidingwindow.variable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -106,12 +108,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Revise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.Revise" />
+    <configuration name="MaxOfAllSubarryas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.fixed.MaxOfAllSubarryas" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.*" />
+          <option name="PATTERN" value="com.sks.averma.slidingwindow.fixed.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,12 +121,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShortestUniqueSubstring" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.ShortestUniqueSubstring" />
+    <configuration name="MinimumWindowSubstring" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.variable.MinimumWindowSubstring" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.medium.*" />
+          <option name="PATTERN" value="com.sks.averma.slidingwindow.variable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,26 +134,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeInversion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.TreeInversion" />
+    <configuration name="PairSums" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.FBprep.PairSums" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
+          <option name="PATTERN" value="com.sks.FBprep.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ShortestUniqueSubstring" />
-        <item itemvalue="Application.TreeInversion" />
-        <item itemvalue="Application.Revise" />
-        <item itemvalue="Application.GraphCloner" />
-        <item itemvalue="Application.CoinChange_MinCoins" />
+        <item itemvalue="Application.MinimumWindowSubstring" />
+        <item itemvalue="Application.LongestSubstringWithoutRepeatingChar" />
+        <item itemvalue="Application.LongestSubstringWithKUniqueChars" />
+        <item itemvalue="Application.MaxOfAllSubarryas" />
+        <item itemvalue="Application.PairSums" />
       </list>
     </recent_temporary>
   </component>
