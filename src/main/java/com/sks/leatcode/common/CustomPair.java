@@ -1,5 +1,7 @@
 package com.sks.leatcode.common;
 
+import java.util.Objects;
+
 public class CustomPair<K, V> implements Comparable<CustomPair> {
     public K key;
     public V value;
@@ -7,6 +9,23 @@ public class CustomPair<K, V> implements Comparable<CustomPair> {
     public CustomPair(K key, V value) {
         this.key = key;
         this.value = value;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CustomPair<?, ?> that = (CustomPair<?, ?>) o;
+        return Objects.equals(key, that.key) && Objects.equals(value, that.value);
+    }
+
+    public CustomPair() {
+        super();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(key, value);
     }
 
     @Override

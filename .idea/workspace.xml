@@ -5,14 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/FBprep/PairSums.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/FBprep/MatchingPairs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/FBprep/RotationalCipher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/MinAbsoluteDiff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/RowColumnSortedArray_1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/CountAnagrams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/CountAnagrams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/FirstNegativeInWindowK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/FirstNegativeInWindowK.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/MaxOfAllSubarryas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/MaxOfAllSubarryas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubstringWithoutRepeatingChar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubstringWithoutRepeatingChar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/MinimumWindowSubstring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/MinimumWindowSubstring.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/Revise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/Revise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/FloorCeilOfSortedArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/FloorCeilOfSortedArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/NearlySortedArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/NearlySortedArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/PagesOfBooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/PagesOfBooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/PeakElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/PeakElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/RowColumnSortedArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/RowColumnSortedArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/SortedRotatedArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/SortedRotatedArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dupNMissing/MultipleMissingAndDuplicatesInArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dupNMissing/MultipleMissingAndDuplicatesInArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KClosestElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KClosestElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KClosestPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KClosestPoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KSortedArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KSortedArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KTopFrequentNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KTopFrequentNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MaxAreaBinaryMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MaxAreaBinaryMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MinInStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MinInStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/CustomPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/CustomPair.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,13 +92,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MinimumWindowSubstring">
-    <configuration name="LongestSubstringWithKUniqueChars" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.variable.LongestSubstringWithKUniqueChars" />
+  <component name="RunManager" selected="Application.PagesOfBooks">
+    <configuration name="PagesOfBooks" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.binarysearch.PagesOfBooks" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.slidingwindow.variable.*" />
+          <option name="PATTERN" value="com.sks.averma.binarysearch.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,12 +106,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LongestSubstringWithoutRepeatingChar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.variable.LongestSubstringWithoutRepeatingChar" />
+    <configuration name="PeakElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.binarysearch.PeakElement" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.slidingwindow.variable.*" />
+          <option name="PATTERN" value="com.sks.averma.binarysearch.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,38 +119,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MaxOfAllSubarryas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.fixed.MaxOfAllSubarryas" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.averma.slidingwindow.fixed.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MinimumWindowSubstring" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.variable.MinimumWindowSubstring" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.averma.slidingwindow.variable.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PairSums" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.FBprep.PairSums" />
+    <configuration name="RotationalCipher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.FBprep.RotationalCipher" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.sks.FBprep.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RowColumnSortedArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.binarysearch.RowColumnSortedArray" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.averma.binarysearch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RowColumnSortedArray_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.binarysearch.RowColumnSortedArray_1" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.averma.binarysearch.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -162,11 +173,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MinimumWindowSubstring" />
-        <item itemvalue="Application.LongestSubstringWithoutRepeatingChar" />
-        <item itemvalue="Application.LongestSubstringWithKUniqueChars" />
-        <item itemvalue="Application.MaxOfAllSubarryas" />
-        <item itemvalue="Application.PairSums" />
+        <item itemvalue="Application.PagesOfBooks" />
+        <item itemvalue="Application.RowColumnSortedArray_1" />
+        <item itemvalue="Application.RowColumnSortedArray" />
+        <item itemvalue="Application.PeakElement" />
+        <item itemvalue="Application.RotationalCipher" />
       </list>
     </recent_temporary>
   </component>
@@ -351,9 +362,24 @@
           <line>67</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KClosestElements.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/dupNMissing/MultipleMissingAndDuplicatesInArray.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/RowColumnSortedArray_1.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MinInStack.java</url>
-          <line>113</line>
+          <line>112</line>
           <properties field="stack" class="com.sks.averma.stack.MinInStack.MyStack_ExtraSpace" />
           <option name="timeStamp" value="13" />
         </line-breakpoint>

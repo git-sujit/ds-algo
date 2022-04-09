@@ -9,10 +9,11 @@ import java.util.Arrays;
  * 7   12  18  25
  * 9   18  24  30
  * ]
+ * Search number n and return the co-ordinates(row, column) : 0-based index
  */
 public class RowColumnSortedArray {
     /**
-     * Time Complexity: O(rows+cols)
+     * Time Complexity: O(rows*cols)
      * Space Complexity: O(1)
      */
     public static Coordinate searchInRowColumnSortedArray(int[][] a, int n) {

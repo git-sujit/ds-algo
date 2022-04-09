@@ -37,7 +37,8 @@ public class PagesOfBooks {
         //System.out.println("Start = " + start + ", End = " + end);
         while (start <= end) {
             int mid = start + (end - start) / 2;
-            if (isValid(books, students, mid)) {
+            if (isValid_better(books, students, mid)) {
+            //if (isValid(books, students, mid)) {
                 result = mid;
                 end = mid - 1;
             } else {
@@ -46,6 +47,19 @@ public class PagesOfBooks {
         }
 
         return result;
+    }
+
+    private static boolean isValid_better(int[] books, int students, int max) {
+        int sum = 0;
+        for (int pages : books) {
+            sum += pages;
+            if (sum > max) {
+                sum = pages;
+                students--;
+            }
+            if (students <= 0) return false;
+        }
+        return true;
     }
 
     private static boolean isValid(int[] books, int students, int max) {

@@ -10,6 +10,7 @@ public class MultipleMissingAndDuplicatesInArray {
     public static List<List<Integer>> multipleMissingAndDuplicates_swapSort(int[] nums) {
         if (nums == null || nums.length == 0) return null;
         swapSort(nums);
+        System.out.println("After Swap Sort, nums = " + Arrays.toString(nums));
         List<Integer> missing = new ArrayList<>();
         List<Integer> duplicates = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {

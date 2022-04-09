@@ -6,6 +6,8 @@ public class FloorCeilOfSortedArray {
     /**
      * Time Complexity: O(logn)
      * Space Complexity: O(1)
+     * REMEMBER(Opposite): Floor(greater)- Sent value when n>a[mid]
+     * Ceil(smaller)- sent value when n<a[mid]
      */
     public static int findFloor(int[] a, int n) {
         if (a == null || a.length == 0) return -1;

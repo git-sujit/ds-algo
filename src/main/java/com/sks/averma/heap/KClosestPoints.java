@@ -1,12 +1,29 @@
 package com.sks.averma.heap;
 
 import com.sks.leatcode.common.CustomPair;
+import javafx.util.Pair;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class KClosestPoints {
+    public static int[][] kClosetPoints_better(int[][] points, int[] targetPoint, int k) {
+        if (points == null || points.length == 0 || targetPoint == null || targetPoint.length == 0 || k <= 0 || k > points.length)
+            return null;
+        int[][] out = new int[k][2];
+        PriorityQueue<Pair<int[], Integer>> minHeap = new PriorityQueue<>(Comparator.comparing((Pair<int[], Integer> p) -> p.getValue()).reversed());
+        for (int[] pt : points) {
+            minHeap.add(new Pair(pt, calculateDistance(pt, targetPoint)));
+            if (minHeap.size() > k)
+                minHeap.remove();
+        }
+        int i = 0;
+        while (!minHeap.isEmpty())
+            out[i++] = minHeap.remove().getKey();
+        return out;
+    }
+
     /**
      * Time complexity: O(N⋅logk)
      * Adding to/removing from the heap (or priority queue) only takes O(logk) time when the size of the heap is capped at k elements.
@@ -52,14 +69,10 @@ public class KClosestPoints {
     }
 
     static void test(int[][] points, int[] targetPoint, int k) {
-        System.out.println("Points = ");
-        for (int[] point : points)
-            System.out.println(Arrays.toString(point));
+        System.out.println("\nPoints = " + Arrays.deepToString(points));
         System.out.println("Target Point = " + Arrays.toString(targetPoint));
-        int[][] kClosests = kClosetPoints(points, targetPoint, k);
-        System.out.println(k + " closest points = ");
-        for (int[] cp : kClosests)
-            System.out.println(Arrays.toString(cp));
+        System.out.println("[Better] " + k + " closest points = " + Arrays.deepToString(kClosetPoints_better(points, targetPoint, k)));
+        System.out.println(k + " closest points = " + Arrays.deepToString(kClosetPoints(points, targetPoint, k)));
     }
 
     static class Point {

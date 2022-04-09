@@ -80,7 +80,7 @@ public class MaxAreaBinaryMatrix {
                 if (i == 0)
                     histograms[i][j] = bMatrix[i][j];
                 else {
-                    // If base is o then overall its 0
+                    // If base is 0 then overall its 0
                     if (bMatrix[i][j] == 0) histograms[i][j] = 0;
                     else histograms[i][j] = histograms[i - 1][j] + bMatrix[i][j];
                 }

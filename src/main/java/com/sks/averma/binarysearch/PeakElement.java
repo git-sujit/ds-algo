@@ -5,9 +5,14 @@ import java.util.Arrays;
 /**
  * Array is not Sorted but leverage binary search algorithm based on probability of answer in lef side vs right side
  * Idea: Take the half having higher number either at mid-1 or mid+1
+ * Return Index of peak element
  */
 public class PeakElement {
 
+    /**
+     * Time Complexity:  O(logn)
+     * Space Complexity: O(1)
+     */
     public static int findPeakElement_recursive(int[] a) {
         if (a == null || a.length == 0) return -1;
         return findPeakElement_recursive(a, 0, a.length - 1);
@@ -34,10 +39,10 @@ public class PeakElement {
             int prev = mid - 1;
             int next = mid + 1;
             if (mid == 0) {
-                if (next < e && a[mid] > a[next]) return a[mid];
+                if (next < a.length && a[mid] > a[next]) return a[mid];
                 else s = next;
             } else if (mid == a.length - 1) {
-                if (prev >= s && a[mid] > a[prev]) return a[mid];
+                if (prev >= 0 && a[mid] > a[prev]) return a[mid];
                 else e = prev;
             } else {
                 if (a[mid] > a[prev] && a[mid] > a[next]) return a[mid];

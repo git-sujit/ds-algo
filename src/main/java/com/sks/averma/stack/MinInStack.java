@@ -1,6 +1,5 @@
 package com.sks.averma.stack;
 
-import com.sks.learn.ctci6.chap3.MyStack;
 import javafx.util.Pair;
 
 import java.util.Stack;

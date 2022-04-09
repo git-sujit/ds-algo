@@ -37,7 +37,7 @@ public class KSortedArray {
     }
 
     static void test(int[] a, int k) {
-        System.out.println("Array = " + Arrays.toString(a) + ", k = " + k);
+        System.out.println("\nk = " + k + ", Array = " + Arrays.toString(a));
         sortNearlySorted(a, k);
         System.out.println("Sorted Array = " + Arrays.toString(a));
     }

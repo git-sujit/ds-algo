@@ -1,6 +1,7 @@
 package com.sks.averma.heap;
 
 import com.sks.leatcode.common.CustomPair;
+import javafx.util.Pair;
 
 import java.util.*;
 
@@ -11,8 +12,23 @@ import java.util.*;
  * |a - x| == |b - x| and a < b
  */
 public class KClosestElements {
+    public static int[] findKClosestElements_better(int[] a, int k, int x) throws Exception {
+        if (a == null || a.length == 0 || k <= 0 || k > a.length) throw new Exception("Invalid Input");
+        PriorityQueue<Pair<Integer, Integer>> maxHeap = new PriorityQueue<>(Comparator.comparing((Pair<Integer, Integer> p) -> p.getValue()).reversed());
+        for (int e : a) {
+            maxHeap.add(new Pair(e, Math.abs(e - x)));
+            if (maxHeap.size() > k)
+                maxHeap.remove();
+        }
+        List<Integer> out = new ArrayList<>();
+        while (!maxHeap.isEmpty())
+            out.add(maxHeap.remove().getKey());
+        Collections.sort(out);
+        return out.stream().mapToInt(i -> i).toArray();
+    }
 
     /**
+     * p
      * Time Complexity: O(nlogk)
      * Space Complexity: O(k) for PriorityQueue
      * REMEMBER:: For MaxHeap: PriorityQueue<DiffEle> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
@@ -51,7 +67,7 @@ public class KClosestElements {
         return out;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         int[] a = {1, 2, 3, 4, 5, 6, 7};
         int k = 4;
         int x = 3;
@@ -63,8 +79,9 @@ public class KClosestElements {
         test(a, k, x);
     }
 
-    static void test(int[] a, int k, int x) {
+    static void test(int[] a, int k, int x) throws Exception {
         System.out.println("\nArray = " + Arrays.toString(a) + ", k = " + k + ", x = " + x);
+        System.out.println("[Better] " + k + " closest elements of " + x + " = " + Arrays.toString(findKClosestElements_better(a, k, x)));
         System.out.println(k + " closest elements of " + x + " = " + Arrays.toString(kClosest(a, k, x)));
         System.out.println(k + " closest elements of " + x + " = " + findClosestElements(a, k, x));
 

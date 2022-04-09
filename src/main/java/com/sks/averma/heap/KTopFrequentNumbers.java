@@ -1,10 +1,30 @@
 package com.sks.averma.heap;
 
 import com.sks.leatcode.common.CustomPair;
+import javafx.util.Pair;
 
 import java.util.*;
 
 public class KTopFrequentNumbers {
+    public static int[] topFrequentNumbers_better(int[] numbers, int k) {
+        if (numbers == null || numbers.length == 0 || k <= 0 || k > numbers.length) return null;
+        int[] out = new int[k];
+        Map<Integer, Integer> freqMap = new HashMap<>();
+        for (int num : numbers)
+            freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
+        PriorityQueue<Pair<Integer, Integer>> minHeap = new PriorityQueue<>(Comparator.comparing((Pair<Integer, Integer> p) -> p.getValue()));
+        for (int num : freqMap.keySet()) {
+            //CustomPair(key=number, value=Frequency)
+            minHeap.add(new Pair(num, freqMap.get(num)));
+            if (minHeap.size() > k)
+                minHeap.remove();
+        }
+        int i = 0;
+        while (!minHeap.isEmpty())
+            out[i++] = minHeap.remove().getKey();
+        return out;
+    }
+
     /**
      * Time Complexity: O(nlogk)
      * Space Complexity: O(k)
@@ -70,6 +90,7 @@ public class KTopFrequentNumbers {
 
     private static void test(int[] numbers, int k) {
         System.out.println("\nArray = " + Arrays.toString(numbers));
+        System.out.println("[Better] " + k + " most frequent numbers = " + Arrays.toString(topFrequentNumbers_better(numbers, k)));
         System.out.println(k + " most frequent numbers = " + Arrays.toString(topFrequentNumbers(numbers, k)));
         frequencySort(numbers);
         System.out.println("Frequency Sort, Array = " + Arrays.toString(numbers));
