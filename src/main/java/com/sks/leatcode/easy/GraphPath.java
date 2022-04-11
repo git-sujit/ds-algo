@@ -36,10 +36,19 @@ public class GraphPath {
         return false;
     }
 
+    /**
+     * Using Adjacency List
+     * Time Complexity:
+     * Space Complexity:
+     * Typical Candidate for BFS: We are trying to get path between two nodes
+     */
     public static boolean validPath_adjList(int n, int[][] edges, int source, int destination) {
         if (edges == null || edges.length == 0 || source < 0 || destination < 0 || source > n || destination > n)
             return false;
-        Map<Integer, Set<Integer>> adjList = prepareAdjacencyList(edges);
+        //Map<Integer, Set<Integer>> adjList = prepareAdjacencyList(edges);
+        Map<Integer, Set<Integer>> adjList = prepareAdjacencyList_better(edges);
+        //System.out.println("adjList  = " + adjList);
+        //System.out.println("adjList1 = " + adjList1);
         return bfs_find(adjList, source, destination);
     }
 
@@ -61,6 +70,15 @@ public class GraphPath {
         return false;
     }
 
+    private static Map<Integer, Set<Integer>> prepareAdjacencyList_better(int[][] edges) {
+        Map<Integer, Set<Integer>> adjList = new HashMap<>();
+        for (int[] edge : edges) {
+            adjList.computeIfAbsent(edge[0], e -> new HashSet<>()).add(edge[1]);
+            adjList.computeIfAbsent(edge[1], e -> new HashSet<>()).add(edge[0]);
+        }
+        return adjList;
+    }
+
     private static Map<Integer, Set<Integer>> prepareAdjacencyList(int[][] edges) {
         Map<Integer, Set<Integer>> adjList = new HashMap<>();
         for (int[] edge : edges) {
@@ -70,7 +88,7 @@ public class GraphPath {
             n1Children.add(n2);
             adjList.put(n1, n1Children);
             Set<Integer> n2Children = adjList.getOrDefault(n2, new HashSet<>());
-            n1Children.add(n1);
+            n2Children.add(n1);
             adjList.put(n2, n2Children);
         }
         return adjList;

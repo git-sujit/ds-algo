@@ -22,6 +22,10 @@ import java.util.*;
  * 2. Instead of visited set, use parent map that keeps track of parent node. Then when we iterate thru neighbors of a node, we ignore parent node
  */
 public class GraphValidTree {
+    /**
+     * Time: O(N+E), N = no. of nodes, E = no. of edges
+     * Space: O(N+E)
+     */
     public static boolean validTree(int n, int[][] edges) {
         if (edges.length != n - 1) return false;
 
@@ -54,6 +58,41 @@ public class GraphValidTree {
         return parentMap.size() == n;
     }
 
+    /**
+     * Time: O(N+E), N = no. of nodes, E = no. of edges
+     * Space: O(N+E)
+     */
+    public static boolean validTree_1(int n, int[][] edges) {
+        Map<Integer, List<Integer>> adjList = prepareAdjListMap(edges);
+        Map<Integer, Integer> parentMap = new HashMap<>();
+        Set<Integer> visited = new HashSet<>();
+        parentMap.put(0, -1);
+        dfs(0, adjList, parentMap, visited);
+
+        return parentMap.size() == n;
+    }
+
+    private static void dfs(int start, Map<Integer, List<Integer>> adjList, Map<Integer, Integer> parentMap, Set<Integer> visited) {
+        visited.add(start);
+        if (adjList.get(start) == null) return;
+        for (int nbr : adjList.get(start)) {
+            if (parentMap.containsKey(nbr)) return;
+            parentMap.put(nbr, start);
+            if (!visited.contains((nbr)))
+                dfs(nbr, adjList, parentMap, visited);
+        }
+
+    }
+
+    private static Map<Integer, List<Integer>> prepareAdjListMap(int[][] edges) {
+        Map<Integer, List<Integer>> adjList = new HashMap<>();
+        for (int[] edge : edges) {
+            adjList.computeIfAbsent(edge[0], e -> new ArrayList<>()).add(edge[1]);
+            adjList.computeIfAbsent(edge[1], e -> new ArrayList<>()).add(edge[0]);
+        }
+        return adjList;
+    }
+
     private static Map<Integer, List<Integer>> prepareNeighborMap(int[][] edges) {
         Map<Integer, List<Integer>> map = new HashMap<>();
         for (int[] edge : edges) {
@@ -70,14 +109,22 @@ public class GraphValidTree {
     public static void main(String[] args) {
         int n = 5;
         int[][] edges = {{0, 1}, {0, 2}, {0, 3}, {1, 4}};
-        System.out.println("Valid Tree? : " + validTree(n, edges));
+        demo(n, edges);
+
         n = 4;
         edges = new int[][]{{0, 1}, {2, 3}};
-        System.out.println("Valid Tree? : " + validTree(n, edges));
+        demo(n, edges);
+
         n = 1;
         edges = new int[][]{};
-        System.out.println("Valid Tree? : " + validTree(n, edges));
+        demo(n, edges);
+
         n = 2;
-        System.out.println("Valid Tree? : " + validTree(n, edges));
+        demo(n, edges);
+    }
+
+    private static void demo(int n, int[][] edges) {
+        System.out.println("\nValid Tree? : " + validTree(n, edges));
+        System.out.println("[Better]Valid Tree? : " + validTree_1(n, edges));
     }
 }

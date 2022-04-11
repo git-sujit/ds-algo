@@ -1,9 +1,6 @@
 package com.sks.leatcode.medium;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * You have a graph of n nodes. You are given an integer n and an array edges
@@ -14,6 +11,43 @@ import java.util.Set;
  * Number of Components = Number of DFS
  */
 public class GraphConnectedComponents {
+    /**
+     * Time: O(E+V)
+     * Space: O(E+V)
+     */
+    public static int countComponents_1(int n, int[][] edges) {
+        int comps = 0;
+        boolean[] visited = new boolean[n];
+        Map<Integer, List<Integer>> adjList = prepareAdjListMap(edges);
+        for (int node = 0; node < n; node++) {
+            if (!visited[node]) {
+                dfs(node, adjList, visited);
+                comps++;
+            }
+        }
+        return comps;
+    }
+
+    private static void dfs(int start, Map<Integer, List<Integer>> adjList, boolean[] visited) {
+        if (visited[start]) return;
+        visited[start] = true;
+        if (adjList.get(start) != null) {
+            for (int nbr : adjList.get(start))
+                if (!visited[nbr])
+                    dfs(nbr, adjList, visited);
+        }
+    }
+
+    private static Map<Integer, List<Integer>> prepareAdjListMap(int[][] edges) {
+        Map<Integer, List<Integer>> adjList = new HashMap<>();
+        for (int[] edge : edges) {
+            adjList.computeIfAbsent(edge[0], e -> new ArrayList<>()).add(edge[1]);
+            adjList.computeIfAbsent(edge[1], e -> new ArrayList<>()).add(edge[0]);
+        }
+        return adjList;
+    }
+
+
     public static int countComponents(int n, int[][] edges) {
         List<Integer>[] adjList = prepareAdjList(n, edges);
         //printAdjList(adjList);
@@ -100,6 +134,7 @@ public class GraphConnectedComponents {
     private static void test(int n, int[][] edges) {
         //System.out.println("Number of connected components = " + countComponents_not_good(n, edges));
         System.out.println("Number of connected components = " + countComponents(n, edges));
+        System.out.println("[Better]Number of connected components = " + countComponents_1(n, edges));
     }
 
 }

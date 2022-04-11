@@ -8,6 +8,10 @@ import java.util.List;
  * Input-Output method
  */
 public class Subset {
+    /**
+     * Time Complexity : O(2^n)
+     * Space Complexity: O(2^n)
+     */
     public static List<String> findSubsets(String s) {
         List<String> out = new ArrayList<>();
         if (s == null || s.length() == 0) return out;
@@ -21,6 +25,10 @@ public class Subset {
         return out;
     }
 
+    /**
+     * Time Complexity : O(2^n)
+     * Space Complexity: O(2^n)
+     */
     public static List<List<Integer>> findSubsets(List<Integer> nums) {
         List<List<Integer>> out = new ArrayList<>();
         if (nums == null || nums.size() == 0) return out;
@@ -28,6 +36,7 @@ public class Subset {
         for (int n : nums) {
             List<List<Integer>> sub = new ArrayList<>();
             for (List<Integer> e : out) {
+                // NOTE: Create New ArrayList
                 List<Integer> e1 = new ArrayList<>(e);
                 e1.add(n);
                 sub.add(e1);

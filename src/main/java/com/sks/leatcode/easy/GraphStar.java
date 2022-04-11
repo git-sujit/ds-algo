@@ -7,6 +7,11 @@ package com.sks.leatcode.easy;
  * between the nodes ui and vi. Return the center of the given star graph.
  */
 public class GraphStar {
+    public static int findCenter_better(int[][] edges) {
+        if (edges == null || edges.length == 0) return -1;
+        return (edges[0][0] == edges[1][0] || edges[0][0] == edges[1][1]) ? edges[0][0] : edges[0][1];
+    }
+
     /**
      * Time Complexity: O(1)
      * Space Complexity: O(1)
@@ -26,8 +31,10 @@ public class GraphStar {
     public static void main(String[] args) {
         int[][] edges = {{1, 2}, {2, 3}, {4, 2}};
         System.out.println("Center = " + findCenter(edges));
+        System.out.println("[Better]Center = " + findCenter_better(edges));
 
         edges = new int[][]{{1, 2}, {5, 1}, {1, 3}, {1, 4}};
         System.out.println("Center = " + findCenter(edges));
+        System.out.println("[Better]Center = " + findCenter_better(edges));
     }
 }

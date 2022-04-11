@@ -5,8 +5,8 @@ import com.sks.leatcode.common.TreePrinter;
 
 public class HeightOfBinaryTree {
     /**
-     * Time : O(logn)
-     * Space: O(1)
+     * Time : O(n), we are traversing all the nodes
+     * Space: O(n), best case O(logn) for balanced tree
      * 1. Hypothesis: height(node) function returns the height of node
      */
     public static int height(TreeNode root) {

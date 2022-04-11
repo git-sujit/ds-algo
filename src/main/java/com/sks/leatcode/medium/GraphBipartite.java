@@ -13,7 +13,7 @@ import java.util.Stack;
  */
 public class GraphBipartite {
     /**
-     * DFS
+     * DFS / XOR
      * Time Complexity: O(N+E), where N is the number of nodes in the graph, and E is the number of edges.
      * We explore each node once when we transform it from uncolored to colored, traversing all its edges in the process.
      * Space Complexity: O(N), the space used to store the color.
@@ -22,22 +22,36 @@ public class GraphBipartite {
         int[] color = new int[graph.length];
         Arrays.fill(color, -1);
         //Loop to take care of disconnected components
-        for (int i = 0; i < graph.length; i++) {
-            if (color[i] == -1) {
+        for (int node = 0; node < graph.length; node++) {
+            if (color[node] == -1) {
                 Stack<Integer> stack = new Stack<>();
-                stack.push(i);
-                color[i] = 0;
+                stack.push(node);
+                color[node] = 0;
                 while (!stack.isEmpty()) {
-                    int node = stack.pop();
-                    for (int nei : graph[node]) {
+                    int sn = stack.pop();
+                    for (int nei : graph[sn]) {
                         if (color[nei] == -1) {
                             stack.push(nei);
-                            color[nei] = color[node] ^ 1;
-                        } else if (color[nei] == color[node]) {
+                            color[nei] = color[sn] ^ 1;
+                        } else if (color[nei] == color[sn]) {
                             return false;
                         }
                     }
                 }
+            }
+        }
+        return true;
+    }
+
+    public static boolean isBipartite_partial(int[][] graph) {
+        int[] color = new int[graph.length];
+        Arrays.fill(color, -1);
+        color[0] = 0;
+        for (int n = 0; n < graph.length; n++) {
+            for (int nbr : graph[n]) {
+                if (color[nbr] == -1)
+                    color[nbr] = (color[n] == 0) ? 1 : 0;
+                else if (color[nbr] == color[n]) return false;
             }
         }
         return true;
@@ -105,5 +119,6 @@ public class GraphBipartite {
         //graph[i] is an array of nodes that node-i is adjacent to
         int[][] graph = new int[][]{{1, 2, 3}, {0, 2}, {0, 1, 3}, {0, 2}};
         System.out.println("Is Bipartite = " + isBipartite(graph));
+        System.out.println("Is Bipartite_1 = " + isBipartite_partial(graph));
     }
 }

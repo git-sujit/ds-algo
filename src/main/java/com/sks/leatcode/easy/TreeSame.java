@@ -12,8 +12,19 @@ import java.util.Queue;
  */
 public class TreeSame {
     /**
-     * Time Complexity:
-     * Space Complexity:
+     * Time Complexity: O(n), each node is traversed once
+     * Space Complexity: O(n), O(log(N) if balanced tree else O(n) to keep RECURSION-STACK
+     */
+    public static boolean isSameTree_recursion(TreeNode p, TreeNode q) {
+        if (p == null && q == null) return true;
+        if (p == null || q == null) return false;
+        if (p.val != q.val) return false;
+        return isSameTree_recursion(p.left, q.left) && isSameTree_recursion(p.right, q.right);
+    }
+
+    /**
+     * Time Complexity: O(n)
+     * Space Complexity:O(n), O(log(N) if balanced tree else O(n) to keep RECURSION-STACK
      */
     public static boolean isSameTree_iteration(TreeNode p, TreeNode q) {
         if (p == null && q == null) return true;
@@ -35,17 +46,6 @@ public class TreeSame {
         }
         if (!q1.isEmpty() || !q2.isEmpty()) return false;
         return true;
-    }
-
-    /**
-     * Time Complexity: O(n), each node is traversed once
-     * Space Complexity: O(n), O(log(N) if balanced tree else O(n) to keep RECURSION-STACK
-     */
-    public static boolean isSameTree_recursion(TreeNode p, TreeNode q) {
-        if (p == null && q == null) return true;
-        if (p == null || q == null) return false;
-        if (p.val != q.val) return false;
-        return isSameTree_recursion(p.left, q.left) && isSameTree_recursion(p.right, q.right);
     }
 
     public static void main(String[] args) {

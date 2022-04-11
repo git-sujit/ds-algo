@@ -16,6 +16,21 @@ public class TreeInversion {
      * Time Complexity  : O(n), we are going through each node once
      * Space Complexity : O(logn)/Height, for Balance tree , O(n) if Recursion stack can grow upto n size if Tree is skewed/linear
      */
+    public static TreeNode invertTree_recursive_2(TreeNode root) {
+        if (root == null) return null;
+        TreeNode left = root.left;
+        TreeNode right = root.right;
+        root.left = right;
+        root.right = left;
+        invertTree_recursive_2(left);
+        invertTree_recursive_2(right);
+        return root;
+    }
+
+    /**
+     * Time Complexity  : O(n), we are going through each node once
+     * Space Complexity : O(logn)/Height, for Balance tree , O(n) if Recursion stack can grow upto n size if Tree is skewed/linear
+     */
     public static TreeNode invertTree_recursive(TreeNode root) {
         if (root == null)
             return null;

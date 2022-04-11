@@ -11,7 +11,7 @@ import java.util.Map;
  * For this problem, a height-balanced binary tree is defined as:
  * a binary tree in which the left and right subtrees of every node differ in height by no more than 1.
  */
-public class TreeBalance {
+public class TreeHeightBalanced {
     /**
      * Top-Down recursion
      * Time Complexity: O(nlogn), for each of n node, height is calculated[Height- O(logn)]
