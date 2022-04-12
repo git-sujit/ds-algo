@@ -21,8 +21,11 @@ import java.util.Arrays;
  * The first step is simple. The second step is crucial, it can be solved either using recursion or Dynamic Programming.
  */
 public class EqualSumPartition {
-
-    public static boolean hasEqualSumPartition(int[] arr) {
+    /**
+     * Time Complexity : O(n^2)
+     * Space Complexity: O(n^2)
+     */
+    public static boolean hasEqualSumPartition_topDown(int[] arr) {
         int sum = 0;
         for (int i = 0; i < arr.length; i++)
             sum += arr[i];
@@ -38,7 +41,6 @@ public class EqualSumPartition {
                 if (j == 0) t[i][j] = true;
             }
         }
-
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= sum; j++) {
                 if (arr[i - 1] <= j)
@@ -60,6 +62,6 @@ public class EqualSumPartition {
 
     private static void test_equalSumPartition(int[] arr) {
         System.out.println("##### Array: " + Arrays.toString(arr));
-        System.out.println("Has Equal Sum Partition? : " + hasEqualSumPartition(arr));
+        System.out.println("Has Equal Sum Partition? : " + hasEqualSumPartition_topDown(arr));
     }
 }

@@ -61,8 +61,8 @@ public class KnapsackProblem {
     /**
      * Top-down is called real dynamic programming
      * Remove recursive call
-     * Time Complexity: O(n^2)
-     * Space Complexity: O(n^2)
+     * Time Complexity: O(N*W)
+     * Space Complexity: O(N*W)
      * Better Part: No method stack is used
      **/
     public static int knapsack_top_down(int[] wt, int[] v, int w, int n) {

@@ -8,7 +8,33 @@ import java.util.Arrays;
  * Count the number of such subsets.
  */
 public class CountSubsetsWithDifference {
-    public static int countNoSubsetWithGivenDifference(int[] arr, int diff) {
+    /**
+     * Time Complexity : O(2^n)
+     * Space Complexity: O(n)
+     */
+    public static int countNoSubsetWithGivenDifference_recursion(int[] arr, int diff) {
+        if (arr == null || arr.length == 0) return 0;
+        int sum = 0;
+        for (int n : arr)
+            sum += n;
+        int s = (sum + diff) / 2;
+        return countSubsetSum(arr, s, arr.length);
+    }
+
+    private static int countSubsetSum(int[] arr, int s, int n) {
+        if (s == 0) return 1;
+        if (n == 0) return 0;
+        if (arr[n - 1] <= s)
+            return countSubsetSum(arr, s - arr[n - 1], n - 1) + countSubsetSum(arr, s, n - 1);
+        else
+            return countSubsetSum(arr, s, n - 1);
+    }
+
+    /**
+     * Time Complexity : O(n^2)
+     * Space Complexity: O(n^2)
+     */
+    public static int countNoSubsetWithGivenDifference_topDown(int[] arr, int diff) {
         int n = arr.length;
         int sum = 0;
         for (int a : arr)
@@ -19,7 +45,9 @@ public class CountSubsetsWithDifference {
 
         int count = 0;
         for (int j = 0; j <= sum / 2; j++)
-            if (Math.abs(sum - 2 * j) == diff) count++;
+            if (lastRow[j]) {
+                if (Math.abs(sum - 2 * j) == diff) count++;
+            }
 
         return count;
     }
@@ -47,23 +75,6 @@ public class CountSubsetsWithDifference {
         return t;
     }
 
-    public static int countNoSubsetWithGivenDifference_recursion(int[] arr, int diff) {
-        if (arr == null || arr.length == 0) return 0;
-        int sum = 0;
-        for (int n : arr)
-            sum += n;
-        int s = (sum + diff) / 2;
-        return countSubsetSum(arr, s, arr.length);
-    }
-
-    private static int countSubsetSum(int[] arr, int s, int n) {
-        if (s == 0) return 1;
-        if (n == 0) return 0;
-        if (arr[n - 1] <= s)
-            return countSubsetSum(arr, s - arr[n - 1], n - 1) + countSubsetSum(arr, s, n - 1);
-        else
-            return countSubsetSum(arr, s, n - 1);
-    }
 
     public static void main(String[] args) {
         int[] arr3 = {1, 1, 2, 3};
@@ -74,7 +85,7 @@ public class CountSubsetsWithDifference {
     private static void test_countNoSubsetWithGivenDifference(int[] arr, int diff) {
         System.out.println("##### Array: " + Arrays.toString(arr));
         System.out.println("Difference = " + diff);
-        System.out.println("[Top Down] Count of No of Subsets with Given Difference = " + countNoSubsetWithGivenDifference(arr, diff));
+        System.out.println("[Top Down] Count of No of Subsets with Given Difference = " + countNoSubsetWithGivenDifference_topDown(arr, diff));
         System.out.println("[Recursion] Count of No of Subsets with Given Difference = " + countNoSubsetWithGivenDifference_recursion(arr, diff));
     }
 }

@@ -15,6 +15,10 @@ import java.util.Arrays;
  * You may assume that you have an infinite number of each kind of coin.
  */
 public class CoinChange_MaxWays {
+    /**
+     * Time complexity : O(S*n)O(S∗n). where S is the amount, n is denomination count
+     * Space complexity : O(S)O(S)
+     */
     public static int change_topDown(int[] coins, int n, int amount) {
         int[][] td = new int[n + 1][amount + 1];
         for (int i = 0; i <= n; i++) {
