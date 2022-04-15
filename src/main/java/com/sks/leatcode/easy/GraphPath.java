@@ -11,32 +11,6 @@ import java.util.*;
  */
 public class GraphPath {
     /**
-     * Time Complexity:
-     * Space Complexity:
-     * Typical Candidate for BFS: We are trying to get path between two nodes
-     */
-    public static boolean validPath(int n, int[][] edges, int source, int destination) {
-        if (source == destination) return true;
-        HashSet<Integer> visitedSet = new HashSet<>();
-        Queue<Integer> que = new LinkedList<>();
-        que.add(source);
-        while (!que.isEmpty()) {
-            int qn = que.remove();
-            if (!visitedSet.contains(qn)) {
-                if (qn == destination) return true;
-                visitedSet.add(qn);
-                for (int[] edge : edges) {
-                    if (edge[0] == qn && !visitedSet.contains(edge[1]))
-                        que.add(edge[1]);
-                    else if (edge[1] == qn && !visitedSet.contains(edge[0]))
-                        que.add(edge[0]);
-                }
-            }
-        }
-        return false;
-    }
-
-    /**
      * Using Adjacency List
      * Time Complexity:
      * Space Complexity:
@@ -69,6 +43,33 @@ public class GraphPath {
         }
         return false;
     }
+    
+    /**
+     * Time Complexity:
+     * Space Complexity:
+     * Typical Candidate for BFS: We are trying to get path between two nodes
+     */
+    public static boolean validPath(int n, int[][] edges, int source, int destination) {
+        if (source == destination) return true;
+        HashSet<Integer> visitedSet = new HashSet<>();
+        Queue<Integer> que = new LinkedList<>();
+        que.add(source);
+        while (!que.isEmpty()) {
+            int qn = que.remove();
+            if (!visitedSet.contains(qn)) {
+                if (qn == destination) return true;
+                visitedSet.add(qn);
+                for (int[] edge : edges) {
+                    if (edge[0] == qn && !visitedSet.contains(edge[1]))
+                        que.add(edge[1]);
+                    else if (edge[1] == qn && !visitedSet.contains(edge[0]))
+                        que.add(edge[0]);
+                }
+            }
+        }
+        return false;
+    }
+
 
     private static Map<Integer, Set<Integer>> prepareAdjacencyList_better(int[][] edges) {
         Map<Integer, Set<Integer>> adjList = new HashMap<>();

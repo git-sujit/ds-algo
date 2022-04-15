@@ -8,7 +8,7 @@ import java.util.Map;
  */
 public class MinimumWindowSubstring {
     /**
-     * Time Complexity:
+     * Time Complexity: O(n)
      * Space Complexity:
      */
     public static int minWindowSize(String s, String t) {
