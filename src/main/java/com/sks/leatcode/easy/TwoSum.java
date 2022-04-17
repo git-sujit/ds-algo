@@ -2,29 +2,56 @@ package com.sks.leatcode.easy;
 
 import com.sks.leatcode.common.ALGO_TYPE;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
  * You may assume that each input would have exactly one solution, and you may not use the same element twice.
  * You can return the answer in any order.
  **/
+
 public class TwoSum {
-    //Time Complexity: O(n^2)
-    //Space Complexity: O(1), space required is not dependent on size of input array
-    private static int[] bruteForce(int[] nums, int target) {
-        for (int i = 0; i < nums.length; i++)
-            for (int j = i + 1; j < nums.length; j++)
-                if (nums[i] + nums[j] == target)
-                    return new int[]{i, j};
+    /**
+     * Time Complexity: O(n)
+     * Space Complexity: O(n)
+     */
+    private static int[] onePassHashTable(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int num = nums[i];
+            int complement = target - num;
+            if (map.containsKey(complement)) {
+                return new int[]{map.get(complement), i};
+            }
+            map.put(num, i);
+        }
         return null;
     }
 
-    // Trading space for speed
-    // Time Complexity: O(n)
-    // Space Complexity: O(n)
+    /**
+     * All Pairs
+     * Time Complexity: O(n)
+     * Space Complexity: O(n)
+     */
+    private static int[][] onePassHashTable_allPairs(int[] nums, int target) {
+        List<int[]> out = new ArrayList<>();
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int num = nums[i];
+            int complement = target - num;
+            if (map.containsKey(complement)) {
+                out.add(new int[]{map.get(complement), i});
+            }
+            map.put(num, i);
+        }
+        return out.toArray(new int[out.size()][]);
+    }
+
+    /**
+     * Trading space for speed
+     * Time Complexity: O(n)
+     * Space Complexity: O(n)
+     */
     private static int[] twoPassHashTable(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++)
@@ -39,19 +66,15 @@ public class TwoSum {
         return null;
     }
 
-    //Time Complexity: O(n)
-    //Space Complexity: O(n)
-    private static int[] onePassHashTable(int[] nums, int target) {
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            int num = nums[i];
-            int complement = target - num;
-            if (map.containsKey(complement)) {
-                return new int[]{map.get(complement), i};
-            }
-            map.put(num, i);
-        }
-
+    /**
+     * Time Complexity: O(n^2)
+     * Space Complexity: O(1), space required is not dependent on size of input array
+     */
+    private static int[] bruteForce(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++)
+            for (int j = i + 1; j < nums.length; j++)
+                if (nums[i] + nums[j] == target)
+                    return new int[]{i, j};
         return null;
     }
 
@@ -64,6 +87,9 @@ public class TwoSum {
         target = 6;
         runTestCases(nums, target);
 
+        nums = new int[]{1, 1, 1, 1, 1, 1, 1, 1};
+        target = 2;
+        runTestCases(nums, target);
     }
 
     private static void runTestCases(int[] nums, int target) {
@@ -75,7 +101,6 @@ public class TwoSum {
     private static void analyseOutput(int[] nums, int target, ALGO_TYPE algoType) {
         System.out.println("***INPUT : nums = " + Arrays.toString(nums));
         System.out.println("target = " + target);
-
         int[] out = null;
         if (algoType == ALGO_TYPE.BRUTE_FORCE)
             out = bruteForce(nums, target);
@@ -83,6 +108,11 @@ public class TwoSum {
             out = twoPassHashTable(nums, target);
         else if (algoType == ALGO_TYPE.ONE_PASS_HASH_TABLE)
             out = onePassHashTable(nums, target);
+        else if (algoType == ALGO_TYPE.ALL_PAIRS) {
+            System.out.println("***OUTPUT, AlgoType = " + algoType);
+            System.out.println(Arrays.deepToString(onePassHashTable_allPairs(nums, target)) + "\n");
+            return;
+        }
 
         System.out.println("***OUTPUT, AlgoType = " + algoType);
         System.out.println(Arrays.toString(out) + "\n");
