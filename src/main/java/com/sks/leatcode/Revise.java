@@ -139,6 +139,11 @@ public class Revise {
         String s = "sujit kumar singh";
         String r = new StringBuilder(s).reverse().toString();
         System.out.println("s = " + s + ", r = " + r);
+        char[] carr = s.toCharArray();
+        String r1 = "";
+        for (int i = carr.length - 1; i >= 0; i--)
+            r1 += carr[i];
+        System.out.println("r1 = " + r1);
     }
 
     private static void array_of_primitive_to_object() {
@@ -191,7 +196,7 @@ public class Revise {
     public static void main(String[] args) {
         //stackInJava();
         //queueInJava();
-        //stringUtilities();
+        stringUtilities();
         //heap();
         array();
         //map();

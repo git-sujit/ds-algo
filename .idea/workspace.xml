@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/FourSum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/ThreeSum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/TwoSumSorted.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/EditDistance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/LongestRepeatingSubsequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/MinDeletionToPalindrome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/MinInsertionDeletionToConvert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/MinInsertionToPalindrome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/ShortestCommonSuperSequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/mcm/PalindromePartition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/LongestCommonSubstring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/LongestCommonSubstring.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/LongestPalindromicSubsequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/LongestPalindromicSubsequence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/LowestCommonSubsequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/LongestCommonSubsequence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/mcm/MatrixChainMultiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/mcm/MatrixChainMultiplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/Revise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/Revise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/ALGO_TYPE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/ALGO_TYPE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TwoSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TwoSum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,13 +86,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ThreeSum">
-    <configuration name="Revise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.Revise" />
+  <component name="RunManager" selected="Application.PalindromePartition">
+    <configuration name="LongestRepeatingSubsequence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.dp.lcs.LongestRepeatingSubsequence" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.*" />
+          <option name="PATTERN" value="com.sks.averma.dp.lcs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,12 +100,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreeSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.ThreeSum" />
+    <configuration name="MatrixChainMultiplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.dp.mcm.MatrixChainMultiplication" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.medium.*" />
+          <option name="PATTERN" value="com.sks.averma.dp.mcm.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,12 +113,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TwoSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.easy.TwoSum" />
+    <configuration name="MinInsertionToPalindrome" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.dp.lcs.MinInsertionToPalindrome" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.easy.*" />
+          <option name="PATTERN" value="com.sks.averma.dp.lcs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,12 +126,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TwoSumSorted" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.TwoSumSorted" />
+    <configuration name="PalindromePartition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.dp.mcm.PalindromePartition" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.medium.*" />
+          <option name="PATTERN" value="com.sks.averma.dp.mcm.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,12 +139,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UniqueCharFrequency" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leatcode.medium.UniqueCharFrequency" />
+    <configuration name="ShortestCommonSuperSequence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.dp.lcs.ShortestCommonSuperSequence" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leatcode.medium.*" />
+          <option name="PATTERN" value="com.sks.averma.dp.lcs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -161,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ThreeSum" />
-        <item itemvalue="Application.TwoSumSorted" />
-        <item itemvalue="Application.TwoSum" />
-        <item itemvalue="Application.Revise" />
-        <item itemvalue="Application.UniqueCharFrequency" />
+        <item itemvalue="Application.PalindromePartition" />
+        <item itemvalue="Application.MatrixChainMultiplication" />
+        <item itemvalue="Application.LongestRepeatingSubsequence" />
+        <item itemvalue="Application.MinInsertionToPalindrome" />
+        <item itemvalue="Application.ShortestCommonSuperSequence" />
       </list>
     </recent_temporary>
   </component>
@@ -306,11 +312,6 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/LowestCommonSubsequence.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/KokoEatingBanana.java</url>
           <line>81</line>
           <option name="timeStamp" value="9" />
@@ -379,6 +380,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/TwoSumSorted.java</url>
           <line>40</line>
           <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/LongestCommonSubstring.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/ShortestCommonSuperSequence.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MinInStack.java</url>

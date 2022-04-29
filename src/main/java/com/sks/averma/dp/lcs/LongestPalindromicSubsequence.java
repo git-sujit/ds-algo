@@ -9,6 +9,96 @@ import java.util.Arrays;
  */
 public class LongestPalindromicSubsequence {
     /**
+     * TABULATION : Length
+     * Time Complexity: O(n^2): n is length of string
+     * Space Complexity: O(n^2) for Tabulation array
+     */
+    public static int longestPalindromeSubseq_length_tabulation(String s) {
+        if (s == null || s.length() == 0) return 0;
+        int l = s.length();
+        String r = new StringBuilder(s).reverse().toString();
+        int[][] tb = new int[l + 1][l + 1];
+        for (int i = 0; i <= l; i++)
+            for (int j = 0; j <= l; j++)
+                if (i == 0 || j == 0)
+                    tb[i][j] = 0;
+
+        for (int i = 1; i <= l; i++) {
+            for (int j = 1; j <= l; j++) {
+                if (s.charAt(i - 1) == r.charAt(j - 1))
+                    tb[i][j] = 1 + tb[i - 1][j - 1];
+                else
+                    tb[i][j] = Math.max(tb[i][j - 1], tb[i - 1][j]);
+            }
+        }
+        return tb[l][l];
+    }
+
+    /**
+     * TABULATION : String
+     * Time Complexity: O(n^2): n is length of string
+     * Space Complexity: O(n^2) for Tabulation array
+     */
+    public static String print_lps(String s) {
+        if (s == null || s.length() == 0) return "";
+        int l = s.length();
+        String r = new StringBuilder(s).reverse().toString();
+        int[][] tb = new int[l + 1][l + 1];
+        for (int i = 0; i <= l; i++)
+            for (int j = 0; j <= l; j++)
+                tb[i][j] = 0;
+        for (int i = 1; i <= l; i++) {
+            for (int j = 1; j <= l; j++) {
+                if (s.charAt(i - 1) == r.charAt(j - 1))
+                    tb[i][j] = 1 + tb[i - 1][j - 1];
+                else
+                    tb[i][j] = Math.max(tb[i - 1][j], tb[i][j - 1]);
+            }
+        }
+        String result = "";
+        int i = l;
+        int j = l;
+        while (i > 0 && j > 0) {
+            if (s.charAt(i - 1) == r.charAt(j - 1)) {
+                result = s.charAt(i - 1) + result;
+                i--;
+                j--;
+            } else {
+                if (tb[i - 1][j] > tb[i][j - 1])
+                    i--;
+                else
+                    j--;
+
+            }
+        }
+        return result;
+    }
+
+    /**
+     * TABULATION : String
+     * Time Complexity: O(n^2): n is length of string
+     * Space Complexity: O(n^2) for Tabulation array
+     */
+    public static String longestPalindromeSubseq_string_tabulation(String s) {
+        if (s == null || s.length() == 0) return "";
+        String r = new StringBuilder(s).reverse().toString();
+        int l = s.length();
+        String[][] tb = new String[l + 1][l + 1];
+        for (int i = 0; i <= l; i++)
+            for (int j = 0; j <= l; j++)
+                tb[i][j] = "";
+        for (int i = 1; i <= l; i++) {
+            for (int j = 1; j <= l; j++) {
+                if (s.charAt(i - 1) == r.charAt(j - 1))
+                    tb[i][j] = tb[i - 1][j - 1] + s.charAt(i - 1);
+                else
+                    tb[i][j] = tb[i - 1][j].length() > tb[i][j - 1].length() ? tb[i - 1][j] : tb[i][j - 1];
+            }
+        }
+        return tb[l][l];
+    }
+
+    /**
      * RECURSION
      * Time Complexity: O(2^n): n is length of string
      * Space Complexity: O(n) for Recursion stack
@@ -55,36 +145,17 @@ public class LongestPalindromicSubsequence {
         return memo[ls][lr];
     }
 
-    /**
-     * TABULATION
-     * Time Complexity: O(n^2): n is length of string
-     * Space Complexity: O(n^2) for Tabulation array
-     */
-    public static int longestPalindromeSubseq_tabulation(String s) {
-        if (s == null || s.length() == 0) return 0;
-        int l = s.length();
-        String r = new StringBuilder(s).reverse().toString();
-        int[][] tb = new int[l + 1][l + 1];
-        for (int i = 0; i <= l; i++)
-            for (int j = 0; j <= l; j++)
-                if (i == 0 || j == 0)
-                    tb[i][j] = 0;
-
-        for (int i = 1; i <= l; i++) {
-            for (int j = 1; j <= l; j++) {
-                if (s.charAt(i - 1) == r.charAt(j - 1))
-                    tb[i][j] = 1 + tb[i - 1][j - 1];
-                else
-                    tb[i][j] = Math.max(tb[i][j - 1], tb[i - 1][j]);
-            }
-        }
-        return tb[l][l];
-    }
 
     public static void main(String[] args) {
-        String s = "bbbab";
-        System.out.println("Recursion: s = " + s + ", longest palindromic subsequence = " + longestPalindromeSubseq_recursion(s));
+        demo("bbbab");
+        demo("agbcba");
+    }
+
+    private static void demo(String s) {
+        System.out.println("\nRecursion: s = " + s + ", longest palindromic subsequence = " + longestPalindromeSubseq_recursion(s));
         System.out.println("Memoization: s = " + s + ", longest palindromic subsequence = " + longestPalindromeSubseq_memoization(s));
-        System.out.println("Tabulation: s = " + s + ", longest palindromic subsequence = " + longestPalindromeSubseq_tabulation(s));
+        System.out.println("Tabulation: s = " + s + ", longest palindromic subsequence = " + longestPalindromeSubseq_length_tabulation(s));
+        System.out.println("[String] Tabulation: s = " + s + ", longest palindromic subsequence String = " + longestPalindromeSubseq_string_tabulation(s));
+        System.out.println("[String-BETTER] Tabulation: s = " + s + ", longest palindromic subsequence String = " + print_lps(s));
     }
 }
