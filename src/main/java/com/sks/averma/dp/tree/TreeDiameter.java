@@ -1,11 +1,38 @@
 package com.sks.averma.dp.tree;
 
-import com.sks.leatcode.common.TreeNode;
+import com.sks.leetcode.common.TreeNode;
+import com.sks.leetcode.common.TreePrinter;
 
 /**
  * Diameter: Longest path between two leaves not necessarily passing through root
  */
 public class TreeDiameter {
+    /**
+     * Time Complexity : O(n), we are exploring all nodes
+     * Space Complexity: O(n), for worst case linear-tree
+     */
+    public static int diameterOfBinaryTree_BETTER(TreeNode root, int[] res) {
+        /** Base Condition **/
+        if (root == null) return 0;
+        /** Hypothesis **/
+        int ld = diameterOfBinaryTree_BETTER(root.left, res);
+        int rd = diameterOfBinaryTree_BETTER(root.right, res);
+        /** Induction **/
+        // What could be passed to parent i.e return statement
+        int temp = 1 + Math.max(ld, rd);
+        // Potential diameter
+        int pd = 1 + ld + rd;
+        // Potential answer
+        int ans = Math.max(temp, pd);
+        // Store the max diameter till this point
+        res[0] = Math.max(res[0], ans);
+        return temp;
+    }
+
+    /**
+     * Time Complexity :
+     * Space Complexity:
+     */
     public static int diameter(TreeNode root) {
         int[] res = new int[1];
         diameter(root, res);
@@ -20,7 +47,7 @@ public class TreeDiameter {
         int hl = height(root.left);
         int hr = height(root.right);
         res[0] = Math.max(temp, 1 + hl + hr);
-        System.out.println("Result = " + res[0]);
+        //System.out.println("Result = " + res[0]);
         return temp;
     }
 
@@ -31,7 +58,11 @@ public class TreeDiameter {
 
     public static void main(String[] args) {
         TreeNode root = prepareTree();
+        TreePrinter.printNode(root);
         System.out.println("Diameter = " + diameter(root));
+        int[] res = new int[]{Integer.MIN_VALUE};
+        diameterOfBinaryTree_BETTER(root, res);
+        System.out.println("[Better] Diameter = " + res[0]);
     }
 
     private static TreeNode prepareTree() {

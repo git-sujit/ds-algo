@@ -133,7 +133,7 @@ public class Permutations {
     }
 
     private static void demo_old() {
-        com.sks.leatcode.medium.Permutations obj = new com.sks.leatcode.medium.Permutations();
+        com.sks.leetcode.medium.Permutations obj = new com.sks.leetcode.medium.Permutations();
 
         int[] a = {1, 2, 3};
         System.out.println("Permutation(int[])  : " + Arrays.toString(a));

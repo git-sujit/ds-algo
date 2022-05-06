@@ -18,6 +18,27 @@ public class MinMaxSumSubArray {
      * Time Complexity: O(n)
      * Space Complexity: O(1)
      */
+    public static int maxSumSubArray_slidingWindow_BETTER(int[] a, int k) {
+        if (a == null || a.length == 0 || k <= 0 || k > a.length) return -1;
+        int maxSum = Integer.MIN_VALUE;
+        int ws = 0;
+        int we = 0;
+        int sum = 0;
+        while (we < a.length) {
+            sum += a[we];
+            if (we - ws + 1 == k) {
+                maxSum = Math.max(maxSum, sum);
+                sum -= a[ws++];
+            }
+            we++;
+        }
+        return maxSum;
+    }
+
+    /**
+     * Time Complexity: O(n)
+     * Space Complexity: O(1)
+     */
     public static int maxSumSubArray_slidingWindow(int[] a, int k) {
         if (a == null || a.length == 0 || k <= 0 || k > a.length) return -1;
         int maxSum = Integer.MIN_VALUE;
@@ -93,6 +114,7 @@ public class MinMaxSumSubArray {
         for (int[] array : subArrays)
             System.out.println(Arrays.toString(array));
         System.out.println("Max Sum of sub-array(Sliding Window) = " + maxSumSubArray_slidingWindow(a, k));
+        System.out.println("[Better]Max Sum of sub-array(Sliding Window) = " + maxSumSubArray_slidingWindow_BETTER(a, k));
         System.out.println("Max Sum of sub-array = " + maxSumSubArray(a, k));
         System.out.println("Max Sum of sub-array(Brute Force) = " + maxSumSubArray_bruteForce(a, k));
     }

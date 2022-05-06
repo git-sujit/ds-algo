@@ -1,7 +1,7 @@
 package com.sks.averma.recursion;
 
-import com.sks.leatcode.common.TreeNode;
-import com.sks.leatcode.common.TreePrinter;
+import com.sks.leetcode.common.TreeNode;
+import com.sks.leetcode.common.TreePrinter;
 
 public class HeightOfBinaryTree {
     /**

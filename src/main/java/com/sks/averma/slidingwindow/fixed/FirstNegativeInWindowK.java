@@ -10,6 +10,7 @@ import java.util.List;
         if (windowEnd - windowStart + 1 == k) { // When we hit the window size
             windowStart++; // Slide the window
         }
+        windowEnd++; // Remember- In the end
     }
  */
 

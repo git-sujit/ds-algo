@@ -1,6 +1,6 @@
 package com.sks.averma.heap;
 
-import com.sks.leatcode.common.CustomPair;
+import com.sks.leetcode.common.CustomPair;
 import javafx.util.Pair;
 
 import java.util.*;

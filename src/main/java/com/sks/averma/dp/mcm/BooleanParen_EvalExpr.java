@@ -44,7 +44,7 @@ public class BooleanParen_EvalExpr {
 
     public static void main(String[] args) {
         demo("T|F");
-        demo("\"T^T^F");
+        demo("T^T^F");
     }
 
     private static void demo(String exp) {
