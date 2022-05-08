@@ -45,7 +45,7 @@ public class RainWaterTrapping {
                 j++;
             }
             j--;
-            System.out.println("i = " + i + ", j = " + j + ", Range = (" + (i - j) + ", " + (i + j) + ")" + ", maxHeight = " + maxHeight);
+            //System.out.println("i = " + i + ", j = " + j + ", Range = (" + (i - j) + ", " + (i + j) + ")" + ", maxHeight = " + maxHeight);
             for (int k = i - j + 1; k < i + j; k++)
                 totalWalter += (maxHeight - heights[k]) * 1;
         }

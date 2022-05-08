@@ -11,6 +11,34 @@ import java.util.Set;
 public class LongestSubstringWithoutRepeatingChar {
     /**
      * Time complexity : O(n)
+     * Space complexity : O(n) for set
+     */
+    public static int longestSubString_set_BETTER(String str) {
+        if (str == null || str.length() == 0) return -1;
+        int max = 0;
+        int ws = 0;
+        int we = 0;
+        Set<Character> set = new HashSet<>();
+        while (we < str.length()) {
+            char ch = str.charAt(we);
+            if (set.contains(ch)) {
+                while (ws < we) {
+                    char wch = str.charAt(ws++);
+                    set.remove(wch);
+                    if (wch == ch) break;
+                }
+
+            } else {
+                set.add(ch);
+                max = Math.max(max, set.size());
+            }
+            we++;
+        }
+        return max;
+    }
+
+    /**
+     * Time complexity : O(n)
      * Space complexity : O(n) for map
      */
     public static int longestSubString_map(String str) {
@@ -113,6 +141,7 @@ public class LongestSubstringWithoutRepeatingChar {
     private static void test(String str) {
         System.out.println("\nString = " + str);
         System.out.println("[Map] Longest Substring size = " + longestSubString_map(str));
+        System.out.println("[Better-Set] Longest Substring size = " + longestSubString_set_BETTER(str));
         System.out.println("[Set] Longest Substring size = " + longestSubString_set(str));
         System.out.println("[Brute Force] Longest Substring size = " + longestSubString_bruteForce(str));
     }

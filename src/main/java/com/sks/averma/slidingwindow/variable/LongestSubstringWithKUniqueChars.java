@@ -22,7 +22,7 @@ public class LongestSubstringWithKUniqueChars {
             //if (map.size() < k) {
             //  windowEnd++;
             //} else
-            if (map.size() <= k) {
+            if (map.size() <= k) { // Because of At Most
                 maxSize = Math.max(maxSize, windowEnd - windowStart + 1);
                 //System.out.println("windowStart = " + windowStart + ", windowEnd = " + windowEnd + ", size = " + (windowEnd - windowStart + 1));
                 windowEnd++;

@@ -1,7 +1,7 @@
 package com.sks.averma.slidingwindow.variable;
 
 
-import java.util.Arrays;
+import java.util.*;
 
 /**
  * Given an array arr[] of size n containing integers. The problem is to find the length of the longest sub-array having sum equal to the given value k.
@@ -11,8 +11,21 @@ public class LongestSubArrayOfASum {
      * TimeComplexity: O(n), n-Size of array
      * Space Complexity: O(1)
      */
-    public static int sizeOfLongestSubarray(int[] numbers, int sum) {
-        return 0;
+    public static int sizeOfLongestSubarray_negativeNums(int[] nums, int sum) {
+        if (nums == null || nums.length == 0) return -1;
+        Map<Integer, List<Integer>> map = new HashMap<>();
+        int max = 0;
+        int lsum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            lsum += nums[i];
+            if (lsum == sum) max = Math.max(max, i + 1);
+            else if (map.containsKey(lsum - sum)) {
+                for (int idx : map.get(lsum - sum))
+                    max = Math.max(max, i - idx + 1);
+            }
+            map.computeIfAbsent(sum, e -> new ArrayList<>()).add(i);
+        }
+        return max;
     }
 
     /**
@@ -118,7 +131,7 @@ public class LongestSubArrayOfASum {
             }
         }
         System.out.println("\nNumbers = " + Arrays.toString(numbers) + ", Sum = " + sum);
-        System.out.println("Size of Longest SubArray = " + sizeOfLongestSubarray(numbers, sum));
+        System.out.println("[-ve Nums] Size of Longest SubArray = " + sizeOfLongestSubarray_negativeNums(numbers, sum));
         System.out.println("[Brute Force] Size of Longest SubArray = " + sizeOfLongestSubarray_bruteForce(numbers, sum));
         if (isPositiveArray)
             System.out.println("[Positive-Array]Size of Longest SubArray = " + sizeOfLongestSubarray_positiveArray(numbers, sum));

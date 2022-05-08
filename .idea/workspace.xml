@@ -5,132 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/tree/PathSumOfLeaves.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/tree/PathSumOfNodes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/common/TrieNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TrieIndexOfPairs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/Trie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/SubArraySumCount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/mcm/BooleanParen_EvalExpr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/mcm/BooleanParen_EvalExpr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/tree/TreeDiameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/tree/TreeDiameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KClosestElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KClosestElements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KClosestPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KClosestPoints.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KTopFrequentNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KTopFrequentNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/HeightOfBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/HeightOfBinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/Permutations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/Permutations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/FirstNegativeInWindowK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/FirstNegativeInWindowK.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/MaxOfAllSubarryas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/MaxOfAllSubarryas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/MinMaxSumSubArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/MinMaxSumSubArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/Revise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/Revise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/ALGO_TYPE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/common/ALGO_TYPE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/common/BST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/CustomPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/common/CustomPair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/ListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/common/ListNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/common/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/common/TreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/common/TreePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/common/TreePrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/BalaceBrackets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/BalaceBrackets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/BinarySubstrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/BinarySubstrings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/ClimbStairs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/ClimbStairs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/GraphBFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/GraphBFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/GraphDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/GraphDFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/GraphPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/GraphPath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/GraphStar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/GraphStar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/LinkedListBinaryToDecimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/LinkedListBinaryToDecimal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/LinkedListCycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/LinkedListCycle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/LinkedListIntersection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/LinkedListIntersection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/LinkedListPalindrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/LinkedListPalindrome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/LinkedListRemove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/LinkedListRemove.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/LinkedListReverse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/LinkedListReverse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/MaxProfitStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/MaxProfitStock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/MaximumSubarray_KadanesAlgo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/MaximumSubarray_KadanesAlgo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/MinStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/MinStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/MissingNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/MissingNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/OnesTogether.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/OnesTogether.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/PalindromeInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/PalindromeInteger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/RangeSumQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/RangeSumQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeBSClosest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeBSClosest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeBSInOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeBSInOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeBSSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeBSSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeCousins.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeCousins.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeDiameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeDiameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeHeight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeHeight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeHeightBalanced.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeHeightBalanced.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeInversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeInversion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeLevelAverage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeLevelAverage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeMerge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeMerge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreePaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreePaths.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeSame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeSame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeSubtree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeSubtree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeSymmetry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeSymmetry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeTilt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeTilt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeTraversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeTraversal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TreeUnival.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeUnival.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/easy/TwoSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TwoSum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/hard/FreqStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/hard/FreqStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/hard/FreqStackBetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/hard/FreqStackBetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/hard/LFUCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/hard/LFUCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/hard/LargestRectangleArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/hard/LargestRectangleArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/hard/MedianOfSortedArrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/hard/MedianOfSortedArrays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/hard/MissingPositive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/hard/MissingPositive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/hard/NQueens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/hard/NQueens.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/hard/RobotRoomCleaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/hard/RobotRoomCleaner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/hard/TrappingRainWater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/hard/TrappingRainWater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/hard/TreePathSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/hard/TreePathSum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/hard/WildcardMatching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/hard/WildcardMatching.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/AllDuplicateNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/AllDuplicateNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/AnagramsInString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/AnagramsInString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/CapacityToShipPackagesInDays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/CapacityToShipPackagesInDays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/CourseSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/CourseSchedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/DiagonalTraversalMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/DiagonalTraversalMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/FloydAlgoDuplicateNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/FloydAlgoDuplicateNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/FourSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/FourSum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/GraphBipartite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/GraphBipartite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/GraphCloner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/GraphCloner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/GraphConnectedComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/GraphConnectedComponents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/GraphRottingOranges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/GraphRottingOranges.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/GraphValidTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/GraphValidTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/InorderSuccessorBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/InorderSuccessorBST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/InorderSuccessorTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/InorderSuccessorTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/KokoEatingBanana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/KokoEatingBanana.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/KthSmallestBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/KthSmallestBST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LRUCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LRUCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LRUCacheBetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LRUCacheBetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LinkedListOddEven.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LinkedListOddEven.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LinkedListRemoveNthFromEnd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LinkedListRemoveNthFromEnd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LinkedListReversal2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LinkedListReversal2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LongestPalindromicSubsequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LongestPalindromicSubsequence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LongestSubStringWithAtmostKUniqueChars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LongestSubStringWithAtmostKUniqueChars.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/LowestCommonSubsequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LowestCommonSubsequence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/MaxLengthRepeatedSubArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/MaxLengthRepeatedSubArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/MergeIntervals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/MergeIntervals.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/NAryTreeDiameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/NAryTreeDiameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/NextGreaterElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/NextGreaterElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/NextPermutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/NextPermutation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/NumOfSubArraysOfSumK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/NumOfSubArraysOfSumK.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/PermutationInString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/PermutationInString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/PermutationPhoneLetterCombinations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/PermutationPhoneLetterCombinations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/Permutations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/Permutations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/ShortestUniqueSubstring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/ShortestUniqueSubstring.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/StringToInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/StringToInteger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/SubdomainVisitCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/SubdomainVisitCount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/Subsets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/Subsets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/Sudoku.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/Sudoku.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/ThreeSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/ThreeSum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/TreeBSTFromPrePostOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/TreeBSTFromPrePostOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/TreeBSTSerDeserBetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/TreeBSTSerDeserBetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/TreeDirectionBwNodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/TreeDirectionBwNodes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/TreeEvenGrandParents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/TreeEvenGrandParents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/TreeEvenOdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/TreeEvenOdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/TreeLCA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/TreeLCA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/TreeMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/TreeMax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/TreeSerDeser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/TreeSerDeser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/TwoSumSorted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/TwoSumSorted.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/UniqueCharFrequency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/UniqueCharFrequency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/ValidateBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/ValidateBST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leatcode/medium/WordSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/WordSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubArrayOfASum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubArrayOfASum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubstringWithKUniqueChars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubstringWithKUniqueChars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubstringWithoutRepeatingChar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubstringWithoutRepeatingChar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/MinimumWindowSubstring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/MinimumWindowSubstring.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/PickToys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/PickToys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/stack/RainWaterTrapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/stack/RainWaterTrapping.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,13 +82,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MaxOfAllSubarryas">
-    <configuration name="BooleanParen_EvalExpr" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.dp.mcm.BooleanParen_EvalExpr" />
+  <component name="RunManager" selected="Application.RainWaterTrapping">
+    <configuration name="LongestSubArrayOfASum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.variable.LongestSubArrayOfASum" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.dp.mcm.*" />
+          <option name="PATTERN" value="com.sks.averma.slidingwindow.variable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -213,12 +96,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CountAnagrams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.fixed.CountAnagrams" />
+    <configuration name="LongestSubstringWithoutRepeatingChar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.variable.LongestSubstringWithoutRepeatingChar" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.slidingwindow.fixed.*" />
+          <option name="PATTERN" value="com.sks.averma.slidingwindow.variable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -226,12 +109,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MaxOfAllSubarryas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.fixed.MaxOfAllSubarryas" />
+    <configuration name="MinimumWindowSubstring" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.variable.MinimumWindowSubstring" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.slidingwindow.fixed.*" />
+          <option name="PATTERN" value="com.sks.averma.slidingwindow.variable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -239,12 +122,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MinMaxSumSubArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.fixed.MinMaxSumSubArray" />
+    <configuration name="PickToys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.variable.PickToys" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.slidingwindow.fixed.*" />
+          <option name="PATTERN" value="com.sks.averma.slidingwindow.variable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -252,12 +135,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PathSumOfNodes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.dp.tree.PathSumOfNodes" />
+    <configuration name="RainWaterTrapping" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.stack.RainWaterTrapping" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.dp.tree.*" />
+          <option name="PATTERN" value="com.sks.averma.stack.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -280,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MaxOfAllSubarryas" />
-        <item itemvalue="Application.CountAnagrams" />
-        <item itemvalue="Application.MinMaxSumSubArray" />
-        <item itemvalue="Application.PathSumOfNodes" />
-        <item itemvalue="Application.BooleanParen_EvalExpr" />
+        <item itemvalue="Application.RainWaterTrapping" />
+        <item itemvalue="Application.PickToys" />
+        <item itemvalue="Application.MinimumWindowSubstring" />
+        <item itemvalue="Application.LongestSubstringWithoutRepeatingChar" />
+        <item itemvalue="Application.LongestSubArrayOfASum" />
       </list>
     </recent_temporary>
   </component>
@@ -503,6 +386,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/ShortestCommonSuperSequence.java</url>
           <line>38</line>
           <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/MaxOfAllSubarryas.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MinInStack.java</url>
