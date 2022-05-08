@@ -6,6 +6,10 @@ import javafx.util.Pair;
 import java.util.*;
 
 public class KTopFrequentNumbers {
+    /**
+     * Time Complexity: O(nlogk)
+     * Space Complexity: O(k)
+     */
     public static int[] topFrequentNumbers_better(int[] numbers, int k) {
         if (numbers == null || numbers.length == 0 || k <= 0 || k > numbers.length) return null;
         int[] out = new int[k];

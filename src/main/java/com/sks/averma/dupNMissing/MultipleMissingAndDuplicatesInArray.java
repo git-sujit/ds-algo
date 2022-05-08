@@ -25,6 +25,23 @@ public class MultipleMissingAndDuplicatesInArray {
         return out;
     }
 
+    /**
+     * Time: O(n), traversing the array once
+     */
+    private static void swapSort_better(int[] nums) {
+        if (nums == null || nums.length == 0) return;
+        int i = 0;
+        while (i < nums.length) {
+            int num = nums[i];
+            if (num == i + 1) i++;
+            else {
+                int temp = nums[num - 1];
+                nums[num - 1] = num;
+                nums[i] = temp;
+            }
+        }
+    }
+
     private static void swapSort(int[] nums) {
         if (nums == null || nums.length == 0) return;
         int i = 0;
@@ -45,9 +62,30 @@ public class MultipleMissingAndDuplicatesInArray {
 
     /**
      * Time Complexity: O(n): Traversing the array once
+     * Space Complexity: O(n): For Array
+     */
+    public static List<List<Integer>> missingAndDuplicates_array(int[] nums) {
+        if (nums == null || nums.length == 0) return null;
+        List<List<Integer>> out = new ArrayList<>();
+        List<Integer> missing = new ArrayList<>();
+        List<Integer> duplicates = new ArrayList<>();
+        int[] count = new int[nums.length];
+        for (int num : nums)
+            count[num - 1]++;
+        for (int i = 0; i < nums.length; i++) {
+            if (count[i] == 0) missing.add(i + 1);
+            if (count[i] == 2) duplicates.add(i + 1);
+        }
+        out.add(missing);
+        out.add(duplicates);
+        return out;
+    }
+
+    /**
+     * Time Complexity: O(n): Traversing the array once
      * Space Complexity: O(n): For HashMap
      */
-    public static List<List<Integer>> missingAndDuplicates(int[] nums) {
+    public static List<List<Integer>> missingAndDuplicates_map(int[] nums) {
         if (nums == null || nums.length == 0) return null;
         List<List<Integer>> out = new ArrayList<>();
         Map<Integer, Integer> numCountMap = new HashMap<>();
@@ -73,14 +111,14 @@ public class MultipleMissingAndDuplicatesInArray {
 
     private static void test(int[] nums) {
         System.out.println("Numbers = " + Arrays.toString(nums));
-        List<List<Integer>> out = missingAndDuplicates(nums);
-        System.out.println("Missing Numbers = " + out.get(0));
-        System.out.println("Duplicate Numbers = " + out.get(1));
 
-        System.out.println("\nUsing Swap Sort:: ");
+        List<List<Integer>> out = missingAndDuplicates_map(nums);
+        System.out.println("[Map] Missing = " + out.get(0) + ", Duplicate = " + out.get(1));
+
+        out = missingAndDuplicates_array(nums);
+        System.out.println("[Array] Missing = " + out.get(0) + ", Duplicate = " + out.get(1));
+
         out = multipleMissingAndDuplicates_swapSort(nums);
-        System.out.println("Missing Numbers = " + out.get(0));
-        System.out.println("Duplicate Numbers = " + out.get(1));
-        multipleMissingAndDuplicates_swapSort(nums);
+        System.out.println("[Swap-Sort] Missing = " + out.get(0) + ", Duplicate = " + out.get(1));
     }
 }

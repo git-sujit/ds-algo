@@ -8,6 +8,12 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class KClosestPoints {
+    /**
+     * Time complexity: O(N⋅logk)
+     * Adding to/removing from the heap (or priority queue) only takes O(logk) time when the size of the heap is capped at k elements.
+     * Space complexity: O(k)
+     * The heap (or priority queue) will contain at most k elements.
+     */
     public static int[][] kClosetPoints_better(int[][] points, int[] targetPoint, int k) {
         if (points == null || points.length == 0 || targetPoint == null || targetPoint.length == 0 || k <= 0 || k > points.length)
             return null;

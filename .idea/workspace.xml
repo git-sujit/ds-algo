@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/SubArraySumCount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/MaxOfAllSubarryas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/MaxOfAllSubarryas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubArrayOfASum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubArrayOfASum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubstringWithKUniqueChars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubstringWithKUniqueChars.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubstringWithoutRepeatingChar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubstringWithoutRepeatingChar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/MinimumWindowSubstring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/MinimumWindowSubstring.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/PickToys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/PickToys.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/stack/RainWaterTrapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/stack/RainWaterTrapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dupNMissing/MissingAndDuplicateInArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dupNMissing/MissingAndDuplicateInArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dupNMissing/MultipleMissingAndDuplicatesInArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dupNMissing/MultipleMissingAndDuplicatesInArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KClosestElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KClosestElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KClosestPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KClosestPoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KTopFrequentNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KTopFrequentNumbers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,13 +79,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RainWaterTrapping">
-    <configuration name="LongestSubArrayOfASum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.variable.LongestSubArrayOfASum" />
+  <component name="RunManager" selected="Application.MultipleMissingAndDuplicatesInArray">
+    <configuration name="KClosestElements" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.heap.KClosestElements" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.slidingwindow.variable.*" />
+          <option name="PATTERN" value="com.sks.averma.heap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -96,12 +93,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LongestSubstringWithoutRepeatingChar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.variable.LongestSubstringWithoutRepeatingChar" />
+    <configuration name="MissingAndDuplicateInArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.dupNMissing.MissingAndDuplicateInArray" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.slidingwindow.variable.*" />
+          <option name="PATTERN" value="com.sks.averma.dupNMissing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -109,12 +106,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MinimumWindowSubstring" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.variable.MinimumWindowSubstring" />
+    <configuration name="MultipleMissingAndDuplicatesInArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.dupNMissing.MultipleMissingAndDuplicatesInArray" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.slidingwindow.variable.*" />
+          <option name="PATTERN" value="com.sks.averma.dupNMissing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -163,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MultipleMissingAndDuplicatesInArray" />
+        <item itemvalue="Application.MissingAndDuplicateInArray" />
+        <item itemvalue="Application.KClosestElements" />
         <item itemvalue="Application.RainWaterTrapping" />
         <item itemvalue="Application.PickToys" />
-        <item itemvalue="Application.MinimumWindowSubstring" />
-        <item itemvalue="Application.LongestSubstringWithoutRepeatingChar" />
-        <item itemvalue="Application.LongestSubArrayOfASum" />
       </list>
     </recent_temporary>
   </component>
@@ -354,7 +351,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/dupNMissing/MultipleMissingAndDuplicatesInArray.java</url>
-          <line>31</line>
+          <line>48</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

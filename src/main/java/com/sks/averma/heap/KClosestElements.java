@@ -17,9 +17,11 @@ public class KClosestElements {
         PriorityQueue<Pair<Integer, Integer>> maxHeap = new PriorityQueue<>(Comparator.comparing((Pair<Integer, Integer> p) -> p.getValue()).reversed());
         for (int e : a) {
             maxHeap.add(new Pair(e, Math.abs(e - x)));
-            if (maxHeap.size() > k)
-                maxHeap.remove();
+            //if (maxHeap.size() > k)
+            //maxHeap.remove();
         }
+        while (maxHeap.size() > k)
+            maxHeap.remove();
         List<Integer> out = new ArrayList<>();
         while (!maxHeap.isEmpty())
             out.add(maxHeap.remove().getKey());
