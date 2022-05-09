@@ -1,4 +1,4 @@
-package com.sks.averma.binarysearch;
+package com.sks.averma.binarysearch.bsa;
 
 import java.util.Arrays;
 
@@ -8,10 +8,9 @@ import java.util.Arrays;
  * Return Index of peak element
  */
 public class PeakElement {
-
     /**
      * Time Complexity:  O(logn)
-     * Space Complexity: O(1)
+     * Space Complexity: O(n)
      */
     public static int findPeakElement_recursive(int[] a) {
         if (a == null || a.length == 0) return -1;
@@ -25,6 +24,51 @@ public class PeakElement {
             return findPeakElement_recursive(a, s, mid);
         return findPeakElement_recursive(a, mid + 1, e);
     }
+
+    /**
+     * Time Complexity:  O(logn)
+     * Space Complexity: O(1)
+     */
+    public static int findPeakElement_iterative(int[] a) {
+        int s = 0;
+        int e = a.length - 1;
+        while (s <= e) {
+            if (s == e) return s;
+            int m = s + (e - s) / 2;
+            if (a[m] > a[m + 1]) e = m;
+            else s = m + 1;
+        }
+        return -1;
+    }
+
+    /**
+     * Time Complexity:  O(logn)
+     * Space Complexity: O(1)
+     */
+    public static int findPeakElement(int[] a) {
+        if (a == null || a.length == 0) return -1;
+        int s = 0;
+        int e = a.length - 1;
+        while (s <= e) {
+            int mid = s + (e - s) / 2;
+            if (mid > 0 && mid < a.length - 1) {
+                if (a[mid] > a[mid - 1] && a[mid] > a[mid + 1])
+                    return a[mid];
+                else if (a[mid] < a[mid - 1])
+                    e = mid - 1;
+                else if (a[mid] < a[mid + 1])
+                    s = mid + 1;
+            } else if (mid == 0) {
+                if (mid + 1 < a.length && a[mid] > a[mid + 1]) return a[mid];
+                else s = mid + 1;
+            } else if (mid == a.length - 1) {
+                if (mid - 1 >= 0 && a[mid] > a[mid - 1]) return a[mid];
+                else e = mid - 1;
+            }
+        }
+        return -1;
+    }
+
 
     /**
      * Time Complexity:  O(logn)
@@ -53,30 +97,6 @@ public class PeakElement {
         return -1;
     }
 
-    public static int findPeakElement(int[] a) {
-        if (a == null || a.length == 0) return -1;
-        int s = 0;
-        int e = a.length - 1;
-        while (s <= e) {
-            int mid = s + (e - s) / 2;
-            if (mid > 0 && mid < a.length - 1) {
-                if (a[mid] > a[mid - 1] && a[mid] > a[mid + 1])
-                    return a[mid];
-                else if (a[mid] < a[mid - 1])
-                    e = mid - 1;
-                else if (a[mid] < a[mid + 1])
-                    s = mid + 1;
-            } else if (mid == 0) {
-                if (mid + 1 < a.length && a[mid] > a[mid + 1]) return a[mid];
-                else s = mid + 1;
-            } else if (mid == a.length - 1) {
-                if (mid - 1 >= 0 && a[mid] > a[mid - 1]) return a[mid];
-                else e = mid - 1;
-            }
-        }
-        return -1;
-    }
-
     public static void main(String[] args) {
         int[] a = {5, 10, 20, 15};
         test(a);
@@ -96,6 +116,7 @@ public class PeakElement {
         System.out.println("Peak Element = " + findPeakElement(a));
         System.out.println("[Better]Peak Element = " + findPeakElement_better_not_working(a));
         System.out.println("[Recursion]Peak Element = " + findPeakElement_recursive(a));
+        System.out.println("[Iterative]Peak Element = " + findPeakElement_iterative(a));
     }
 
 }

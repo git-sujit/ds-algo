@@ -1,4 +1,7 @@
-package com.sks.averma.binarysearch;
+package com.sks.averma.binarysearch.bsa;
+
+import com.sks.averma.binarysearch.BinarySearch;
+import com.sks.averma.binarysearch.bsa.PeakElement;
 
 import java.util.Arrays;
 
@@ -9,6 +12,10 @@ import java.util.Arrays;
  * Idea: Similar to finding the peak element
  */
 public class BitonicArray {
+    /**
+     * Time Complexity:  O(logn)
+     * Space Complexity: O(logn)
+     */
     public static int maxElement(int[] bitonic) {
         if (bitonic == null || bitonic.length == 0) return -1;
         if (bitonic.length == 1) return bitonic[0];

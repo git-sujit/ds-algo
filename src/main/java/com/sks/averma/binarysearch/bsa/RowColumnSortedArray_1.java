@@ -1,4 +1,4 @@
-package com.sks.averma.binarysearch;
+package com.sks.averma.binarysearch.bsa;
 
 import java.util.Arrays;
 
@@ -13,14 +13,14 @@ import java.util.Arrays;
  */
 public class RowColumnSortedArray_1 {
     /**
-     * Time Complexity: O(rows*cols)
+     * Time Complexity: O(rows+cols) ~ O(n), each iteration we are removing one row or column
      * Space Complexity: O(1)
      */
     public static int[] searchInRowColumnSortedArray(int[][] a, int n) {
         int rows = a.length;
         int cols = a[0].length;
         int r = 0;
-        int c = cols-1;
+        int c = cols - 1;
         while (r >= 0 && r < rows && c >= 0 && c < cols) {
             if (n < a[r][c]) c--;
             else if (n == a[r][c]) return new int[]{r, c};

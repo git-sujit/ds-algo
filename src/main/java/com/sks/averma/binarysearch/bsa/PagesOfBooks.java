@@ -1,4 +1,4 @@
-package com.sks.averma.binarysearch;
+package com.sks.averma.binarysearch.bsa;
 
 import java.util.Arrays;
 

@@ -1,7 +1,7 @@
 package com.sks.averma.binarysearch;
 
 /**
- * Find first occurrence of 1 in infinite binary sorted array
+ * Find first occurrence of first 1 in infinite binary sorted array
  * E.g: a[] = {0,0,0,0,0,0,0,0,0,0,0,0......1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1......}
  */
 public class InfiniteBinarySortedArray {

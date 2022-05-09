@@ -57,6 +57,14 @@ public class SortedRotatedArray {
         return -1;
     }
 
+    private static int binarySearch_recursive(int[] a, int n, int s, int e) {
+        if (s > e) return -1;
+        int m = s + (e - s) / 2;
+        if (n < a[m]) return binarySearch_recursive(a, n, s, m - 1);
+        else if (n == a[m]) return m;
+        else return binarySearch_recursive(a, s, m + 1, e);
+    }
+
     public static void main(String[] args) {
         int[] a = {2, 5, 6, 8, 10, 13, 15, 18, 20};
         int[] rotatedA = {15, 18, 20, 2, 5, 6, 8, 10, 13};
