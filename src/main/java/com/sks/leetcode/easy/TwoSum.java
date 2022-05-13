@@ -10,8 +10,13 @@ import java.util.*;
  * You can return the answer in any order.
  **/
 
+/**
+ * Like 3Sum, 4Sum or kSum we can use sort & two-pointer approach.
+ * But sorting will be O(nlogn), however for twosum we can solve in O(n)
+ */
 public class TwoSum {
     /**
+     * ONE-PASS-HASHTable
      * Time Complexity: O(n)
      * Space Complexity: O(n)
      */

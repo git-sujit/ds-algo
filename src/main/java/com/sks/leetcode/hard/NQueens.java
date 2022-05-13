@@ -1,5 +1,7 @@
 package com.sks.leetcode.hard;
 
+import java.util.*;
+
 /**
  * The n-queens puzzle is the problem of placing n queens on an n x n chessboard such that no two queens attack each other.
  * Given an integer n, return all distinct solutions to the n-queens puzzle. You may return the answer in any order.
@@ -21,4 +23,68 @@ public class NQueens {
      * Recall that to implement backtracking, we implement a backtrack function that makes some changes to the state, calls itself again,
      * and then when that call returns it undoes those changes (this last part is why it's called "backtracking").
      */
+
+    public List<List<String>> solveNQueens(int n) {
+        List<List<String>> res = new ArrayList<>();
+        if (n <= 0) return res;
+        char[][] board = new char[n][n];
+        for (char[] r : board) Arrays.fill(r, '.');
+        backtrack(n, 0, new HashSet<>(), new HashSet<>(), new HashSet<>(), board, res);
+        return res;
+    }
+
+    private void backtrack(int n, int row, Set<Integer> cols, Set<Integer> diags, Set<Integer> antiDiags, char[][] board, List<List<String>> res) {
+        if (row == n) {
+            res.add(boardToString(board));
+            return;
+        }
+        for (int col = 0; col < n; col++) {
+            int currDiag = row - col;
+            int currAntiDiag = row + col;
+            if (cols.contains(col) || diags.contains(currDiag) || antiDiags.contains(currAntiDiag))
+                continue;
+            //Add Queen To Board
+            cols.add(col);
+            diags.add(currDiag);
+            antiDiags.add(currAntiDiag);
+            board[row][col] = 'Q';
+            // Move to next row with updated board
+            backtrack(n, row + 1, cols, diags, antiDiags, board, res);
+            //Remove the queen from board because we have explored all valid path
+            cols.remove(col);
+            diags.remove(currDiag);
+            antiDiags.remove(currAntiDiag);
+            board[row][col] = '.';
+        }
+    }
+
+    private List<String> boardToString(char[][] board) {
+        List<String> out = new ArrayList<>();
+        for (int i = 0; i < board.length; i++)
+            out.add(new String(board[i]));
+        return out;
+    }
+
+    public static void main(String[] args) {
+        demo(1);
+        demo(2);
+        demo(3);
+        demo(4);
+        demo(5);
+        demo(6);
+        demo(7);
+        demo(8);
+    }
+
+    private static void demo(int n) {
+        System.out.println("########################################");
+        System.out.println("No. of Queens = " + n + ", Board = (" + n + "*" + n + ")");
+        List<List<String>> sols = new NQueens().solveNQueens(n);
+        System.out.println("No. of solutions = " + sols.size());
+        for (int i = 0; i < sols.size(); i++) {
+            System.out.println("## Solution-" + (i + 1) + " ##");
+            for (String s : sols.get(i))
+                System.out.println(s);
+        }
+    }
 }

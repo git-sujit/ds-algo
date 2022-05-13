@@ -50,4 +50,20 @@ public class Node {
         for (Node n : node.children)
             if (!visited.contains(n)) visit_dfs(n, visited);
     }
+
+    public static Node prepareTestData_1() {
+        Map<Integer, Node> nodeMap = createNodes(6);
+        Node n1 = nodeMap.get(1);
+        n1.children = Arrays.asList(nodeMap.get(2), nodeMap.get(3), nodeMap.get(4));
+        nodeMap.get(3).children = Arrays.asList(nodeMap.get(5), nodeMap.get(6));
+        return n1;
+    }
+
+    private static Map<Integer, Node> createNodes(int n) {
+        Map<Integer, Node> map = new HashMap<>();
+        for (int i = 1; i < n; i++) {
+            map.put(i, new Node(i));
+        }
+        return map;
+    }
 }

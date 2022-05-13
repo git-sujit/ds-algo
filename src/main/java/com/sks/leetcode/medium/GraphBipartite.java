@@ -43,6 +43,7 @@ public class GraphBipartite {
         return true;
     }
 
+
     public static boolean isBipartite_partial(int[][] graph) {
         int[] color = new int[graph.length];
         Arrays.fill(color, -1);

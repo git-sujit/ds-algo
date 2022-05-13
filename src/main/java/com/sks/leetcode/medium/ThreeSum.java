@@ -11,6 +11,41 @@ import java.util.*;
  */
 public class ThreeSum {
     /**
+     * (Sort & Two pointers) approach(left/right)
+     * Sort Array & left/right pointer: this makes more efficient(10 times efficient)
+     * Time Complexity: O(n^2)
+     * Space Complexity: O(n)
+     */
+    public List<List<Integer>> threeSum_sort(int[] nums) {
+        if (nums == null || nums.length == 0) return null;
+        Arrays.sort(nums);
+        List<List<Integer>> res = new ArrayList<>();
+        for (int i = 0; i < nums.length; i++) {
+            //i is pivot
+            if (i == 0 || nums[i] != nums[i - 1])
+                twoSum(nums, i, res);
+        }
+        return res;
+    }
+
+    public static void twoSum(int[] nums, int start, List<List<Integer>> res) {
+        int left = start + 1;
+        int right = nums.length - 1;
+        while (left < right) {
+            int sum = nums[start] + nums[left] + nums[right];
+            if (sum < 0) left++;
+            else if (sum == 0) {
+                res.add(Arrays.asList(nums[start], nums[left], nums[right]));
+                left++;
+                right--;
+                // For duplicate numbers
+                while (left < right && nums[left] == nums[left - 1])
+                    left++;
+            } else right--;
+        }
+    }
+
+    /**
      * Input Array cant be modified
      * Time Complexity: O(n^2)
      * Space Complexity: O(n)
@@ -35,37 +70,6 @@ public class ThreeSum {
             }
         }
         return new ArrayList<>(res);
-    }
-
-    /**
-     * Time Complexity: O(n^2)
-     * Space Complexity: O(n)
-     */
-    public List<List<Integer>> threeSum_sort(int[] nums) {
-        if (nums == null || nums.length == 0) return null;
-        Arrays.sort(nums);
-        List<List<Integer>> res = new ArrayList<>();
-        for (int i = 0; i < nums.length; i++) {
-            if (i == 0 || nums[i] != nums[i - 1])
-                twoSum(nums, i, res);
-        }
-        return res;
-    }
-
-    public static void twoSum(int[] nums, int start, List<List<Integer>> res) {
-        int left = start + 1;
-        int right = nums.length - 1;
-        while (left < right) {
-            int sum = nums[start] + nums[left] + nums[right];
-            if (sum < 0) left++;
-            else if (sum == 0) {
-                res.add(Arrays.asList(nums[start], nums[left], nums[right]));
-                left++;
-                right--;
-                while (left < right && nums[left] == nums[left - 1])
-                    left++;
-            } else right--;
-        }
     }
 
     /**
@@ -99,6 +103,30 @@ public class ThreeSum {
         return new ArrayList<>(out);
     }
 
+    public List<List<Integer>> three_sum_latest_TLE(int[] nums) {
+        if (nums == null || nums.length == 0) return null;
+        Set<List<Integer>> out = new HashSet<>();
+        int len = nums.length;
+        Map<Integer, List<int[]>> siMap = new HashMap<>();
+        for (int i = 0; i < len; i++) {
+            for (int j = i + 1; j < len; j++) {
+                siMap.computeIfAbsent(nums[i] + nums[j], e -> new ArrayList<>()).add(new int[]{i, j});
+            }
+        }
+        for (int i = 0; i < len; i++) {
+            if (siMap.containsKey(-nums[i])) {
+                List<int[]> idxList = siMap.get(-nums[i]);
+                for (int[] idx : idxList) {
+                    if (i != idx[0] && i != idx[1]) {
+                        List<Integer> triplet = Arrays.asList(nums[i], nums[idx[0]], nums[idx[1]]);
+                        Collections.sort(triplet);
+                        out.add(triplet);
+                    }
+                }
+            }
+        }
+        return new ArrayList(out);
+    }
 
     public static void main(String[] args) {
         int[] nums = {-1, 0, 1, 2, -1, -4};
@@ -110,5 +138,6 @@ public class ThreeSum {
         System.out.println("Unique Triplets(Values) = " + new ThreeSum().threeSum_TLE(nums));
         System.out.println("[Sort]Unique Triplets(Values) = " + new ThreeSum().threeSum_sort(nums));
         System.out.println("[No-Sort]Unique Triplets(Values) = " + new ThreeSum().threeSum_no_sort(nums));
+        System.out.println("[Latest-No-Sort]Unique Triplets(Values) = " + new ThreeSum().three_sum_latest_TLE(nums));
     }
 }

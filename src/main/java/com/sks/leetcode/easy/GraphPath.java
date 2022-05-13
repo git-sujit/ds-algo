@@ -12,8 +12,8 @@ import java.util.*;
 public class GraphPath {
     /**
      * Using Adjacency List
-     * Time Complexity:
-     * Space Complexity:
+     * Time Complexity : O(n), n is no. of nodes
+     * Space Complexity: O(n)
      * Typical Candidate for BFS: We are trying to get path between two nodes
      */
     public static boolean validPath_adjList(int n, int[][] edges, int source, int destination) {
@@ -43,10 +43,11 @@ public class GraphPath {
         }
         return false;
     }
-    
+
     /**
-     * Time Complexity:
-     * Space Complexity:
+     * Without Adjacency list
+     * Time Complexity : O(n), n is no. of nodes
+     * Space Complexity: O(n)
      * Typical Candidate for BFS: We are trying to get path between two nodes
      */
     public static boolean validPath(int n, int[][] edges, int source, int destination) {
