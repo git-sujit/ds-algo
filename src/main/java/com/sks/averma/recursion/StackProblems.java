@@ -4,25 +4,37 @@ import java.util.Stack;
 
 public class StackProblems {
     static class SortStack {
-        public void sort_stack(Stack<Integer> stack) {
+        /**
+         * Time Complexity : O(n^2), for each temp-entry we might scan all entry of stack to find its place
+         * Space Complexity: O(n)
+         */
+        public void sort_stack_iterative(Stack<Integer> stack) {
             if (stack == null) return;
             Stack<Integer> temp = new Stack<>();
-            while (!stack.isEmpty()) temp.push(stack.pop());
+            while (!stack.isEmpty())
+                temp.push(stack.pop());
             stack.push(temp.pop());
             while (!temp.isEmpty()) {
-                if (temp.peek() >= stack.peek()) stack.push(temp.pop());
+                if (temp.peek() >= stack.peek())
+                    stack.push(temp.pop());
                 else {
                     int t = temp.pop();
-                    while (!stack.isEmpty() && t < stack.peek()) temp.push(stack.pop());
+                    while (!stack.isEmpty() && t < stack.peek())
+                        temp.push(stack.pop());
                     stack.push(t);
                 }
             }
         }
 
+        /**
+         * Time Complexity : O(n^2), for each temp-entry we might scan all entry of stack to find its place
+         * Space Complexity: O(n)
+         */
         public void sort_stack_recursive(Stack<Integer> stack) {
             if (stack.isEmpty()) return;
             Stack<Integer> temp = new Stack<>();
-            while (!stack.isEmpty()) temp.push(stack.pop());
+            while (!stack.isEmpty())
+                temp.push(stack.pop());
             sort_stack_recursive(stack, temp);
         }
 
@@ -31,7 +43,8 @@ public class StackProblems {
             if (stack.isEmpty() || temp.peek() >= stack.peek()) stack.push(temp.pop());
             else {
                 int t = temp.pop();
-                while (!stack.isEmpty() && t < stack.peek()) temp.push(stack.pop());
+                while (!stack.isEmpty() && t < stack.peek())
+                    temp.push(stack.pop());
                 stack.push(t);
             }
             sort_stack_recursive(stack, temp);
@@ -39,6 +52,10 @@ public class StackProblems {
     }
 
     static class StackMiddleDeletion {
+        /**
+         * Time Complexity : O(n)
+         * Space Complexity: O(n)
+         */
         public void deleteMiddle(Stack<Integer> stack) {
             if (stack == null || stack.isEmpty()) return;
             Stack<Integer> temp = new Stack<>();
@@ -85,6 +102,13 @@ public class StackProblems {
             s.push(e);
             while (!s1.isEmpty()) s.push(s1.pop());
         }
+
+        public static Stack<Integer> reverseStack_simple(Stack<Integer> stack) {
+            if (stack.isEmpty()) return null;
+            Stack<Integer> temp = new Stack<>();
+            while (!stack.isEmpty()) temp.push(stack.pop());
+            return temp;
+        }
     }
 
     public static void main(String[] args) {
@@ -95,7 +119,7 @@ public class StackProblems {
         stack.push(9);
         stack.push(2);
         System.out.println("Stack = " + stack);
-        new SortStack().sort_stack(stack);
+        new SortStack().sort_stack_iterative(stack);
         System.out.println("Sorted = " + stack);
 
         stack = new Stack<>();
@@ -122,5 +146,7 @@ public class StackProblems {
         System.out.println("Delete Middle = " + stack);
         new StackReverse().reverseStack_recursion(stack);
         System.out.println("Reversed Stack = " + stack);
+        stack = new StackReverse().reverseStack_simple(stack);
+        System.out.println("Again Reversed Stack = " + stack);
     }
 }

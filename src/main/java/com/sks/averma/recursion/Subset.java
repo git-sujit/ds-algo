@@ -9,8 +9,8 @@ import java.util.List;
  */
 public class Subset {
     /**
-     * Time Complexity : O(2^n)
-     * Space Complexity: O(2^n)
+     * Time Complexity : O(n*2^n)
+     * Space Complexity: O(n*2^n)
      */
     public static List<String> findSubsets(String s) {
         List<String> out = new ArrayList<>();
@@ -26,8 +26,8 @@ public class Subset {
     }
 
     /**
-     * Time Complexity : O(2^n)
-     * Space Complexity: O(2^n)
+     * Time Complexity : O(n*2^n)
+     * Space Complexity: O(n*2^n)
      */
     public static List<List<Integer>> findSubsets(List<Integer> nums) {
         List<List<Integer>> out = new ArrayList<>();

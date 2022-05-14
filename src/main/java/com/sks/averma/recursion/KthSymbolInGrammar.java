@@ -9,6 +9,10 @@ import java.util.List;
  * we look at the previous row and replace each occurrence of 0 with 01, and each occurrence of 1 with 10.
  */
 public class KthSymbolInGrammar {
+    /**
+     * Time Complexity : O(logn)
+     * Time Complexity : O(logn)
+     */
     public static int kthGrammar_recursion(int n, int k) {
         if (n <= 0 || k <= 0 || k > Math.pow(2, k)) return -1;
         if (n == 1 && k == 1) return 0;
@@ -16,7 +20,8 @@ public class KthSymbolInGrammar {
         if (k <= mid) return kthGrammar_recursion(n - 1, k);
         else if (k > mid) {
             int out = kthGrammar_recursion(n - 1, k - mid);
-            return out == 0 ? 1 : 0;
+            //return out == 0 ? 1 : 0;
+            return out ^ 1;
         }
         return -1;
     }

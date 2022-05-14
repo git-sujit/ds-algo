@@ -3,6 +3,10 @@ package com.sks.averma.recursion;
 import com.sks.leetcode.common.TreeNode;
 import com.sks.leetcode.common.TreePrinter;
 
+/**
+ * Height of node: No. of edges from node to most distant leaf
+ * Depth of node: No. of edges from node to root
+ */
 public class HeightOfBinaryTree {
     /**
      * Time : O(n), we are traversing all the nodes
@@ -11,7 +15,7 @@ public class HeightOfBinaryTree {
      */
     public static int height(TreeNode root) {
         // 2. Base Condition
-        if (root == null) return 0;
+        if (root == null) return -1; // null tree has height=-1
         // 3. Induction
         int leftHeight = height(root.left);
         int rightHeight = height(root.right);
@@ -19,7 +23,7 @@ public class HeightOfBinaryTree {
     }
 
     public static int height_better(TreeNode root) {
-        if (root == null) return 0;
+        if (root == null) return -1;
         return 1 + Math.max(height_better(root.left), height_better(root.right));
     }
 

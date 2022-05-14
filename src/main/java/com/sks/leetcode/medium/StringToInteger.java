@@ -16,12 +16,13 @@ public class StringToInteger {
                 if (c == '-') isNegative = true;
                 else validNumStr += c;
                 break;
-            }
+            } else break;
         }
         while (i < s.length()) {
             char c = s.charAt(i++);
             if (c == '0' || digits.contains(c))
                 validNumStr += c;
+            else break;
         }
         System.out.println("validNumStr = " + validNumStr + ", isNegative = " + isNegative);
         if (validNumStr.isEmpty()) return 0;
@@ -36,7 +37,16 @@ public class StringToInteger {
     }
 
     public static void main(String[] args) {
-        String s = "42";
+        String s = "1";
+        test(s);
+
+        s = "20000000000000000000";
+        test(s);
+
+        s = "words and 987";
+        test(s);
+
+        s = "42";
         test(s);
 
         s = "   -42";

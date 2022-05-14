@@ -3,10 +3,10 @@ package com.sks.leetcode.hard;
 import java.util.*;
 
 /**
- * The n-queens puzzle is the problem of placing n queens on an n x n chessboard such that no two queens attack each other.
+ * The n-queens puzzle is the problem of placing n queens on an [n x n] chessboard such that no two queens attack each other.
  * Given an integer n, return all distinct solutions to the n-queens puzzle. You may return the answer in any order.
  * Each solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' both indicate a queen and an empty space, respectively.
- * Note: A queen can be attacked if another queen is on the same row, column, diagonal, or anti-diagonal.
+ * Note: A queen can be attacked if another queen is on the same row, column, diagonal(row-col), or anti-diagonal(row+col).
  */
 public class NQueens {
     /**
@@ -20,15 +20,21 @@ public class NQueens {
     /**
      * BACKTRACKING
      * This is a perfect problem for backtracking - place the queens one by one, and when all possibilities are exhausted, backtrack by removing a queen and placing it elsewhere.
-     * Recall that to implement backtracking, we implement a backtrack function that makes some changes to the state, calls itself again,
-     * and then when that call returns it undoes those changes (this last part is why it's called "backtracking").
+     * Recall that to implement backtracking, we implement a backtrack function that
+     * 1. makes some changes to the state,
+     * 2. calls itself again,
+     * 3. and then when that call returns it undoes those changes (this last part is why it's called "backtracking").
      */
-
+    /**
+     * Time Complexity : O(N!)
+     * Space Complexity: O(n^2)
+     */
     public List<List<String>> solveNQueens(int n) {
         List<List<String>> res = new ArrayList<>();
         if (n <= 0) return res;
         char[][] board = new char[n][n];
-        for (char[] r : board) Arrays.fill(r, '.');
+        for (char[] r : board)
+            Arrays.fill(r, '.');
         backtrack(n, 0, new HashSet<>(), new HashSet<>(), new HashSet<>(), board, res);
         return res;
     }
@@ -43,14 +49,14 @@ public class NQueens {
             int currAntiDiag = row + col;
             if (cols.contains(col) || diags.contains(currDiag) || antiDiags.contains(currAntiDiag))
                 continue;
-            //Add Queen To Board
+            //1. Add Queen To Board i.e change state
             cols.add(col);
             diags.add(currDiag);
             antiDiags.add(currAntiDiag);
             board[row][col] = 'Q';
-            // Move to next row with updated board
+            //2. Move to next row with updated board i.e call itself
             backtrack(n, row + 1, cols, diags, antiDiags, board, res);
-            //Remove the queen from board because we have explored all valid path
+            //3. backtrack- Remove the queen from board because we have explored all valid path
             cols.remove(col);
             diags.remove(currDiag);
             antiDiags.remove(currAntiDiag);

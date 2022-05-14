@@ -15,6 +15,7 @@ public class BalancedParentheses {
     }
 
     private static void allBalancedParens(int open, int close, String paren, List<String> parenList) {
+        System.out.println("abp(" + open + ", " + close + ", " + paren + ", " + parenList + ")");
         if (open == 0 && close == 0) {
             parenList.add(paren);
             return;
@@ -27,8 +28,8 @@ public class BalancedParentheses {
 
     public static void main(String[] args) {
         demo(3);
-        demo(4);
-        demo(5);
+        //demo(4);
+        //demo(5);
     }
 
     private static void demo(int n) {
