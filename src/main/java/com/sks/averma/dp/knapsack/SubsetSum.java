@@ -6,6 +6,7 @@ import java.util.Arrays;
  * @author : Sujit K Singh
  * Purpose : Knapsack variations : Subset Sum
  * Given a set of non-negative integers, and a value sum, determine if there is a subset of the given set with sum equal to given sum.
+ * Sliding Window: If it says find subarray
  * <p>
  * How to Identify Knapsack-patters:
  * 1. Given no. of items :: Array
@@ -13,8 +14,10 @@ import java.util.Arrays;
  * 3. Choice Diagram
  */
 public class SubsetSum {
-    // Time Complexity: O(2^n)
-    // Space Complexity: Method-stack will take space
+    /**
+     * Time Complexity : O(2^n)
+     * Space Complexity: O(n): method stack
+     **/
     public static boolean isSubsetSum_recursion(int[] arr, int sum, int n) {
         if (sum == 0) return true; /// This will be first because is sum==0 then true
         if (n == 0) return false;

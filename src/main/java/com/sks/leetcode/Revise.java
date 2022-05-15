@@ -1,9 +1,21 @@
 package com.sks.leetcode;
 
+import javafx.util.Pair;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class Revise {
+    private static void demo_pair() {
+        Set<Pair<Integer, Integer>> visited = new HashSet<>();
+        visited.add(new Pair(1, 2));
+        System.out.println("Set = " + visited.size() + ", " + visited);
+        visited.add(new Pair(1, 2));
+        System.out.println("Set = " + visited.size() + ", " + visited);
+        System.out.println("Contains(1,2) = " + visited.contains(new Pair<>(1, 2)));
+        System.out.println("Contains(2,1) = " + visited.contains(new Pair<>(2, 1)));
+    }
+
     private static void bitwiseOperator() {
         int n = 81;
         String s = Integer.toBinaryString(n);
@@ -194,6 +206,7 @@ public class Revise {
     }
 
     public static void main(String[] args) {
+        demo_pair();
         //stackInJava();
         //queueInJava();
         stringUtilities();

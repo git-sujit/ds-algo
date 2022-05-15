@@ -7,9 +7,10 @@ import java.util.Arrays;
  * Purpose : Given an array of non-negative integers arr[] of length N and an integer X, the task is to find the number of subsets with sum equal to X.
  */
 public class CountOfSubsetSum {
-
-    // Time Complexity
-    // Space Complexity
+    /**
+     * Time Complexity : O(n*sum)
+     * Space Complexity: O(n*sum)
+     **/
     public static int countOfSubsetSum(int[] arr, int sum, int n) {
         int[][] t = new int[n + 1][sum + 1];
         for (int i = 0; i <= n; i++) {

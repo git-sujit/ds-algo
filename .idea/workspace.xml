@@ -5,21 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/SumOddLenSubArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/hard/NQueensCount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LinkedListMergeKSortedLists.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LongestPalindromicSubstring_ManachersAlgo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/sort/MergeSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/sort/QuickSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/CountingBits.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/IslandPerimeter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/BaseNeg2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/IslandCount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/IslandMaxArea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LinkedListPlusOne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/TreeDeepestLeavesSum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/BalancedParentheses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/BalancedParentheses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/HeightOfBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/HeightOfBinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/KthSymbolInGrammar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/KthSymbolInGrammar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/StackProblems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/StackProblems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/Subset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/Subset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/hard/NQueens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/hard/NQueens.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LinkedListSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LinkedListSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/StringToInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/StringToInteger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/CountOfSubsetSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/CountOfSubsetSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/SubsetSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/SubsetSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/TargetSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/TargetSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/Revise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/Revise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/Subsets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/Subsets.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,35 +86,9 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LongestPalindromicSubstring_ManachersAlgo">
-    <configuration name="BalancedParentheses" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.recursion.BalancedParentheses" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.averma.recursion.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JosephusProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.recursion.JosephusProblem" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.averma.recursion.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LongestPalindromicSubstring_ManachersAlgo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.medium.LongestPalindromicSubstring_ManachersAlgo" />
+  <component name="RunManager" selected="Application.IslandCount">
+    <configuration name="IslandCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.medium.IslandCount" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
@@ -128,12 +100,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NBitBinary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.recursion.NBitBinary" />
+    <configuration name="IslandMaxArea" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.medium.IslandMaxArea" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.recursion.*" />
+          <option name="PATTERN" value="com.sks.leetcode.medium.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -141,12 +113,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringToInteger" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.medium.StringToInteger" />
+    <configuration name="IslandPerimeter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.easy.IslandPerimeter" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.leetcode.easy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedListPlusOne" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.medium.LinkedListPlusOne" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.sks.leetcode.medium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Revise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.Revise" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.leetcode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -169,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LongestPalindromicSubstring_ManachersAlgo" />
-        <item itemvalue="Application.JosephusProblem" />
-        <item itemvalue="Application.NBitBinary" />
-        <item itemvalue="Application.BalancedParentheses" />
-        <item itemvalue="Application.StringToInteger" />
+        <item itemvalue="Application.IslandCount" />
+        <item itemvalue="Application.IslandMaxArea" />
+        <item itemvalue="Application.Revise" />
+        <item itemvalue="Application.IslandPerimeter" />
+        <item itemvalue="Application.LinkedListPlusOne" />
       </list>
     </recent_temporary>
   </component>
@@ -309,11 +307,6 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/SubsetSum.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/KokoEatingBanana.java</url>
           <line>81</line>
           <option name="timeStamp" value="9" />
@@ -397,6 +390,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/MaxOfAllSubarryas.java</url>
           <line>16</line>
           <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/IslandMaxArea.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/IslandMaxArea.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MinInStack.java</url>

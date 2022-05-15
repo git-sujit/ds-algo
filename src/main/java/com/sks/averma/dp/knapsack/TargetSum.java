@@ -9,10 +9,44 @@ import java.util.Arrays;
  * Find out how many ways to assign symbols to make sum of integers equal to target S.
  */
 public class TargetSum {
+    /**
+     * Think... TargetSum is actually difference(s1-s2)
+     * s1+s2 = total-sum so s1 = (s+ts)/2
+     */
+    public static int targetSumWays_better(int[] arr, int targetSum) {
+        int n = arr.length;
+        int totalSum = 0;
+        for (int a : arr)
+            totalSum += a;
+        int sum = (targetSum + totalSum) / 2;
+        return waysForSum(arr, n, sum);
+    }
+
+    private static int waysForSum(int[] arr, int n, int sum) {
+        if (sum == 0) return 1;
+        if (n == 0) return 0;
+        int[][] td = new int[n + 1][sum + 1];
+        for (int i = 0; i <= n; i++) {
+            for (int j = 0; j <= sum; j++) {
+                if (i == 0) td[i][j] = 0;
+                if (j == 0) td[i][j] = 1;
+            }
+        }
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= sum; j++) {
+                if (arr[i - 1] <= j)
+                    td[i][j] = td[i - 1][j - arr[i - 1]] + td[i - 1][j];
+                else
+                    td[i][j] = td[i - 1][j];
+            }
+        }
+        return td[n][sum];
+    }
 
     // Time Complexity:
     // Space Complexity:
     // Think... TargetSum is actually difference(s1-s2)
+    // s1+s2 = total-sum so s1 = (s+ts)/2
     public static int targetSumWays(int[] arr, int targetSum) {
         int n = arr.length;
         int totalSum = 0;
@@ -65,5 +99,6 @@ public class TargetSum {
         System.out.println("Array = " + Arrays.toString(arr));
         System.out.println("Target Sum = " + targetSum);
         System.out.println("No. of ways to get Target-Sum = " + targetSumWays(arr, targetSum));
+        System.out.println("[Better] No. of ways to get Target-Sum = " + targetSumWays_better(arr, targetSum));
     }
 }

@@ -11,8 +11,8 @@ import java.util.List;
 public class Subsets {
     /**
      * BACKTRACKING: Power set is all possible combinations of all possible lengths, from 0 to n.
-     * Time complexity: O(N×2^N), To generate all subsets and then copy them into output list
-     * Space complexity: O(N) , To maintain curr, and are modifying curr in-place with backtracking.
+     * Time complexity: O(N×2^N), To generate all subsets(2^N) and then copy them into output list
+     * Space complexity: O(N*2^N) , 2^N subsets & each subset can have upto N elements
      * IDEA: Backtracking is an algorithm for finding all solutions by exploring all potential candidates.
      * If the solution candidate turns to be not a solution (or at least not the last one),
      * backtracking algorithm discards it by making some changes on the previous step, i.e. backtracks and then try again.
