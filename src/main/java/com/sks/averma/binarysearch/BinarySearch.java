@@ -29,6 +29,25 @@ public class BinarySearch {
         return -1;
     }
 
+    /**
+     * Time Complexity: O(logn)
+     * Space Complexity: O(logn)
+     */
+    public static int binarySearch_recursive(int[] a, int n) {
+        if (a == null || a.length == 0) return -1;
+        int s = 0;
+        int e = a.length - 1;
+        return binarySearch_recursive(a, n, s, e);
+    }
+
+    private static int binarySearch_recursive(int[] a, int n, int s, int e) {
+        if (s > e) return -1;
+        int m = s + (e - s) / 2;
+        if (n < a[m]) return binarySearch_recursive(a, n, s, m - 1);
+        else if (n == a[m]) return m;
+        else return binarySearch_recursive(a, n, m + 1, e);
+    }
+
     public static int binarySearch(int[] a, int n, int s, int e) {
         while (s <= e) {
             //int mid = (s + e) / 2;
@@ -168,6 +187,7 @@ public class BinarySearch {
         int n = 7;
         System.out.println("Array = " + Arrays.toString(a) + ", n = " + n);
         System.out.println("Binary Search index = " + binarySearch(a, n));
+        System.out.println("[Recursive]Binary Search index = " + binarySearch_recursive(a, n));
 
         a = new int[]{2, 4, 10, 10, 10, 18, 20};
         n = 10;

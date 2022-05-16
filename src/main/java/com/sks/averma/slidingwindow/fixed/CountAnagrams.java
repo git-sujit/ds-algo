@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Given a word pat and a text txt. Return the count of the occurences of anagrams of the word in the text.
+ * Given a word pat and a text txt. Return the count of the occurrences of anagrams of the word in the text.
  */
 public class CountAnagrams {
     /**

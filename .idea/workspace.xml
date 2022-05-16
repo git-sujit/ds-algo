@@ -5,19 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/CountingBits.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/IslandPerimeter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/BaseNeg2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/IslandCount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/IslandMaxArea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LinkedListPlusOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/TreeDeepestLeavesSum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/CountOfSubsetSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/CountOfSubsetSum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/SubsetSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/SubsetSum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/TargetSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/TargetSum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/Revise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/Revise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/Subsets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/Subsets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2021/MatrixRotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/DEPRECATED/algo2021/MatrixRotation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2021/ScratchBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/DEPRECATED/algo2021/ScratchBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/algo2021/TestInheritance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/DEPRECATED/algo2021/TestInheritance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/BinarySearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/bsa/PeakElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/bsa/PeakElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/TowerOfHanoi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/TowerOfHanoi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/CountAnagrams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/CountAnagrams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/MaxOfAllSubarryas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/MaxOfAllSubarryas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MaxAreaHistogram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MaxAreaHistogram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MinInStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MinInStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/gfg/GfgMS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/DEPRECATED/gfg/GfgMS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/gfg/GfgRecursion_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/DEPRECATED/gfg/GfgRecursion_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2017/InterviewContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/DEPRECATED/interview2017/InterviewContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2017/InterviewImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/DEPRECATED/interview2017/InterviewImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2018/GenColl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/DEPRECATED/interview2018/GenColl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2018/InterviewQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/DEPRECATED/interview2018/InterviewQuestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2018/Others.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/DEPRECATED/interview2018/Others.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2018/RecursiveAlgos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/DEPRECATED/interview2018/RecursiveAlgos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2018/Revise18.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/DEPRECATED/interview2018/Revise18.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview/interview2018/WMTTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/DEPRECATED/interview2018/WMTTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/KokoEatingBanana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/KokoEatingBanana.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,13 +95,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/sks/algo2020/algoexperts" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.IslandCount">
-    <configuration name="IslandCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.medium.IslandCount" />
+  <component name="RunManager" selected="Application.TowerOfHanoi">
+    <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.binarysearch.BinarySearch" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leetcode.medium.*" />
+          <option name="PATTERN" value="com.sks.averma.binarysearch.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -100,12 +109,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IslandMaxArea" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.medium.IslandMaxArea" />
+    <configuration name="KSortedArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.heap.KSortedArray" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leetcode.medium.*" />
+          <option name="PATTERN" value="com.sks.averma.heap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,12 +122,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IslandPerimeter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.easy.IslandPerimeter" />
+    <configuration name="RainWaterTrapping" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.stack.RainWaterTrapping" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leetcode.easy.*" />
+          <option name="PATTERN" value="com.sks.averma.stack.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -126,12 +135,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedListPlusOne" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.medium.LinkedListPlusOne" />
+    <configuration name="StockSpanner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.stack.StockSpanner" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leetcode.medium.*" />
+          <option name="PATTERN" value="com.sks.averma.stack.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,12 +148,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Revise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.Revise" />
+    <configuration name="TowerOfHanoi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.recursion.TowerOfHanoi" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leetcode.*" />
+          <option name="PATTERN" value="com.sks.averma.recursion.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -167,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.IslandCount" />
-        <item itemvalue="Application.IslandMaxArea" />
-        <item itemvalue="Application.Revise" />
-        <item itemvalue="Application.IslandPerimeter" />
-        <item itemvalue="Application.LinkedListPlusOne" />
+        <item itemvalue="Application.TowerOfHanoi" />
+        <item itemvalue="Application.BinarySearch" />
+        <item itemvalue="Application.KSortedArray" />
+        <item itemvalue="Application.RainWaterTrapping" />
+        <item itemvalue="Application.StockSpanner" />
       </list>
     </recent_temporary>
   </component>
@@ -347,11 +356,6 @@
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KClosestElements.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/dupNMissing/MultipleMissingAndDuplicatesInArray.java</url>
           <line>48</line>
           <option name="timeStamp" value="28" />
@@ -403,7 +407,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MinInStack.java</url>
-          <line>112</line>
+          <line>121</line>
           <properties field="stack" class="com.sks.averma.stack.MinInStack.MyStack_ExtraSpace" />
           <option name="timeStamp" value="13" />
         </line-breakpoint>

@@ -1,12 +1,12 @@
 package com.sks.leetcode.easy;
 
-import com.sks.algo2020.TestData;
+import com.sks.XDEPRECATED.algo2020.TestData;
 
 import java.util.HashSet;
 import java.util.Set;
 import java.util.Stack;
 
-import static com.sks.algo2020.TestData.GraphNode;
+import static com.sks.XDEPRECATED.algo2020.TestData.GraphNode;
 
 /**
  * @author : Sujit K Singh

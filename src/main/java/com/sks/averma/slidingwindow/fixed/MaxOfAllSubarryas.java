@@ -17,13 +17,16 @@ public class MaxOfAllSubarryas {
             int n = nums[we];
             if (dq.isEmpty()) dq.addFirst(n);
             else {
-                if (dq.peek() > n) {
-                    while (dq.peekLast() < n)
-                        dq.removeLast();
-                    dq.addLast(n);
-                } else {
+                // if n is bigger than q.first then remove all
+                // If we get bigger element then clear q
+                if (n >= dq.peek()) {
                     dq.clear();
                     dq.addFirst(n);
+                } // Put it at its appropriate place
+                else {
+                    while (n > dq.peekLast())
+                        dq.removeLast();
+                    dq.addLast(n);
                 }
             }
             if (we - ws + 1 == k) {

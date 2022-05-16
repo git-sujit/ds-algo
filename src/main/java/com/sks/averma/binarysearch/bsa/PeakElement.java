@@ -10,6 +10,34 @@ import java.util.Arrays;
 public class PeakElement {
     /**
      * Time Complexity:  O(logn)
+     * Space Complexity: O(1)
+     */
+    public static int findPeakElement(int[] a) {
+        if (a == null || a.length == 0) return -1;
+        int s = 0;
+        int e = a.length - 1;
+        while (s <= e) {
+            int mid = s + (e - s) / 2;
+            if (mid > 0 && mid < a.length - 1) {
+                if (a[mid] > a[mid - 1] && a[mid] > a[mid + 1])
+                    return a[mid];
+                else if (a[mid] < a[mid - 1])
+                    e = mid - 1;
+                else if (a[mid] < a[mid + 1])
+                    s = mid + 1;
+            } else if (mid == 0) {
+                if (mid + 1 < a.length && a[mid] > a[mid + 1]) return a[mid];
+                else s = mid + 1;
+            } else if (mid == a.length - 1) {
+                if (mid - 1 >= 0 && a[mid] > a[mid - 1]) return a[mid];
+                else e = mid - 1;
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * Time Complexity:  O(logn)
      * Space Complexity: O(n)
      */
     public static int findPeakElement_recursive(int[] a) {
@@ -37,34 +65,6 @@ public class PeakElement {
             int m = s + (e - s) / 2;
             if (a[m] > a[m + 1]) e = m;
             else s = m + 1;
-        }
-        return -1;
-    }
-
-    /**
-     * Time Complexity:  O(logn)
-     * Space Complexity: O(1)
-     */
-    public static int findPeakElement(int[] a) {
-        if (a == null || a.length == 0) return -1;
-        int s = 0;
-        int e = a.length - 1;
-        while (s <= e) {
-            int mid = s + (e - s) / 2;
-            if (mid > 0 && mid < a.length - 1) {
-                if (a[mid] > a[mid - 1] && a[mid] > a[mid + 1])
-                    return a[mid];
-                else if (a[mid] < a[mid - 1])
-                    e = mid - 1;
-                else if (a[mid] < a[mid + 1])
-                    s = mid + 1;
-            } else if (mid == 0) {
-                if (mid + 1 < a.length && a[mid] > a[mid + 1]) return a[mid];
-                else s = mid + 1;
-            } else if (mid == a.length - 1) {
-                if (mid - 1 >= 0 && a[mid] > a[mid - 1]) return a[mid];
-                else e = mid - 1;
-            }
         }
         return -1;
     }

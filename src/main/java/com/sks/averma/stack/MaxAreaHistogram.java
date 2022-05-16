@@ -20,7 +20,7 @@ public class MaxAreaHistogram {
         int[] nsRight = nsRightIndex(heights);
         System.out.println("nsRightIndex = " + Arrays.toString(nsRight));
         for (int i = 0; i < heights.length; i++) {
-            int width = nsRight[i] - nsLeft[i] - 1;
+            int width = nsRight[i] - nsLeft[i] - 1; // Dont count both smaller indexes
             int area = heights[i] * width;
             max = Math.max(max, area);
         }
