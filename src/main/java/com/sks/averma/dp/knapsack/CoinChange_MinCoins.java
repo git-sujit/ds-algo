@@ -19,11 +19,6 @@ public class CoinChange_MinCoins {
                 }
             }
         }
-        for (int j = 1; j <= amount; j++) {
-
-        }
-        //for (int[] t : td)
-        //  System.out.println(Arrays.toString(t));
         for (int i = 1; i <= coins.length; i++) {
             for (int j = 1; j <= amount; j++) {
                 if (coins[i - 1] <= j)

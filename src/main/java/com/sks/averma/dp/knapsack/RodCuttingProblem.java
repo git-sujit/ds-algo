@@ -25,7 +25,7 @@ public class RodCuttingProblem {
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
                 if (lengths[i - 1] <= j)
-                    td[i][j] = Math.max(prices[i - 1] + td[i][j - lengths[i - 1]], td[i - 1][j]);
+                    td[i][j] = Math.max(prices[i - 1] + td[i]/*Note: Not(i-1)*/[j - lengths[i - 1]], td[i - 1][j]);
                 else
                     td[i][j] = td[i - 1][j];
             }
@@ -74,7 +74,7 @@ public class RodCuttingProblem {
         if (n == 0 || max_len == 0) return 0;
         if (lengths[n - 1] <= max_len)
             return Math.max(
-                    prices[n - 1] + cutRodMaximizeValue(prices, lengths, max_len - lengths[n - 1], n),
+                    prices[n - 1] + cutRodMaximizeValue(prices, lengths, max_len - lengths[n - 1], n/*Note: Not (n-1)*/),
                     cutRodMaximizeValue(prices, lengths, max_len, n - 1));
         else
             return cutRodMaximizeValue(prices, lengths, max_len, n - 1);

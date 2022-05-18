@@ -49,6 +49,10 @@ public class SubsetSum {
         return mem[n][sum];
     }
 
+    /**
+     * Time Complexity : O(n^2)
+     * Space Complexity: O(n^2): for tb
+     **/
     // Problem Statement: Given an array and a TargetSum, check if a subset is present whose sum is TargetSum
     public static boolean isSubsetSum_top_down(int[] arr, int sum, int n) {
         Boolean[][] t = new Boolean[n + 1][sum + 1]; // Default is null

@@ -11,6 +11,40 @@ public class LinkedListReversal2 {
      * Time Complexity :
      * Space Complexity:
      */
+    public ListNode reverseBetween_better(ListNode head, int left, int right) {
+        if (head == null || left >= right) return head;
+        ListNode beforeLeft = null;
+        ListNode revStart = null;
+        int count = 1;
+        ListNode curr = head;
+        while (count < left) {
+            beforeLeft = curr;
+            curr = curr.next;
+            count++;
+        }
+        revStart = curr;
+        ListNode prev = curr;
+        curr = curr.next;
+        while (curr != null && count < right) {
+            ListNode temp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = temp;
+            count++;
+        }
+        if (beforeLeft == null) head = prev;
+        else beforeLeft.next = prev;
+
+        if (revStart == null) return prev;
+        else revStart.next = curr;
+
+        return head;
+    }
+
+    /**
+     * Time Complexity :
+     * Space Complexity:
+     */
     public static ListNode reverseBetween_notWorking(ListNode head, int left, int right) {
         if (head == null) return null;
         if (left >= right) return head;
@@ -50,12 +84,17 @@ public class LinkedListReversal2 {
         int left = 3;
         int right = 5;
         test(head, left, right);
+
+        head = ListNode.prepareTestData_palindrome(true);
+        left = 1;
+        right = 3;
+        test(head, left, right);
     }
 
     private static void test(ListNode head, int left, int right) {
         System.out.println("\nList : " + head);
-        System.out.println("Reversed the list between " + left + " and " + right + " element(inclusive)");
-        head = reverseBetween_notWorking(head, left, right);
+        System.out.println("Reversed the list between( " + left + " and " + right + ") element(inclusive)");
+        head = new LinkedListReversal2().reverseBetween_better(head, left, right);
         System.out.println("List : " + head);
     }
 }

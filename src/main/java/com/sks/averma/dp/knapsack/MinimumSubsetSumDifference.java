@@ -34,11 +34,18 @@ public class MinimumSubsetSumDifference {
         //System.out.println("Last Row = " + Arrays.toString(lastRow));
 
         int min_diff = Integer.MAX_VALUE;
-        for (int j = sum / 2; j >= 0; j--)
+        /*-for (int j = sum / 2; j >= 0; j--)
             if (lastRow[j]) {
                 min_diff = sum - 2 * j;
                 break;
             }
+         */
+        //More readable code
+        for (int j = 0; j <= sum / 2; j++) {
+            if (lastRow[j]) {
+                min_diff = Math.min(min_diff, Math.abs(2 * j - sum));
+            }
+        }
         //System.out.println("Total Sum = " + sum);
         return min_diff;
     }

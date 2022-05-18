@@ -10,7 +10,7 @@ import java.util.Arrays;
 /**
  * You are given an integer array coins representing coins of different denominations and an
  * integer amount representing a total amount of money.
- * Return the fewest number of coins that you need to make up that amount.
+ * Return the max number of ways to make up that amount.
  * If that amount of money cannot be made up by any combination of the coins, return -1.
  * You may assume that you have an infinite number of each kind of coin.
  */
@@ -32,7 +32,7 @@ public class CoinChange_MaxWays {
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= amount; j++) {
                 if (coins[i - 1] <= j)
-                    td[i][j] = td[i][j - coins[i - 1]] + td[i - 1][j];
+                    td[i][j] = td[i]/** For Unbounded Knapsack **/[j - coins[i - 1]] + td[i - 1][j];
                 else
                     td[i][j] = td[i - 1][j];
             }

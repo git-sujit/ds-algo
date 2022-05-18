@@ -17,9 +17,14 @@ public class TreeTilt {
     public static int findTilt_recursion(TreeNode root) {
         if (root == null) return 0;
         Map<TreeNode, Integer> nodeSumMap = new HashMap<>();
-        return Math.abs(nodeSum_memoization(root.left, nodeSumMap) - nodeSum_memoization(root.right, nodeSumMap)) +
-                findTilt_recursion(root.left) +
-                findTilt_recursion(root.right);
+        return findTilt_recursion(root, nodeSumMap);
+    }
+
+    public static int findTilt_recursion(TreeNode node, Map<TreeNode, Integer> nodeSumMap) {
+        if (node == null) return 0;
+        return Math.abs(nodeSum_memoization(node.left, nodeSumMap) - nodeSum_memoization(node.right, nodeSumMap)) +
+                findTilt_recursion(node.left) +
+                findTilt_recursion(node.right);
     }
 
     private static int nodeSum_memoization(TreeNode node, Map<TreeNode, Integer> nodeSumMap) {

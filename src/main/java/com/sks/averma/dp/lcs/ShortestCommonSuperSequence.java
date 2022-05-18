@@ -1,7 +1,5 @@
 package com.sks.averma.dp.lcs;
 
-import java.util.Arrays;
-
 /**
  * Given two strings, return shortest-string common super-sequence
  * Sequence: Ordered but may not be continuous

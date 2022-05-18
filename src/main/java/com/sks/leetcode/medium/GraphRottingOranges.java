@@ -27,7 +27,8 @@ public class GraphRottingOranges {
         Queue<Pair<Integer, Integer>> q = new LinkedList<>();
         for (int r = 0; r < rows; r++) {
             for (int c = 0; c < cols; c++) {
-                if (grid[r][c] == 2) q.add(new Pair(r, c));
+                if (grid[r][c] == 2)
+                    q.add(new Pair(r, c));
             }
         }
         while (!q.isEmpty()) {

@@ -27,25 +27,26 @@ public class GraphValidTree {
      * Space: O(N+E)
      */
     public static boolean validTree_better(int n, int[][] edges) {
+        if (edges.length != n - 1) return false;
         Map<Integer, List<Integer>> adjList = prepareAdjListMap(edges);
+        Stack<Integer> stack = new Stack<>();
+        // Tree Check: to keep track of already visited nodes & avoid parents in the neighbors
         Map<Integer, Integer> parentMap = new HashMap<>();
-        Set<Integer> visited = new HashSet<>();
         parentMap.put(0, -1);
-        dfs(0, adjList, parentMap, visited);
-
-        return parentMap.size() == n;
-    }
-
-    private static void dfs(int start, Map<Integer, List<Integer>> adjList, Map<Integer, Integer> parentMap, Set<Integer> visited) {
-        visited.add(start);
-        if (adjList.get(start) == null) return;
-        for (int nbr : adjList.get(start)) {
-            if (parentMap.containsKey(nbr)) return;
-            parentMap.put(nbr, start);
-            if (!visited.contains((nbr)))
-                dfs(nbr, adjList, parentMap, visited);
+        stack.push(0);
+        while (!stack.isEmpty()) {
+            int node = stack.pop();
+            if (adjList.get(node) != null) {
+                for (int nei : adjList.get(node)) {
+                    if (parentMap.get(node) == nei) continue;
+                    if (parentMap.containsKey(nei)) return false;
+                    stack.push(nei);
+                    parentMap.put(nei, node);
+                }
+            }
         }
-
+        // Tree Check: Graph fully connected, then every node must have been seen
+        return parentMap.size() == n;
     }
 
     private static Map<Integer, List<Integer>> prepareAdjListMap(int[][] edges) {
@@ -120,6 +121,10 @@ public class GraphValidTree {
         demo(n, edges);
 
         n = 2;
+        demo(n, edges);
+
+        n = 5;
+        edges = new int[][]{{0, 1}, {1, 2}, {2, 3}, {1, 3}, {1, 4}};
         demo(n, edges);
     }
 
