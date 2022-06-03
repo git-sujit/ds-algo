@@ -3,6 +3,7 @@ package com.sks.averma.binarysearch;
 import java.util.Arrays;
 
 /**
+ * Given a nearly sorted array, find index of a given number
  * index-i element can be at i-1, i or i+1
  */
 public class NearlySortedArray {
@@ -17,13 +18,15 @@ public class NearlySortedArray {
         int e = len - 1;
         while (s <= e) {
             int mid = s + (e - s) / 2;
-            int prev = (mid - 1 + len) % len;
-            int next = (mid + 1) % len;
+            //int prev = (mid - 1 + len) % len;
+            int prev = mid - 1;
+            //int next = (mid + 1) % len;
+            int next = mid + 1;
             if (n == a[prev]) return prev;
             else if (n == a[mid]) return mid;
             else if (n == a[next]) return next;
-            else if (n < a[prev]) e = prev - 1;
-            else if (n > a[next]) s = next + 1;
+            else if (prev >= 0 && n < a[prev]) e = prev - 1;
+            else if (next < len && n > a[next]) s = next + 1;
             else return -1;
         }
         return -1;

@@ -19,7 +19,7 @@ public class SubsetSum {
      * Space Complexity: O(n): method stack
      **/
     public static boolean isSubsetSum_recursion(int[] arr, int sum, int n) {
-        if (sum == 0) return true; /// This will be first because is sum==0 then true
+        if (sum == 0) return true; /// This will be first because if sum==0 then true
         if (n == 0) return false;
 
         if (arr[n - 1] <= sum)

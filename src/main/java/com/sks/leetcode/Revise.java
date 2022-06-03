@@ -6,6 +6,27 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Revise {
+    private static void demo_dequeue() {
+        Deque<Integer> dq = new ArrayDeque<>();
+        dq.addFirst(1);
+        dq.add(2);
+        dq.addLast(9);
+        dq.addLast(10);
+        System.out.println(dq);
+        int first = dq.getFirst();
+        dq.removeFirst();
+        dq.addLast(first);
+        System.out.println("Removed first=" + first + " & added to Last = " + dq);
+        System.out.println("First = " + dq.getFirst() + ", Last = " + dq.getLast());
+
+        first = dq.getFirst();
+        dq.removeFirst();
+        dq.addLast(first);
+        System.out.println("Removed first=" + first + " & added to Last = " + dq);
+        System.out.println("First = " + dq.getFirst() + ", Last = " + dq.getLast());
+
+    }
+
     private static void demo_pair() {
         Set<Pair<Integer, Integer>> visited = new HashSet<>();
         visited.add(new Pair(1, 2));
@@ -206,12 +227,13 @@ public class Revise {
     }
 
     public static void main(String[] args) {
-        demo_pair();
+        demo_dequeue();
+        //demo_pair();
         //stackInJava();
         //queueInJava();
-        stringUtilities();
+        //stringUtilities();
         //heap();
-        array();
+        //array();
         //map();
         //comparators();
         //bitwiseOperator();

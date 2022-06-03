@@ -20,8 +20,10 @@ public class SortedRotatedArray {
         int e = len - 1;
         while (s <= e) {
             int mid = s + (e - s) / 2;
-            int prev = (mid - 1 + len) % len;
-            int next = (mid + 1) % len;
+            //int prev = (mid - 1 + len) % len;
+            int prev = mid - 1;
+            //int next = (mid + 1) % len;
+            int next = mid + 1;
             if (prev >= 0 && a[mid] < a[prev] && next < len && a[mid] < a[next])
                 return mid;
             if (a[0] > a[mid])

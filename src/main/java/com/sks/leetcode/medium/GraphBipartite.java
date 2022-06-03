@@ -1,9 +1,6 @@
 package com.sks.leetcode.medium;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * There is an undirected graph with n nodes, where each node is numbered between 0 and n - 1.
@@ -119,7 +116,14 @@ public class GraphBipartite {
     public static void main(String[] args) {
         //graph[i] is an array of nodes that node-i is adjacent to
         int[][] graph = new int[][]{{1, 2, 3}, {0, 2}, {0, 1, 3}, {0, 2}};
-        System.out.println("Is Bipartite = " + isBipartite(graph));
+        demo(graph);
+
+        graph = new int[][]{{1, 3}, {0, 2}, {1, 3}, {0, 2}};
+        demo(graph);
+    }
+
+    private static void demo(int[][] graph) {
+        System.out.println("\nIs Bipartite = " + isBipartite(graph));
         System.out.println("Is Bipartite_1 = " + isBipartite_partial(graph));
     }
 }

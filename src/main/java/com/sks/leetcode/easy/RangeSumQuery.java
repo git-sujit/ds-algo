@@ -13,7 +13,7 @@ import java.util.Map;
  * NumArray(int[] nums) Initializes the object with the integer array nums.
  * int sumRange(int left, int right) Returns the sum of the elements of nums between indices left and right inclusive (i.e. nums[left] + nums[left + 1] + ... + nums[right]).
  */
-public class RangeSumQuery {
+public class  RangeSumQuery {
     private Map<Pair<Integer, Integer>, Integer> cache = new HashMap<>();
     private int[] nums;
 

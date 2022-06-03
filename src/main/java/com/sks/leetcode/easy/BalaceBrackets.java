@@ -1,5 +1,8 @@
 package com.sks.leetcode.easy;
 
+import java.util.HashMap;
+import java.util.*;
+
 /**
  * A bracket is any of the following characters: (, ), {, }, [, or ].
  * a sequence of brackets is said to be balanced if
@@ -8,6 +11,24 @@ package com.sks.leetcode.easy;
  * -The first and last brackets of the sequence are matching, and the portion of the sequence without the first and last elements is balanced.
  */
 public class BalaceBrackets {
+    public static boolean isBalanced_stack(String s) {
+        if (s == null || s.isEmpty()) return true;
+        Stack<Character> stack = new Stack<>();
+        Map<Character, Character> opClMap = new HashMap<>();
+        opClMap.put('[', ']');
+        opClMap.put('{', '}');
+        opClMap.put('(', ')');
+        for (char ch : s.toCharArray()) {
+            if (opClMap.containsKey(ch)) {
+                stack.push(ch);
+            } else {
+                if (opClMap.get(stack.peek()) != ch) return false;
+                else stack.pop();
+            }
+        }
+        return true;
+    }
+
     public static boolean isBalanced(String s) {
         if (s == null || s.isEmpty()) return true;
         int len = s.length();
@@ -28,5 +49,6 @@ public class BalaceBrackets {
     private static void demo(String s) {
         System.out.println("\nSequence of brackets : " + s);
         System.out.println("Is balanced? : " + isBalanced(s));
+        System.out.println("[Better]Is balanced? : " + isBalanced_stack(s));
     }
 }

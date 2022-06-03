@@ -25,23 +25,6 @@ public class MultipleMissingAndDuplicatesInArray {
         return out;
     }
 
-    /**
-     * Time: O(n), traversing the array once
-     */
-    private static void swapSort_better(int[] nums) {
-        if (nums == null || nums.length == 0) return;
-        int i = 0;
-        while (i < nums.length) {
-            int num = nums[i];
-            if (num == i + 1) i++;
-            else {
-                int temp = nums[num - 1];
-                nums[num - 1] = num;
-                nums[i] = temp;
-            }
-        }
-    }
-
     private static void swapSort(int[] nums) {
         if (nums == null || nums.length == 0) return;
         int i = 0;

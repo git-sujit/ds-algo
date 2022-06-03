@@ -24,8 +24,14 @@ public class NextLetterProblem {
     }
 
     public static void main(String[] args) {
-        char[] ca = {'a', 'c', 'f', 'h'};
+        char[] ca = {'b', 'c', 'f', 'h'};
         char ch = 'g';
+        demo(ca, ch);
+
+        ch = 'a';
+        demo(ca, ch);
+
+        ch = 'z';
         demo(ca, ch);
 
         ch = 'h';

@@ -3,7 +3,7 @@ package com.sks.averma.binarysearch;
 import java.util.Arrays;
 
 /**
- * Given sorted array, find the minimum difference between any pair in given array.
+ * Given sorted array and a number n, find the minimum difference between any pair in given array.
  */
 public class MinAbsoluteDiff {
     public static int minDiffEle(int[] nums, int n) {

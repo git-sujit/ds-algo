@@ -10,6 +10,25 @@ import java.util.List;
  * Given the root of a binary search tree and a target value, return the value in the BST that is closest to the target.
  */
 public class TreeBSClosest {
+    public static int closestValue_better_2(TreeNode root, double target) {
+        if (root == null) return -1;
+        double diff = Double.MAX_VALUE;
+        int closest = root.val;
+        while (root != null) {
+            int val = root.val;
+            if (target > val) {
+                if (Math.abs(val - target) < diff) {
+                    diff = Math.abs(val - target);
+                    closest = val;
+                }
+                root = root.right;
+            } else {
+                root = root.right;
+            }
+        }
+        return closest;
+    }
+
     /**
      * Binary Search
      * Time complexity : O(H)/O(logN) since here one goes from root down to a leaf.
@@ -84,5 +103,6 @@ public class TreeBSClosest {
     private static void demo(TreeNode root, double target) {
         System.out.println("\nClosest node to " + target + " = " + closestValue(root, target));
         System.out.println("[Better] Closest node to " + target + " = " + closestValue_better(root, target));
+        System.out.println("[Better-2] Closest node to " + target + " = " + closestValue_better_2(root, target));
     }
 }
