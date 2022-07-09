@@ -3,7 +3,7 @@ package com.sks.averma.slidingwindow.fixed;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-/*- SLIDING WINDOW CODE TEMPLATE
+/*- FIXED: SLIDING WINDOW CODE TEMPLATE
     int windowStart = 0;
     int windowEnd = 0;
     while (windowEnd < a.length) {

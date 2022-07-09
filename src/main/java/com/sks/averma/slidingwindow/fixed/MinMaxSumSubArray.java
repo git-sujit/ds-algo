@@ -1,6 +1,16 @@
 package com.sks.averma.slidingwindow.fixed;
 
 import java.util.Arrays;
+/*- FIXED: SLIDING WINDOW CODE TEMPLATE
+    int windowStart = 0;
+    int windowEnd = 0;
+    while (windowEnd < a.length) {
+        if (windowEnd - windowStart + 1 == k) { // When we hit the window size
+            windowStart++; // Slide the window
+        }
+        windowEnd++; // Remember- In the end
+    }
+ */
 /*- SLIDING WINDOW CODE TEMPLATE
     int windowStart = 0;
     for (int windowEnd = 0; windowEnd < a.length; windowEnd++) {

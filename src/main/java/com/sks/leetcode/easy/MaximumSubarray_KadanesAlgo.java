@@ -10,6 +10,8 @@ public class MaximumSubarray_KadanesAlgo {
     /**
      * Time Complexity: O(n)
      * Space Complexity: O(1)
+     * Kadane's Algorithm:
+     * local_maximums(i) = Math.max(A[i] + local_maximum[i-1], A[i]) => Dynamic Programming
      */
     public static int maxSubArray(int[] nums) {
         if (nums == null) return -1;

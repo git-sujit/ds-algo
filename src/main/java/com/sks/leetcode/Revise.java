@@ -6,11 +6,35 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Revise {
+    public static void main(String[] args) {
+        demo_random();
+        //demo_dequeue();
+        //demo_pair();
+        //stackInJava();
+        //queueInJava();
+        //stringUtilities();
+        //heap();
+        //array();
+        //map();
+        //comparators();
+        //bitwiseOperator();
+    }
+
+    private static void demo_random() {
+        String str = "a";
+        System.out.println(str.substring(1));
+    }
+
+    /**
+     * deque is short for "double ended queue" and is usually pronounced "deck"
+     * public interface Deque<E> extends Queue<E>
+     * Implementing Classes: ArrayDeque, ConcurrentLinkedDeque, LinkedBlockingDeque, LinkedList
+     */
     private static void demo_dequeue() {
         Deque<Integer> dq = new ArrayDeque<>();
-        dq.addFirst(1);
+        dq.addFirst(1); // Add element to the FRONT of the queue
         dq.add(2);
-        dq.addLast(9);
+        dq.addLast(9); // Add element to the END of the queue
         dq.addLast(10);
         System.out.println(dq);
         int first = dq.getFirst();
@@ -224,18 +248,5 @@ public class Revise {
         System.out.println("FIFO, After remove: " + q);
         System.out.println("is Empty? : " + q.isEmpty());
         System.out.println("Size = " + q.size());
-    }
-
-    public static void main(String[] args) {
-        demo_dequeue();
-        //demo_pair();
-        //stackInJava();
-        //queueInJava();
-        //stringUtilities();
-        //heap();
-        //array();
-        //map();
-        //comparators();
-        //bitwiseOperator();
     }
 }

@@ -5,27 +5,38 @@ import java.util.*;
 
 /**
  * Given an array arr[] of size n containing integers. The problem is to find the length of the longest sub-array having sum equal to the given value k.
+ * Refer: htps://www.geeksforgeeks.org/longest-sub-array-sum-k/
  */
 public class LongestSubArrayOfASum {
     /**
      * TimeComplexity: O(n), n-Size of array
-     * Space Complexity: O(1)
+     * Space Complexity: O(n)
      */
-    public static int sizeOfLongestSubarray_negativeNums(int[] nums, int sum) {
-        if (nums == null || nums.length == 0) return -1;
-        Map<Integer, List<Integer>> map = new HashMap<>();
-        int max = 0;
-        int lsum = 0;
-        for (int i = 0; i < nums.length; i++) {
-            lsum += nums[i];
-            if (lsum == sum) max = Math.max(max, i + 1);
-            else if (map.containsKey(lsum - sum)) {
-                for (int idx : map.get(lsum - sum))
-                    max = Math.max(max, i - idx + 1);
+    public static int sizeOfLongestSubarray_negativeNums(int[] arr, int k) {
+        int n = arr.length;
+        // HashMap to store (sum, index) tuples
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int sum = 0, maxLen = 0;
+        for (int i = 0; i < n; i++) {
+            // accumulate sum
+            sum += arr[i];
+            // when subarray starts from index '0'
+            if (sum == k)
+                maxLen = i + 1;
+            // make an entry for 'sum' if it is
+            // not present in 'map'
+            if (!map.containsKey(sum)) {
+                map.put(sum, i);
             }
-            map.computeIfAbsent(sum, e -> new ArrayList<>()).add(i);
+            // check if 'sum-k' is present in 'map'
+            // or not
+            if (map.containsKey(sum - k)) {
+                // update maxLength
+                if (maxLen < (i - map.get(sum - k)))
+                    maxLen = i - map.get(sum - k);
+            }
         }
-        return max;
+        return maxLen;
     }
 
     /**
@@ -111,18 +122,22 @@ public class LongestSubArrayOfASum {
     public static void main(String[] args) {
         int[] numbers = {4, 1, 1, 1, 2, 3, 5};
         int sum = 5;
-        test(numbers, sum);
+        demo(numbers, sum);
 
         numbers = new int[]{-5, 8, -14, 2, 4, 12};
         sum = -5;
-        test(numbers, sum);
+        demo(numbers, sum);
 
         numbers = new int[]{1, 2, 3};
         sum = 3;
-        test(numbers, sum);
+        demo(numbers, sum);
+
+        numbers = new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        sum = 3;
+        demo(numbers, sum);
     }
 
-    private static void test(int[] numbers, int sum) {
+    private static void demo(int[] numbers, int sum) {
         boolean isPositiveArray = true;
         for (int n : numbers) {
             if (n < 0) {

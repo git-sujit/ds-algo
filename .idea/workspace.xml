@@ -5,24 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview2022/AmazonScreening.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview2022/LinkedInMinRankCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/hard/ValidNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LRULatest_TLE.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/hard/RegexMatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/hard/SubstringWithConcatWords_LC_30.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/MinAbsoluteDiff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/MinAbsoluteDiff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/NearlySortedArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/NearlySortedArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/NextLetterProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/NextLetterProblem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/SortedRotatedArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/SortedRotatedArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/SubsetSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dp/knapsack/SubsetSum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/dupNMissing/MultipleMissingAndDuplicatesInArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/dupNMissing/MultipleMissingAndDuplicatesInArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/FirstNegativeInWindowK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/FirstNegativeInWindowK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/MaxOfAllSubarryas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/MaxOfAllSubarryas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/MinMaxSumSubArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/MinMaxSumSubArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubArrayOfASum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubArrayOfASum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubstringWithoutRepeatingChar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubstringWithoutRepeatingChar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/PickToys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/PickToys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/SubArraySumCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/SubArraySumCount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/Revise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/Revise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/BalaceBrackets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/BalaceBrackets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/BinarySubstrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/BinarySubstrings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/RangeSumQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/RangeSumQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeBSClosest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeBSClosest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeCousins.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/TreeCousins.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/GraphBipartite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/GraphBipartite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/MaximumSubarray_KadanesAlgo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/MaximumSubarray_KadanesAlgo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,13 +91,13 @@
       <recent name="com.sks.learn" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ValidNumber">
-    <configuration name="CountingBits" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.easy.CountingBits" />
+  <component name="RunManager" selected="Application.PickToys">
+    <configuration name="LongestSubArrayOfASum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.variable.LongestSubArrayOfASum" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leetcode.easy.*" />
+          <option name="PATTERN" value="com.sks.averma.slidingwindow.variable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,12 +105,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MinimumSubsetSumDifference" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.dp.knapsack.MinimumSubsetSumDifference" />
+    <configuration name="LongestSubstringWithoutRepeatingChar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.variable.LongestSubstringWithoutRepeatingChar" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.dp.knapsack.*" />
+          <option name="PATTERN" value="com.sks.averma.slidingwindow.variable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,12 +118,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeBSClosest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.easy.TreeBSClosest" />
+    <configuration name="PickToys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.variable.PickToys" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leetcode.easy.*" />
+          <option name="PATTERN" value="com.sks.averma.slidingwindow.variable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,21 +131,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeBSInOrder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.easy.TreeBSInOrder" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.leetcode.easy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ValidNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.hard.ValidNumber" />
+    <configuration name="RegexMatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.hard.RegexMatch" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
@@ -163,26 +144,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration name="SubstringWithConcatWords_LC_30" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.hard.SubstringWithConcatWords_LC_30" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.leetcode.hard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ValidNumber" />
-        <item itemvalue="Application.MinimumSubsetSumDifference" />
-        <item itemvalue="Application.TreeBSInOrder" />
-        <item itemvalue="Application.TreeBSClosest" />
-        <item itemvalue="Application.CountingBits" />
+        <item itemvalue="Application.PickToys" />
+        <item itemvalue="Application.LongestSubstringWithoutRepeatingChar" />
+        <item itemvalue="Application.LongestSubArrayOfASum" />
+        <item itemvalue="Application.SubstringWithConcatWords_LC_30" />
+        <item itemvalue="Application.RegexMatch" />
       </list>
     </recent_temporary>
   </component>
@@ -391,11 +383,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/dp/lcs/ShortestCommonSuperSequence.java</url>
           <line>36</line>
           <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/fixed/MaxOfAllSubarryas.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/IslandMaxArea.java</url>

@@ -4,13 +4,13 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Given an array consisting of the cost of toys. Given an integer K depicting the amount of money
- * available to purchase toys. Write a program to find the maximum number of toys one can buy with the amount K.
- * Note: One can buy only 1 quantity of a particular toy.
- */
 public class PickToys {
 
+    /**
+     * Given an array consisting of the cost of toys. Given an integer K depicting the amount of money
+     * available to purchase toys. Write a program to find the maximum number of toys one can buy with the amount K.
+     * Note: One can buy contiguous toys and only 1 quantity of a particular toy
+     */
     public static int maximum_toys(int cost[], int n, int k) {
         if (n == 0 || k == 0) return 0;
         if (cost[n - 1] <= k)
@@ -20,9 +20,9 @@ public class PickToys {
     }
 
     /**
-     * @param toys
-     * @param k
-     * @return
+     * Given toys & max unique toys k, find out the max no. of contiguous toys a kid can pick
+     * Time Complexity : O(n)
+     * Space Complexity: O(n), for Map
      */
     public static int maximumNumberOfToys(String toys, int k) {
         if (toys == null || toys.length() == 0 || k <= 0 || k > toys.length()) return -1;
@@ -64,7 +64,6 @@ public class PickToys {
 
     private static void test(String toys, int k) {
         System.out.println("Toys = " + toys + ", k = " + k);
-        System.out.println("Maximum number of toys = " + maximumNumberOfToys(toys, k));
         System.out.println("Maximum number of toys = " + maximumNumberOfToys(toys, k));
     }
 }

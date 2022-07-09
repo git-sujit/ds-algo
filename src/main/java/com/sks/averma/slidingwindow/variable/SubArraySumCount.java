@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.
+ * Given an array of integers nums and an integer k, return the total number of sub-arrays whose sum equals to k.
  */
 public class SubArraySumCount {
     public int subarraySum_map(int[] nums, int k) {

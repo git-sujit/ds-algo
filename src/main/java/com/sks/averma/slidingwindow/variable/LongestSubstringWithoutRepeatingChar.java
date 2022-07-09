@@ -13,6 +13,29 @@ public class LongestSubstringWithoutRepeatingChar {
      * Time complexity : O(n)
      * Space complexity : O(n) for set
      */
+    public static int longestSubString_set_EVEN_BETTER(String str) {
+        if (str == null || str.length() == 0) return -1;
+        int len = str.length();
+        int maxLen = 0;
+        Set<Character> set = new HashSet<>();
+        int ws = 0, we = 0;
+        while (we < len) {
+            char ch = str.charAt(we);
+            if (set.contains(ch)) {
+                set.clear();
+                ws = we;
+            }
+            set.add(ch);
+            maxLen = Math.max(maxLen, set.size());
+            we++;
+        }
+        return maxLen;
+    }
+
+    /**
+     * Time complexity : O(n)
+     * Space complexity : O(n) for set
+     */
     public static int longestSubString_set_BETTER(String str) {
         if (str == null || str.length() == 0) return -1;
         int max = 0;
@@ -141,7 +164,8 @@ public class LongestSubstringWithoutRepeatingChar {
     private static void test(String str) {
         System.out.println("\nString = " + str);
         System.out.println("[Map] Longest Substring size = " + longestSubString_map(str));
-        System.out.println("[Better-Set] Longest Substring size = " + longestSubString_set_BETTER(str));
+        System.out.println("[EVEN_Better-Set] Longest Substring size = " + longestSubString_set_EVEN_BETTER(str));
+        System.out.println("[Better-Set] Longest Substring size = " + longestSubString_set_EVEN_BETTER(str));
         System.out.println("[Set] Longest Substring size = " + longestSubString_set(str));
         System.out.println("[Brute Force] Longest Substring size = " + longestSubString_bruteForce(str));
     }
