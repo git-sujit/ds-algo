@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 public class Revise {
     public static void main(String[] args) {
         demo_random();
+        demo_heap();
         //demo_dequeue();
         //demo_pair();
         //stackInJava();
@@ -18,6 +19,23 @@ public class Revise {
         //map();
         //comparators();
         //bitwiseOperator();
+    }
+
+    /**
+     * -Heap[Complete Binary Tree + Parent greater(max) or Smaller(min) than children]
+     * -An unbounded priority queue based on a priority heap
+     * -The elements of the priority queue are ordered according to the natural ordering, or by a Comparator provided at queue construction time
+     * -A PriorityQueue is used when the objects are supposed to be processed based on the priority.
+     * -Queue follows the First-In-First-Out algorithm, but sometimes the elements of the queue are needed to be processed according to the priority, that’s when the PriorityQueue comes into play.
+     * -PriorityQueue is not synchronized so use the thread-safe PriorityBlockingQueue class
+     * public class PriorityQueue<E> extends AbstractQueue<E> implements Serializable
+     */
+    private static void demo_heap() {
+        // Various ways of creating heap
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+        PriorityQueue<Integer> MaxHeap1 = new PriorityQueue<>(Comparator.reverseOrder());
+        PriorityQueue<Pair<Integer, Integer>> maxHeap2 = new PriorityQueue<>(Comparator.comparing((Pair<Integer, Integer> p) -> p.getValue()).reversed());
+        PriorityQueue<Pair<int[], Integer>> minHeap3 = new PriorityQueue<>(Comparator.comparing((Pair<int[], Integer> p) -> p.getValue()));
     }
 
     private static void demo_random() {

@@ -18,15 +18,15 @@ public class KClosestPoints {
         if (points == null || points.length == 0 || targetPoint == null || targetPoint.length == 0 || k <= 0 || k > points.length)
             return null;
         int[][] out = new int[k][2];
-        PriorityQueue<Pair<int[], Integer>> minHeap = new PriorityQueue<>(Comparator.comparing((Pair<int[], Integer> p) -> p.getValue()).reversed());
+        PriorityQueue<Pair<int[], Integer>> maxHeap = new PriorityQueue<>(Comparator.comparing((Pair<int[], Integer> p) -> p.getValue()).reversed());
         for (int[] pt : points) {
-            minHeap.add(new Pair(pt, calculateDistance(pt, targetPoint)));
-            if (minHeap.size() > k)
-                minHeap.remove();
+            maxHeap.add(new Pair(pt, calculateDistance(pt, targetPoint)));
+            if (maxHeap.size() > k)
+                maxHeap.remove();
         }
         int i = 0;
-        while (!minHeap.isEmpty())
-            out[i++] = minHeap.remove().getKey();
+        while (!maxHeap.isEmpty())
+            out[i++] = maxHeap.remove().getKey();
         return out;
     }
 

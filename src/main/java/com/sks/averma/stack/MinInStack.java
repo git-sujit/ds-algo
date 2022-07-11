@@ -15,38 +15,37 @@ import java.util.Stack;
  */
 public class MinInStack {
     public static void main(String[] args) {
-        testStack_extraSpace();
-        testStack_efficient();
+        //testStack_extraSpace();
+        //testStack_efficient();
         testStack_superEfficient();
     }
 
     private static void testStack_superEfficient() {
         System.out.println("\nMyStack_SuperEfficient");
         MyStack_SuperEfficient mStackEff = new MyStack_SuperEfficient();
-        mStackEff.push(10);
-        mStackEff.push(20);
-        System.out.println("stack = " + mStackEff.stack);
-        System.out.println("min = " + mStackEff.min());
-        mStackEff.push(5);
-        mStackEff.push(50);
-        mStackEff.push(43);
-        System.out.println("stack = " + mStackEff.stack);
-        System.out.println("min = " + mStackEff.min());
-        mStackEff.push(75);
-        mStackEff.push(1);
-        System.out.println("stack = " + mStackEff.stack);
-        System.out.println("min = " + mStackEff.min());
+        demo_push(mStackEff, 10);
+        demo_push(mStackEff, 20);
+        demo_push(mStackEff, 5);
+        demo_push(mStackEff, 50);
+        demo_push(mStackEff, 43);
+        demo_push(mStackEff, 75);
+        demo_push(mStackEff, 1);
+
+        demo_pop(mStackEff);
+        demo_pop(mStackEff);
+        demo_pop(mStackEff);
+        demo_pop(mStackEff);
+        demo_pop(mStackEff);
+    }
+
+    private static void demo_pop(MyStack_SuperEfficient mStackEff) {
         mStackEff.pop();
-        System.out.println("stack = " + mStackEff.stack);
-        System.out.println("min = " + mStackEff.min());
-        mStackEff.pop();
-        System.out.println("stack = " + mStackEff.stack);
-        System.out.println("min = " + mStackEff.min());
-        mStackEff.pop();
-        mStackEff.pop();
-        mStackEff.pop();
-        System.out.println("stack = " + mStackEff.stack);
-        System.out.println("min = " + mStackEff.min());
+        System.out.println("Pop:\tstack = " + mStackEff.stack + ", min = " + mStackEff.min());
+    }
+
+    private static void demo_push(MyStack_SuperEfficient mStackEff, int ele) {
+        mStackEff.push(ele);
+        System.out.println("Push(" + ele + "):\tstack = " + mStackEff.stack + ", min = " + mStackEff.min());
     }
 
     private static void testStack_efficient() {

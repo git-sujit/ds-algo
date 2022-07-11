@@ -12,6 +12,30 @@ import java.util.*;
  * |a - x| == |b - x| and a < b
  */
 public class KClosestElements {
+    /**
+     * THINK :: Pair => int[2]
+     * Time Complexity : O(nlogk)
+     * Space Complexity: O(k)
+     */
+    public static int[] findKClosestElements_array_notPair(int[] a, int k, int x) throws Exception {
+        if (a == null || a.length == 0 || k <= 0 || k > a.length) throw new Exception("Invalid Input");
+        PriorityQueue<int[]> maxHeap = new PriorityQueue<>(Comparator.comparing((int[] a1) -> a1[1]).reversed());
+        for (int ele : a) {
+            maxHeap.add(new int[]{ele, Math.abs(ele - x)});
+            //if (maxHeap.size() > k) maxHeap.remove();
+        }
+        while (maxHeap.size() > k)
+            maxHeap.remove();
+        int[] out = new int[k];
+        int i = 0;
+        while (!maxHeap.isEmpty()) out[i++] = maxHeap.remove()[0];
+        return out;
+    }
+
+    /**
+     * Time Complexity : O(nlogk)
+     * Space Complexity: O(k)
+     */
     public static int[] findKClosestElements_better(int[] a, int k, int x) throws Exception {
         if (a == null || a.length == 0 || k <= 0 || k > a.length) throw new Exception("Invalid Input");
         PriorityQueue<Pair<Integer, Integer>> maxHeap = new PriorityQueue<>(Comparator.comparing((Pair<Integer, Integer> p) -> p.getValue()).reversed());
@@ -83,6 +107,7 @@ public class KClosestElements {
 
     static void test(int[] a, int k, int x) throws Exception {
         System.out.println("\nArray = " + Arrays.toString(a) + ", k = " + k + ", x = " + x);
+        System.out.println("[Pair=int[2]] " + k + " closest elements of " + x + " = " + Arrays.toString(findKClosestElements_array_notPair(a, k, x)));
         System.out.println("[Better] " + k + " closest elements of " + x + " = " + Arrays.toString(findKClosestElements_better(a, k, x)));
         System.out.println(k + " closest elements of " + x + " = " + Arrays.toString(kClosest(a, k, x)));
         System.out.println(k + " closest elements of " + x + " = " + findClosestElements(a, k, x));
