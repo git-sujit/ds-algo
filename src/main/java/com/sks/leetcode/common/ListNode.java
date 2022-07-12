@@ -86,4 +86,15 @@ public class ListNode {
         }
         return head;
     }
+
+    public static ListNode prepareTestData_binary() {
+        ListNode head = new ListNode(1);
+        ListNode curr = head;
+        for (int i = 2; i < 8; i++) {
+            curr.next = new ListNode(i % 2);
+            curr = curr.next;
+        }
+        return head;
+    }
+
 }

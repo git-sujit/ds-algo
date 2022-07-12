@@ -6,7 +6,7 @@ import com.sks.leetcode.common.ListNode;
  * Given the head of a singly linked list and two integers left and right where left <= right,
  * reverse the nodes of the list from position left to position right, and return the reversed list.
  */
-public class LinkedListReversal2 {
+public class LinkedListReversal_left_right {
     /**
      * Time Complexity :
      * Space Complexity:
@@ -94,7 +94,7 @@ public class LinkedListReversal2 {
     private static void test(ListNode head, int left, int right) {
         System.out.println("\nList : " + head);
         System.out.println("Reversed the list between( " + left + " and " + right + ") element(inclusive)");
-        head = new LinkedListReversal2().reverseBetween_better(head, left, right);
+        head = new LinkedListReversal_left_right().reverseBetween_better(head, left, right);
         System.out.println("List : " + head);
     }
 }

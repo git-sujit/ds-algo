@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/NextAlphabet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KClosestElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KClosestElements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KClosestPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KClosestPoints.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KTopFrequentNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/heap/KTopFrequentNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MinInStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MinInStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/Revise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/Revise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/BinarySearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/FloorCeilOfSortedArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/FloorCeilOfSortedArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/SortedRotatedArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/SortedRotatedArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/JosephusProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/JosephusProblem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/common/ListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/common/ListNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/LinkedListBinaryToDecimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/LinkedListBinaryToDecimal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/LinkedListIntersection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/LinkedListIntersection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LinkedListOddEven.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LinkedListOddEven.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LinkedListReversal2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LinkedListReversal_left_right.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,13 +90,13 @@
       <recent name="com.sks.learn" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.KClosestElements">
-    <configuration name="KClosestElements" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.heap.KClosestElements" />
+  <component name="RunManager" selected="Application.JosephusProblem">
+    <configuration name="JosephusProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.recursion.JosephusProblem" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.heap.*" />
+          <option name="PATTERN" value="com.sks.averma.recursion.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,12 +104,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LongestSubstringWithoutRepeatingChar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.variable.LongestSubstringWithoutRepeatingChar" />
+    <configuration name="LinkedListBinaryToDecimal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.easy.LinkedListBinaryToDecimal" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.slidingwindow.variable.*" />
+          <option name="PATTERN" value="com.sks.leetcode.easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,12 +117,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MinInStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.stack.MinInStack" />
+    <configuration name="LinkedListOddEven" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.medium.LinkedListOddEven" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.stack.*" />
+          <option name="PATTERN" value="com.sks.leetcode.medium.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -125,12 +130,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PickToys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.slidingwindow.variable.PickToys" />
+    <configuration name="LinkedListReversal_left_right" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.medium.LinkedListReversal_left_right" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.slidingwindow.variable.*" />
+          <option name="PATTERN" value="com.sks.leetcode.medium.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -138,12 +143,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RainWaterTrapping" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.stack.RainWaterTrapping" />
+    <configuration name="NextAlphabet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.binarysearch.NextAlphabet" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.stack.*" />
+          <option name="PATTERN" value="com.sks.averma.binarysearch.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -164,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.KClosestElements" />
-        <item itemvalue="Application.MinInStack" />
-        <item itemvalue="Application.RainWaterTrapping" />
-        <item itemvalue="Application.PickToys" />
-        <item itemvalue="Application.LongestSubstringWithoutRepeatingChar" />
+        <item itemvalue="Application.JosephusProblem" />
+        <item itemvalue="Application.LinkedListReversal_left_right" />
+        <item itemvalue="Application.LinkedListBinaryToDecimal" />
+        <item itemvalue="Application.LinkedListOddEven" />
+        <item itemvalue="Application.NextAlphabet" />
       </list>
     </recent_temporary>
   </component>
@@ -355,7 +360,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LinkedListOddEven.java</url>
-          <line>40</line>
+          <line>61</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -392,6 +397,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MinInStack.java</url>
           <line>25</line>
           <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/JosephusProblem.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MinInStack.java</url>

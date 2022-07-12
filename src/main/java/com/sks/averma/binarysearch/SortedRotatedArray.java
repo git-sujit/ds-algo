@@ -34,6 +34,9 @@ public class SortedRotatedArray {
         return -1;
     }
 
+    /**
+     *
+     */
     public static int find(int[] a, int n) {
         int minEleIndex = numOfRotations(a);
         //System.out.println("minEleIndex = " + minEleIndex);

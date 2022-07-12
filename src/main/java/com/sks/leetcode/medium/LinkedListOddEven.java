@@ -17,6 +17,27 @@ public class LinkedListOddEven {
      * Time Complexity : O(n)
      * Space Complexity: O(1)
      */
+    public static ListNode oddEvenList_Better(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode curr = head;
+        ListNode eventHead = head.next;
+        ListNode oddTail = null;
+        int count = 1;
+        while (curr != null && curr.next != null) {
+            ListNode temp = curr.next;
+            curr.next = curr.next.next;
+            curr = temp;
+            count++;
+            if (count % 2 == 1) oddTail = curr;
+        }
+        oddTail.next = eventHead;
+        return head;
+    }
+
+    /**
+     * Time Complexity : O(n)
+     * Space Complexity: O(1)
+     */
     public static ListNode oddEvenList(ListNode head) {
         if (head == null || head.next == null) return head;
         ListNode oddNode = head;
@@ -61,6 +82,11 @@ public class LinkedListOddEven {
         System.out.println("List : " + head);
         head = oddEvenList(head);
         System.out.println("Odd-Even List : " + head);
+
+        head = ListNode.prepareTestData_1();
+        System.out.println("List : " + head);
+        head = oddEvenList_Better(head);
+        System.out.println("[Better] Odd-Even List : " + head);
 
         head = ListNode.prepareTestData_1();
         head = oddEvenList_1(head);

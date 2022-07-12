@@ -19,8 +19,8 @@ public class LinkedListIntersection {
         ListNode pA = headA;
         ListNode pB = headB;
         while (pA != pB) {
-            pA = pA == null ? headB : pA.next;
-            pB = pB == null ? headA : pB.next;
+            pA = (pA == null ? headB : pA.next);
+            pB = (pB == null ? headA : pB.next);
         }
         return pA;
     }
