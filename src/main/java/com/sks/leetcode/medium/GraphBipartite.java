@@ -21,6 +21,8 @@ public class GraphBipartite {
         //Loop to take care of disconnected components
         for (int node = 0; node < graph.length; node++) {
             if (color[node] == -1) {
+                // QUE: DFS but why visited-set is not required here
+                // Because color array serves that purpose
                 Stack<Integer> stack = new Stack<>();
                 stack.push(node);
                 color[node] = 0;

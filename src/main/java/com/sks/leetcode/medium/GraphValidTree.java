@@ -8,8 +8,8 @@ import java.util.*;
  * Return true if the edges of the given graph make up a valid tree, and false otherwise.
  * <p>
  * Graph, G, is a tree iff(Connected & Acyclic):
- * 1. G is fully connected. In other words, for every pair of nodes in G, there is a path between them.
- * 2. G contains no cycles. In other words, there is exactly one path between each pair of nodes in G.
+ * 1. G is fully CONNECTED. In other words, for every pair of nodes in G, there is a path between them.
+ * 2. G contains NO-CYCLES. In other words, there is exactly one path between each pair of nodes in G.
  * <p>
  * Depth-first search is a classic graph-traversal algorithm that can be used to check for both of these conditions.
  * Depth-first search requires being able to look up the adjacent (immediate neighbours) of a given node.
@@ -38,7 +38,9 @@ public class GraphValidTree {
             int node = stack.pop();
             if (adjList.get(node) != null) {
                 for (int nei : adjList.get(node)) {
+                    // Avoid trivial cycle
                     if (parentMap.get(node) == nei) continue;
+                    // if already seen
                     if (parentMap.containsKey(nei)) return false;
                     stack.push(nei);
                     parentMap.put(nei, node);

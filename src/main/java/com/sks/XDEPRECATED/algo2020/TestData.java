@@ -86,6 +86,18 @@ public class TestData {
         return n0;
     }
 
+    public static GraphNode<Integer> getGraphData_2() {
+        GraphNode<Integer> n0 = new GraphNode(0);
+        GraphNode<Integer> n1 = new GraphNode(1);
+        GraphNode<Integer> n2 = new GraphNode(2);
+
+        n0.children = new GraphNode[]{n1, n2};
+        n1.children = new GraphNode[]{n0, n2};
+        n2.children = new GraphNode[]{n0, n1};
+
+        return n0;
+    }
+
     public static BTNode<String> getBinaryTreeDataString() {
         BTNode<String> n0 = new BTNode("P");
         BTNode<String> n1 = new BTNode("A");

@@ -21,6 +21,7 @@ public class GraphBFS {
         Queue<GraphNode> q = new LinkedList<>();
         q.add(node);
         while (!q.isEmpty()) {
+            //System.out.println("q = " + q);
             GraphNode qn = q.remove();
             // REMEMBER: Queue might have duplicate entries
             if (!visitedSet.contains(qn)) {
@@ -85,8 +86,13 @@ public class GraphBFS {
     public static void main(String[] args) {
         System.out.println("### GRAPH BFS");
         GraphNode<Integer> root = TestData.getGraphData_1();
-        System.out.println("\nBFS-without mutating graph");
+        System.out.println("\n1. BFS-without mutating graph");
         bfs_withoutMutatingGraph(root);
+
+        root = TestData.getGraphData_2();
+        System.out.println("\n2. BFS-without mutating graph");
+        bfs_withoutMutatingGraph(root);
+
 
         System.out.println("\nBFS-Better");
         bfs_better(root);
