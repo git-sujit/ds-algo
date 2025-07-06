@@ -26,6 +26,7 @@ public class BinarySearch {
             else
                 return mid;
         }
+        //Not Found
         return -1;
     }
 

@@ -196,7 +196,8 @@ public class MinInStack {
         }
 
         public Integer min() {
-            return min;
+            if (stack.isEmpty()) return -1;
+            else return min;
         }
     }
 }
