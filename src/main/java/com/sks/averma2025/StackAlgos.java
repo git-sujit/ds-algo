@@ -1,14 +1,12 @@
 package com.sks.averma2025;
 
-import com.sks.averma.stack.MinInStack;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
-public class StackApp {
-    private static final StackApp stackApp = new StackApp();
+public class StackAlgos {
+    private static final StackAlgos stackApp = new StackAlgos();
 
     public static void main(String[] args) {
         System.out.println("-------------------------------------------------------------------------------------");

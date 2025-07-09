@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma2025/BinarySearchApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma2025/StackApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma2025/BinarySearchAlgos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma2025/BinarySearchOnAnswerAlgos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ds-algo.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/BinarySearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MinInStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MinInStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma2025/BinarySearchApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma2025/StackApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma2025/StackAlgos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,15 +55,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.BinarySearchAlgos.executor": "Run",
     "Application.BinarySearchApp.executor": "Run",
+    "Application.BinarySearchOnAnswerAlgos.executor": "Run",
     "Application.MinInStack.executor": "Run",
     "Application.NextGreaterElement.executor": "Run",
+    "Application.PagesOfBooks.executor": "Run",
     "Application.StackApp.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/Users/sujit/Switch-2025/ds-algo",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Language Defaults"
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -85,7 +82,7 @@
       <recent name="com.sks.learn" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BinarySearchApp">
+  <component name="RunManager" selected="Application.BinarySearchOnAnswerAlgos">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -99,8 +96,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BinarySearchApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma2025.BinarySearchApp" />
+    <configuration name="BinarySearchAlgos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma2025.BinarySearchAlgos" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
@@ -112,12 +109,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GraphBipartite" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.medium.GraphBipartite" />
+    <configuration name="BinarySearchOnAnswerAlgos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma2025.BinarySearchOnAnswerAlgos" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.leetcode.medium.*" />
+          <option name="PATTERN" value="com.sks.averma2025.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -138,12 +135,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NextGreaterElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.stack.NextGreaterElement" />
+    <configuration name="PagesOfBooks" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma.binarysearch.bsa.PagesOfBooks" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.stack.*" />
+          <option name="PATTERN" value="com.sks.averma.binarysearch.bsa.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -151,8 +148,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StackApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma2025.StackApp" />
+    <configuration name="StackAlgos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma2025.StackAlgos" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
@@ -166,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BinarySearchApp" />
-        <item itemvalue="Application.StackApp" />
+        <item itemvalue="Application.BinarySearchOnAnswerAlgos" />
+        <item itemvalue="Application.PagesOfBooks" />
+        <item itemvalue="Application.BinarySearchAlgos" />
+        <item itemvalue="Application.StackAlgos" />
         <item itemvalue="Application.MinInStack" />
-        <item itemvalue="Application.NextGreaterElement" />
-        <item itemvalue="Application.GraphBipartite" />
       </list>
     </recent_temporary>
   </component>
@@ -348,11 +345,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/dupNMissing/MultipleMissingAndDuplicatesInArray.java</url>
           <line>31</line>
           <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/bsa/RowColumnSortedArray_1.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/leetcode/medium/LinkedListOddEven.java</url>

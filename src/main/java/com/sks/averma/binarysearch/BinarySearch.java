@@ -42,7 +42,7 @@ public class BinarySearch {
     }
 
     private static int binarySearch_recursive(int[] a, int n, int s, int e) {
-        // Base Condition
+        // Base Condition: Where the recursion will break to avoid ArrayIndexOutOfBoundsException
         if (s > e) return -1;
         int m = s + (e - s) / 2;
         if (n < a[m]) return binarySearch_recursive(a, n, s, m - 1);
