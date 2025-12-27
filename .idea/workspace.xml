@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma2025/BinarySearchAlgos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma2025/BinarySearchOnAnswerAlgos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma2025/HeapAlgos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/binarysearch/BinarySearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma2025/BinarySearchApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma2025/StackApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma2025/StackAlgos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +38,9 @@
   <component name="ProblemsViewState">
     <option name="showPreview" value="true" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="1dsTFPZJt1E5wAzgn0lkRf4rahT" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -53,22 +49,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BinarySearchAlgos.executor": "Run",
-    "Application.BinarySearchApp.executor": "Run",
-    "Application.BinarySearchOnAnswerAlgos.executor": "Run",
-    "Application.MinInStack.executor": "Run",
-    "Application.NextGreaterElement.executor": "Run",
-    "Application.PagesOfBooks.executor": "Run",
-    "Application.StackApp.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/sujit/Switch-2025/ds-algo",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BinarySearchAlgos.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BinarySearchApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BinarySearchOnAnswerAlgos.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HeapAlgos.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MinInStack.executor&quot;: &quot;Run&quot;,
+    &quot;Application.NextGreaterElement.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PagesOfBooks.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StackApp.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/sujit/Switch-2025/ds-algo&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.sks.interview2022" />
@@ -82,7 +79,7 @@
       <recent name="com.sks.learn" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BinarySearchOnAnswerAlgos">
+  <component name="RunManager" selected="Application.HeapAlgos">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -122,12 +119,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MinInStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma.stack.MinInStack" />
+    <configuration name="HeapAlgos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma2025.HeapAlgos" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.averma.stack.*" />
+          <option name="PATTERN" value="com.sks.averma2025.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -163,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HeapAlgos" />
         <item itemvalue="Application.BinarySearchOnAnswerAlgos" />
         <item itemvalue="Application.PagesOfBooks" />
         <item itemvalue="Application.BinarySearchAlgos" />
         <item itemvalue="Application.StackAlgos" />
-        <item itemvalue="Application.MinInStack" />
       </list>
     </recent_temporary>
   </component>
@@ -385,6 +382,14 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/JosephusProblem.java</url>
           <line>26</line>
           <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma2025/BinarySearchAlgos.java</url>
+          <line>50</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/java/com/sks/averma/stack/MinInStack.java</url>
