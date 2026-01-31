@@ -1,4 +1,4 @@
-package com.sks.averma2025;
+package com.sks.averma_2025;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.sks.averma2025;
+package com.sks.averma_2025;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -552,7 +552,7 @@ public class StackAlgos {
     private void run_stockSpanner(int[] stockPrices) {
         int[] stockSpan_bf = stackApp.stockSpanner_BF(stockPrices);
         int[] stockSpan_stack = stackApp.stockSpanner_stack(stockPrices);
-        System.out.println("Stack Prices:" + Arrays.toString(stockPrices));
+        System.out.println("Stock Prices:" + Arrays.toString(stockPrices));
         System.out.println("StockSpanner:" + Arrays.toString(stockSpan_stack));
         System.out.println("Passed?     :" + Arrays.equals(stockSpan_bf, stockSpan_stack));
         System.out.println(" ");

@@ -4,7 +4,8 @@ package com.sks.averma.slidingwindow.variable;
 import java.util.*;
 
 /**
- * Given an array arr[] of size n containing integers. The problem is to find the length of the longest sub-array having sum equal to the given value k.
+ * Given an array arr[] of size n containing integers. The problem is to find the length of the longest sub-array
+ * having sum equal to the given value k.
  * Refer: htps://www.geeksforgeeks.org/longest-sub-array-sum-k/
  */
 public class LongestSubArrayOfASum {
