@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma_2026/A_StackPractice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma_2026/B_HeapPractice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma_2026/C_BinarySearchPractice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma_2026/D_BinarySearchOnAnswerPractice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/hellointerview/twopointers/ThreeSum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/hellointerview/twopointers/TriangleNumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/hellointerview/twopointers/TwoSum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubArrayOfASum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/slidingwindow/variable/LongestSubArrayOfASum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma2025/BinarySearchAlgos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma_2025/BinarySearchAlgos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma2025/BinarySearchOnAnswerAlgos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma_2025/BinarySearchOnAnswerAlgos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma2025/HeapAlgos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma_2025/HeapAlgos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma2025/StackAlgos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma_2025/StackAlgos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma_2026/D_BinarySearchOnAnswerPractice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma_2026/D_BinarySearchOnAnswerPractice.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +57,7 @@
     "Application.BinarySearchApp.executor": "Run",
     "Application.BinarySearchOnAnswerAlgos.executor": "Run",
     "Application.C_BinarySearchPractice.executor": "Run",
+    "Application.D_BinarySearchOnAnswerPractice.executor": "Run",
     "Application.FirstNegativeInWindowK.executor": "Run",
     "Application.HeapAlgos.executor": "Run",
     "Application.InfiniteBinarySortedArray.executor": "Run",
@@ -85,7 +75,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/Users/sujit/AARAMBH/ds-algo",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -101,7 +91,7 @@
       <recent name="com.sks.learn" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.InfiniteBinarySortedArray">
+  <component name="RunManager" selected="Application.D_BinarySearchOnAnswerPractice">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -111,19 +101,6 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="A_StackPractice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.averma_2026.A_StackPractice" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.averma_2026.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -143,6 +120,19 @@
     </configuration>
     <configuration name="C_BinarySearchPractice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sks.averma_2026.C_BinarySearchPractice" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.averma_2026.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D_BinarySearchOnAnswerPractice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.averma_2026.D_BinarySearchOnAnswerPractice" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
@@ -182,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.InfiniteBinarySortedArray" />
+        <item itemvalue="Application.D_BinarySearchOnAnswerPractice" />
         <item itemvalue="Application.C_BinarySearchPractice" />
+        <item itemvalue="Application.InfiniteBinarySortedArray" />
         <item itemvalue="Application.NearlySortedArray" />
         <item itemvalue="Application.B_HeapPractice" />
-        <item itemvalue="Application.A_StackPractice" />
       </list>
     </recent_temporary>
   </component>
