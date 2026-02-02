@@ -44,7 +44,7 @@ public class FirstNegativeInWindowK {
 
     /**
      * Time Complexity: O(n): Traversing the array only once
-     * Time Complexity: O(k): Size of list that stores negative numbers, which will be at max k
+     * Space Complexity: O(k): Size of list that stores negative numbers, which will be at max k
      */
     public static int[] firstNegativeInteger(int arr[], int k) {
         if (arr == null || arr.length == 0 || k <= 0 || k > arr.length) return null;

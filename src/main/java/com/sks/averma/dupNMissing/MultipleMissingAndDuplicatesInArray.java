@@ -25,6 +25,9 @@ public class MultipleMissingAndDuplicatesInArray {
         return out;
     }
 
+    /**
+     * Sort so that: ith index has (i+1) element
+     */
     private static void swapSort(int[] nums) {
         if (nums == null || nums.length == 0) return;
         int i = 0;
