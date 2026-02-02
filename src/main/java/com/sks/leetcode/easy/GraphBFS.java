@@ -4,7 +4,7 @@ import com.sks.XDEPRECATED.algo2020.TestData;
 
 import java.util.*;
 
-import static com.sks.XDEPRECATED.algo2020.TestData.GraphNode;
+import static com.sks.XDEPRECATED.algo2020.TestData.GraphNode_OLD;
 
 /**
  * @author : Sujit K Singh
@@ -15,19 +15,19 @@ public class GraphBFS {
      * Time Complexity : O(n)
      * Space Complexity: O(n) for Queue & VisitedSet
      */
-    public static void bfs_withoutMutatingGraph(GraphNode<Integer> node) {
+    public static void bfs_withoutMutatingGraph(GraphNode_OLD<Integer> node) {
         if (node == null) return;
-        Set<GraphNode> visitedSet = new HashSet<>();
-        Queue<GraphNode> q = new LinkedList<>();
+        Set<GraphNode_OLD> visitedSet = new HashSet<>();
+        Queue<GraphNode_OLD> q = new LinkedList<>();
         q.add(node);
         while (!q.isEmpty()) {
             //System.out.println("q = " + q);
-            GraphNode qn = q.remove();
+            GraphNode_OLD qn = q.remove();
             // REMEMBER: Queue might have duplicate entries
             if (!visitedSet.contains(qn)) {
                 visit(qn);
                 visitedSet.add(qn);
-                for (GraphNode child : qn.children) {
+                for (GraphNode_OLD child : qn.children) {
                     if (!visitedSet.contains(child))
                         q.add(child);
                 }
@@ -40,17 +40,17 @@ public class GraphBFS {
      * Space Complexity: O(n) Max queue size is n
      * Check the visited after removing from queue, queue might have duplicate data, hence need to check visited
      */
-    public static void bfs_better(GraphNode<Integer> n) {
+    public static void bfs_better(GraphNode_OLD<Integer> n) {
         if (n == null) return;
-        Queue<GraphNode<Integer>> q = new LinkedList<>();
+        Queue<GraphNode_OLD<Integer>> q = new LinkedList<>();
         q.add(n);
         while (!q.isEmpty()) {
-            GraphNode<Integer> qn = q.remove();
+            GraphNode_OLD<Integer> qn = q.remove();
             // REMEMBER: Queue might have duplicate entries
             if (!qn.visited) {
                 visit(qn);
                 qn.visited = true;
-                for (GraphNode<Integer> c : qn.children) {
+                for (GraphNode_OLD<Integer> c : qn.children) {
                     if (!c.visited) q.add(c);
                 }
             }
@@ -61,14 +61,14 @@ public class GraphBFS {
      * Time Complexity  : O(n) - Visiting each of n nodes
      * Space Complexity : O(n) - Queue memory
      */
-    public static void bfs(GraphNode<Integer> n) {
+    public static void bfs(GraphNode_OLD<Integer> n) {
         if (n == null) return;
-        Queue<GraphNode<Integer>> q = new LinkedList<>();
+        Queue<GraphNode_OLD<Integer>> q = new LinkedList<>();
         q.addAll(Arrays.asList(n.children));
         visit(n);
         n.visited = true;
         while (!q.isEmpty()) {
-            GraphNode<Integer> qn = q.remove();
+            GraphNode_OLD<Integer> qn = q.remove();
             // REMEMBER: Queue might have duplicate entries
             if (!qn.visited) {
                 q.addAll(Arrays.asList(qn.children));
@@ -79,13 +79,13 @@ public class GraphBFS {
     }
 
 
-    private static void visit(GraphNode<Integer> n) {
+    private static void visit(GraphNode_OLD<Integer> n) {
         System.out.print(n.data + " ");
     }
 
     public static void main(String[] args) {
         System.out.println("### GRAPH BFS");
-        GraphNode<Integer> root = TestData.getGraphData_1();
+        GraphNode_OLD<Integer> root = TestData.getGraphData_1();
         System.out.println("\n1. BFS-without mutating graph");
         bfs_withoutMutatingGraph(root);
 

@@ -1,0 +1,5 @@
+package com.sks.interview_2026;
+
+public class I_TreePractice {
+
+}

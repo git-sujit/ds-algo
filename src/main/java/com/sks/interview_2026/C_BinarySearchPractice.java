@@ -1,4 +1,4 @@
-package com.sks.averma_2026;
+package com.sks.interview_2026;
 
 import java.util.Arrays;
 

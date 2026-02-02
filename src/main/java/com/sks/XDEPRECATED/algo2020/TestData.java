@@ -5,15 +5,15 @@ package com.sks.XDEPRECATED.algo2020;
  * Purpose : Test Data Builder
  */
 public class TestData {
-    public static class GraphNode<T> {
+    public static class GraphNode_OLD<T> {
         public T data;
-        public GraphNode<T>[] children;
+        public GraphNode_OLD<T>[] children;
         public boolean visited;
 
-        public GraphNode() {
+        public GraphNode_OLD() {
         }
 
-        public GraphNode(T data) {
+        public GraphNode_OLD(T data) {
             this.data = data;
         }
 
@@ -50,50 +50,50 @@ public class TestData {
         }
     }
 
-    public static GraphNode<Integer> getGraphData() {
-        GraphNode<Integer> n0 = new GraphNode(0);
-        GraphNode<Integer> n1 = new GraphNode(1);
-        GraphNode<Integer> n2 = new GraphNode(2);
-        GraphNode<Integer> n3 = new GraphNode(3);
-        GraphNode<Integer> n4 = new GraphNode(4);
-        GraphNode<Integer> n5 = new GraphNode(5);
+    public static GraphNode_OLD<Integer> getGraphData() {
+        GraphNode_OLD<Integer> n0 = new GraphNode_OLD(0);
+        GraphNode_OLD<Integer> n1 = new GraphNode_OLD(1);
+        GraphNode_OLD<Integer> n2 = new GraphNode_OLD(2);
+        GraphNode_OLD<Integer> n3 = new GraphNode_OLD(3);
+        GraphNode_OLD<Integer> n4 = new GraphNode_OLD(4);
+        GraphNode_OLD<Integer> n5 = new GraphNode_OLD(5);
 
-        n0.children = new GraphNode[]{n1, n4, n5};
-        n1.children = new GraphNode[]{n3, n4};
-        n2.children = new GraphNode[]{n1};
-        n3.children = new GraphNode[]{n2, n4};
-        n4.children = new GraphNode[]{};
-        n5.children = new GraphNode[]{};
-
-        return n0;
-    }
-
-    public static GraphNode<Integer> getGraphData_1() {
-        GraphNode<Integer> n0 = new GraphNode(0);
-        GraphNode<Integer> n1 = new GraphNode(1);
-        GraphNode<Integer> n2 = new GraphNode(2);
-        GraphNode<Integer> n3 = new GraphNode(3);
-        GraphNode<Integer> n4 = new GraphNode(4);
-        GraphNode<Integer> n5 = new GraphNode(5);
-
-        n0.children = new GraphNode[]{n1, n5};
-        n1.children = new GraphNode[]{n3, n4};
-        n2.children = new GraphNode[]{n1};
-        n3.children = new GraphNode[]{n2, n4};
-        n4.children = new GraphNode[]{};
-        n5.children = new GraphNode[]{};
+        n0.children = new GraphNode_OLD[]{n1, n4, n5};
+        n1.children = new GraphNode_OLD[]{n3, n4};
+        n2.children = new GraphNode_OLD[]{n1};
+        n3.children = new GraphNode_OLD[]{n2, n4};
+        n4.children = new GraphNode_OLD[]{};
+        n5.children = new GraphNode_OLD[]{};
 
         return n0;
     }
 
-    public static GraphNode<Integer> getGraphData_2() {
-        GraphNode<Integer> n0 = new GraphNode(0);
-        GraphNode<Integer> n1 = new GraphNode(1);
-        GraphNode<Integer> n2 = new GraphNode(2);
+    public static GraphNode_OLD<Integer> getGraphData_1() {
+        GraphNode_OLD<Integer> n0 = new GraphNode_OLD(0);
+        GraphNode_OLD<Integer> n1 = new GraphNode_OLD(1);
+        GraphNode_OLD<Integer> n2 = new GraphNode_OLD(2);
+        GraphNode_OLD<Integer> n3 = new GraphNode_OLD(3);
+        GraphNode_OLD<Integer> n4 = new GraphNode_OLD(4);
+        GraphNode_OLD<Integer> n5 = new GraphNode_OLD(5);
 
-        n0.children = new GraphNode[]{n1, n2};
-        n1.children = new GraphNode[]{n0, n2};
-        n2.children = new GraphNode[]{n0, n1};
+        n0.children = new GraphNode_OLD[]{n1, n5};
+        n1.children = new GraphNode_OLD[]{n3, n4};
+        n2.children = new GraphNode_OLD[]{n1};
+        n3.children = new GraphNode_OLD[]{n2, n4};
+        n4.children = new GraphNode_OLD[]{};
+        n5.children = new GraphNode_OLD[]{};
+
+        return n0;
+    }
+
+    public static GraphNode_OLD<Integer> getGraphData_2() {
+        GraphNode_OLD<Integer> n0 = new GraphNode_OLD(0);
+        GraphNode_OLD<Integer> n1 = new GraphNode_OLD(1);
+        GraphNode_OLD<Integer> n2 = new GraphNode_OLD(2);
+
+        n0.children = new GraphNode_OLD[]{n1, n2};
+        n1.children = new GraphNode_OLD[]{n0, n2};
+        n2.children = new GraphNode_OLD[]{n0, n1};
 
         return n0;
     }

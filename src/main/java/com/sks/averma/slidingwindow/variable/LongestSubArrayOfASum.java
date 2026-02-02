@@ -121,7 +121,7 @@ public class LongestSubArrayOfASum {
     }
 
     public static void main(String[] args) {
-        int[] numbers = {4, 1, 1, 1, 2, 3, 5};
+        int[] numbers = {4, 1, 1, 1, 2, 0, 3, 5};
         int sum = 5;
         demo(numbers, sum);
 

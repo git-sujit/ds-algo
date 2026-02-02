@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Stack;
 
-import static com.sks.XDEPRECATED.algo2020.TestData.GraphNode;
+import static com.sks.XDEPRECATED.algo2020.TestData.GraphNode_OLD;
 
 /**
  * @author : Sujit K Singh
@@ -18,11 +18,11 @@ public class DepthFirstSearch {
      * Space Complexity : O(n) - method stack memory for recursion
      * (NuViSLoCR) :: Null Check - Visit - Set Flag - Loop - Check Flag- Recursion
      */
-    public static void dfs(GraphNode<Integer> n) {
+    public static void dfs(GraphNode_OLD<Integer> n) {
         if (n == null) return;
         visit(n);
         n.visited = true;
-        for (GraphNode<Integer> child : n.children) {
+        for (GraphNode_OLD<Integer> child : n.children) {
             if (!child.visited)
                 dfs(child);
         }
@@ -32,32 +32,32 @@ public class DepthFirstSearch {
      * Time: O(n)
      * Space: O(n) for visitedSet
      */
-    public static void dfs_visited_set(GraphNode<Integer> n) {
+    public static void dfs_visited_set(GraphNode_OLD<Integer> n) {
         //Set<GraphNode> visitedSet = new HashSet<>();
         dfs_visited_set(n, new HashSet<>());
         //System.out.println("visitedSet = " + visitedSet);
     }
 
-    private static void dfs_visited_set(GraphNode<Integer> node, Set<GraphNode> visitedSet) {
+    private static void dfs_visited_set(GraphNode_OLD<Integer> node, Set<GraphNode_OLD> visitedSet) {
         if (node == null) return;
         visit(node);
         visitedSet.add(node);
-        for (GraphNode child : node.children) {
+        for (GraphNode_OLD child : node.children) {
             if (!visitedSet.contains(child)) dfs_visited_set(child, visitedSet);
         }
     }
 
-    public static void dfs_iterative(GraphNode<Integer> n) {
+    public static void dfs_iterative(GraphNode_OLD<Integer> n) {
         if (n == null) return;
-        Stack<GraphNode<Integer>> stack = new Stack<>();
+        Stack<GraphNode_OLD<Integer>> stack = new Stack<>();
         stack.push(n);
         while (!stack.isEmpty()) {
-            GraphNode<Integer> sn = stack.pop();
+            GraphNode_OLD<Integer> sn = stack.pop();
             visit(sn);
             sn.visited = true;
-            GraphNode[] children = sn.children;
+            GraphNode_OLD[] children = sn.children;
             for (int i = children.length - 1; i >= 0; i--) {
-                GraphNode child = children[i];
+                GraphNode_OLD child = children[i];
                 if (!child.visited) stack.push(child);
             }
         }
@@ -83,7 +83,7 @@ public class DepthFirstSearch {
         System.out.println("Visited : " + node);
     }
 
-    private static void visit(GraphNode<Integer> n) {
+    private static void visit(GraphNode_OLD<Integer> n) {
         System.out.println("Visited : " + n.data);
     }
 
@@ -109,7 +109,7 @@ public class DepthFirstSearch {
 
     private static void test_dfs_vertices() {
         System.out.println("### GRAPH DFS");
-        GraphNode<Integer> root = TestData.getGraphData();
+        GraphNode_OLD<Integer> root = TestData.getGraphData();
         System.out.println("DFS Recursive- visitedSet");
         dfs_visited_set(root);
         System.out.println("DFS Recursive- mutating Graph");
