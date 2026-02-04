@@ -3,33 +3,33 @@ package com.sks.interview_2026.tree;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TreeNode {
-    public int val;
-    public TreeNode left;
-    public TreeNode right;
+public class BinaryTreeNode {
+    public int data;
+    public BinaryTreeNode left;
+    public BinaryTreeNode right;
 
-    public TreeNode() {
+    public BinaryTreeNode() {
     }
 
-    public TreeNode(int val) {
-        this.val = val;
+    public BinaryTreeNode(int val) {
+        this.data = val;
     }
 
-    public TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
+    public BinaryTreeNode(int val, BinaryTreeNode left, BinaryTreeNode right) {
+        this.data = val;
         this.left = left;
         this.right = right;
     }
 
     @Override
     public String toString() {
-        return val + "=>(" + (left == null ? left : left.val) +
-                ", " + (right == null ? right : right.val) + ")";
+        return data + "=>(" + (left == null ? "-" : left.data) +
+                ", " + (right == null ? "-" : right.data) + ")";
     }
 
-    public static TreeNode treeData1() {
-        List<TreeNode> nodes = testNodes(10);
-        TreeNode root = nodes.get(1);
+    public static BinaryTreeNode getBinaryTreeData1() {
+        List<BinaryTreeNode> nodes = testNodes(10);
+        BinaryTreeNode root = nodes.get(1);
         root.left = nodes.get(2);
         root.right = nodes.get(3);
         nodes.get(2).left = nodes.get(4);
@@ -39,9 +39,9 @@ public class TreeNode {
         return root;
     }
 
-    public static TreeNode treeData2() {
-        List<TreeNode> nodes = testNodes(10);
-        TreeNode root = nodes.get(4);
+    public static BinaryTreeNode getBinaryTreeData2() {
+        List<BinaryTreeNode> nodes = testNodes(10);
+        BinaryTreeNode root = nodes.get(4);
         root.left = nodes.get(2);
         root.right = nodes.get(9);
         nodes.get(2).left = nodes.get(3);
@@ -50,9 +50,9 @@ public class TreeNode {
         return root;
     }
 
-    public static TreeNode binarySearchTreeData1() {
-        List<TreeNode> nodes = testNodes(10);
-        TreeNode root = nodes.get(5);
+    public static BinaryTreeNode getBinarySearchTreeData1() {
+        List<BinaryTreeNode> nodes = testNodes(10);
+        BinaryTreeNode root = nodes.get(5);
         root.left = nodes.get(3);
         root.right = nodes.get(6);
         nodes.get(3).left = nodes.get(2);
@@ -64,10 +64,10 @@ public class TreeNode {
         return root;
     }
 
-    private static List<TreeNode> testNodes(int n) {
-        List<TreeNode> nodes = new ArrayList<>();
+    private static List<BinaryTreeNode> testNodes(int n) {
+        List<BinaryTreeNode> nodes = new ArrayList<>();
         for (int i = 0; i <= n; i++)
-            nodes.add(new TreeNode(i));
+            nodes.add(new BinaryTreeNode(i));
         return nodes;
     }
 }
