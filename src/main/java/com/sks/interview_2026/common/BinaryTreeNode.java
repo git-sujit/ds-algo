@@ -1,4 +1,4 @@
-package com.sks.interview_2026.tree;
+package com.sks.interview_2026.common;
 
 import java.util.ArrayList;
 import java.util.List;

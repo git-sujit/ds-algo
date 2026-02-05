@@ -1,6 +1,4 @@
-package com.sks.interview_2026.graph;
-
-import com.sks.XDEPRECATED.algo2020.TestData;
+package com.sks.interview_2026.common;
 
 public class GraphNode<T> {
     public T data;

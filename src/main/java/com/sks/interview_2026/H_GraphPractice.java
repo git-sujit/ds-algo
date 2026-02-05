@@ -1,6 +1,6 @@
 package com.sks.interview_2026;
 
-import com.sks.interview_2026.graph.GraphNode;
+import com.sks.interview_2026.common.GraphNode;
 
 import java.util.*;
 

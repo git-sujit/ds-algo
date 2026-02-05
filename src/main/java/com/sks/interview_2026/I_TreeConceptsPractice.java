@@ -1,13 +1,12 @@
 package com.sks.interview_2026;
 
-import com.sks.XDEPRECATED.algo2020.TestData;
-import com.sks.interview_2026.tree.BinaryTreeNode;
+import com.sks.interview_2026.common.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class I_TreePractice {
+public class I_TreeConceptsPractice {
     public static void main(String[] args) {
         System.out.println("----- PRINT BINARY TREE -----");
         test_printBinaryTree();

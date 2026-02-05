@@ -33,7 +33,7 @@ public class BasicProblems {
     }
 
     public static int nthFactorial(int n) {
-        // Base
+        // Base Condition
         if (n == 0 || n == 1) return 1;
         return n * nthFactorial(n - 1);
     }

@@ -53,6 +53,26 @@ public class B_HeapPractice {
     /**
      * Time Complexity: O(nlogk), Space Complexity: O(k) for heap
      */
+    private static List<Pair<Integer, Integer>> topKFrequentNumbers(int[] numbers, int k) {
+        if (numbers == null || numbers.length == 0 || k <= 0 || k > numbers.length) return null;
+        List<Pair<Integer, Integer>> out = new ArrayList<>();
+        Map<Integer, Integer> freqMap = new HashMap<>();
+        for (int num : numbers)
+            freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
+        PriorityQueue<Pair<Integer, Integer>> minHeap = new PriorityQueue<>(Comparator.comparing(Pair::getValue));
+        for (int num : freqMap.keySet()) {
+            minHeap.add(new Pair<>(num, freqMap.get(num)));
+            if (minHeap.size() > k)
+                minHeap.remove();
+        }
+        while (!minHeap.isEmpty())
+            out.add(minHeap.remove());
+        return out.reversed();
+    }
+
+    /**
+     * Time Complexity: O(nlogk), Space Complexity: O(k) for heap
+     */
     private static int minCostOfConnectingRopes(int[] ropes) {
         if (ropes == null || ropes.length <= 1) return -1;
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
@@ -64,27 +84,6 @@ public class B_HeapPractice {
             totalCost += cost;
         }
         return totalCost;
-    }
-
-    /**
-     * Time Complexity: O(nlogk), Space Complexity: O(k) for heap
-     */
-    private static int[] topKFrequentNumbers_better(int[] numbers, int k) {
-        if (numbers == null || numbers.length == 0 || k <= 0 || k > numbers.length) return null;
-        int[] out = new int[k];
-        Map<Integer, Integer> freqMap = new HashMap<>();
-        for (int num : numbers)
-            freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
-        PriorityQueue<Pair<Integer, Integer>> minHeap = new PriorityQueue<>(Comparator.comparing((Pair<Integer, Integer> p) -> p.getValue()));
-        for (int num : numbers) {
-            minHeap.add(new Pair<>(num, freqMap.get(num)));
-            if (minHeap.size() > k)
-                minHeap.remove();
-        }
-        int j = 0;
-        while (!minHeap.isEmpty())
-            out[j++] = minHeap.remove().getKey();
-        return out;
     }
 
     /**
@@ -115,10 +114,10 @@ public class B_HeapPractice {
     }
 
     private static void test_topKFrequentNumbers() {
-        int[] numbers = new int[]{1, 3, 3, 2, 1, 2, 1, 4};
+        int[] numbers = new int[]{1, 3, 3, 2, 1, 2, 1, 4, 3, 1};
         int k = 3;
         System.out.println("\nArray = " + Arrays.toString(numbers));
-        System.out.println(k + " most frequent numbers = " + Arrays.toString(topKFrequentNumbers_better(numbers, k)));
+        System.out.println(k + " most frequent numbers = " + topKFrequentNumbers(numbers, k));
     }
 
     private static void test_minCostConnectRopes() {
