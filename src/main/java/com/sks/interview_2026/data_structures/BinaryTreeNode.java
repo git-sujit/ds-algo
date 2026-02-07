@@ -1,4 +1,4 @@
-package com.sks.interview_2026.common;
+package com.sks.interview_2026.data_structures;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.sks.interview_2026;
 
-import com.sks.interview_2026.common.BinaryTreeNode;
+import com.sks.interview_2026.data_structures.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.Arrays;

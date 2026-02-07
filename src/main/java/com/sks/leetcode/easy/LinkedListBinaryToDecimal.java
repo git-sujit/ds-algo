@@ -21,5 +21,6 @@ public class LinkedListBinaryToDecimal {
         ListNode head = ListNode.prepareTestData_binary();
         System.out.println("\nBinary Linked List : " + head);
         System.out.println("Decimal Value : " + getDecimalValue(head));
+        System.out.println("\nBinary Linked List : " + head);
     }
 }

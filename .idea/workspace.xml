@@ -5,17 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a83909c-15ef-4954-ae88-9125573be76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/J_RecursionPractice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/K_DynamicProgrammingPractice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/L_LeetCode_Easy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/M_LeetCode_Medium.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/N_LeetCode_Hard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/companies/VerkadaPractice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/data_structures/LinkedListNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/BasicProblems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/averma/recursion/BasicProblems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/B_HeapPractice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/B_HeapPractice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/G_Variable_SlidingWindowPractice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/G_Variable_SlidingWindowPractice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/H_GraphPractice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/H_GraphPractice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/I_TreeConceptsPractice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/I_TreeConceptsPractice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/J_TreeLeetCodePractice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/common/BinaryTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/common/BinaryTreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/common/GraphNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/common/GraphNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/J_RecursionPractice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/J_RecursionPractice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/L_LeetCode_Easy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/L_LeetCode_Easy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/common/BinaryTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/data_structures/BinaryTreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/common/GraphNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/interview_2026/data_structures/GraphNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/common/ListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/common/ListNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/LinkedListBinaryToDecimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sks/leetcode/easy/LinkedListBinaryToDecimal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +81,10 @@
     "Application.I_TreePractice.executor": "Run",
     "Application.InfiniteBinarySortedArray.executor": "Run",
     "Application.K_RecursionPractice.executor": "Run",
+    "Application.L_LeetCode_Easy.executor": "Run",
+    "Application.LinkedListBinaryToDecimal.executor": "Run",
     "Application.LongestSubArrayOfASum.executor": "Run",
+    "Application.M_LeetCode_Medium.executor": "Run",
     "Application.MaxOfAllSubarryas.executor": "Run",
     "Application.MinInStack.executor": "Run",
     "Application.NearlySortedArray.executor": "Run",
@@ -96,7 +102,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -112,7 +118,7 @@
       <recent name="com.sks.learn" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.B_HeapPractice">
+  <component name="RunManager" selected="Application.M_LeetCode_Medium">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -126,8 +132,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="B_HeapPractice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.interview_2026.B_HeapPractice" />
+    <configuration name="G_Variable_SlidingWindowPractice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.interview_2026.G_Variable_SlidingWindowPractice" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
@@ -139,8 +145,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="H_GraphPractice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.interview_2026.H_GraphPractice" />
+    <configuration name="L_LeetCode_Easy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.interview_2026.L_LeetCode_Easy" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
@@ -152,25 +158,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="I_TreeConceptsPractice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.interview_2026.I_TreeConceptsPractice" />
+    <configuration name="LinkedListBinaryToDecimal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.leetcode.easy.LinkedListBinaryToDecimal" />
       <module name="ds-algo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sks.interview_2026.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="J_RecursionPractice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sks.interview_2026.J_RecursionPractice" />
-      <module name="ds-algo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sks.interview_2026.*" />
+          <option name="PATTERN" value="com.sks.leetcode.easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -191,12 +184,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="M_LeetCode_Medium" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sks.interview_2026.M_LeetCode_Medium" />
+      <module name="ds-algo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sks.interview_2026.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.B_HeapPractice" />
-        <item itemvalue="Application.J_RecursionPractice" />
-        <item itemvalue="Application.I_TreeConceptsPractice" />
-        <item itemvalue="Application.H_GraphPractice" />
+        <item itemvalue="Application.M_LeetCode_Medium" />
+        <item itemvalue="Application.L_LeetCode_Easy" />
+        <item itemvalue="Application.LinkedListBinaryToDecimal" />
+        <item itemvalue="Application.G_Variable_SlidingWindowPractice" />
         <item itemvalue="Application.LongestSubArrayOfASum" />
       </list>
     </recent_temporary>

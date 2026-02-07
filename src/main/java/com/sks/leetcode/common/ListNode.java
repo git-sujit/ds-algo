@@ -53,6 +53,16 @@ public class ListNode {
         return head;
     }
 
+    public static ListNode prepareTestData_2() {
+        ListNode head = new ListNode(1);
+        ListNode curr = head;
+        for (int i = 0; i < 5; i++) {
+            curr.next = new ListNode(i);
+            curr = curr.next;
+        }
+        return head;
+    }
+
     public static ListNode prepareTestData_cycle() {
         ListNode head = new ListNode(1);
         ListNode two = new ListNode(2);
@@ -92,6 +102,24 @@ public class ListNode {
         ListNode curr = head;
         for (int i = 2; i < 8; i++) {
             curr.next = new ListNode(i % 2);
+            curr = curr.next;
+        }
+        return head;
+    }
+
+    public static ListNode[] prepareListOfLinkedList() {
+        //1,4,5],[1,3,4],[2,6]
+        ListNode list1 = prepareLinkedList(new int[]{1, 4, 5});
+        ListNode list2 = prepareLinkedList(new int[]{1, 3, 4});
+        ListNode list3 = prepareLinkedList(new int[]{2, 6});
+        return new ListNode[]{list1, list2, list3};
+    }
+
+    public static ListNode prepareLinkedList(int[] nums) {
+        ListNode head = new ListNode(nums[0]);
+        ListNode curr = head;
+        for (int i = 1; i < nums.length; i++) {
+            curr.next = new ListNode(nums[i]);
             curr = curr.next;
         }
         return head;
