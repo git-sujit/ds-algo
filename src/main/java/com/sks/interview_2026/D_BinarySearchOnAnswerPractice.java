@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class D_BinarySearchOnAnswerPractice {
     public static void main(String[] args) {
+        System.out.println("----- \"BINARY SEARCH ON ANSWER\" ALGORITHMS -----");
         System.out.println("----- PEAK ELEMENT -----");
         test_peakElement();
 
@@ -20,7 +21,6 @@ public class D_BinarySearchOnAnswerPractice {
         test_allocateMinPagesToStudents();
     }
 
-
     /**
      * Time Complexity:  O(logn), Space Complexity: O(1)
      */
@@ -29,16 +29,20 @@ public class D_BinarySearchOnAnswerPractice {
         int s = 0, e = a.length - 1;
         while (s <= e) {
             int mid = s + (e - s) / 2;
-            if (mid > 0 && mid < a.length - 1) {
-                if (a[mid] > a[mid - 1] && a[mid] > a[mid + 1]) return a[mid];
-                else if (a[mid] < a[mid - 1]) e = mid - 1;
-                else if (a[mid] < a[mid + 1]) s = mid + 1;
-            } else if (mid == 0) {
-                if (mid + 1 < a.length && a[mid] > a[mid + 1]) return a[mid];
-                else s = mid + 1;
+            int prev = mid - 1, next = mid + 1;
+            if (mid == 0) {
+                if (next < a.length && a[mid] > a[next]) return a[mid];
+                else s = next;
             } else if (mid == a.length - 1) {
-                if (mid - 1 >= 0 && a[mid] > a[mid - 1]) return a[mid];
-                else e = mid - 1;
+                if (prev >= 0 && a[mid] > a[prev]) return a[mid];
+                else e = prev;
+            } else {
+                // 4 cases of prev/next with Smaller/Bigger
+                if (a[mid] > a[prev] && a[mid] > a[next]) return a[mid];
+                else if (a[mid] < a[prev]) e = prev;
+                else if (a[mid] < a[next]) s = next;
+                // NOT EXPLICITLY REQUIRED
+                // else System.out.println("This is the case of both prev/next bigger than mid, which will be caught by mid<prev case");
             }
         }
         return -1;
@@ -114,11 +118,11 @@ public class D_BinarySearchOnAnswerPractice {
         return result;
     }
 
-    private static boolean isValid_better(int[] books, int students, int max) {
+    private static boolean isValid_better(int[] books, int students, int maxPagesPerStudent) {
         int sum = 0;
         for (int pages : books) {
             sum += pages;
-            if (sum > max) {
+            if (sum > maxPagesPerStudent) {
                 sum = pages;
                 students--;
             }
@@ -146,6 +150,11 @@ public class D_BinarySearchOnAnswerPractice {
         a = new int[]{25};
         System.out.println("\nArray = " + Arrays.toString(a));
         System.out.println("Peak Element = " + findPeakElement(a));
+
+        a = new int[]{25, 10, 20, 40};
+        System.out.println("\nArray = " + Arrays.toString(a));
+        System.out.println("Peak Element = " + findPeakElement(a));
+
     }
 
     private static void test_bitonicArray() {

@@ -33,7 +33,7 @@ public class E_MissingAndDuplicatesPractice {
      */
     public static List<List<Integer>> multipleMissingAndDuplicates_swapSort(int[] nums) {
         if (nums == null || nums.length == 0) return null;
-        swapSort(nums);
+        swapSort_better(nums);
         // System.out.println("After Swap Sort, nums = " + Arrays.toString(nums));
         List<Integer> missing = new ArrayList<>();
         List<Integer> duplicates = new ArrayList<>();
@@ -52,6 +52,20 @@ public class E_MissingAndDuplicatesPractice {
     /**
      * Time Complexity: O(n), Space Complexity: O(1)
      */
+    private static void swapSort_better(int[] nums) {
+        if (nums == null || nums.length == 0) return;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != i + 1) {
+                // Duplicate
+                if (nums[nums[i] - 1] != nums[i]) {
+                    int temp = nums[nums[i] - 1];
+                    nums[nums[i] - 1] = nums[i];
+                    nums[i] = temp;
+                }
+            }
+        }
+    }
+
     private static void swapSort(int[] nums) {
         if (nums == null || nums.length == 0) return;
         int i = 0;

@@ -23,7 +23,7 @@ public class TreeBSClosest {
                 }
                 root = root.right;
             } else {
-                root = root.right;
+                root = root.left;
             }
         }
         return closest;

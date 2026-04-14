@@ -1,6 +1,7 @@
 package com.sks.interview_2026;
 
 import com.sks.interview_2026.data_structures.BinaryTreeNode;
+import com.sks.leetcode.common.TreePrinter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -169,6 +170,8 @@ public class I_TreeConceptsPractice {
      */
     private static void test_printBinaryTree() {
         BinaryTreeNode root = BinaryTreeNode.getBinaryTreeData1();
+        System.out.println("Using Binary Tree Printer");
+        BinaryTreePrinter.printNode(root);
         System.out.println(printBinaryTree(root));
         printBinaryTree_byLevel(root, 0);
     }

@@ -9,13 +9,13 @@ import java.util.Arrays;
  * the maximum number of pages assigned to a student is minimum.
  * <p>
  * Example: Unsorted Array: Value at index-i represents pages in book-i
- * E,g: Array=[10, 15, 25, 20, 5, 40, 50]
+ * E,g: Array=[10, 15, 25, 20, 35, 40, 50]
  * Book-0 has 10 pages, Book-1 has 15 pages and so on
  * n is number of students that can read books
  * Conditions:
  * 1. One student can read multiple books but in continuous manner i.e book-0, book-1, book-2 so on
  * 2. But not in book-o, book-3, book-5 fashion
- * Minimize the load on te student
+ * Minimize the load on the student
  */
 public class PagesOfBooks {
 
@@ -38,7 +38,7 @@ public class PagesOfBooks {
         while (start <= end) {
             int mid = start + (end - start) / 2;
             if (isValid_better(books, students, mid)) {
-            //if (isValid(books, students, mid)) {
+                //if (isValid(books, students, mid)) {
                 result = mid;
                 end = mid - 1;
             } else {

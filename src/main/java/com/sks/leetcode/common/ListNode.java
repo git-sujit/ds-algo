@@ -54,9 +54,9 @@ public class ListNode {
     }
 
     public static ListNode prepareTestData_2() {
-        ListNode head = new ListNode(1);
+        ListNode head = new ListNode(0);
         ListNode curr = head;
-        for (int i = 0; i < 5; i++) {
+        for (int i = 1; i < 5; i++) {
             curr.next = new ListNode(i);
             curr = curr.next;
         }

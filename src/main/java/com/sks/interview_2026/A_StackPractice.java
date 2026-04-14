@@ -7,17 +7,23 @@ import java.util.Stack;
 
 public class A_StackPractice {
     public static void main(String[] args) {
-        // Next Greater Element Right
+        System.out.println("\n----- STACK ALGORITHMS -----");
+        System.out.println("----- NEXT GREATER ELEMENT RIGHT -----");
         test_ngr();
-        // Stock Spanner
+
+        System.out.println("\n----- STOCK SPANNER -----");
         test_stockSpanner();
-        // Maximum Area Histogram
+
+        System.out.println("\n----- MAXIMUM AREA HISTOGRAM -----");
         test_maximumAreaHistogram();
-        // Maximum Area rectangle - In Binary Matrix
+
+        System.out.println("\n-----  MAXIMUM AREA RECTANGLE - IN BINARY MATRIX -----");
         test_maximumAreaRectangle_binaryMatrix();
-        // Rain Water Trapping
+
+        System.out.println("\n----- RAIN WATER TRAPPING -----");
         test_rainWaterTrapping();
-        // Min Stack
+
+        System.out.println("\n----- MIN STACK -----");
         test_MinStack();
     }
 
@@ -66,7 +72,7 @@ public class A_StackPractice {
                 while (!stack.isEmpty() && arr[stack.peek()] <= arr[i]) stack.pop();
                 ngl_idx[i] = stack.isEmpty() ? -1 : stack.peek();
             }
-            stack.push(i);
+            stack.push(i); // Push Index
         }
         return ngl_idx;
     }
@@ -74,6 +80,8 @@ public class A_StackPractice {
     /**
      * Maximum Area Histogram
      * Time Complexity: O(n), Space Complexity: O(n)
+     * NOTE: Need to calculate left/right span separately
+     * Will not Work => nsr_idx[i] - nsl_idx[i] + 1
      **/
     private static int maximumAreaHistogram(int[] buildingHeights) {
         if (buildingHeights == null || buildingHeights.length == 0) return -1;
@@ -82,14 +90,15 @@ public class A_StackPractice {
         //System.out.println("nsl_idx = " + Arrays.toString(nsl_idx));
         //System.out.println("nsr_idx = " + Arrays.toString(nsr_idx));
         int[] areas = new int[buildingHeights.length];
-        int max = -1;
+        int max = -1; // Math.min is better but -1 also works because area wont be negative
         for (int i = 0; i < buildingHeights.length; i++) {
+
             int left_span = (i - nsl_idx[i] - 1);
             int right_span = nsr_idx[i] == -1 ? (buildingHeights.length - 1 - i) : (nsr_idx[i] - i - 1);
             areas[i] = buildingHeights[i] * (left_span + right_span + 1);
             max = Math.max(max, areas[i]);
         }
-        //System.out.println("Areas = " + Arrays.toString(areas));
+        System.out.println("Areas = " + Arrays.toString(areas));
         //return Arrays.stream(areas).max().getAsInt();
         return max;
     }
@@ -184,34 +193,28 @@ public class A_StackPractice {
         return waterTrapped;
     }
 
+    // Think: No need of Stack, Nearest left/right does not matter
     private static int[] maxElementLeft(int[] arr) {
         if (arr == null || arr.length == 0) return null;
         int[] maxLeft = new int[arr.length];
-        Stack<Integer> stack = new Stack<>();
+        int ml = Integer.MIN_VALUE;
         for (int i = 0; i < arr.length; i++) {
-            if (stack.isEmpty()) maxLeft[i] = -1;
-            else {
-                while (!stack.isEmpty() && stack.peek() <= arr[i]) stack.pop();
-                maxLeft[i] = stack.isEmpty() ? -1 : stack.peek();
-            }
-            if (stack.isEmpty() || stack.peek() < arr[i])
-                stack.push(arr[i]);
+            ml = Math.max(ml, arr[i]);
+            maxLeft[i] = ml;
         }
+        System.out.println("maxLeft = " + Arrays.toString(maxLeft));
         return maxLeft;
     }
 
     private static int[] maxElementRight(int[] arr) {
         if (arr == null || arr.length == 0) return null;
         int[] maxRight = new int[arr.length];
-        Stack<Integer> stack = new Stack<>();
+        int mr = Integer.MIN_VALUE;
         for (int i = arr.length - 1; i >= 0; i--) {
-            if (stack.isEmpty()) maxRight[i] = -1;
-            else {
-                while (!stack.isEmpty() && stack.peek() <= arr[i]) stack.pop();
-                maxRight[i] = stack.isEmpty() ? -1 : stack.peek();
-            }
-            if (stack.isEmpty() || stack.peek() < arr[i]) stack.push(arr[i]);
+            mr = Math.max(mr, arr[i]);
+            maxRight[i] = mr;
         }
+        System.out.println("maxRight = " + Arrays.toString(maxRight));
         return maxRight;
     }
 

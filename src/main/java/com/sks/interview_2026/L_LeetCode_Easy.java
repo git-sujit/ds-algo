@@ -53,6 +53,24 @@ public class L_LeetCode_Easy {
      * MERGE-TWO-SORTED-LinkedLists
      */
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        ListNode temp = new ListNode();
+        ListNode tail = temp;
+        while (list1 != null && list2 != null) {
+            if (list1.val < list2.val) {
+                tail.next = list1;
+                list1 = list1.next;
+                tail = tail.next;
+            } else {
+                tail.next = list2;
+                list2 = list2.next;
+                tail = tail.next;
+            }
+        }
+        tail.next = (list1 != null) ? list1 : list2;
+        return temp.next;
+    }
+
+    public static ListNode mergeTwoLists_NOT_WORKING(ListNode list1, ListNode list2) {
         if (list1 == null && list2 == null) return null;
         else if (list1 == null) return list2;
         else if (list2 == null) return list1;

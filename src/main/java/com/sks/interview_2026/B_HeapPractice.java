@@ -6,13 +6,17 @@ import javafx.util.Pair;
 
 public class B_HeapPractice {
     public static void main(String[] args) {
-        // Kth Smallest/Largest Element
+        System.out.println("\n----- HEAP ALGORITHMS -----");
+        System.out.println("----- KTH SMALLEST/LARGEST ELEMENT -----");
         test_kthSmallestLargest();
-        // Sort K/Nearly Sorted Array
+
+        System.out.println("----- SORT K/NEARLY SORTED ARRAY -----");
         test_kSorted();
-        // Top K Frequent Numbers
+
+        System.out.println("----- TOP K FREQUENT NUMBERS -----");
         test_topKFrequentNumbers();
-        // Minimum Cost in Connecting Ropes
+
+        System.out.println("----- MINIMUM COST IN CONNECTING ROPES -----");
         test_minCostConnectRopes();
     }
 

@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class C_BinarySearchPractice {
     public static void main(String[] args) {
-        System.out.println("----- BINARY SEARCH -----");
+        System.out.println("----- BINARY SEARCH ALGORITHMS -----");
         test_binarySearch();
 
         System.out.println("\n----- SORTED-ROTATED ARRAY -----");
@@ -64,17 +64,21 @@ public class C_BinarySearchPractice {
      * Time Complexity: O(logn), Space Complexity: O(1)
      */
     private static int numOfRotations_sortedRotatedArray(int[] nums) {
-        if (nums == null || nums.length < 2 || nums[0] < nums[nums.length - 1]) return -1;
+        if (nums == null || nums.length < 2 || nums[0] < nums[nums.length - 1]) return 0;
         int len = nums.length;
+        // Boundary condition(min element is 1st or last element): 0 rotation or len rotations
+        if (nums[0] > nums[1]) return 0;
+        if (nums[len - 1] < nums[len - 2]) return len - 1;
         int s = 0, e = len - 1;
         while (s <= e) {
             int mid = s + (e - s) / 2;
             int prev = mid - 1;
             int next = mid + 1;
+
             // Condition: smaller than both neighbors
             if (prev >= 0 && nums[mid] < nums[prev] && next < len && nums[mid] < nums[next]) return mid;
-            if (nums[0] > nums[mid]) e = mid - 1;
-            else if (nums[mid] > nums[len - 1]) s = mid + 1;
+            if (nums[0] > nums[mid]) e = prev;
+            else if (nums[mid] > nums[len - 1]) s = next;
         }
         return -1;
     }
@@ -182,9 +186,15 @@ public class C_BinarySearchPractice {
     private static void test_sortedRotatedArray() {
         int[] a = {2, 5, 6, 8, 10, 13, 15, 18, 20};
         int[] rotatedA = {15, 18, 20, 2, 5, 6, 8, 10, 13};
-        int n = 18;
-
         System.out.println("Original Array= " + Arrays.toString(a));
+        System.out.println("Rotated Array = " + Arrays.toString(rotatedA));
+        System.out.println("Num of Rotations = " + numOfRotations_sortedRotatedArray(rotatedA));
+
+        rotatedA = new int[]{2, 5, 6, 8, 10, 13, 15, 18, 20};
+        System.out.println("Rotated Array = " + Arrays.toString(rotatedA));
+        System.out.println("Num of Rotations = " + numOfRotations_sortedRotatedArray(rotatedA));
+
+        rotatedA = new int[]{5, 6, 8, 10, 13, 15, 18, 20, 2};
         System.out.println("Rotated Array = " + Arrays.toString(rotatedA));
         System.out.println("Num of Rotations = " + numOfRotations_sortedRotatedArray(rotatedA));
     }
