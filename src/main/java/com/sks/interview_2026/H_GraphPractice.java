@@ -6,6 +6,7 @@ import java.util.*;
 
 public class H_GraphPractice {
     public static void main(String[] args) {
+        System.out.println("----- GRAPH ALGORITHMS -----");
         System.out.println("----- GRAPH: DEPTH FIRST SEARCH -----");
         test_dfs();
         System.out.println("\n----- GRAPH: BREADTH FIRST SEARCH -----");
@@ -21,6 +22,27 @@ public class H_GraphPractice {
      * Space Complexity : O(n) - method stack memory for recursion
      * (NuViSLoCR) :: Null Check - Visit - Set Flag - Loop - Check Flag- Recursion
      */
+    private static void dfs_recursive_noMutation(GraphNode<Integer> node) {
+        System.out.println("\nDFS, Without Mutating Graph: ");
+        if (node == null) return;
+        Set<GraphNode<Integer>> visitedSet = new HashSet<>();
+        dfs_recursive_noMutation(node, visitedSet);
+    }
+
+    // Hypothesis: This function traverses a graph in Depth-First fashion
+    private static void dfs_recursive_noMutation(GraphNode<Integer> node, Set<GraphNode<Integer>> visitedSet) {
+        // Base Condition
+        if (node == null) return;
+        visitNode(node);
+        visitedSet.add(node);
+        if (node.children != null) {
+            for (GraphNode<Integer> child : node.children)
+                if (!visitedSet.contains(child))
+                    // Induction
+                    dfs_recursive_noMutation(child, visitedSet);
+        }
+    }
+
     private static void dfs_recursive(GraphNode<Integer> n) {
         if (n == null) return;
         visitNode(n);
@@ -40,6 +62,7 @@ public class H_GraphPractice {
             visitNode(sn);
             sn.visited = true;
             GraphNode[] children = sn.children;
+            // NOTE: Adding Children in Reverse Order
             for (int i = children.length - 1; i >= 0; i--) {
                 GraphNode child = children[i];
                 if (!child.visited) stack.push(child);
@@ -52,6 +75,28 @@ public class H_GraphPractice {
      * Space Complexity: O(n) Max queue size is n
      * Check the visited after removing from queue, queue might have duplicate data, hence need to check visited
      */
+    private static void bfs_recursive_noMutation(GraphNode<Integer> node) {
+        if (node == null) return;
+        Set<GraphNode<Integer>> visitedSet = new HashSet<>();
+        Queue<GraphNode<Integer>> queue = new LinkedList<>();
+        queue.add(node);
+        bfs_recursive_noMutation(queue, visitedSet);
+    }
+
+    private static void bfs_recursive_noMutation(Queue<GraphNode<Integer>> queue, Set<GraphNode<Integer>> visitedSet) {
+        // Base Condition
+        if (queue.isEmpty()) return;
+        GraphNode<Integer> node = queue.remove();
+        visitNode(node);
+        visitedSet.add(node);
+        if (node.children != null) {
+            for (GraphNode<Integer> node1 : node.children) {
+                if (!visitedSet.contains(node1)) queue.add(node1);
+            }
+        }
+        bfs_recursive_noMutation(queue, visitedSet);
+    }
+
     public static void bfs(GraphNode<Integer> n) {
         if (n == null) return;
         Queue<GraphNode<Integer>> q = new LinkedList<>();
@@ -108,6 +153,34 @@ public class H_GraphPractice {
      * Space Complexity: O(n)
      * Typical Candidate for BFS: We are trying to get path between two nodes
      */
+    public static boolean validPath_adjList_better(int n, int[][] edges, int source, int destination) {
+        if (edges == null || edges.length == 0 || source < 0 || destination < 0 || source > n || destination > n)
+            return false;
+        // Prepare Adjacency List
+        Map<Integer, Set<Integer>> adjList = new HashMap<>();
+        for (int[] edge : edges) {
+            Set<Integer> s = adjList.getOrDefault(edge[0], new HashSet<>());
+            s.add(edge[1]);
+            adjList.put(edge[0], s);
+        }
+        // BFS traversal to find Path(Not DFS)
+        Queue<Integer> q = new LinkedList<>();
+        Set<Integer> visited = new HashSet<>();
+        q.add(source);
+        while (!q.isEmpty()) {
+            int qEle = q.remove();
+            Set<Integer> children = adjList.get(qEle);
+            for (int child : children) {
+                if (!visited.contains(child)) {
+                    if (child == destination) return true;
+                    visited.add(child);
+                    q.add(child);
+                }
+            }
+        }
+        return false;
+    }
+
     public static boolean validPath_adjList(int n, int[][] edges, int source, int destination) {
         if (edges == null || edges.length == 0 || source < 0 || destination < 0 || source > n || destination > n)
             return false;
@@ -160,6 +233,7 @@ public class H_GraphPractice {
         GraphNode<Integer> n0 = GraphNode.getGraphData();
         System.out.println("DFS - Recursive");
         dfs_recursive(n0);
+        dfs_recursive_noMutation(n0);
 
         n0 = GraphNode.getGraphData();
         System.out.println("\nDFS - Iterative");
@@ -170,6 +244,8 @@ public class H_GraphPractice {
         GraphNode<Integer> root = GraphNode.getGraphData_1();
         System.out.println("\n1. BFS-without mutating graph");
         bfs_withoutMutatingGraph(root);
+        System.out.println("\n1. BFS-Recursive & without mutating graph");
+        bfs_recursive_noMutation(root);
 
         System.out.println("\nBFS-Better");
         bfs(root);
@@ -181,9 +257,12 @@ public class H_GraphPractice {
         int source = 0;
         int destination = 2;
         System.out.println("[Adj-List]valid path exists? : " + validPath_adjList(n, edges, source, destination));
+        System.out.println("[Adj-List-Better]valid path exists? : " + validPath_adjList_better(n, edges, source, destination));
+
 
         destination = 3;
         System.out.println("[Adj-List]valid path exists? : " + validPath_adjList(n, edges, source, destination));
+        System.out.println("[Adj-List-Better]valid path exists? : " + validPath_adjList_better(n, edges, source, destination));
     }
 
     private static void test_graphStar() {

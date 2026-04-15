@@ -100,6 +100,15 @@ public class I_TreeConceptsPractice {
         else return searchBST_recursive(node.right, data);
     }
 
+    private static BinaryTreeNode searchBST_iterative_BETTER(BinaryTreeNode node, int data) {
+        if (node == null) return null;
+        while(node != null){
+            if(node.data == data) return node;
+            else if(data < node.data) node = node.left;
+            else node = node.right;
+        }
+        return null;
+    }
     // Time Complexity  : O(height=logn)
     // Space Complexity : O(logn) for stack
     private static BinaryTreeNode searchBST_iterative(BinaryTreeNode node, int data) {
@@ -195,13 +204,17 @@ public class I_TreeConceptsPractice {
 
         int data = 8;
         System.out.println("SEARCH in BST - Recursive, data=" + data + ": " + searchBST_recursive(bstRoot, data));
+
         System.out.println("SEARCH in BST - Iterative, data=" + data + ": " + searchBST_iterative(bstRoot, data));
+        System.out.println("[BETTER]SEARCH in BST - Iterative, data=" + data + ": " + searchBST_iterative_BETTER(bstRoot, data));
         data = 10;
         System.out.println("SEARCH in BST - Recursive, data=" + data + ": " + searchBST_recursive(bstRoot, data));
         System.out.println("SEARCH in BST - Iterative, data=" + data + ": " + searchBST_iterative(bstRoot, data));
+        System.out.println("[BETTER]SEARCH in BST - Iterative, data=" + data + ": " + searchBST_iterative_BETTER(bstRoot, data));
         data = 4;
         System.out.println("SEARCH in BST - Recursive, data=" + data + ": " + searchBST_recursive(bstRoot, data));
         System.out.println("SEARCH in BST - Iterative, data=" + data + ": " + searchBST_iterative(bstRoot, data));
+        System.out.println("[BETTER]SEARCH in BST - Iterative, data=" + data + ": " + searchBST_iterative_BETTER(bstRoot, data));
 
         System.out.println("Min/Max in BST: " + minInBST(bstRoot) + "/" + maxInBST(bstRoot));
         System.out.println("Does min/max changes the root-node? NO - " + bstRoot);
