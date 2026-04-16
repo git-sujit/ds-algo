@@ -3,12 +3,13 @@ package com.sks.interview_2026;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public class G_Variable_SlidingWindowPractice {
     public static void main(String[] args) {
+        System.out.println("----- VARIABLE-SIZE SLIDING WINDOW -----");
         System.out.println("----- LONGEST SUBARRAY OF A SUM -----");
         test_longestSubarrayOfASum();
+
         System.out.println("----- LONGEST SUBSTRING WITH K UNIQUE CHARS -----");
         test_longestSubstring_kUniqueChars();
     }
@@ -17,6 +18,21 @@ public class G_Variable_SlidingWindowPractice {
      * TimeComplexity: O(n), n-Size of array
      * Space Complexity: O(1)
      */
+    public static int sizeOfLongestSubarray_positiveArray_BETTER(int[] numbers, int sum) {
+        if (numbers == null || numbers.length == 0) return -1;
+        int ws = 0, we = 0, maxSize = Integer.MIN_VALUE, tempSum = 0;
+        for (int num : numbers) {
+            tempSum += num;
+            if (tempSum == sum) maxSize = Math.max(maxSize, we - ws + 1);
+            else if (tempSum > sum) {
+                tempSum -= numbers[ws];
+                ws++;
+            }
+            we++;
+        }
+        return maxSize;
+    }
+
     public static int sizeOfLongestSubarray_positiveArray(int[] numbers, int sum) {
         if (numbers == null || numbers.length == 0) return -1;
         int maxSize = Integer.MIN_VALUE;
@@ -121,6 +137,8 @@ public class G_Variable_SlidingWindowPractice {
             System.out.println("[Negative-Array] Size of Longest SubArray = " + sizeOfLongestSubarray_negativeArray(numbers, sum));
         else
             System.out.println("[Positive-Array]Size of Longest SubArray = " + sizeOfLongestSubarray_positiveArray(numbers, sum));
+
+        System.out.println("[BETTER]Size of Longest SubArray = " + sizeOfLongestSubarray_positiveArray_BETTER(numbers, sum));
     }
 
     private static void test_longestSubstring_kUniqueChars() {

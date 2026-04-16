@@ -1,10 +1,9 @@
 package com.sks.interview_2026;
 
 import com.sks.interview_2026.data_structures.BinaryTreeNode;
+import com.sks.leetcode.medium.PermutationPhoneLetterCombinations;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class J_RecursionPractice {
     public static void main(String[] args) {
@@ -19,7 +18,11 @@ public class J_RecursionPractice {
 
         System.out.println("----- PERMUTATIONS -----");
         test_permutations();
+
+        System.out.println("----- PHONE LETTER COMBINATION -----");
+        test_phoneLetterCombination();
     }
+
 
     /**
      * BASIC PROBLEMS
@@ -31,7 +34,8 @@ public class J_RecursionPractice {
         // 2. Base Condition
         if (n == 0) return;
         // 3. Induction: Call function with smaller input
-        print_1_n(n - 1); // Think: --n/n-- will not work, infinite loop
+        //print_1_n(n - 1);
+        print_1_n(--n); // Think: --n works but n-- will not work, infinite loop
         System.out.print(n + " ");
     }
 
@@ -43,7 +47,8 @@ public class J_RecursionPractice {
         if (n == 0) return;
         System.out.print(n + " ");
         //Induction
-        print_n_1(n - 1); // Think: --n works but n-- will not work, infinite loop
+        //print_n_1(n - 1);
+        print_n_1(--n); // Think: --n works but n-- will not work, infinite loop
     }
 
     // Hypothesis: nthFactorial(n) return factorial of n
@@ -114,6 +119,38 @@ public class J_RecursionPractice {
     }
 
     /**
+     * Time Complexity: O(n*4^n), Space Complexity: O(n)
+     */
+    private static List<String> phoneLetterCombination(String digits) {
+        List<String> out = new ArrayList<>();
+        if (digits.isEmpty()) return out;
+        Map<Character, String> numCharsMap = prepareNumCharsMap_better();
+        out.add("");
+        for (char ch : digits.toCharArray()) {
+            String chars = numCharsMap.get(ch);
+            List<String> temp = new ArrayList<>();
+            for (char ch1 : chars.toCharArray())
+                for (String s : out)
+                    temp.add(s + ch1);
+            out = temp;
+        }
+        return out;
+    }
+
+    private static Map<Character, String> prepareNumCharsMap_better() {
+        Map<Character, String> numCharsMap = new HashMap<>();
+        numCharsMap.put('2', "abc");
+        numCharsMap.put('3', "def");
+        numCharsMap.put('4', "ghi");
+        numCharsMap.put('5', "jkl");
+        numCharsMap.put('6', "mno");
+        numCharsMap.put('7', "pqrs");
+        numCharsMap.put('8', "tuv");
+        numCharsMap.put('9', "wxyz");
+        return numCharsMap;
+    }
+
+    /**
      * TEST
      */
     private static void test_basicProblems() {
@@ -146,5 +183,11 @@ public class J_RecursionPractice {
         int[] nums = {1, 2, 3};
         System.out.println("Nums : " + Arrays.toString(nums));
         System.out.println("Perms: " + permutations(nums));
+    }
+
+    private static void test_phoneLetterCombination() {
+        String digits = "23";
+        System.out.println("Digits = " + digits);
+        System.out.println("Letter Combinations = " + phoneLetterCombination(digits));
     }
 }

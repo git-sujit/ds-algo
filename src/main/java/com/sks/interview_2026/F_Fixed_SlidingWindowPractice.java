@@ -1,10 +1,15 @@
 package com.sks.interview_2026;
 
+import com.sks.interview_2026.companies.LinkedInInterview;
+
 import java.util.*;
 
 public class F_Fixed_SlidingWindowPractice {
     public static void main(String[] args) {
-        System.out.println("----- MISSING & DUPLICATES -----");
+        System.out.println("----- FIXED-SIZE SLIDING WINDOW -----");
+        System.out.println("----- MIN/MAX SUM OF A SUBARRAY -----");
+        // Given an array of integers Arr of size N and a number K. Return the maximum sum of a subarray of size K.
+        // numbers = {1, 3, -1, -3, 5, 3, 3, 6, 7}, k = 3;
         test_minMaxSumSubArray();
 
         System.out.println("----- FIRST NEGATIVE NUMBER IN SUBARRAYS -----");
@@ -38,10 +43,47 @@ public class F_Fixed_SlidingWindowPractice {
         return new int[]{minSum, maxSum};
     }
 
+    // Good but does not follow the pattern of Window = (we-ws)
+    private static int[] minMaxSumSubArray_1(int[] numbers, int k) {
+        if (numbers == null || numbers.length == 0 || numbers.length < k) return null;
+        int sum = 0;
+        int minSum = Integer.MAX_VALUE;
+        int maxSum = Integer.MIN_VALUE;
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+            if (i >= k - 1) {
+                minSum = Math.min(minSum, sum);
+                maxSum = Math.max(maxSum, sum);
+                sum -= numbers[i - k + 1];
+            }
+        }
+        return new int[]{minSum, maxSum};
+    }
+
     /**
      * Time Complexity: O(n): Traversing the array only once
      * Space Complexity: O(k): Size of list that stores negative numbers, which will be at max k
      */
+    private static List<Integer> firstNegativeInSubArray_better(int[] numbers, int k) {
+        if (numbers == null || numbers.length == 0 || numbers.length < k) return null;
+        List<Integer> out = new ArrayList<>();
+        int ws = 0, we = 0;
+        Queue<Integer> q = new LinkedList<>();
+        for (int num : numbers) {
+            if (num < 0) q.add(num);
+            if (we - ws + 1 == k) {
+                if (q.isEmpty()) out.add(0);
+                else {
+                    out.add(q.peek());
+                    if (numbers[ws] == q.peek()) q.remove();
+                }
+                ws++;
+            }
+            we++;
+        }
+        return out;
+    }
+
     private static int[] firstNegativeInSubArray(int[] numbers, int k) {
         if (numbers == null || numbers.length == 0 || numbers.length < k) return null;
         int[] out = new int[numbers.length - k + 1];
@@ -116,6 +158,7 @@ public class F_Fixed_SlidingWindowPractice {
         int k = 3;
         System.out.println("Numbers = " + Arrays.toString(numbers) + ", Window Size K = " + k);
         System.out.println("Min-Max of sum of SubArray = " + Arrays.toString(minMaxSumSubArray(numbers, k)));
+        System.out.println("Min-Max of sum of SubArray = " + Arrays.toString(minMaxSumSubArray_1(numbers, k)));
     }
 
     private static void test_firstNegativeInSubArray() {
@@ -123,15 +166,18 @@ public class F_Fixed_SlidingWindowPractice {
         int k = 2;
         System.out.println("Array = " + Arrays.toString(arr) + ", k = " + k);
         System.out.println("First -ve integer in each sub-array of size " + k + " = " + Arrays.toString(firstNegativeInSubArray(arr, k)));
+        System.out.println("First -ve integer in each sub-array of size " + k + " = " + firstNegativeInSubArray_better(arr, k));
 
         k = 3;
         System.out.println("Array = " + Arrays.toString(arr) + ", k = " + k);
         System.out.println("First -ve integer in each sub-array of size " + k + " = " + Arrays.toString(firstNegativeInSubArray(arr, k)));
+        System.out.println("First -ve integer in each sub-array of size " + k + " = " + firstNegativeInSubArray_better(arr, k));
 
         arr = new int[]{12, -1, -7, 8, -15, 30, 16, 28};
         k = 3;
         System.out.println("Array = " + Arrays.toString(arr) + ", k = " + k);
         System.out.println("First -ve integer in each sub-array of size " + k + " = " + Arrays.toString(firstNegativeInSubArray(arr, k)));
+        System.out.println("First -ve integer in each sub-array of size " + k + " = " + firstNegativeInSubArray_better(arr, k));
     }
 
     private static void test_countAnagrams() {
